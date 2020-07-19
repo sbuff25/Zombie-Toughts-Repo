@@ -43,12 +43,15 @@ function selectOption(option) {
         // since this is where all the decisions are made, you might add some logic like
         // this to help determine what should be shown -- have more json objects to take
         // them where they need to go.
+
     if (nextTextNodeId == 20 && state.mountDoomn == true) {
         console.log('Mount Doom');
+        //This should be changing the text id but it dosnt.
         nextTextNodeId == 21;
     } else if (nextTextNodeId == 20 && state.ghostTown == true) {
 
         console.log('Ghost Town');
+          //This should be changing the text id but it dosnt.
         nextTextNodeId == 22;
     }
     showTextNode(nextTextNodeId)
@@ -324,6 +327,7 @@ const textNodes = [{
         text: 'Final Scene. Depending on which path the player originally chose they will either focus on a memory of being at Mount Doom or the Ghost Town',
         options: [{
             text: 'Continue',
+            //I think this is the problem here.
             nextText: 21
         }]
     },
