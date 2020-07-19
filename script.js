@@ -35,7 +35,9 @@ function showOption(option) {
 }
 
 function selectOption(option) {
-    const nextTextNodeId = option.nextText
+    // this can't be a const or it cannot be changed.
+    //const nextTextNodeId = option.nextText
+    var nextTextNodeId = option.nextText
     if (nextTextNodeId <= 0) {
         startGame();
     }
@@ -47,12 +49,14 @@ function selectOption(option) {
     if (nextTextNodeId == 20 && state.mountDoomn == true) {
         console.log('Mount Doom');
         //This should be changing the text id but it dosnt.
-        nextTextNodeId == 21;
+        // it was because of the == instead of =
+        nextTextNodeId = 21;
     } else if (nextTextNodeId == 20 && state.ghostTown == true) {
 
         console.log('Ghost Town');
-          //This should be changing the text id but it dosnt.
-        nextTextNodeId == 22;
+        // same as before, it had == but needed to be =
+        //This should be changing the text id but it dosnt.
+        nextTextNodeId = 22;
     }
     showTextNode(nextTextNodeId)
 
@@ -138,7 +142,7 @@ const textNodes = [{
         text: 'Choose your starting location.',
         options: [{
                 text: 'Mount Doom',
-                setState: { mountDoomn: true},
+                setState: { mountDoomn: true },
                 nextText: 6
             },
             {
