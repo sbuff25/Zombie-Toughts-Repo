@@ -3,14 +3,14 @@ const optionButtonsElement = document.getElementById('option-buttons');
 
 let state = {}
 
-const cowboyHat = false;
 
-function startGame(){
+function startGame() {
     state = {}
     showTextNode(1)
-    
+
 }
-function showTextNode(textNodeIndex){
+
+function showTextNode(textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
     while (optionButtonsElement.firstChild) {
@@ -18,43 +18,54 @@ function showTextNode(textNodeIndex){
     }
 
     textNode.options.forEach(option => {
-        if (showOption(option)) {
-            const button = document.createElement('button')
-            button.innerText = option.text
-            button.classList.add('btn')
-            button.addEventListener('click', () => selectOption(option))
-            optionButtonsElement.appendChild(button)
-        }
-    })
-    //This is storing the choices being made in the console. these some of these choices will effect final outcome of game. 
+            if (showOption(option)) {
+                const button = document.createElement('button')
+                button.innerText = option.text
+                button.classList.add('btn')
+                button.addEventListener('click', () => selectOption(option))
+                optionButtonsElement.appendChild(button)
+            }
+        })
+        //This is storing the choices being made in the console. these some of these choices will effect final outcome of game. 
     console.log(state);
 }
 
 function showOption(option) {
     return option.requiredState == null || option.requiredState(state)
 }
+
 function selectOption(option) {
     const nextTextNodeId = option.nextText
     if (nextTextNodeId <= 0) {
         startGame();
     }
     state = Object.assign(state, option.setState)
+        // since this is where all the decisions are made, you might add some logic like
+        // this to help determine what should be shown -- have more json objects to take
+        // them where they need to go.
+    if (nextTextNodeId == 20 && state.mountDoomn == true) {
+        console.log('Mount Doom');
+        nextTextNodeId == 21;
+    } else if (nextTextNodeId == 20 && state.ghostTown == true) {
+
+        console.log('Ghost Town');
+        nextTextNodeId == 22;
+    }
     showTextNode(nextTextNodeId)
+
 }
 
-const textNodes = [
-    {
+const textNodes = [{
         id: 1,
         text: 'Choose if Sam is a GIRL or Boy',
-        options: [
-            {
+        options: [{
                 text: 'Play as a Boy',
-                setState: {boy: true},
+                setState: { boy: true },
                 nextText: 2
             },
             {
                 text: 'Play as a Girl',
-                setState: {girl: true},
+                setState: { girl: true },
                 nextText: 3
             }
         ]
@@ -62,20 +73,19 @@ const textNodes = [
     {
         id: 2,
         text: 'Looks like Sam is a BOY. What hat should he wear?',
-        options: [
-            {
+        options: [{
                 text: 'A baseball cap?',
-                setState: {baseballCap: true},
+                setState: { baseballCap: true },
                 nextText: 4
             },
             {
                 text: 'A Cowboy hat?',
-                setState: {cowboyHat: true},
+                setState: { cowboyHat: true },
                 nextText: 4
             },
             {
                 text: 'Or a Tophat?',
-                setState: {topHat: true},
+                setState: { topHat: true },
                 nextText: 4
             }
         ]
@@ -83,20 +93,19 @@ const textNodes = [
     {
         id: 3,
         text: 'Looks like Sam is a Girl. What hat should she wear?',
-        options: [
-            {
+        options: [{
                 text: 'A baseball cap?',
-                setState: {baseballCap: true},
+                setState: { baseballCap: true },
                 nextText: 4
             },
             {
                 text: 'A Cowboy hat?',
-                setState: {cowboyHat: true},
+                setState: { cowboyHat: true },
                 nextText: 4
             },
             {
                 text: 'Or a Tophat?',
-                setState: {topHat: true},
+                setState: { topHat: true },
                 nextText: 4
             }
         ]
@@ -104,20 +113,19 @@ const textNodes = [
     {
         id: 4,
         text: 'Now That we know what our Gender is lets choose an accessory for our friend Pig.',
-        options: [
-            {
+        options: [{
                 text: 'A Fadora?',
-                setState: {fadora: true},
+                setState: { fadora: true },
                 nextText: 5
             },
             {
                 text: 'A Headband?',
-                setState: {headband: true},
+                setState: { headband: true },
                 nextText: 5
             },
             {
                 text: 'Or Eyeshadow',
-                setSate: {eyeshadow: true},
+                setSate: { eyeshadow: true },
                 nextText: 5
             }
         ]
@@ -125,15 +133,14 @@ const textNodes = [
     {
         id: 5,
         text: 'Choose your starting location.',
-        options: [
-            {
+        options: [{
                 text: 'Mount Doom',
-                setState: {mountDoomn: true},
+                setState: { mountDoomn: true},
                 nextText: 6
             },
             {
                 text: 'Ghost Town',
-                setState: {ghostTown: true},
+                setState: { ghostTown: true },
                 nextText: 7
             }
         ]
@@ -141,64 +148,54 @@ const textNodes = [
     {
         id: 6,
         text: 'Mount Doom Scene',
-        options:[
-            {
-                text: 'Continue',
-                nextText: 8
-            }
-        ]
+        options: [{
+            text: 'Continue',
+            nextText: 8
+        }]
     },
     {
         id: 7,
         text: 'Ghost Town scene',
-        options:[
-            {
-                text: 'Continue',
-                nextText: 8
-            }
-        ]
+        options: [{
+            text: 'Continue',
+            nextText: 8
+        }]
     },
     {
         id: 8,
         text: 'Battlefield scene. Choose Between the shark or the wolf',
-        options:[
-            {
+        options: [{
                 text: 'Shark',
-                setState: {shark: true},
+                setState: { shark: true },
                 nextText: 9
             },
             {
                 text: 'Wolf',
-                setState: {wolf: true},
+                setState: { wolf: true },
                 nextText: 10
             }
         ]
     },
     {
-        id:9,
+        id: 9,
         text: 'You chose to fight the shark.',
-        options:[
-            {
-                text: 'Continue',
-                nextText: 11
-            }
-        ]
+        options: [{
+            text: 'Continue',
+            nextText: 11
+        }]
     },
     {
-        id:10,
+        id: 10,
         text: 'You chose to fight the wolf.',
-        options:[
-            {
-                text: 'Continue',
-                nextText: 11
-            }
-        ]
+        options: [{
+            text: 'Continue',
+            nextText: 11
+        }]
     },
     {
-        id:11,
+        id: 11,
         text: 'Vampire Bat Scene',
-        options:[
-            {
+        options: [{
                 text: 'Why does Sam have anxiety?',
                 nextText: 12
             },
@@ -217,10 +214,9 @@ const textNodes = [
         ]
     },
     {
-        id:12,
+        id: 12,
         text: 'Explanation of question 1 and options to ask more',
-        options:[
-            {
+        options: [{
                 text: 'How can Sam overcome his anxiety?',
                 nextText: 13
             },
@@ -235,20 +231,17 @@ const textNodes = [
         ]
     },
     {
-        id:13,
+        id: 13,
         text: 'Explanation of question 2 and option to ask more',
-        options:[
-            {
-                text: 'Correct Choices Continue Game',
-                nextText: 16
-            },
-        ]
+        options: [{
+            text: 'Correct Choices Continue Game',
+            nextText: 16
+        }, ]
     },
     {
-        id:14,
+        id: 14,
         text: 'Question 3 tells the player to not as silly questions and focus on the task at hand',
-        options:[
-            {
+        options: [{
                 text: 'Why does Sam have anxiety?',
                 nextText: 12
             },
@@ -269,95 +262,101 @@ const textNodes = [
     {
         id: 18,
         text: 'Asking Question 3 twice Results in this form of a game over',
-        options:[
-            {
+        options: [{
                 text: 'Try Again',
                 nextText: 11
             }
-        
-    ]
+
+        ]
     },
     {
         id: 15,
         text: 'This option is reckless and results in a game over restarting the scinario',
-        options:[
-            {
+        options: [{
                 text: 'Try Again',
                 nextText: 11
             }
-        
-    ]
+
+        ]
     },
     {
         id: 16,
         text: 'Sam defeats the bats and learns a valuable lesson about his anxiety',
-        options:[
-            {
+        options: [{
                 text: 'Continue',
                 nextText: 17
             }
-        
-    ]
+
+        ]
     },
     {
         id: 17,
         text: 'Zombie Apocalypse Scene, no Choices',
-        options:[
-            {
-                text: 'Continue',
-                nextText: 19
-            }
-        ]
+        options: [{
+            text: 'Continue',
+            nextText: 19
+        }]
     },
     {
         id: 19,
         text: 'Level Up Scene. Player gains 50xp and a copper mind shield as well as the ability to pick one of three items',
-        options:[
-            {
+        options: [{
                 text: 'Bubble Machine',
-                setState: {bubbleMachine: true, experiancePoints: true, copperMindShield: true},
+                setState: { bubbleMachine: true, experiancePoints: true, copperMindShield: true },
                 nextText: 20
             },
             {
                 text: 'Band of Pacification',
-                setState: {bandOfPacification: true, experiancePoints: true, copperMindShield: true},
+                setState: { bandOfPacification: true, experiancePoints: true, copperMindShield: true },
                 nextText: 20
             },
             {
                 text: 'Stuffed Hedgehog',
-                setState: {stuffedHedgeHog: true, experiancePoints: true, copperMindShield: true},
+                setState: { stuffedHedgeHog: true, experiancePoints: true, copperMindShield: true },
                 nextText: 20
             }
         ]
     },
     // Going to need three different outcomes here. deppending on which path the player chose at the beging of the game (Mount Doom or Ghost Town). and also which item they chose when they leveled up will determine the videos being played in the final scene.
-    
+
     {
         id: 20,
-        text: 'Final Scene. Depending on wich path the player originally chose they will either focus on a memory of being at Mount Doom or the Ghost Town',
-        options:[
-        {
+        text: 'Final Scene. Depending on which path the player originally chose they will either focus on a memory of being at Mount Doom or the Ghost Town',
+        options: [{
             text: 'Continue',
             nextText: 21
-        },
-        ]
+        }]
     },
     {
         id: 21,
+        text: 'Memory of MT Doom',
+        options: [{
+            text: 'Continue',
+            nextText: 23
+        }]
+    },
+    {
+        id: 22,
+        text: 'Memory of Ghost Town',
+        options: [{
+            text: 'Continue',
+            nextText: 23
+        }]
+    },
+    {
+        id: 23,
         text: 'END OF GAME',
-        options:[
-        {
+        options: [{
             text: 'RESTART GAME',
             nextText: -1
-        },
-        ]
+        }]
     }
 
 
 
 
 
-   
+
 
 
 ]
