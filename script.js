@@ -35,6 +35,18 @@ function showOption(option) {
 }
 
 function selectOption(option) {
+     /*
+            LOGICAL STATMENTS TO COMPLETE:
+            1. VAMPIRE CAVE DIALOUGE DECISIONS
+                -1ST CHOICE LEADS TO 2ND, 3RD AND 4TH
+                -2ND LEADS TO 1ST, 3RD AND 4TH
+                -3RD LEADS TO 1ST SECOND 3RD AND 4TH (CAN ONLY SELECT 3RD ONCE MORE)
+                -4TH LEADS TO A GAME OVER AND HAVING TO RESTART THE SCENE
+            2. FINAL BOSS BATTLE WILL CHANGE DEPENDING ON WHICH ITEM SAM HAS CHOSEN FROM PREIVIOUS LEVEL UP SCENE
+                -THE ONLY TWO FACTORS THAT EFFECT THE VIDEO SHOWN WILL BE
+                    1.THE FIRST DESTINATION THE PLAYER GOES TO (MOUNT DOOM OR GHOST TOWN)
+                    2. WHICH ITEM THE PLAYER CHOOSES WHEN THEY LEVEL UP (HEDGEHOG, BAND OF PACIFICATION OR BUBBLE MACHINE)
+        */
     // this can't be a const or it cannot be changed.
     //const nextTextNodeId = option.nextText
     var nextTextNodeId = option.nextText
