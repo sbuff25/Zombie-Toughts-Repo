@@ -10,6 +10,7 @@ function startGame() {
 
 }
 
+
 function showTextNode(textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
@@ -33,42 +34,44 @@ function showTextNode(textNodeIndex) {
 function showOption(option) {
     return option.requiredState == null || option.requiredState(state)
 }
-
+// ALL LOGICAL STATMENTS
 function selectOption(option) {
-     /*
-            LOGICAL STATMENTS TO COMPLETE:
-            1. VAMPIRE CAVE DIALOUGE DECISIONS
-                -1ST CHOICE LEADS TO 2ND, 3RD AND 4TH
-                -2ND LEADS TO 1ST, 3RD AND 4TH
-                -3RD LEADS TO 1ST SECOND 3RD AND 4TH (CAN ONLY SELECT 3RD ONCE MORE)
-                -4TH LEADS TO A GAME OVER AND HAVING TO RESTART THE SCENE
-            2. FINAL BOSS BATTLE WILL CHANGE DEPENDING ON WHICH ITEM SAM HAS CHOSEN FROM PREIVIOUS LEVEL UP SCENE
-                -THE ONLY TWO FACTORS THAT EFFECT THE VIDEO SHOWN WILL BE
-                    1.THE FIRST DESTINATION THE PLAYER GOES TO (MOUNT DOOM OR GHOST TOWN)
-                    2. WHICH ITEM THE PLAYER CHOOSES WHEN THEY LEVEL UP (HEDGEHOG, BAND OF PACIFICATION OR BUBBLE MACHINE)
-        */
-    // this can't be a const or it cannot be changed.
-    //const nextTextNodeId = option.nextText
+    
     var nextTextNodeId = option.nextText
     if (nextTextNodeId <= 0) {
         startGame();
     }
     state = Object.assign(state, option.setState)
-        // since this is where all the decisions are made, you might add some logic like
-        // this to help determine what should be shown -- have more json objects to take
-        // them where they need to go.
 
-    if (nextTextNodeId == 20 && state.mountDoomn == true) {
+    if (nextTextNodeId == 20 && state.mountDoomn == true && state.stuffedHedgeHog == true) {
         console.log('Mount Doom');
-        //This should be changing the text id but it dosnt.
-        // it was because of the == instead of =
-        nextTextNodeId = 21;
-    } else if (nextTextNodeId == 20 && state.ghostTown == true) {
+        nextTextNodeId = 21.1;
+    } 
+    else if (nextTextNodeId == 20 && state.mountDoomn == true && state.bandOfPacification == true) {
+        console.log('Mount Doom');
+        nextTextNodeId = 21.2;
+    }
+    else if (nextTextNodeId == 20 && state.mountDoomn == true && state.bubbleMachine == true) {
+        console.log('Mount Doom');
+        nextTextNodeId = 21.3;
+    }
+    else if (nextTextNodeId == 20 && state.ghostTown == true && state.stuffedHedgeHog == true) {
 
         console.log('Ghost Town');
-        // same as before, it had == but needed to be =
-        //This should be changing the text id but it dosnt.
-        nextTextNodeId = 22;
+        nextTextNodeId = 22.1;
+    }
+    else if (nextTextNodeId == 20 && state.ghostTown == true && state.bandOfPacification == true) {
+
+        console.log('Ghost Town');
+        nextTextNodeId = 22.2;
+    }
+    else if (nextTextNodeId == 20 && state.ghostTown == true && state.bubbleMachine == true) {
+
+        console.log('Ghost Town');
+        nextTextNodeId = 22.3;
+    }
+    else if (nextTextNodeId == 7 && state.cowboyHat == true){
+        nextTextNodeId = 7.1;
     }
     showTextNode(nextTextNodeId)
 
@@ -181,6 +184,14 @@ const textNodes = [{
         }]
     },
     {
+        id: 7.1,
+        text: 'Ghost Town scene were pig complements you on choosing COWBOYHAT',
+        options: [{
+            text: 'Continue',
+            nextText: 8
+        }]
+    },
+    {
         id: 8,
         text: 'Battlefield scene. Choose Between the shark or the wolf',
         options: [{
@@ -237,6 +248,7 @@ const textNodes = [{
         text: 'Explanation of question 1 and options to ask more',
         options: [{
                 text: 'How can Sam overcome his anxiety?',
+
                 nextText: 13
             },
             {
@@ -253,19 +265,29 @@ const textNodes = [{
         id: 13,
         text: 'Explanation of question 2 and option to ask more',
         options: [{
-            text: 'Correct Choices Continue Game',
+            text: 'Why does Sam have anxiety?',
             nextText: 16
-        }, ]
+        },
+{
+            text: 'Why is a raven like a writing desk?',
+            nextText: 14
+        },
+        {
+            text: 'Skip dialouge and proceed to fight the bats',
+            nextText: 15
+        }]
     },
     {
         id: 14,
         text: 'Question 3 tells the player to not as silly questions and focus on the task at hand',
         options: [{
                 text: 'Why does Sam have anxiety?',
+
                 nextText: 12
             },
             {
                 text: 'Why does Sam have anxiety?',
+
                 nextText: 12
             },
             {
@@ -336,28 +358,58 @@ const textNodes = [{
             }
         ]
     },
-    // Going to need three different outcomes here. deppending on which path the player chose at the beging of the game (Mount Doom or Ghost Town). and also which item they chose when they leveled up will determine the videos being played in the final scene.
 
     {
         id: 20,
         text: 'Final Scene. Depending on which path the player originally chose they will either focus on a memory of being at Mount Doom or the Ghost Town',
         options: [{
             text: 'Continue',
-            //I think this is the problem here.
             nextText: 21
         }]
     },
     {
-        id: 21,
-        text: 'Memory of MT Doom',
+        id: 21.1,
+        text: 'Focuses on HEDGEHOG Memory of MT Doom',
         options: [{
             text: 'Continue',
             nextText: 23
         }]
     },
     {
-        id: 22,
-        text: 'Memory of Ghost Town',
+        id: 21.2,
+        text: 'Focuses on BAND OF PACIFICATION Memory of MT Doom',
+        options: [{
+            text: 'Continue',
+            nextText: 23
+        }]
+    },
+    {
+        id: 21.3,
+        text: 'Focuses on BUBBLE MACHINE Memory of MT Doom',
+        options: [{
+            text: 'Continue',
+            nextText: 23
+        }]
+    },
+    {
+        id: 22.1,
+        text: 'Focuses on HEDGEHOG Memory of Ghost Town',
+        options: [{
+            text: 'Continue',
+            nextText: 23
+        }]
+    },
+    {
+        id: 22.2,
+        text: 'Focuses on BAND OF PACIFICATION Memory of Ghost Town',
+        options: [{
+            text: 'Continue',
+            nextText: 23
+        }]
+    },
+    {
+        id: 22.3,
+        text: 'Focuses on BUBBLE MACHINE Memory of Ghost Town',
         options: [{
             text: 'Continue',
             nextText: 23

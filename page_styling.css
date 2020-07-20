@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body, html 
+{
+    height: 100%;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 180%;
+    color: #666;
+    text-align: center;
+}
+h2
+{
+   text-transform: uppercase; 
+   letter-spacing: 5px;
+   transition: opacity 0.3s ease-in-out;
+}
+h2:hover
+{
+    opacity: 50%;
+    
+}
+footer
+{
+    background-color: #323232;
+    height: 25%;
+}
+.container
+{
+    display: inline-block;
+    text-align: center;
+}
+
+.btn
+{
+    background-color: var(--background-color);
+    color: #222;
+    margin: 5px;
+    padding: .5em 4em;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+
+    --background-color: #e3e3e3;
+    --border-size: 2px;
+    --accent-color:  #323232;
+}
+/* Background Slide */
+.btn::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transform: scaleX(0);
+    /* transform-origin: left; */
+    transition: transform 300ms ease-in-out;
+
+}
+.btn:hover::before,
+.btn:focus::before
+{
+    transform: scaleX(1);
+}
+.btn
+{
+    transition: color 300ms ease-in-out;
+    z-index: 1;
+}
+
+.btn:hover,
+.btn:focus
+{
+    color: #fff;
+}
+/* Border Underline */
+/* .btn::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--border-size);
+    background-color: var(--accent-color);
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+}
+.btn:hover::before,
+.btn:focus::before
+{
+    transform: scaleX(1);
+} */
+
+
+.content
+{
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s;
+    padding: 0 15px;
+    font-family: sans-serif;
+    background: #EEEEEE;
+    
+
+}
+/*-----------------------------*/
+.heading
+{
+   position: absolute;
+   color: #fff;
+    font-size: 550%;
+    top: 38%;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    text-shadow: 0 0 10px #000;
+}
+.heading-sm
+{
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    color: #fff;
+    font-size: 250%;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 10px #000;
+
+}
+.two-col
+{
+  float: left;
+  width: 42%;
+  padding: 0 4%;
+  text-align: left;
+}
+
+.dark
+{
+    overflow: auto;
+    padding: 50px 80px;
+    background-color: #323232;
+    color: #f2f2f2;
+}
+.parallax1
+{
+    background: url(images/Place_Holder_BG.jpg);
+    min-height: 100%;
+}
+.parallax2
+{
+    background: url(images/Place_Holder_BG.jpg);
+    min-height: 60%;
+}
+.parallax3
+{
+    background: url(images/Place_Holder_BG.jpg);
+    min-height: 40%;
+}
+.parallax4
+{
+    background: url(images/Place_Holder_BG.jpg);
+    min-height: 100%;
+}
+.parallax1, .parallax2, .parallax3, .parallax4
+{
+    position: relative;
+    opacity: .75;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.collapsed
+{
+    display: none;
+}
+
+/*For Mobile*/
+
+@media (max-width: 768px)
+{
+    .heading
+    {
+        font-size: 250%;
+    }
+    .heading-sm
+    {
+        font-size: 180%;
+    }
+    .content_button
+    {
+        font-size: 100%;
+    }
+    .two-col
+    {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+}
