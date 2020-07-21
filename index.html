@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en-us">
+  <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zombie Thoughts Project V2</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -9,8 +10,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script defer src="./game.js"></script>
     <link rel="stylesheet" href="./css.css">
+    <link rel="stylesheet" href="./menu.css">
 </head>
 <body>
+<div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger">
+        <div></div>
+    </div>
+    <div class="menu">
+        <div>
+            <div>
+               <ul>
+                   <li><a href="">Home</a></li>
+                   <li><a href="">About</a></li>
+                   <li><a href="">Game</a></li>
+                   <li><a href="">Play Zombie Thoughts</a></li>
+               </ul> 
+            </div>
+        </div>
+    </div>
+</div>
     <header class="showcase">
         <div class="content">
             <img src="./images/ZT_logo.png" class="logo" alt="Zombie Thoughts">
@@ -50,7 +70,7 @@
     <!--Actual Game-->
     <!-- <div class="gameBg"> -->
         <div class="game expand container center">
-            <h3 class="center starter">Begin Story</h3>
+            <h3 class="center starter">Play Zombie Thoughts</h3>
             <div class="collapsed center">
                 <div id="text">Text</div>
             <div id="option-buttons">
@@ -79,4 +99,3 @@
 
     <script src="expand_collapse.js"></script>
 </body>
-</html>
