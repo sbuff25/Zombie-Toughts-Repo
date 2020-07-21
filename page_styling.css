@@ -4,7 +4,7 @@ body, html
 {
     height: 100%;
     margin: 0;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 180%;
     color: #666;
     text-align: center;
@@ -29,8 +29,12 @@ footer
 {
     display: inline-block;
     text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+.logo{
+    width: 300px;
+    height: 300px;
+}
 .btn
 {
     background-color: var(--background-color);
@@ -109,13 +113,21 @@ footer
     
 
 }
+.lpContent
+{
+    padding-top: 10%;
+   position: relative;
+   top: 25%;
+   text-align: center;
+   transition: all 1000ms;
+}
 /*-----------------------------*/
 .heading
 {
    position: absolute;
    color: #fff;
     font-size: 550%;
-    top: 38%;
+    top: 25%;
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 8px;
@@ -150,17 +162,32 @@ footer
 }
 .parallax1
 {
-    background: url(images/Place_Holder_BG.jpg);
+    background: url(images/clouds.jpg);
     min-height: 100%;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: all 1000ms;
+
 }
+.parallax1:hover
+{
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+.lpContent:hover{
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+
 .parallax2
 {
-    background: url(images/Place_Holder_BG.jpg);
+    background: url(images/mountain.jpg);
     min-height: 60%;
 }
 .parallax3
 {
-    background: url(images/Place_Holder_BG.jpg);
+    background: url(images/mountain_2.jpg);
     min-height: 40%;
 }
 .parallax4

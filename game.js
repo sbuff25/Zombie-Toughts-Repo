@@ -73,6 +73,7 @@ function selectOption(option) {
     else if (nextTextNodeId == 7 && state.cowboyHat == true){
         nextTextNodeId = 7.1;
     }
+    
     showTextNode(nextTextNodeId)
 
 }
@@ -231,7 +232,7 @@ const textNodes = [{
             },
             {
                 text: 'How can Sam overcome his anxiety?',
-                nextText: 13
+                nextText: 13.1
             },
             {
                 text: 'Why is a raven like a writing desk?',
@@ -246,9 +247,10 @@ const textNodes = [{
     {
         id: 12,
         text: 'Explanation of question 1 and options to ask more',
+        setState:{question1: true},
         options: [{
                 text: 'How can Sam overcome his anxiety?',
-
+                setState: {question2: true},
                 nextText: 13
             },
             {
@@ -262,20 +264,33 @@ const textNodes = [{
         ]
     },
     {
+        id: 12.1,
+        text: 'Explanation of question 1 and options to ask more',
+        setState:{question1: true},
+        options: [{
+                text: 'Continue',
+                setState: {question2: true},
+                nextText: 16
+            },
+        ]
+    },
+    {
         id: 13,
         text: 'Explanation of question 2 and option to ask more',
         options: [{
-            text: 'Why does Sam have anxiety?',
+            text: 'Continue',
             nextText: 16
+        }
+        ]
+    },
+    {
+        id: 13.1,
+        text: 'Explanation of question 2 and option to ask more',
+        options: [{
+            text: 'Why does Sam have anxiety?',
+            nextText: 12.1
         },
-{
-            text: 'Why is a raven like a writing desk?',
-            nextText: 14
-        },
-        {
-            text: 'Skip dialouge and proceed to fight the bats',
-            nextText: 15
-        }]
+        ]
     },
     {
         id: 14,
