@@ -1,0 +1,260 @@
+body
+{
+    background: rgba(0, 0, 0, 0.9);
+    margin: 0;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.showcase::after
+{
+    content: '';
+    height: 100vh;
+    width: 100%;
+    background-image: url(./images/clouds.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .75;
+    background-attachment: fixed;
+    display: block;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: all 1000ms;
+}
+.showcase:hover::after
+{
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+.showcase:focus::after
+{
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+.showcase:hover .content
+{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+.showcase:focus .content
+{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+#lighten
+{
+    opacity: 0.4;
+    transition: all 1000ms;
+    cursor: pointer;
+}
+#lighten:hover
+{
+    opacity: 0.70;
+}
+.gameBg::after
+{
+    
+    content: '';
+    height: 100vh;
+    width: 100%;
+    background-image: url(./images/mountain.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .75;
+    background-attachment: fixed;
+    display: block;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: all 1000ms;
+}
+.gameBg:hover::after
+{
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+.content
+{
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 50%;
+    margin-top: 105px;
+    margin-left: -145px;
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    transition: all 1000ms;
+}
+.content .logo
+{
+    height: 180px;
+    width: 180px;
+}
+.content .title
+{
+    font-size: 2.2rem;
+    margin-top: 1rem;
+}
+.content .text
+{
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+.container
+{
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+}
+.grid-3
+{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.center
+{
+    text-align: center;
+    margin: auto;
+}
+.bg-light
+{
+    background: #f4f4f4;
+    color: #333;
+}
+.bg-dark
+{
+    background: #333;
+    color: #f4f4f4;
+}
+footer p
+{
+    margin: 0;
+}
+footer
+{
+    padding: 2.2rem;
+}
+/* Styling for Game and Game Buttons */
+/* Background Slide */
+.game
+{
+
+    margin: auto;
+    z-index: 1;
+}
+
+.btn
+{
+    background-color: var(--background-color);
+    color: #222;
+    margin: 5px;
+    padding: .5em 4em;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+
+    --background-color: #e3e3e3;
+    --border-size: 2px;
+    --accent-color:  #323232;
+}
+.btn::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transform: scaleX(0);
+    /* transform-origin: left; */
+    transition: transform 300ms ease-in-out;
+
+}
+.btn:hover::before,
+.btn:focus::before
+{
+    transform: scaleX(1);
+}
+.btn
+{
+    transition: color 300ms ease-in-out;
+    z-index: 1;
+}
+
+.btn:hover,
+.btn:focus
+{
+    color: #fff;
+}
+
+.option-buttons
+{
+    position: absolute;
+    top: 50%;
+    margin: auto;
+}
+.collapsed
+{
+    display: none;
+}
+
+
+
+/* Small Screens*/
+@media(max-width: 560px)
+{
+    .showcase::after
+    {
+        height: 50vh;
+    
+    }
+    .content
+    {
+        top: 5%;
+        margin-top: 5px;
+    }
+    .content .logo
+    {
+      
+        height: 140px;
+        width: 140px;
+
+    }
+    .content .text
+    {
+        display: none;
+    }
+    .content .title
+    {
+        display: none;
+    }
+    .grid-3
+    {
+       grid-template-columns: 1fr; 
+    }
+    .info div
+    {
+        border-bottom: #333 solid 1px;
+        padding: 1.2rem 1rem;
+    }
+}
+/* Landscape */
+@media(max-height: 500px)
+    {
+    .content .title, .content .text
+        {
+            display: none;
+        }
+    .content
+    {
+        top: 0;    }
+
+    }

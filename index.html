@@ -3,69 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zombi Thoughts Project</title>
-    <link rel="stylesheet" href="./page_styling.css">
-   
+    <title>Zombie Thoughts Project V2</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script defer src="./game.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script defer src="./game.js"></script>
+    <link rel="stylesheet" href="./css.css">
 </head>
 <body>
-    
-    <div class="parallax1">
-        <div class="lpContent">
-            <img class="logo"src="./images/ZT_logo.png" alt="">
-            <br>
-            <div class="title">
-                Welcome to Zombie Thoughts,<br>Presented by the Montana Repertory Theatre
-            </div>
-        </div> 
-    </div>
-    <div class="dark"></div>
-
-    <div class="parallax2">
-        <div class="heading-sm">
-            Introduction to the idea of the project and how it works.
+    <header class="showcase">
+        <div class="content">
+            <img src="./images/ZT_logo.png" class="logo" alt="Zombie Thoughts">
+             <div class="title">
+                 Welcome to Zombie Thoughts
+             </div>
+             <div class="text">
+                 A production by The Missoula Repertory Theatre.
+             </div>
         </div>
-    </div>
+    </header>
 
-    <div class="expand dark">
-            <h2>Begin Story</h2>
-        
+    <!-- About the Project -->
+    <section class="info bg-light">
+        <div class="container grid-3 center">
+        <div class="expandToggle">
+                <h3 id="lighten">What is Zombie Thoughts?</h3>
+                <div class="collapsed">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, corrupti?
+                </div> 
+        </div>
+        <div class="expandToggle">
+            <h3 id="lighten">Why this format?</h3>
             <div class="collapsed">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, corrupti?
+            </div> 
+        </div>
+        <div class="expandToggle">
+            <h3 id="lighten">Struggling With Anxiety?</h3>
+            <div class="collapsed">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, corrupti?
+            </div> 
+        </div>   
+
+    </section>
+
+    <!--Actual Game-->
+    <!-- <div class="gameBg"> -->
+        <div class="game expand container center">
+            <h3 class="center starter">Begin Story</h3>
+            <div class="collapsed center">
                 <div id="text">Text</div>
             <div id="option-buttons">
-            <div class="container">
-                <button class="btn">option 1</button>
-                <button class="btn">option 2</button>
-                <button class="btn">option 3</button>
-                <button class="btn">option 4</button>
+            <div class="container center">
+
             </div>
                 
             </div> 
         </div>
+
+    <!-- </div> -->
         
-        </div>
         
+
         
-    </div>
-        
+   
+   
     
+</div>
 
-    <div class="parallax3">
-        
-    </div>
+    <!--Footer-->
+    <footer class="center bg-dark">
+        <p>Missoula Repertory Theatre &copy; 2020</p>
+    </footer>
 
-    <div class="expand dark">
-        <h2>After thoughts and links to thoes who wish to seek help with anxiety.</h2>
-        <div class=" collapsed two-col">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae tempore eaque labore repudiandae dolorem rerum aliquid laborum sequi est ea adipisci consequuntur consequatur, velit ut a laudantium fuga perferendis voluptate qui suscipit sit quibusdam! Quae, quod sapiente. Labore temporibus blanditiis commodi! Fugiat quas itaque ratione iste similique at laborum sint.</p>
-        </div>
-            <div class=" collapsed two-col">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi, molestiae, dolorum rerum quod voluptas minus repellendus itaque optio at quasi, ipsum animi reprehenderit cum explicabo. Porro esse sequi fugit minus perferendis architecto ut praesentium, unde atque dolorem beatae quisquam molestias repellat temporibus accusantium adipisci fugiat ipsam, magnam alias nulla.</p>
-            </div>
-    </div>
+
     <script src="expand_collapse.js"></script>
 </body>
 </html>
