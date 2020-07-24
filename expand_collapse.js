@@ -1,9 +1,0 @@
-$('.expand').click(function()
-{
-   $(this).find('.collapsed').slideDown('slow');
-   $(this).find('.starter').fadeOut('slow');
-});
-$('.expandToggle').click(function()
-{
-   $(this).find('.collapsed').slideToggle('slow');
-});
