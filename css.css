@@ -6,6 +6,7 @@ body
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow: hidden;
 }
+
 h3
 {
     color: black;
@@ -159,7 +160,7 @@ section#help
 }
 .content .logo
 {
-    height: 180px;
+    height: 100%;
     width: 180px;
 }
 .content .title
@@ -306,9 +307,11 @@ a:hover
     }
     .content .logo
     {
-      
-        height: 140px;
-        width: 140px;
+        position: absolute;
+        top: 20%;
+        right: 20%;
+        height: 100%;
+        width: 180px;
 
     }
     .content .text
