@@ -4,7 +4,7 @@ body
     margin: 0;
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow: hidden;
+    overflow: auto;
 }
 
 h3
@@ -160,8 +160,10 @@ section#help
 }
 .content .logo
 {
-    height: 100%;
-    width: 180px;
+    height: 170%;
+    width: 100%;
+    padding-bottom: 30px;
+
 }
 .content .title
 {
@@ -294,6 +296,45 @@ a:hover
 
 /* Small Screens*/
 @media(max-width: 560px)
+{
+    .showcase::after
+    {
+        height: 50vh;
+    
+    }
+    .content
+    {
+        position: absolute;
+        z-index: 1;
+        top: 20%;
+        left: 50%;
+        margin-top: 20px;
+        margin-left: -145px;
+        padding-bottom: 20px;
+        /* width: 40%;
+        height: 40%; */
+    }
+    
+    .content .text
+    {
+        display: none;
+    }
+    .content .title
+    {
+        display: none;
+    }
+    .grid-3
+    {
+       grid-template-columns: 1fr; 
+    }
+    .info div
+    {
+        border-bottom: #333 solid 1px;
+        padding: 1.2rem 1rem;
+    }
+}
+/* Small Screens*/
+@media(max-width: 380px)
 {
     .showcase::after
     {
