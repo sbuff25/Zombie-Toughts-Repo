@@ -150,19 +150,15 @@ section#help
     position: absolute;
     z-index: 1;
     top: 20%;
-    left: 50%;
     margin-top: 20px;
-    margin-left: -145px;
-    width: 300px;
-    height: 350px;
     text-align: center;
     transition: all 1000ms;
 }
 .content .logo
 {
-    height: 170%;
-    width: 100%;
-    padding-bottom: 30px;
+    height: 35%;
+    width: 35%;
+    padding-bottom: 20px;
 
 }
 .content .title
@@ -307,10 +303,10 @@ a:hover
         position: absolute;
         z-index: 1;
         top: 20%;
-        left: 50%;
-        margin-top: 20px;
-        margin-left: -145px;
+   
+   
         padding-bottom: 20px;
+        justify-content: center;
         /* width: 40%;
         height: 40%; */
     }
@@ -334,6 +330,18 @@ a:hover
     }
 }
 /* Small Screens*/
+@media(max-height: 450px)
+{
+    .content .logo
+    {
+        /* position: absolute; */
+        top: 50%;
+        
+        justify-content: center;
+        
+
+    }
+}
 @media(max-width: 380px)
 {
     .showcase::after
@@ -348,11 +356,12 @@ a:hover
     }
     .content .logo
     {
-        position: absolute;
-        top: 20%;
-        right: 20%;
-        height: 100%;
-        width: 180px;
+        /* position: absolute; */
+        margin-top: 200px;
+        top: 50%;
+        right: 50%;
+        justify-content: center;
+        
 
     }
     .content .text
