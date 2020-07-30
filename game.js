@@ -27,15 +27,6 @@ function showTextNode(textNodeIndex) {
                 optionButtonsElement.appendChild(button)
             }
         })
-    textNode.options.forEach(option => {
-        if (showOption(option)) {
-            const button = document.createElement('button')
-            button.innerText = option.text
-            button.classList.add('btn')
-            button.addEventListener('touch', () => selectOption(option))
-            optionButtonsElement.appendChild(button)
-        }
-    })
         //This is storing the choices being made in the console. these some of these choices will effect final outcome of game. 
     console.log(state);
 }

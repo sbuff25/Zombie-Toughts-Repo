@@ -197,7 +197,12 @@ footer
     --border-size: 2px;
     --accent-color:  #323232;
 }
-.btn::before
+
+
+
+
+/* Button With Slide Effect */
+/* .btn::before
 {
     content: '';
     position: absolute;
@@ -208,7 +213,6 @@ footer
     z-index: -1;
     background-color: var(--accent-color);
     transform: scaleX(0);
-    /* transform-origin: left; */
     transition: transform 500ms ease-in-out;
 
 }
@@ -227,7 +231,7 @@ footer
 .btn:focus
 {
     color: #fff;
-}
+} */
 
 .option-buttons
 {
