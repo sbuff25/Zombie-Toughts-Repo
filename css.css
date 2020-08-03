@@ -269,14 +269,49 @@ a:hover
 {
     section#home
 {
-    background: url(./images/Seperated_Peices_For_ZT_V1/Title_2.png);
+    background: url(./images/Small_Screens/Title_SC.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     opacity: .75;
 }
-
+section#about
+{
+    background: url(./images/Small_Screens/Boy_SC.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: .75;
+}
+section#cast
+{
+    background: url(./images/Small_Screens/Pig_SC.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: .75;
+}
+section#game
+{
+    background: url(./images/Small_Screens/Brain_SC.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: .75;
+}
+section#help
+{
+    background: url(./images/Small_Screens/Mounatins_SC.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: .75;
+}
     .showcase::after
     {
         height: 50vh;
