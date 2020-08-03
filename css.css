@@ -32,6 +32,12 @@ section
     opacity: 0.70;
 }
 /* Section Backgrounds */
+.blocker
+{
+    width: 100%;
+    background-color: #e3e3e3;
+    z-index: 100;
+}
 section
 {
     display: flex;
@@ -44,7 +50,7 @@ section
 }
 section#home
 {
-    background: url(./placeHolderBG/placeholder_bg.png);
+    background: url(./images/Seperated_Peices_For_ZT_V1/Title_2.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -53,7 +59,7 @@ section#home
 }
 section#about
 {
-    background: url(./placeHolderBG/placeholder_bg.png);
+    background: url(./images/Seperated_Peices_For_ZT_V1/boy\ and\ Pig.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -62,7 +68,7 @@ section#about
 }
 section#cast
 {
-    background: url(./placeHolderBG/placeholder_bg.png);
+    background: url(./images/Seperated_Peices_For_ZT_V1/brain.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -80,7 +86,7 @@ section#game
 }
 section#help
 {
-    background: url(./placeHolderBG/placeholder_bg.png);
+    background: url(./images/Seperated_Peices_For_ZT_V1/Bottom_mts.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -261,6 +267,16 @@ a:hover
 /* Small Screens*/
 @media(max-width: 560px)
 {
+    section#home
+{
+    background: url(./images/Seperated_Peices_For_ZT_V1/Title_2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: .75;
+}
+
     .showcase::after
     {
         height: 50vh;
