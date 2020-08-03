@@ -1,0 +1,43 @@
+#title_animi
+{
+    position: absolute;
+    left: 8%;
+    width:50%;
+    animation: transitionText 1.7s;
+
+}
+
+
+#author_animi
+{
+    position: absolute;
+    left: 10%;
+    bottom: 5%;
+    width: 50%;
+    animation: transitionText 1.5s;
+
+}
+#mt_rep_logo
+{
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    animation: transitionText .95s;
+}
+
+
+
+
+@keyframes transitionText
+{
+    from
+    {
+        opacity: 0;
+        transform: translateY(1000px);
+    }
+    to
+    {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

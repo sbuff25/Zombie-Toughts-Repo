@@ -3,13 +3,15 @@ body
     background: rgba(0, 0, 0, 0.9);
     margin: 0;
     color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Bebas Neue', cursive;
     overflow: auto;
+    
 }
 
 h3
 {
     color: black;
+    font-size: 50px;
 }
 #text
 {
@@ -32,12 +34,7 @@ section
     opacity: 0.70;
 }
 /* Section Backgrounds */
-.blocker
-{
-    width: 100%;
-    background-color: #e3e3e3;
-    z-index: 100;
-}
+
 section
 {
     display: flex;
@@ -50,7 +47,7 @@ section
 }
 section#home
 {
-    background: url(./images/Seperated_Peices_For_ZT_V1/Title_2.png);
+    background: url(./images/Large_Screens/Background_Home.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -59,7 +56,7 @@ section#home
 }
 section#about
 {
-    background: url(./images/Seperated_Peices_For_ZT_V1/boy\ and\ Pig.png);
+    background: url(./images/Large_Screens/Background_Boy.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -68,7 +65,7 @@ section#about
 }
 section#cast
 {
-    background: url(./images/Seperated_Peices_For_ZT_V1/brain.png);
+    background: url(./images/Large_Screens/Background_Pig.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -77,7 +74,7 @@ section#cast
 }
 section#game
 {
-    background: url(./placeHolderBG/placeholder_bg.png);
+    background: url(./images/Large_Screens/Background_Brain.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -267,9 +264,10 @@ a:hover
 /* Small Screens*/
 @media(max-width: 560px)
 {
-    section#home
+
+section#home
 {
-    background: url(./images/Small_Screens/Title_SC.png);
+    background: url(./images/Large_Screens/Background_Home.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

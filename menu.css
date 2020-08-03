@@ -21,7 +21,7 @@ a
 }
 nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     min-height: 8vh;
     background-color: rgba(0, 0, 0, 1);
