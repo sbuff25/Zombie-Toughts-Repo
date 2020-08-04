@@ -41,7 +41,24 @@
         transform: translateY(0px);
     }
 }
-
+@media(max-width: 768px)
+{
+    #title_animi
+    {
+        width: 75%;
+        bottom: 10%;
+    }
+    #mt_rep_logo
+    {
+        right: 55%;
+        bottom: 46%;
+    }
+    #author_animi
+    {
+        bottom: 2%;
+        left: 12%;
+    }
+}
 @media(max-width: 560px)
 {
     #title_animi
