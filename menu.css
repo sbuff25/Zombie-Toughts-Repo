@@ -26,14 +26,7 @@ nav{
     min-height: 8vh;
     background-color: rgba(0, 0, 0, 1);
 }
-.logo
-{
-    color: #f4f4f4;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 22px;
 
-}
 .nav_links
 {
     display: flex;

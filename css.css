@@ -5,6 +5,7 @@ body
     color: #fff;
     font-family: 'Bebas Neue', cursive;
     overflow: auto;
+    overflow-y: hidden;
     
 }
 
@@ -154,7 +155,7 @@ section#help
 .center
 {
     text-align: center;
-    margin: auto;
+    margin-top: 10px;
 }
 .bg-light
 {
@@ -264,7 +265,6 @@ a:hover
 /* Small Screens*/
 @media(max-width: 560px)
 {
-
 section#home
 {
     background: url(./images/Large_Screens/Background_Home.png);
