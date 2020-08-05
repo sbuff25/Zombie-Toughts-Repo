@@ -399,11 +399,11 @@ section#help
     {
        grid-template-columns: 1fr; 
     }
-    .info div
+    /* .info div
     {
         border-bottom: #333 solid 1px;
         padding: 1.2rem 1rem;
-    }
+    } */
 }
 /* Landscape */
 @media(max-height: 500px)
