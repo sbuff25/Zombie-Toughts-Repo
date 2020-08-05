@@ -141,6 +141,7 @@ section#help
     overflow: auto;
     padding: 4rem 1rem;
 }
+
 .grid-3
 {
     display: grid;
@@ -152,15 +153,8 @@ section#help
     display: grid;
     grid-template-columns: 30% 70%;
 }
-.grid_team > div
-{
-    background: rgba(0, 0, 0, 0.5);
-    padding: 1em;
-}
-.grid_team > div:nth-child(odd)
-{
-    background: rgba(0, 0, 0, 0.5);
-}
+
+
 .center
 {
     text-align: center;
@@ -276,7 +270,7 @@ a:hover
 .grid_team
 {
     display: grid;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 20% 50%;
 }
 section#home
 {
@@ -355,7 +349,7 @@ section#help
     }
     .info div
     {
-        border-bottom: #333 solid 1px;
+        /* border-bottom: #333 solid 1px; */
         padding: 1.2rem 1rem;
     }
 }
@@ -366,7 +360,6 @@ section#help
     {
         /* position: absolute; */
         top: 50%;
-        
         justify-content: center;
         
 
