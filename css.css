@@ -201,7 +201,7 @@ footer
 
 
 /* Button With Slide Effect */
-.btn::before
+/* .btn::before
 {
     content: '';
     position: absolute;
@@ -230,7 +230,7 @@ footer
 .btn:focus
 {
     color: #fff;
-}
+} */
 
 .option-buttons
 {
