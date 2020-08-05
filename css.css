@@ -8,20 +8,18 @@ body
    
     
 }
-
+.headShot
+{
+    width: 20%;
+}
 h3
 {
-    color: black;
-    font-size: 50px;
+    color: #f3e113;
+    font-size: 100px;
 }
 #text
 {
     color: black;
-}
-section
-{
-    width: 100%;
-    height: 100vh;
 }
 #lighten
 {
@@ -32,7 +30,7 @@ section
 #lighten:hover
 {
     
-    opacity: 0.70;
+    opacity: 1;
 }
 /* Section Backgrounds */
 
@@ -138,15 +136,30 @@ section#help
 .container
 {
     max-width: 960px;
+    max-height: 100%;
     margin: auto;
-    overflow: hidden;
+    overflow: auto;
     padding: 4rem 1rem;
 }
 .grid-3
 {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
+}
+.grid_team
+{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+.grid_team > div
+{
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+}
+.grid_team > div:nth-child(odd)
+{
+    background: rgba(0, 0, 0, 0.5);
 }
 .center
 {
@@ -161,7 +174,7 @@ section#help
 .bg-dark
 {
     background: #333;
-    color: #f4f4f4;
+    color: #333;
 }
 footer p
 {
@@ -260,6 +273,11 @@ a:hover
 /* Small Screens*/
 @media(max-width: 560px)
 {
+.grid_team
+{
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
 section#home
 {
     background: url(./images/Large_Screens/Background_Home.png);
@@ -363,7 +381,7 @@ section#help
     }
     .content
     {
-        top: 5%;
+        /* top: 5%; */
         margin-top: 5px;
     }
     .content .logo
