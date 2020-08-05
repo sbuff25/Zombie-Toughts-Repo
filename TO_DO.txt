@@ -1,3 +1,0 @@
-1.Restialize buttons to have a more digitized feel to them
-2.Swap out background with ZT Poster
-3.Create a timer that allows time for video to play then show text promt
