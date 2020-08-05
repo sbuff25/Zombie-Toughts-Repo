@@ -39,7 +39,7 @@ nav{
 .nav_links li
 {
     list-style: none;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
 }
 .nav_links a
 {
@@ -92,6 +92,9 @@ nav{
     .nav_links li
     {
         opacity: 0;
+        padding-bottom: 100px;
+
+        
     }
     .burger
     {
