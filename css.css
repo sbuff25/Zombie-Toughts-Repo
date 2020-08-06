@@ -20,6 +20,8 @@ h3
 {
     color: #f3e113;
     font-size: 80px;
+    margin-top: 1px;
+    margin-bottom: 1px;
 }
 #text
 {
@@ -35,6 +37,21 @@ h3
 {
     
     opacity: 1;
+}
+#vid_box
+{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+#vid_box iframe
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 /* Section Backgrounds */
 
@@ -140,12 +157,11 @@ section#help
 .container
 {
     max-width: 100vw;
-    max-height: 100vh;
+    max-height: 100%;
  
     overflow: auto;
     padding: 4rem 1rem;
 }
-
 .grid-3
 {
     display: grid;
@@ -162,7 +178,7 @@ section#help
 .center
 {
     text-align: center;
-    margin-top: 10px;
+    /* margin-top: 5px; */
 }
 .bg-light
 {
@@ -186,7 +202,7 @@ footer
 /* Background Slide */
 .game
 {
-    margin-top: 40px;
+    margin-top: 10px;
     z-index: 1;
 }
 
@@ -265,7 +281,6 @@ a:hover
     opacity: 100%;
     filter: blur(0px);
 }
-
 
 
 /* Small Screens*/
@@ -369,6 +384,7 @@ section#help
         padding: 1.2rem 1rem;
     }
 }
+
 /* Small Screens*/
 @media(max-height: 450px)
 {
