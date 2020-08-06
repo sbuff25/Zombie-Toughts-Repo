@@ -116,11 +116,12 @@ function selectOption(option) {
     showTextNode(nextTextNodeId)
 
 }
+{/* <iframe width="560" height="315" src="https://www.youtube.com/embed/9YffrCViTVk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
 // Whole numbers will indicate that the player is taking rout 1 while a decimal will indicate that the player has taken rout 2
 // Genders will be changed to appropriate names as soon as I find out what thoes names are.
 const textNodes = [{
         id: 1,
-        vid: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+        vid: 'https://www.youtube.com/embed/9YffrCViTVk',
         text: 'Choose if Sam is a GIRL or Boy',
         options: [{
                 text: 'Play as a Boy',
@@ -134,6 +135,7 @@ const textNodes = [{
             }
         ]
     },
+    
     {
         id: 2,
         text: 'Looks like Sam is a BOY. What hat should he wear?',
