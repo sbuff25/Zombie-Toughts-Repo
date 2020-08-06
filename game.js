@@ -1,5 +1,5 @@
 
-const videoElement = document.getElementById('video')
+const videoElement = document.getElementById('video');
 const textElement = document.getElementById('text');
 const optionButtonsElement = document.getElementById('option-buttons');
 
@@ -14,8 +14,8 @@ function startGame() {
 
 
 function showTextNode(textNodeIndex) {
-    const imgNode = textNodes.find(imgNode => imgNode.id === textNodeIndex)
-    videoElement.innerHTML = imgNode.img
+    const vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
+    videoElement.src = vidNode.vid
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
     while (optionButtonsElement.firstChild) {
@@ -25,8 +25,8 @@ function showTextNode(textNodeIndex) {
     textNode.options.forEach(option => {
             if (showOption(option)) {
                 const button = document.createElement('button')
-                const img = document.createElement('img')
-                img.innerHTML = option.img
+                const vid = document.createElement('iframe')
+                vid.innerHTML = option.vid
                 button.innerText = option.text
                 button.classList.add('btn')
                 button.addEventListener('click', () => selectOption(option))
@@ -120,7 +120,7 @@ function selectOption(option) {
 // Genders will be changed to appropriate names as soon as I find out what thoes names are.
 const textNodes = [{
         id: 1,
-        img: './images/Title_Animation/Boy.png',
+        vid: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
         text: 'Choose if Sam is a GIRL or Boy',
         options: [{
                 text: 'Play as a Boy',
