@@ -127,7 +127,7 @@ function selectOption(option) {
 // Genders will be changed to appropriate names as soon as I find out what thoes names are.
 const textNodes = [{
         id: 1,
-        vid: 'https://www.youtube.com/embed/5Yvo9Q-Vp2c',
+        vid: 'https://www.youtube.com/embed/awcQ9-QvZLs?vq=hd1080&autoplay=1&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&fs=0&controls=0&disablekb=1',
         text: 'Choose if Sam is a GIRL or Boy',
         options: [{
                 text: 'Play as a Boy',
@@ -144,8 +144,10 @@ const textNodes = [{
     
     {
         id: 2,
+        vid: '',
         text: 'Looks like Sam is a BOY. What hat should he wear?',
         options: [{
+            
                 text: 'A baseball cap?',
                 setState: { baseballCap: true },
                 nextText: 4
