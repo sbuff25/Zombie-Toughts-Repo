@@ -8,14 +8,18 @@ let state = {}
 
 function startGame() {
     state = {}
-    showTextNode(1)
+    showTextNode(1);
 
 }
 
-
-function showTextNode(textNodeIndex) {
+function showVid(textNodeIndex) 
+{
     const vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
     videoElement.src = vidNode.vid
+}
+
+function showTextNode(textNodeIndex) {
+    showVid(1);
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
     while (optionButtonsElement.firstChild) {
@@ -49,67 +53,67 @@ function selectOption(option) {
     }
     state = Object.assign(state, option.setState)
 
-    if (nextTextNodeId == 20 && state.mountDoomn == true && state.stuffedHedgeHog == true && state.boy == true) {
+    if (nextTextNodeId == 20 && state.mountDoomn == true && state.stuffedHedgeHog == true && state.hamilton == true) {
         console.log('Mount Doom');
         nextTextNodeId = 21.1;
     } 
-    else if (nextTextNodeId == 20 && state.mountDoomn == true && state.bandOfPacification == true && state.boy == true) {
+    else if (nextTextNodeId == 20 && state.mountDoomn == true && state.bandOfPacification == true && state.hamilton == true) {
         console.log('Mount Doom');
         nextTextNodeId = 21.2;
     }
-    else if (nextTextNodeId == 20 && state.mountDoomn == true && state.bubbleMachine == true && state.boy == true) {
+    else if (nextTextNodeId == 20 && state.mountDoomn == true && state.bubbleMachine == true && state.hamilton == true) {
         console.log('Mount Doom');
         nextTextNodeId = 21.3;
     }
-    else if (nextTextNodeId == 20 && state.ghostTown == true && state.stuffedHedgeHog == true && state.boy == true) {
+    else if (nextTextNodeId == 20 && state.ghostTown == true && state.stuffedHedgeHog == true && state.hamilton == true) {
 
         console.log('Ghost Town');
         nextTextNodeId = 22.1;
     }
-    else if (nextTextNodeId == 20 && state.ghostTown == true && state.bandOfPacification == true && state.boy == true) {
+    else if (nextTextNodeId == 20 && state.ghostTown == true && state.bandOfPacification == true && state.hamilton == true) {
 
         console.log('Ghost Town');
         nextTextNodeId = 22.2;
     }
-    else if (nextTextNodeId == 20 && state.ghostTown == true && state.bubbleMachine == true && state.boy == true) {
+    else if (nextTextNodeId == 20 && state.ghostTown == true && state.bubbleMachine == true && state.hamilton == true) {
 
         console.log('Ghost Town');
         nextTextNodeId = 22.3;
     }
 
-    if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.stuffedHedgeHog == true && state.girl == true) {
+    if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.stuffedHedgeHog == true && state.annie == true) {
         console.log('Mount Doom');
         nextTextNodeId = 21.12;
     } 
-    else if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.bandOfPacification == true && state.girl == true) {
+    else if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.bandOfPacification == true && state.annie == true) {
         console.log('Mount Doom');
         nextTextNodeId = 21.22;
     }
-    else if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.bubbleMachine == true && state.girl == true) {
+    else if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.bubbleMachine == true && state.annie == true) {
         console.log('Mount Doom');
         nextTextNodeId = 21.31;
     }
-    else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.stuffedHedgeHog == true && state.girl == true) {
+    else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.stuffedHedgeHog == true && state.annie == true) {
 
         console.log('Ghost Town');
         nextTextNodeId = 22.11;
     }
-    else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.bandOfPacification == true && state.girl == true) {
+    else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.bandOfPacification == true && state.annie == true) {
 
         console.log('Ghost Town');
         nextTextNodeId = 22.21;
     }
-    else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.bubbleMachine == true && state.girl == true) {
+    else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.bubbleMachine == true && state.annie == true) {
 
         console.log('Ghost Town');
         nextTextNodeId = 22.31;
     }
 
 
-    else if (nextTextNodeId == 7.1 && state.cowboyHat == true && state.girl == true){
+    else if (nextTextNodeId == 7.1 && state.cowboyHat == true && state.annie == true){
         nextTextNodeId = 7.2;
     }
-    else if (nextTextNodeId == 7 && state.cowboyHat == true && state.boy == true){
+    else if (nextTextNodeId == 7 && state.cowboyHat == true && state.hamilton == true){
         nextTextNodeId = 7.3;
     }
     
@@ -127,16 +131,16 @@ function selectOption(option) {
 // Genders will be changed to appropriate names as soon as I find out what thoes names are.
 const textNodes = [{
         id: 1,
-        vid: 'https://www.youtube.com/embed/awcQ9-QvZLs?vq=hd1080&autoplay=1&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&fs=0&controls=0&disablekb=1',
-        text: 'Choose if Sam is a GIRL or Boy',
+        vid: 'https://www.youtube.com/embed/kt2D7xl06mk?vq=hd1080&autoplay=1&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&fs=0&controls=0&disablekb=1',
+        text: 'Choose if Sam is a Annie or Hamilton',
         options: [{
-                text: 'Play as a Boy',
-                setState: { boy: true },
+                text: 'Play as Hamilton',
+                setState: { hamilton: true },
                 nextText: 2
             },
             {
-                text: 'Play as a Girl',
-                setState: { girl: true },
+                text: 'Play as Annie',
+                setState: { annie: true },
                 nextText: 2.1
             }
         ]
@@ -145,7 +149,7 @@ const textNodes = [{
     {
         id: 2,
         vid: '',
-        text: 'Looks like Sam is a BOY. What hat should he wear?',
+        text: 'Looks like Sam is going to be Hamilton. What hat should he wear?',
         options: [{
             
                 text: 'A baseball cap?',
@@ -166,7 +170,7 @@ const textNodes = [{
     },
     {
         id: 2.1,
-        text: 'Looks like Sam is a Girl. What hat should she wear?',
+        text: 'Looks like Sam is going to be Annie. What hat should she wear?',
         options: [{
                 text: 'A baseball cap?',
                 setState: { baseballCap: true },
@@ -186,7 +190,7 @@ const textNodes = [{
     },
     {
         id: 4,
-        text: 'Now That we know what our Gender is lets choose an accessory for our friend Pig.',
+        text: 'Now That we know what our character is lets choose an accessory for our friend Pig.',
         options: [{
                 text: 'A Fadora?',
                 setState: { fadora: true },
@@ -207,7 +211,7 @@ const textNodes = [{
    
     {
         id: 4.1,
-        text: 'Now That we know what our Gender, a girl lets choose an accessory for our friend Pig.',
+        text: 'Now That we know what our character is lets choose an accessory for our friend Pig.',
         options: [{
                 text: 'A Fadora?',
                 setState: { fadora: true },
@@ -228,7 +232,7 @@ const textNodes = [{
 // Boy
     {
         id: 5,
-        text: 'Choose your starting location.Boy',
+        text: 'Choose your starting location. Hamilton',
         options: [{
                 text: 'Mount Doom',
                 setState: { mountDoomn: true },
@@ -244,7 +248,7 @@ const textNodes = [{
 // Girl
     {
         id: 5.1,
-        text: 'Choose your starting location girl.',
+        text: 'Choose your starting location Annie.',
         options: [{
                 text: 'Mount Doom',
                 setState: { mountDoomn: true },
@@ -260,7 +264,7 @@ const textNodes = [{
 // Boy
     {
         id: 6,
-        text: 'Mount Doom Scene Boy',
+        text: 'Mount Doom Scene Hamilton',
         options: [{
             text: 'Continue',
             nextText: 8
@@ -269,7 +273,7 @@ const textNodes = [{
 // Girl
     {
         id: 6.1,
-        text: 'Mount Doom Scene, girl',
+        text: 'Mount Doom Scene, Annie',
         options: [{
             text: 'Continue',
             nextText: 8.1
@@ -278,7 +282,7 @@ const textNodes = [{
 // Boy
     {
         id: 7,
-        text: 'Ghost Town scene Boy',
+        text: 'Ghost Town scene Hamilton',
         options: [{
             text: 'Continue',
             nextText: 8
@@ -287,7 +291,7 @@ const textNodes = [{
 // Girl
     {
         id: 7.1,
-        text: 'Ghost Town scene, girl',
+        text: 'Ghost Town scene, Annie',
         options: [{
             text: 'Continue',
             nextText: 8
@@ -296,7 +300,7 @@ const textNodes = [{
 // Girl
     {
         id: 7.2,
-        text: 'Ghost Town scene were pig complements you on choosing COWBOYHAT, Girl',
+        text: 'Ghost Town scene were pig complements you on choosing COWBOYHAT, Annie',
         options: [{
             text: 'Continue',
             nextText: 8.1
@@ -305,7 +309,7 @@ const textNodes = [{
 // Boy
     {
         id: 7.3,
-        text: 'Ghost Town scene were pig complements you on choosing COWBOYHAT, Boy',
+        text: 'Ghost Town scene were pig complements you on choosing COWBOYHAT, Hamilton',
         options: [{
             text: 'Continue',
             nextText: 8
@@ -314,7 +318,7 @@ const textNodes = [{
 // Boy
     {
         id: 8,
-        text: 'Battlefield scene. Choose Between the shark or the wolf Boy',
+        text: 'Battlefield scene. Choose Between the shark or the wolf Hamilton',
         options: [{
                 text: 'Shark',
                 setState: { shark: true },
@@ -330,7 +334,7 @@ const textNodes = [{
 // Girl
     {
         id: 8.1,
-        text: 'Battlefield scene. Choose Between the shark or the wolf,Girl',
+        text: 'Battlefield scene. Choose Between the shark or the wolf,Annie',
         options: [{
                 text: 'Shark',
                 setState: { shark: true },
@@ -346,7 +350,7 @@ const textNodes = [{
 // Boy
     {
         id: 9,
-        text: 'You chose to fight the shark.Boy',
+        text: 'You chose to fight the shark.Hamilton',
         options: [{
             text: 'Continue',
             nextText: 11
@@ -355,7 +359,7 @@ const textNodes = [{
 // Girl
     {
         id: 9.1,
-        text: 'You chose to fight the shark.Girl',
+        text: 'You chose to fight the shark.Annie',
         options: [{
             text: 'Continue',
             nextText: 11.1
@@ -364,7 +368,7 @@ const textNodes = [{
 // Boy
     {
         id: 10,
-        text: 'You chose to fight the wolf.Boy',
+        text: 'You chose to fight the wolf.Hamilton',
         options: [{
             text: 'Continue',
             nextText: 11
@@ -373,7 +377,7 @@ const textNodes = [{
 // Girl
     {
         id: 10.1,
-        text: 'You chose to fight the wolf.Girl',
+        text: 'You chose to fight the wolf.Annie',
         options: [{
             text: 'Continue',
             nextText: 11.1
@@ -382,21 +386,21 @@ const textNodes = [{
 // Boy
     {
         id: 11,
-        text: 'Vampire Bat Scene as Boy',
+        text: 'Vampire Bat Scene as Hamilton',
         options: [{
-                text: 'Why does Sam have anxiety Boy?',
+                text: 'Why does Sam have anxiety Hamilton?',
                 nextText: 12
             },
             {
-                text: 'How can Sam overcome his anxiety Boy?',
+                text: 'How can Sam overcome his anxiety Hamilton?',
                 nextText: 13.1
             },
             {
-                text: 'Why is a raven like a writing desk Boy?',
+                text: 'Why is a raven like a writing desk Hamilton?',
                 nextText: 14
             },
             {
-                text: 'Skip dialouge and proceed to fight the bats Boy',
+                text: 'Skip dialouge and proceed to fight the bats Hamilton',
                 nextText: 15
             },
         ]
@@ -404,21 +408,21 @@ const textNodes = [{
 // Girl
     {
         id: 11.1,
-        text: 'Vampire Bat Scene as Girl',
+        text: 'Vampire Bat Scene as Annie',
         options: [{
-                text: 'Why does Sam have anxiety? Girl',
+                text: 'Why does Sam have anxiety? Annie',
                 nextText: 12.2
             },
             {
-                text: 'How can Sam overcome his anxiety? Girl',
+                text: 'How can Sam overcome his anxiety? Annie',
                 nextText: 13.2
             },
             {
-                text: 'Why is a raven like a writing desk? Girl',
+                text: 'Why is a raven like a writing desk? Annie',
                 nextText: 14.1
             },
             {
-                text: 'Skip dialouge and proceed to fight the bats Girl',
+                text: 'Skip dialouge and proceed to fight the bats Annie',
                 nextText: 15.1
             },
         ]
@@ -426,19 +430,19 @@ const textNodes = [{
 // Boy
     {
         id: 12,
-        text: 'Explanation of question 1 and options to ask more Boy',
+        text: 'Explanation of question 1 and options to ask more Hamilton',
         setState:{question1: true},
         options: [{
-                text: 'How can Sam overcome his anxiety? Boy',
+                text: 'How can Sam overcome his anxiety? Hamilton',
                 setState: {question2: true},
                 nextText: 13
             },
             {
-                text: 'Why is a raven like a writing desk? Boy',
+                text: 'Why is a raven like a writing desk? Hamilton',
                 nextText: 14
             },
             {
-                text: 'Skip dialouge and proceed to fight the bats Boy',
+                text: 'Skip dialouge and proceed to fight the bats Hamilton',
                 nextText: 15
             },
         ]
@@ -446,7 +450,7 @@ const textNodes = [{
 // Boy
     {
         id: 12.1,
-        text: 'Explanation of question 1 and options to ask more Boy',
+        text: 'Explanation of question 1 and options to ask more Hamilton',
         setState:{question1: true},
         options: [{
                 text: 'Continue',
@@ -458,19 +462,19 @@ const textNodes = [{
 // Girl
     {
         id: 12.2,
-        text: 'Explanation of question 1 and options to ask more girl',
+        text: 'Explanation of question 1 and options to ask more Annie',
         setState:{question1: true},
         options: [{
-                text: 'How can Sam overcome his anxiety? Girl',
+                text: 'How can Sam overcome his anxiety? Annie',
                 setState: {question2: true},
                 nextText: 13.2
             },
             {
-                text: 'Why is a raven like a writing desk? Girl',
+                text: 'Why is a raven like a writing desk? Annie',
                 nextText: 14.1
             },
             {
-                text: 'Skip dialouge and proceed to fight the bats Girl',
+                text: 'Skip dialouge and proceed to fight the bats Annie',
                 nextText: 15.1
             },
         ]
@@ -488,7 +492,7 @@ const textNodes = [{
 // Boy
     {
         id: 13.1,
-        text: 'Explanation of question 2, No option to repeat Boy',
+        text: 'Explanation of question 2, No option to repeat Hamilton',
         options: [{
             text: 'Why does Sam have anxiety?',
             nextText: 12.1
@@ -498,7 +502,7 @@ const textNodes = [{
 // Girl
     {
         id: 13.2,
-        text: 'Explanation of question 2 and option to ask more girl',
+        text: 'Explanation of question 2 and option to ask more Annie',
         options: [{
             text: 'Continue',
             nextText: 16.1
@@ -508,23 +512,23 @@ const textNodes = [{
 // Boy
     {
         id: 14,
-        text: 'Question 3 tells the player to not as silly questions and focus on the task at handBoy',
+        text: 'Question 3 tells the player to not as silly questions and focus on the task at hand Hamilton',
         options: [{
-                text: 'Why does Sam have anxiety?Boy',
+                text: 'Why does Sam have anxiety?Hamilton',
 
                 nextText: 12
             },
             {
-                text: 'Why does Sam have anxiety?Boy',
+                text: 'Why does Sam have anxiety?Hamilton',
 
                 nextText: 12
             },
             {
-                text: 'Skip dialouge and proceed to fight the batsBoy',
+                text: 'Skip dialouge and proceed to fight the bats Hamilton',
                 nextText: 15
             },
             {
-                text: 'Why is a raven like a writing desk?Boy',
+                text: 'Why is a raven like a writing desk? Hamilton',
                 nextText: 18
             },
         ]
@@ -532,23 +536,23 @@ const textNodes = [{
 // Girl
     {
         id: 14.1,
-        text: 'Question 3 tells the player to not as silly questions and focus on the task at hand Girl',
+        text: 'Question 3 tells the player to not as silly questions and focus on the task at hand Annie',
         options: [{
-                text: 'Why does Sam have anxiety? Girl',
+                text: 'Why does Sam have anxiety? Annie',
 
                 nextText: 12.2
             },
             {
-                text: 'Why does Sam have anxiety? Girl',
+                text: 'Why does Sam have anxiety? Annie',
 
                 nextText: 12.2
             },
             {
-                text: 'Skip dialouge and proceed to fight the bats Girl',
+                text: 'Skip dialouge and proceed to fight the bats Annie',
                 nextText: 15.1
             },
             {
-                text: 'Why is a raven like a writing desk? Girl',
+                text: 'Why is a raven like a writing desk? Annie',
                 nextText: 18.1
             },
         ]
@@ -556,7 +560,7 @@ const textNodes = [{
 // Boy
     {
         id: 18,
-        text: 'Asking Question 3 twice Results in this form of a game over Boy',
+        text: 'Asking Question 3 twice Results in this form of a game over Hamilton',
         options: [{
                 text: 'Try Again',
                 nextText: 11
@@ -567,7 +571,7 @@ const textNodes = [{
 // Girl
     {
         id: 18.1,
-        text: 'Asking Question 3 twice Results in this form of a game over girl',
+        text: 'Asking Question 3 twice Results in this form of a game over Annie',
         options: [{
                 text: 'Try Again',
                 nextText: 11
@@ -578,7 +582,7 @@ const textNodes = [{
 // Boy
     {
         id: 15,
-        text: 'This option is reckless and results in a game over restarting the scinario Boy',
+        text: 'This option is reckless and results in a game over restarting the scinario Hamilton',
         options: [{
                 text: 'Try Again',
                 nextText: 11
@@ -589,7 +593,7 @@ const textNodes = [{
 // Girl
     {
         id: 15.1,
-        text: 'This option is reckless and results in a game over restarting the scinario girl',
+        text: 'This option is reckless and results in a game over restarting the scinario Annie',
         options: [{
                 text: 'Try Again',
                 nextText: 11.1
@@ -600,7 +604,7 @@ const textNodes = [{
 // Boy
     {
         id: 16,
-        text: 'Sam defeats the bats and learns a valuable lesson about his anxiety Boy',
+        text: 'Sam defeats the bats and learns a valuable lesson about his anxiety Hamilton',
         options: [{
                 text: 'Continue',
                 nextText: 17
@@ -611,7 +615,7 @@ const textNodes = [{
 // Girl
     {
         id: 16.1,
-        text: 'Sam defeats the bats and learns a valuable lesson about his anxiety girl',
+        text: 'Sam defeats the bats and learns a valuable lesson about his anxiety Annie',
         options: [{
                 text: 'Continue',
                 nextText: 17.1
@@ -622,7 +626,7 @@ const textNodes = [{
 // Boy
     {
         id: 17,
-        text: 'Zombie Apocalypse Scene, no Choices Boy',
+        text: 'Zombie Apocalypse Scene, no Choices Hamilton',
         options: [{
             text: 'Continue',
             nextText: 19
@@ -631,7 +635,7 @@ const textNodes = [{
 // Girl
     {
         id: 17.1,
-        text: 'Zombie Apocalypse Scene, no Choices girl',
+        text: 'Zombie Apocalypse Scene, no Choices Annie',
         options: [{
             text: 'Continue',
             nextText: 19.1
@@ -640,19 +644,19 @@ const textNodes = [{
 // Boy
     {
         id: 19,
-        text: 'Level Up Scene. Player gains 50xp and a copper mind shield as well as the ability to pick one of three items Boy',
+        text: 'Level Up Scene. Player gains 50xp and a copper mind shield as well as the ability to pick one of three items Hamilton',
         options: [{
-                text: 'Bubble Machine Boy',
+                text: 'Bubble Machine Hamilton',
                 setState: { bubbleMachine: true, experiancePoints: true, copperMindShield: true },
                 nextText: 20
             },
             {
-                text: 'Band of Pacification Boy',
+                text: 'Band of Pacification Hamilton',
                 setState: { bandOfPacification: true, experiancePoints: true, copperMindShield: true },
                 nextText: 20
             },
             {
-                text: 'Stuffed Hedgehog Boy',
+                text: 'Stuffed Hedgehog Hamilton',
                 setState: { stuffedHedgeHog: true, experiancePoints: true, copperMindShield: true },
                 nextText: 20
             }
@@ -661,19 +665,19 @@ const textNodes = [{
 // Girl
     {
         id: 19.1,
-        text: 'Level Up Scene. Player gains 50xp and a copper mind shield as well as the ability to pick one of three items girl',
+        text: 'Level Up Scene. Player gains 50xp and a copper mind shield as well as the ability to pick one of three items Annie',
         options: [{
-                text: 'Bubble Machine girl',
+                text: 'Bubble Machine Annie',
                 setState: { bubbleMachine: true, experiancePoints: true, copperMindShield: true },
                 nextText: 20.1
             },
             {
-                text: 'Band of Pacification girl',
+                text: 'Band of Pacification Annie',
                 setState: { bandOfPacification: true, experiancePoints: true, copperMindShield: true },
                 nextText: 20.1
             },
             {
-                text: 'Stuffed Hedgehog girl',
+                text: 'Stuffed Hedgehog Annie',
                 setState: { stuffedHedgeHog: true, experiancePoints: true, copperMindShield: true },
                 nextText: 20.1
             }
@@ -690,7 +694,7 @@ const textNodes = [{
     },
     {
         id: 21.1,
-        text: 'Focuses on HEDGEHOG Memory of MT Doom Boy',
+        text: 'Focuses on HEDGEHOG Memory of MT Doom Hamilton',
         options: [{
             text: 'Continue',
             nextText: 23
@@ -698,7 +702,7 @@ const textNodes = [{
     },
     {
         id: 21.2,
-        text: 'Focuses on BAND OF PACIFICATION Memory of MT Doom Boy',
+        text: 'Focuses on BAND OF PACIFICATION Memory of MT Doom Hamilton',
         options: [{
             text: 'Continue',
             nextText: 23
@@ -706,7 +710,7 @@ const textNodes = [{
     },
     {
         id: 21.3,
-        text: 'Focuses on BUBBLE MACHINE Memory of MT Doom Boy',
+        text: 'Focuses on BUBBLE MACHINE Memory of MT Doom Hamilton',
         options: [{
             text: 'Continue',
             nextText: 23
@@ -714,7 +718,7 @@ const textNodes = [{
     },
     {
         id: 22.1,
-        text: 'Focuses on HEDGEHOG Memory of Ghost Town Boy',
+        text: 'Focuses on HEDGEHOG Memory of Ghost Town Hamilton',
         options: [{
             text: 'Continue',
             nextText: 23
@@ -722,7 +726,7 @@ const textNodes = [{
     },
     {
         id: 22.2,
-        text: 'Focuses on BAND OF PACIFICATION Memory of Ghost Town Boy',
+        text: 'Focuses on BAND OF PACIFICATION Memory of Ghost Town Hamilton',
         options: [{
             text: 'Continue',
             nextText: 23
@@ -730,7 +734,7 @@ const textNodes = [{
     },
     {
         id: 22.3,
-        text: 'Focuses on BUBBLE MACHINE Memory of Ghost Town Boy',
+        text: 'Focuses on BUBBLE MACHINE Memory of Ghost Town Hamilton',
         options: [{
             text: 'Continue',
             nextText: 23
@@ -738,7 +742,7 @@ const textNodes = [{
     },
     {
         id: 23,
-        text: 'END OF GAME Boy',
+        text: 'END OF GAME Hamilton',
         options: [{
             text: 'RESTART GAME',
             nextText: -1
@@ -749,7 +753,7 @@ const textNodes = [{
 // Girls Final Out Comes
     {
         id: 20.1,
-        text: 'Final Scene. Depending on which path the player originally chose they will either focus on a memory of being at Mount Doom or the Ghost Town Girl',
+        text: 'Final Scene. Depending on which path the player originally chose they will either focus on a memory of being at Mount Doom or the Ghost Town Annie',
         options: [{
             text: 'Continue',
             nextText: 21.12
@@ -757,7 +761,7 @@ const textNodes = [{
     },
     {
         id: 21.12,
-        text: 'Focuses on HEDGEHOG Memory of MT Doom Girl',
+        text: 'Focuses on HEDGEHOG Memory of MT Doom Annie',
         options: [{
             text: 'Continue',
             nextText: 23.1
@@ -765,7 +769,7 @@ const textNodes = [{
     },
     {
         id: 21.22,
-        text: 'Focuses on BAND OF PACIFICATION Memory of MT Doom Girl',
+        text: 'Focuses on BAND OF PACIFICATION Memory of MT Doom Annie',
         options: [{
             text: 'Continue',
             nextText: 23.1
@@ -773,7 +777,7 @@ const textNodes = [{
     },
     {
         id: 21.31,
-        text: 'Focuses on BUBBLE MACHINE Memory of MT Doom Girl',
+        text: 'Focuses on BUBBLE MACHINE Memory of MT Doom Annie',
         options: [{
             text: 'Continue',
             nextText: 23.1
@@ -781,7 +785,7 @@ const textNodes = [{
     },
     {
         id: 22.11,
-        text: 'Focuses on HEDGEHOG Memory of Ghost Town Girl',
+        text: 'Focuses on HEDGEHOG Memory of Ghost Town Annie',
         options: [{
             text: 'Continue',
             nextText: 23.1
@@ -789,7 +793,7 @@ const textNodes = [{
     },
     {
         id: 22.21,
-        text: 'Focuses on BAND OF PACIFICATION Memory of Ghost Town Girl',
+        text: 'Focuses on BAND OF PACIFICATION Memory of Ghost Town Annie',
         options: [{
             text: 'Continue',
             nextText: 23.1
@@ -797,7 +801,7 @@ const textNodes = [{
     },
     {
         id: 22.31,
-        text: 'Focuses on BUBBLE MACHINE Memory of Ghost Town Girl',
+        text: 'Focuses on BUBBLE MACHINE Memory of Ghost Town Annie',
         options: [{
             text: 'Continue',
             nextText: 23.1
@@ -805,7 +809,7 @@ const textNodes = [{
     },
     {
         id: 23.1,
-        text: 'END OF GAME as girl',
+        text: 'END OF GAME as Annie',
         options: [{
             text: 'RESTART GAME',
             nextText: -1
