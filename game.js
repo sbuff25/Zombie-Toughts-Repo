@@ -12,14 +12,14 @@ function startGame() {
 
 }
 
-function showVid(textNodeIndex) 
+videoElement.onended = function() 
 {
-    const vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
-    videoElement.src = vidNode.vid
+    alert("Video Ends");    
 }
 
 function showTextNode(textNodeIndex) {
-    showVid(1);
+    const vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
+    videoElement.src = vidNode.vid
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
     while (optionButtonsElement.firstChild) {
