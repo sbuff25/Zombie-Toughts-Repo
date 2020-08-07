@@ -10,32 +10,23 @@ let state = {}
 
 function startGame() {
     state = {}
-    
-    onEnd();
-
+    showVid(1);
 }
 
-function onEnd()
-{
-    console.log(playing);
-    if (playing == true)
-    {
 
-        showVid(1)
-        playing = false;
-        console.log(playing);
-    }
-    else if(playing == false)
-    {
-       showTextNode(1);
-    }
-}
+
 function showVid(textNodeIndex) {
     const vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
     videoElement.src = vidNode.vid
+    videoElement.onended = function()
+{
+    showTextNode(1);
+    videoElement.style.display='none';
+}
 }
 function showTextNode(textNodeIndex) {
-    
+    const vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
+    videoElement.src = vidNode.vid
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
     while (optionButtonsElement.firstChild) {
@@ -147,7 +138,7 @@ function selectOption(option) {
 // Genders will be changed to appropriate names as soon as I find out what thoes names are.
 const textNodes = [{
         id: 1,
-        vid: 'https://www.youtube.com/embed/kt2D7xl06mk?vq=hd1080&autoplay=1&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&fs=0&controls=0&disablekb=1',
+        vid: './video/sample.mp4',
         text: 'Choose if Sam is a Annie or Hamilton',
         options: [{
                 text: 'Play as Hamilton',
