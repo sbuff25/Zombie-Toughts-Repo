@@ -3,23 +3,38 @@ const videoElement = document.getElementById('video');
 const textElement = document.getElementById('text');
 const optionButtonsElement = document.getElementById('option-buttons');
 
+const playing = true;
+
 let state = {}
 
 
 function startGame() {
     state = {}
-    showTextNode(1);
+    
+    onEnd();
 
 }
 
-videoElement.onended = function() 
+function onEnd()
 {
-    alert("Video Ends");    
+    console.log(playing);
+    if (playing == true)
+    {
+        showVid(1)
+        playing = false;
+        console.log(playing);
+    }
+    else if(playing == false)
+    {
+       showTextNode(1);
+    }
 }
-
-function showTextNode(textNodeIndex) {
+function showVid(textNodeIndex) {
     const vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
     videoElement.src = vidNode.vid
+}
+function showTextNode(textNodeIndex) {
+    
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
     while (optionButtonsElement.firstChild) {

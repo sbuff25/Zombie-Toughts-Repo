@@ -12,7 +12,7 @@
     <script defer src="./game.js"></script>
     <link rel="stylesheet" href="./css.css">
     <link rel="stylesheet" href="./menu.css">
-    
+    <link rel="stylesheet" href="./scroll_in.css">
     <link rel="stylesheet" href="./scroll_bar.css">
     <link rel="stylesheet" href="./text_animiations.css">
    
@@ -100,7 +100,7 @@
                 <div id="vid_box">
                     <iframe src="" width="560" height="315" frameborder="0" id="video"></iframe>
                 </div>
-                <div id="text">Text</div>
+                <div id="text"></div>
                 <div id="option-buttons"></div>
             </div>
         </div>
@@ -135,6 +135,12 @@
 
     <script src="jquery.js"></script>
     <script src="./nav.js"></script>
+    <script src="./scroll_out.js"></script>
+    <script type="text/javascript">
+        ScrollOut({
+            targets: 'h3'
+        })
+    </script>
     <script src="./scroll.js"></script>
     <script src="./parallax.js"></script>
   
