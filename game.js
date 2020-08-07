@@ -15,7 +15,7 @@ function startGame() {
 
 }
 
-function onEnd(event)
+function onEnd()
 {
     console.log(playing);
     if (playing == true)
