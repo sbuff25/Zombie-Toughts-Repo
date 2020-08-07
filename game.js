@@ -15,11 +15,12 @@ function startGame() {
 
 }
 
-function onEnd()
+function onEnd(event)
 {
     console.log(playing);
     if (playing == true)
     {
+
         showVid(1)
         playing = false;
         console.log(playing);
