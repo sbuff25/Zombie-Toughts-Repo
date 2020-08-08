@@ -95,7 +95,7 @@
             array_push($errors, "last_name is required");
         }
 
-        $user_exists = check_username_and_email();
+        $user_exists = check_username_and_email($email, $username);
         if($user_exists){
             array_push($errors, "That username and or email is already in use.");
         }

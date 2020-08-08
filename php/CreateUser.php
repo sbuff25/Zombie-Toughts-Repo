@@ -5,6 +5,8 @@
 
         <?php session_start() 
         include("./Database.php")
+        $DatabaseObject = new Database();
+        $database = $DatabaseObject.get_database();
         ?>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
