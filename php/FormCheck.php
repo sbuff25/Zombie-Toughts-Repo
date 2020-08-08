@@ -53,8 +53,8 @@
 
     $errors = array();
     if (isset($_POST['submitLogin'])) {
-        $email_or_username = mysqli_real_escape_string($db, $_POST['emailorusername']);
-        $password = mysqli_real_escape_string($db, $_POST['password']);
+        $email_or_username = mysqli_real_escape_string($database, $_POST['emailorusername']);
+        $password = mysqli_real_escape_string($database, $_POST['password']);
 
         if (empty($email_or_username)) {
             array_push($errors, "Username or email is required");
@@ -77,10 +77,10 @@
     }
 
     if (isset($_POST['submitNewUser'])) {
-        $email = mysqli_real_escape_string($db, $_POST['email']);
-        $username = mysqli_real_escape_string($db, $_POST['username']);
-        $first_name = mysqli_real_escape_string($db, $_POST['first_name']);
-        $last_name = mysqli_real_escape_string($db, $_POST['last_name']);
+        $email = mysqli_real_escape_string($database, $_POST['email']);
+        $username = mysqli_real_escape_string($database, $_POST['username']);
+        $first_name = mysqli_real_escape_string($database, $_POST['first_name']);
+        $last_name = mysqli_real_escape_string($database, $_POST['last_name']);
 
         if (empty($email)) {
             array_push($errors, "Email is required");
