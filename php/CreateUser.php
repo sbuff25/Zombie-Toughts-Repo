@@ -52,7 +52,7 @@
             <br><br><br><br>  <!--Delete this line when Spencer begins to style -->
             <h1>Create New Administrator</h1>
 
-            <form action='LoginPage.php' method='POST'>
+            <form action='CreateUser.php' method='POST'>
                 <div>
                     <label for='email'>Email:</label>
                     <input name='email' type='email' placeholder="<?php echo "Enter New User's Email..."?>" required>
