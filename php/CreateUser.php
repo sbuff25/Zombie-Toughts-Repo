@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
 
         <?php
-        include("./Classes/Database.php");
+        require_once("./Classes/Database.php");
         $DatabaseObject = new Database();
-        $database = $DatabaseObject.get_database();
+        $database = $DatabaseObject->get_database();
         ?>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
