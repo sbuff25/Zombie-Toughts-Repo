@@ -50,29 +50,32 @@
             <form action='LoginPage.php' method='POST'>
                 <div>
                     <label for='email'>Email:</label>
-                    <input name='email' type='email' placeholder="<?php echo "Enter New User's Email..."?>">
+                    <input name='email' type='email' placeholder="<?php echo "Enter New User's Email..."?>" required>
                 </div>
                 <br>
                 <div>
                     <label for='username'>Username:</label>
-                    <input name='username' placeholder="<?php echo "Enter New User's Username..."?>">
+                    <input name='username' placeholder="<?php echo "Enter New User's Username..."?>" required>
                 </div>
                 <br>
                 <div>
                     <label for='first_name'>First Name:</label>
-                    <input name='first_name' placeholder="<?php echo "Enter New User's First Name..."?>">
+                    <input name='first_name' placeholder="<?php echo "Enter New User's First Name..."?>" required>
                 </div>
                 <br>
                 <div>
                     <label for='last_name'>Last Name:</label>
-                    <input name='last_name' placeholder="<?php echo "Enter New User's Last Name..."?>">
+                    <input name='last_name' placeholder="<?php echo "Enter New User's Last Name..."?>" required>
                 </div>
                 <br>
-                <div>
+                <!--<div>
                     <label for='password'>Password:</label>
-                    <input name='password' type='password' placeholder="<?php echo "Enter New User's Password..."?>">
+                    <input name='password' type='password' placeholder="<?php //echo "Enter New User's Password..."?>">
                 </div>
-                <br>
+                <br>-->
+                <div>
+                    <p>An email will be sent to the user to set their password. If the user does not set their password within 7 days, the user will need to be created again.</p>
+                </div>
                 <?php include('errors.php'); ?>
                 <?php if (isset($_SESSION['success'])) : ?>
                     <div class="error success">

@@ -35,6 +35,21 @@
 
     }
 
+    function check_username_and_email($email, $username){
+        $username = mysqli_real_escape_string($database, $username);
+        $email = mysqli_real_escape_string($database, $email);
+
+
+        $check_user = "SELECT username, email FROM AdminUser WHERE email = '$email' OR username = '$username'";
+        $result = mysqli_query($database, $check_user);
+        if(mysqli_num_rows($result) >= 1){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
 
     $errors = array();
     if (isset($_POST['submitLogin'])) {
@@ -58,6 +73,37 @@
         if (count($errors) == 0) {
             $_SESSION['success'] = "You are now logged in";
             header('location: AdminUser.php');
+        }
+    }
+
+    if (isset($_POST['submitNewUser'])) {
+        $email = mysqli_real_escape_string($db, $_POST['email']);
+        $username = mysqli_real_escape_string($db, $_POST['username']);
+        $first_name = mysqli_real_escape_string($db, $_POST['first_name']);
+        $last_name = mysqli_real_escape_string($db, $_POST['last_name']);
+
+        if (empty($email)) {
+            array_push($errors, "Email is required");
+        }
+        if (empty($email)) {
+            array_push($errors, "Username is required");
+        }
+        if (empty($first_name)) {
+            array_push($errors, "first_name is required");
+        }
+        if (empty($last_name)) {
+            array_push($errors, "last_name is required");
+        }
+
+        $user_exists = check_username_and_email();
+        if($user_exists){
+            array_push($errors, "That username and or email is already in use.");
+        }
+        
+
+        if (count($errors) == 0) {
+            $_SESSION['success'] = "New User was created, and an email was sent to the user.";
+            header('location: CreateUser.php');
         }
     }
 ?>
