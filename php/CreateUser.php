@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
 
-        <?php session_start() 
+        <?php
         include("./Classes/Database.php");
         $DatabaseObject = new Database();
         $database = $DatabaseObject.get_database();
