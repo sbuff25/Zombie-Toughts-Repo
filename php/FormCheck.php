@@ -99,6 +99,7 @@
         $insertSQL = "INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_Date, tempkey)
                                 SELECT * FROM(SELECT '$email', '$first_name', '$last_name', '$privilege_level', '$exp_date', '$key')";
         $result = mysqli_query($database, $insertSQL);
+        array_push($errors, "ERROR: Not able to execute $insertSQL. " . mysqli_error($database));
         if($result){
             return True;
         }
