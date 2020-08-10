@@ -6,7 +6,6 @@
             $ini_file = parse_ini_file('/home3/yqepxzmy/db.ini');
             $this->$database = mysqli_connect ("localhost", $ini_file['username'], $ini_file['password'], $ini_file['db'])
             or die ('I cannot connect to the database.');
-            echo "created class";
         }
 
         function get_database(){
