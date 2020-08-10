@@ -95,7 +95,7 @@
     function create_temp_admin_user($privilege_level, $email, $first_name, $last_name, $key){
         $DatabaseObject = new Database();
         $database = $DatabaseObject->get_database();
-        $exp_date = "NOW() + INTERVAL 4 DAY";
+        $exp_date = "DATE_ADD(CURRENT_DATE() + INTERVAL 4 DAY)";
         $insertSQL = "INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_Date, tempkey)
                                 SELECT * FROM(SELECT '$email', '$first_name', '$last_name', '$privilege_level', '$exp_date', '$key')";
         $result = mysqli_query($database, $insertSQL);
@@ -171,9 +171,9 @@
         require_once("./Classes/SendEmail.php");
 
         
-        $body = new_user_email_body($email, $first_name, $last_name, $key);
-        $subject = new_user_email_subject();
-        $email = new SendEmail($email, $subject, $body);
+        // $body = new_user_email_body($email, $first_name, $last_name, $key);
+        // $subject = new_user_email_subject();
+        // $email = new SendEmail($email, $subject, $body);
 
         if (count($errors) == 0) {
             $_SESSION['success'] = "New User was created, and an email was sent to the user.";
