@@ -11,7 +11,7 @@ const textNodes = [{
         {
             text: 'Play as Annie',
             setState: { annie: true },
-            nextText: 2.1
+            nextText: 'ANNIE'
         }
     ]
 },
@@ -24,12 +24,12 @@ const textNodes = [{
         
             text: 'A baseball cap?',
             setState: { baseballCap: true },
-            nextText: 4
+            nextText: 'HAMILTON_BASEBALL'
         },
         {
             text: 'A Cowboy hat?',
             setState: { cowboyHat: true },
-            nextText: 4
+            nextText: 'HAMILTON_COWBOY'
         },
         // {
         //     text: 'A Tophat?',
@@ -39,18 +39,18 @@ const textNodes = [{
     ]
 },
 {
-    id: 2.1,
+    id: 'ANNIE',
     vid: 'https://www.youtube.com/embed/VN-rQ_Swi24',
     text: 'Looks like Sam is going to be Annie. What hat should she wear?',
     options: [{
             text: 'A baseball cap?',
             setState: { baseballCap: true },
-            nextText: 4.1
+            nextText: 'ANNIE_BASEBALL'
         },
         {
             text: 'A Cowboy hat?',
             setState: { cowboyHat: true },
-            nextText: 4.1
+            nextText: 'ANNIE_COWBOY'
         },
         // {
         //     text: 'A Tophat?',
@@ -60,17 +60,17 @@ const textNodes = [{
     ]
 },
 {
-    id: 4,
+    id: 'HAMILTON_BASEBALL',
     text: 'Now That we know what our character is lets choose an accessory for our friend Pig.',
     options: [{
             text: 'A Fadora?',
             setState: { fadora: true },
-            nextText: 5
+            nextText: 'HAMILTON_BASEBALL_FADORA'
         },
         {
             text: 'A Headband?',
             setState: { headband: true },
-            nextText: 5
+            nextText: 'HAMILTON_BASEBALL_HEADBAND'
         },
         // {
         //     text: 'Or Eyeshadow',
@@ -79,43 +79,453 @@ const textNodes = [{
         // }
     ]
 },
-
 {
-    id: 4.1,
+    id: 'HAMILTON_COWBOY',
     text: 'Now That we know what our character is lets choose an accessory for our friend Pig.',
     options: [{
             text: 'A Fadora?',
             setState: { fadora: true },
-            nextText: 5.1
+            nextText: 'HAMILTON_COWBOY_FADORA'
         },
         {
             text: 'A Headband?',
             setState: { headband: true },
-            nextText: 5.1
+            nextText: 'HAMILTON_COWBOY_HEADBAND'
         },
         // {
         //     text: 'Or Eyeshadow',
         //     setSate: { eyeshadow: true },
-        //     nextText: 5.1
+        //     nextText: 5
         // }
     ]
 },
-// Boy
 {
-    id: 5,
+    id: 'HAMILTON_BASEBALL',
+    text: 'Now That we know what our character is lets choose an accessory for our friend Pig.',
+    options: [{
+            text: 'A Fadora?',
+            setState: { fadora: true },
+            nextText: 'HAMILTON_BASEBALL_FADORA'
+        },
+        {
+            text: 'A Headband?',
+            setState: { headband: true },
+            nextText: 'HAMILTON_BASEBALL_HEADBAND'
+        },
+        // {
+        //     text: 'Or Eyeshadow',
+        //     setSate: { eyeshadow: true },
+        //     nextText: 5
+        // }
+    ]
+},
+{
+    id: 'ANNIE_BASEBALL',
+    text: 'Now That we know what our character is lets choose an accessory for our friend Pig.',
+    options: [{
+            text: 'A Fadora?',
+            setState: { fadora: true },
+            nextText: 'ANNIE_BASEBALL_FADORA'
+        },
+        {
+            text: 'A Headband?',
+            setState: { headband: true },
+            nextText: 'ANNIE_BASEBALL_HEADBAND'
+        },
+        // {
+        //     text: 'Or Eyeshadow',
+        //     setSate: { eyeshadow: true },
+        //     nextText: 5
+        // }
+    ]
+},
+{
+    id: 'ANNIE_COWBOY',
+    text: 'Now That we know what our character is lets choose an accessory for our friend Pig.',
+    options: [{
+            text: 'A Fadora?',
+            setState: { fadora: true },
+            nextText: 'ANNIE_COWBOY_FADORA'
+        },
+        {
+            text: 'A Headband?',
+            setState: { headband: true },
+            nextText: 'ANNIE_COWBOY_HEADBAND'
+        },
+        // {
+        //     text: 'Or Eyeshadow',
+        //     setSate: { eyeshadow: true },
+        //     nextText: 5
+        // }
+    ]
+},
+//DONE CHOOSING HAT AND ACCESORY
+{
+    id: 'HAMILTON_BASEBALL_FADORA',
     text: 'Choose your starting location. Hamilton',
     options: [{
             text: 'Mount Doom',
             setState: { mountDoomn: true },
-            nextText: 6
+            nextText: 'HAMILTON_BASEBALL_FADORA_MTDOOM'
         },
         {
             text: 'Ghost Town',
             setState: { ghostTown: true },
-            nextText: 7
+            nextText: 'HAMILTON_BASEBALL_FADORA_GHOSTTOWN'
         }
     ]
 },
+{
+    id: 'HAMILTON_BASEBALL_HEADBAND',
+    text: 'Choose your starting location. Hamilton',
+    options: [{
+            text: 'Mount Doom',
+            setState: { mountDoomn: true },
+            nextText: 'HAMILTON_BASEBALL_HEADBAND_MTDOOM'
+        },
+        {
+            text: 'Ghost Town',
+            setState: { ghostTown: true },
+            nextText: 'HAMILTON_BASEBALL_HEADBAND_GHOSTOWN'
+        }
+    ]
+},
+{
+    id: 'HAMILTON_COWBOY_FADORA',
+    text: 'Choose your starting location. Hamilton',
+    options: [{
+            text: 'Mount Doom',
+            setState: { mountDoomn: true },
+            nextText: 'HAMILTON_COWBOY_FADORA_MTDOOM'
+        },
+        {
+            text: 'Ghost Town',
+            setState: { ghostTown: true },
+            nextText: 'HAMILTON_COWBOY_FADORA_GHOSTTOWN'
+        }
+    ]
+},
+{
+    id: 'HAMILTON_COWBOY_HEADBAND',
+    text: 'Choose your starting location. Hamilton',
+    options: [{
+            text: 'Mount Doom',
+            setState: { mountDoomn: true },
+            nextText: 'HAMILTON_COWBOY_HEADBAND_MTDOOM'
+        },
+        {
+            text: 'Ghost Town',
+            setState: { ghostTown: true },
+            nextText: 'HAMILTON_COWBOY_HEADBAND_GHOSTTOWN'
+        }
+    ]
+},
+{
+    id: 'HAMILTON_BASEBALL_HEADBAND',
+    text: 'Choose your starting location. Hamilton',
+    options: [{
+            text: 'Mount Doom',
+            setState: { mountDoomn: true },
+            nextText: 'HAMILTON_BASEBALL_HEADBAND_MTDOOM'
+        },
+        {
+            text: 'Ghost Town',
+            setState: { ghostTown: true },
+            nextText: 'HAMILTON_BASEBALL_HEADBAND_GHOSTTOWN'
+        }
+    ]
+},
+
+//
+{
+    id: 'HAMILTON_COWBOY_HEADBAND_MTDOOM',
+    text: 'Mount Doom Scene Hamilton',
+    options: [{
+        text: 'Continue',
+        nextText: 'HAMILTON_COWBOY_HEADBAND_MTDOOM_BATTLE'
+    }]
+},
+{
+    id: 'HAMILTON_COWBOY_HEADBAND_GHOSTTOWN',
+    text: 'Mount Doom Scene Hamilton',
+    options: [{
+        text: 'Continue',
+        nextText: 'HAMILTON_COWBOY_HEADBAND_GHOSTTOWN_BATTLE'
+    }]
+},
+{
+    id: 'HAMILTON_COWBOY_FADORA_MTDOOM',
+    text: 'Mount Doom Scene Hamilton',
+    options: [{
+        text: 'Continue',
+        nextText: 'HAMILTON_COWBOY_FADORA_MTDOOM_BATTLE'
+    }]
+},
+{
+    id: 'HAMILTON_COWBOY_FADORA_GHOSTTOWN',
+    text: 'Mount Doom Scene Hamilton',
+    options: [{
+        text: 'Continue',
+        nextText: 'HAMILTON_COWBOY_FADORA_GHOSTTOWN_BATTLE'
+    }]
+},
+{
+    id: 'HAMILTON_BASEBALL_HEADBAND_MTDOOM',
+    text: 'Mount Doom Scene Hamilton',
+    options: [{
+        text: 'Continue',
+        nextText: 'HAMILTON_BASEBALL_HEADBAND_MTDOOM_BATTLE'
+    }]
+},
+{
+    id: 'HAMILTON_BASEBALL_FADORA_MTDOOM',
+    text: 'Mount Doom Scene Hamilton',
+    options: [{
+        text: 'Continue',
+        nextText: 'HAMILTON_BASEBALL_FADORA_MTDOOM_BATTLE'
+    }]
+},
+{
+    id: 'HAMILTON_BASEBALL_HEADBAND_GHOSTTOWN',
+    text: 'Mount Doom Scene Hamilton',
+    options: [{
+        text: 'Continue',
+        nextText: 'HAMILTON_BASEBALL_HEADBAND_GHOSTTOWN_BATTLE'
+    }]
+},
+{
+    id: 'HAMILTON_BASEBALL_FADORA_GHOSTTOWN',
+    text: 'Mount Doom Scene Hamilton',
+    options: [{
+        text: 'Continue',
+        nextText: 'HAMILTON_BASEBALL_FADORA_GHOSTTOWN_BATTLE'
+    }]
+},
+// END OF LOCATION SCENES
+//BATTLESCENE
+{
+    id: 'HAMILTON_COWBOY_HEADBAND_MTDOOM_BATTLE',
+    text: 'BATTLESCENE',
+    options: [{
+        text: 'Continue',
+        nextText: 'HAMILTON_COWBOY_FADORA_MTDOOM_BATTLE_VCAVE'
+    }]
+},
+{
+    id: 'HAMILTON_COWBOY_FADORA_MTDOOM_BATTLE',
+    text: 'BATTLESCENE',
+    options: [{
+        text: 'Continue',
+        nextText: 'HAMILTON_COWBOY_FADORA_MTDOOM_BATTLE_VCAVE'
+    }]
+},
+{
+    id: 'HAMILTON_COWBOY_HEADBAND_GHOSTTOWN_BATTLE',
+    text: 'BATTLESCENE',
+    options: [{
+        text: 'Continue',
+        nextText: 'HAMILTON_COWBOY_HEADBAND_GHOSTTOWN_BATTLE_VCAVE'
+    }]
+},
+{
+    id: 'HAMILTON_COWBOY_FADORA_GHOSTTOWN_BATTLE',
+    text: 'BATTLESCENE',
+    options: [{
+        text: 'Continue',
+        nextText: 'HAMILTON_COWBOY_FADORA_GHOSTTOWN_BATTLE_VCAVE'
+    }]
+},
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+{
+    id: 'HAMILTON_BASEBALL_HEADBAND_MTDOOM_BATTLE',
+    text: 'BATTLESCENE',
+    options: [{
+        text: 'Continue',
+        nextText: 11.1
+    }]
+},
+{
+    id: 'HAMILTON_BASEBALL_FADORA_MTDOOM_BATTLE',
+    text: 'BATTLESCENE',
+    options: [{
+        text: 'Continue',
+        nextText: 11.2
+    }]
+},
+{
+    id: 'HAMILTON_BASEBALL_HEADBAND_GHOSTTOWN_BATTLE',
+    text: 'BATTLESCENE',
+    options: [{
+        text: 'Continue',
+        nextText: 11.3
+    }]
+},
+{
+    id: 'HAMILTON_BASEBALL_FADORA_GHOSTTOWN_BATTLE',
+    text: 'BATTLESCENE',
+    options: [{
+        text: 'Continue',
+        nextText: 11.4
+    }]
+},
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+{
+    id: 'HAMILTON_COWBOY_HEADBAND_MTDOOM_BATTLE',
+    text: 'BATTLESCENE',
+    options: [{
+        text: 'Continue',
+        nextText: 11.5
+    }]
+},
+{
+    id: 'HAMILTON_COWBOY_FADORA_MTDOOM_BATTLE',
+    text: 'BATTLESCENE',
+    options: [{
+        text: 'Continue',
+        nextText: 11.6
+    }]
+},
+{
+    id: 'HAMILTON_COWBOY_HEADBAND_GHOSTTOWN_BATTLE',
+    text: 'BATTLESCENE',
+    options: [{
+        text: 'Continue',
+        nextText: 11.7
+    }]
+},
+{
+    id: 'HAMILTON_COWBOY_FADORA_GHOSTTOWN_BATTLE',
+    text: 'BATTLESCENE',
+    options: [{
+        text: 'Continue',
+        nextText: 11.8
+    }]
+},
+/////////////////////////////////////////////////////////////////////////////////////
+//QUESTIONS SCENE
+//11.1
+{
+    id: 11.1,
+    text: 'Vampire Bat Scene as Hamilton',
+    options: [{
+            text: 'Why does Sam have anxiety Hamilton?',
+            nextText: 11.12
+        },
+        {
+            text: 'How can Sam overcome his anxiety Hamilton?',
+            nextText: 11.13
+        },
+        {
+            text: 'Why is a raven like a writing desk Hamilton?',
+            nextText: 11.14
+        },
+        {
+            text: 'Skip dialouge and proceed to fight the bats Hamilton',
+            nextText: 11.15
+        },
+    ]
+},
+{
+    id: 11.11,
+    text: 'Vampire Bat Scene as Hamilton',
+    options: [
+        {
+            text: 'How can Sam overcome his anxiety Hamilton?',
+            nextText: 11.13
+        },
+        {
+            text: 'Why is a raven like a writing desk Hamilton?',
+            nextText: 11.14
+        },
+        {
+            text: 'Skip dialouge and proceed to fight the bats Hamilton',
+            nextText: 11.15
+        },
+    ]
+},
+{
+    id: 11.12,
+    text: 'Explanation of question 1 and options to ask more Hamilton',
+    setState:{question1: true},
+    options: [{
+            text: 'contine',
+            setState: {question2: true},
+            nextText: 11.11
+        },
+        {
+            text: 'Why is a raven like a writing desk? Hamilton',
+            nextText: 11.14
+        },
+        {
+            text: 'Skip dialouge and proceed to fight the bats Hamilton',
+            nextText: 11.15
+        },
+    ]
+},
+{
+    id: 11.13,
+    text: 'Explanation of question 2, No option to repeat Hamilton',
+    options: [{
+        text: 'Why does Sam have anxiety?',
+        nextText: 12.1
+    },
+    ]
+},
+{
+    id: 11.14,
+    text: 'Question 3 tells the player to not ask silly questions and focus on the task at hand Hamilton',
+    options: [{
+            text: 'Why does Sam have anxiety?Hamilton',
+
+            nextText: 12
+        },
+        {
+            text: 'Skip dialouge and proceed to fight the bats Hamilton',
+            nextText: 11.15
+        },
+        {
+            text: 'Why is a raven like a writing desk? Hamilton',
+            nextText: 18
+        },
+    ]
+},
+{
+    id: 11.15,
+    text: 'This option is reckless and results in a game over restarting the scinario Hamilton',
+    options: [{
+            text: 'Try Again',
+            nextText: 11.1
+        }
+
+    ]
+},
+//11.2
+
+//11.3
+//11.4
+//11.5
+//11.6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Girl
 {
     id: 5.1,
@@ -299,25 +709,7 @@ const textNodes = [{
     ]
 },
 // Boy
-{
-    id: 12,
-    text: 'Explanation of question 1 and options to ask more Hamilton',
-    setState:{question1: true},
-    options: [{
-            text: 'How can Sam overcome his anxiety? Hamilton',
-            setState: {question2: true},
-            nextText: 13
-        },
-        {
-            text: 'Why is a raven like a writing desk? Hamilton',
-            nextText: 14
-        },
-        {
-            text: 'Skip dialouge and proceed to fight the bats Hamilton',
-            nextText: 15
-        },
-    ]
-},
+
 // Boy
 {
     id: 12.1,
@@ -361,15 +753,7 @@ const textNodes = [{
     ]
 },
 // Boy
-{
-    id: 13.1,
-    text: 'Explanation of question 2, No option to repeat Hamilton',
-    options: [{
-        text: 'Why does Sam have anxiety?',
-        nextText: 12.1
-    },
-    ]
-},
+
 // Girl
 {
     id: 13.2,
@@ -381,29 +765,7 @@ const textNodes = [{
     ]
 },
 // Boy
-{
-    id: 14,
-    text: 'Question 3 tells the player to not as silly questions and focus on the task at hand Hamilton',
-    options: [{
-            text: 'Why does Sam have anxiety?Hamilton',
 
-            nextText: 12
-        },
-        {
-            text: 'Why does Sam have anxiety?Hamilton',
-
-            nextText: 12
-        },
-        {
-            text: 'Skip dialouge and proceed to fight the bats Hamilton',
-            nextText: 15
-        },
-        {
-            text: 'Why is a raven like a writing desk? Hamilton',
-            nextText: 18
-        },
-    ]
-},
 // Girl
 {
     id: 14.1,
@@ -451,16 +813,7 @@ const textNodes = [{
     ]
 },
 // Boy
-{
-    id: 15,
-    text: 'This option is reckless and results in a game over restarting the scinario Hamilton',
-    options: [{
-            text: 'Try Again',
-            nextText: 11
-        }
 
-    ]
-},
 // Girl
 {
     id: 15.1,
@@ -685,240 +1038,5 @@ const textNodes = [{
         text: 'RESTART GAME',
         nextText: -1
     }]
-},
-
-
-
-
-
-
-
-
+}
 ]
-// const videoElement = document.getElementById('video');
-const textElement = document.getElementById('text');
-const optionButtonsElement = document.getElementById('option-buttons');
-var vidNode = 1;
-var vidTime = 1000;
-var Video = 'kt2D7xl06mk';
-var tag = document.createElement('script');
-var firstScriptTag = document.getElementsByTagName('script')[0];
-
-var done = false;
-tag.src = "https://www.youtube.com/iframe_api";
-
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-function loadVideo()
-{
-    done = false;
-    document.getElementById('player').style.display='block';
-    vidTime = vidNode.vidtime;
-    Video = vidNode.vid;
-    console.log(Video);
-    document.getElementById('player').src=Video;
-    //  tag = document.createElement('script');
-    // firstScriptTag = document.getElementsByTagName('script')[0];
-    // tag.src = "https://www.youtube.com/iframe_api";
-    // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    onYouTubeIframeAPIReady();
-}
-
-
-
-
-
-// 3. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
-var player;
-
-function onYouTubeIframeAPIReady() {
-    console.log('Text'+Video);
-  player = new YT.Player('player', {
-    height: '390',
-    width: '640',
-    videoId: Video,
-    events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
-    }
-  });
-}
-
-// 4. The API will call this function when the video player is ready.
-function onPlayerReady(event) {
-//   event.target.playVideo();
-}
-
-// 5. The API calls this function when the player's state changes.
-//    The function indicates that when playing a video (state=1),
-//    the player should play for six seconds and then stop.
-
-function onPlayerStateChange(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    setTimeout(stopVideo, vidTime);
-    
-    done = true;
-  }
-}
-function stopVideo() {
-  player.stopVideo();
-  
-  showTextNode(1);
-}
-
-
-
-
-
-
-const playing = true;
-
-function myFunction(vidTime) {
-    myVar = setTimeout(alertFunc, vidTime);
-    
-  }
-  
-  function alertFunc() {
-    videoElement.style.display='none';
-    document.getElementById('text').style.display='block';
-    showTextNode(1);
-  }
-  
-
-let state = {}
-
-
-function startGame() {
-    state = {}
-    showVid(1);
-}
-
-
-
-function showVid(textNodeIndex) {
-    vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
-    // videoElement.src = vidNode.vid
-    // myFunction(vidNode.vidtime);
-    // videoElement.onended = function()
-// {
-//     showTextNode(1);
-    
-// }
-}
-function showTextNode(textNodeIndex) {
-    
-    // showVid(1);
-     vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
-     loadVideo();
-     console.log(vidNode);
-    // videoElement.src = vidNode.vid
-    const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
-    textElement.innerText = textNode.text
-    while (optionButtonsElement.firstChild) {
-        optionButtonsElement.removeChild(optionButtonsElement.firstChild)
-    }
-
-    textNode.options.forEach(option => {
-            if (showOption(option)) {
-                const button = document.createElement('button')
-                // const vid = document.createElement('iframe')
-                // vid.innerHTML = option.vid
-                button.innerText = option.text
-                button.classList.add('btn')
-                button.addEventListener('click', () => selectOption(option))
-                optionButtonsElement.appendChild(button)
-            }
-        })
-        //This is storing the choices being made in the console. these some of these choices will effect final outcome of game. 
-}
-
-
-function showOption(option) {
-    return option.requiredState == null || option.requiredState(state)
-}
-// ALL LOGICAL STATMENTS
-function selectOption(option) {
-    
-    var nextTextNodeId = option.nextText
-    
-    if (nextTextNodeId <= 0) {
-        startGame();
-    }
-    state = Object.assign(state, option.setState)
-
-    if (nextTextNodeId == 20 && state.mountDoomn == true && state.stuffedHedgeHog == true && state.hamilton == true) {
-        console.log('Mount Doom');
-        nextTextNodeId = 21.1;
-    } 
-    else if (nextTextNodeId == 20 && state.mountDoomn == true && state.bandOfPacification == true && state.hamilton == true) {
-        console.log('Mount Doom');
-        nextTextNodeId = 21.2;
-    }
-    else if (nextTextNodeId == 20 && state.mountDoomn == true && state.bubbleMachine == true && state.hamilton == true) {
-        console.log('Mount Doom');
-        nextTextNodeId = 21.3;
-    }
-    else if (nextTextNodeId == 20 && state.ghostTown == true && state.stuffedHedgeHog == true && state.hamilton == true) {
-
-        console.log('Ghost Town');
-        nextTextNodeId = 22.1;
-    }
-    else if (nextTextNodeId == 20 && state.ghostTown == true && state.bandOfPacification == true && state.hamilton == true) {
-
-        console.log('Ghost Town');
-        nextTextNodeId = 22.2;
-    }
-    else if (nextTextNodeId == 20 && state.ghostTown == true && state.bubbleMachine == true && state.hamilton == true) {
-
-        console.log('Ghost Town');
-        nextTextNodeId = 22.3;
-    }
-
-    if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.stuffedHedgeHog == true && state.annie == true) {
-        console.log('Mount Doom');
-        nextTextNodeId = 21.12;
-    } 
-    else if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.bandOfPacification == true && state.annie == true) {
-        console.log('Mount Doom');
-        nextTextNodeId = 21.22;
-    }
-    else if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.bubbleMachine == true && state.annie == true) {
-        console.log('Mount Doom');
-        nextTextNodeId = 21.31;
-    }
-    else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.stuffedHedgeHog == true && state.annie == true) {
-
-        console.log('Ghost Town');
-        nextTextNodeId = 22.11;
-    }
-    else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.bandOfPacification == true && state.annie == true) {
-
-        console.log('Ghost Town');
-        nextTextNodeId = 22.21;
-    }
-    else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.bubbleMachine == true && state.annie == true) {
-
-        console.log('Ghost Town');
-        nextTextNodeId = 22.31;
-    }
-
-
-    else if (nextTextNodeId == 7.1 && state.cowboyHat == true && state.annie == true){
-        nextTextNodeId = 7.2;
-    }
-    else if (nextTextNodeId == 7 && state.cowboyHat == true && state.hamilton == true){
-        nextTextNodeId = 7.3;
-    }
-    
-    showTextNode(nextTextNodeId)
-
-}
-
-
-
-
-
-
-
-
-startGame();
