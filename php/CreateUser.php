@@ -59,11 +59,6 @@
                 </div>
                 <br>
                 <div>
-                    <label for='username'>Username:</label>
-                    <input name='username' placeholder="<?php echo "Enter New User's Username..."?>" required>
-                </div>
-                <br>
-                <div>
                     <label for='first_name'>First Name:</label>
                     <input name='first_name' placeholder="<?php echo "Enter New User's First Name..."?>" required>
                 </div>
@@ -72,6 +67,17 @@
                     <label for='last_name'>Last Name:</label>
                     <input name='last_name' placeholder="<?php echo "Enter New User's Last Name..."?>" required>
                 </div>
+                <div>
+                    <label for='privilege'>Last Name:</label>
+                    <input name='privilege' placeholder="<?php echo "Enter New User's Last Name..."?>" required>
+                </div>
+                <br>
+                <label for='privilege'>Select Privilege Level:</label>
+                <select name='privilege'>
+                    <option value='low' default>Low</option>
+                    <option value='High' default>High</option>
+                </select>
+                <p>High privileged admin users can create and delete users. Low level admin users cannot.</p>
                 <br>
                 <!--<div>
                     <label for='password'>Password:</label>

@@ -50,6 +50,50 @@
         }
     }
 
+    function check_email($email){
+        $email = mysqli_real_escape_string($database, $email);
+
+
+        $check_user = "SELECT username, email FROM AdminUser WHERE email = '$email'";
+        $result = mysqli_query($database, $check_user);
+        if(mysqli_num_rows($result) >= 1){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public function create_admin_user($privilege_level, $email, $password, $first_name, $last_name){
+        var $salt = generate_salt();
+        var $hashed_password = hash_pbkdf2('haval256,5', $password, $salt, 10, 70);
+        
+
+        $insertSQL = "INSERT INTO AdminUser(email, username, first_name, last_name, password, salt, privilege_level)
+                                SELECT * FROM(SELECT '$email', '$username', '$first_name', '$last_name', '$hashed_password', '$salt', '$privilege_level') AS user 
+                                WHERE NOT EXISTS (SELECT email, username FROM AdminUser WHERE email = '$email' OR username = '$username')";
+        $result = mysqli_query($database, $insertSQL);
+        if($result){
+            return 1;
+        }
+        else{
+            return -1;
+        }
+    }
+
+    public function create_temp_admin_user($privilege_level, $email, $first_name, $last_name, $key){
+        $exp_date = "NOW() + INTERVAL 4 DAY";
+        $insertSQL = "INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_Date, tempkey)
+                                SELECT * FROM(SELECT '$email', '$first_name', '$last_name', '$privilege_level', '$exp_date', '$key')";
+        $result = mysqli_query($database, $insertSQL);
+        if($result){
+            return True;
+        }
+        else{
+            return False;
+        }
+    }
+
 
     $errors = array();
     if (isset($_POST['submitLogin'])) {
@@ -78,9 +122,9 @@
 
     if (isset($_POST['submitNewUser'])) {
         $email = mysqli_real_escape_string($database, $_POST['email']);
-        $username = mysqli_real_escape_string($database, $_POST['username']);
         $first_name = mysqli_real_escape_string($database, $_POST['first_name']);
         $last_name = mysqli_real_escape_string($database, $_POST['last_name']);
+        $privilege = mysqli_real_escape_string($database, $_POST['privilege']);
 
         if (empty($email)) {
             array_push($errors, "Email is required");
@@ -95,11 +139,24 @@
             array_push($errors, "last_name is required");
         }
 
-        $user_exists = check_username_and_email($email, $username);
+        $user_exists = check_email($email);
         if($user_exists){
-            array_push($errors, "That username and or email is already in use.");
+            array_push($errors, "That email is already in use.");
         }
         
+        $key = mysqli_real_escape_string(md5(2418*2+$email));
+        $user_created = create_temp_admin_user($privilege, $email, $first_name, $last_name, $key);
+        if(!$user_created){
+            array_push($errors, "There was a problemt creating the user.");
+        }
+
+        require_once("./Functions/NewUserEmail.php");
+        require_once("./Classes/SendEmail.php");
+
+        
+        $body = new_user_email_body($email, $first_name, $last_name, $key);
+        $subject = new_user_email_subject();
+        $email = new SendEmail($email, $subject, $body)
 
         if (count($errors) == 0) {
             $_SESSION['success'] = "New User was created, and an email was sent to the user.";

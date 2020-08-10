@@ -14,22 +14,6 @@
             return $salt;
         }
 
-        public function create_admin_user($privilege_level, $username, $email, $password, $first_name, $last_name){
-            var $salt = generate_salt();
-            var $hashed_password = hash_pbkdf2('haval256,5', $password, $salt, 10, 70);
-            
-
-            $insertSQL = "INSERT INTO AdminUser(email, username, first_name, last_name, password, salt, privilege_level)
-                                    SELECT * FROM(SELECT '$email', '$username', '$first_name', '$last_name', '$hashed_password', '$salt', '$privilege_level') AS user 
-                                    WHERE NOT EXISTS (SELECT email, username FROM AdminUser WHERE email = '$email' OR username = '$username')";
-            $result = mysqli_query($database, $insertSQL);
-            if($result){
-                return 1;
-            }
-            else{
-                return -1;
-            }
-        }
 
         public function delete_admin_user($deleter_privilege_level, $username_to_delete, $email_to_delete){
             if(strcmp($deleter_privilege_level, 'high')){
