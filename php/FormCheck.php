@@ -152,7 +152,7 @@
         $key = hash_pbkdf2('haval256,5', $email, 555, 5, 50);
         // $user_created = create_temp_admin_user($errors, $privilege, $email, $first_name, $last_name, $key);
         $exp_date = "DATE_ADD(NOW(), INTERVAL 4 DAY)";
-        $insertSQL = "INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_Date, tempkey) VALUES('$email', '$first_name', '$last_name', '$privilege', '$exp_date', '$key')";
+        $insertSQL = "INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_Date, tempkey) VALUES('$email', '$first_name', '$last_name', '$privilege', $exp_date, '$key')";
         $result = mysqli_query($database, $insertSQL);
         if(!$result){
             array_push($errors, "ERROR: Not able to execute $insertSQL. " . mysqli_error($database));
