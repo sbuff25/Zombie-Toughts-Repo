@@ -161,7 +161,7 @@
             array_push($errors, "That email is already in use.");
         }
         
-        $key = mysqli_real_escape_string($database, hash_pbkdf2('haval256,5', $email, "2280XL51", 5, 70));
+        $key = hash_pbkdf2('haval256,5', $email, "2280XL51", 5, 70);
         $user_created = create_temp_admin_user($privilege, $email, $first_name, $last_name, $key);
         if(!$user_created){
             array_push($errors, "There was a problemt creating the user.");
