@@ -177,7 +177,7 @@
 
         if (count($errors) == 0) {
             $_SESSION['success'] = "New User was created, and an email was sent to the user.";
-            header('location: CreateUser.php');
+            header('location: AdminPage.php');
         }
     }
 ?>
