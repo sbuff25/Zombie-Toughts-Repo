@@ -165,9 +165,9 @@
         require_once("./Classes/SendEmail.php");
 
         
-        // $body = new_user_email_body($email, $first_name, $last_name, $key);
-        // $subject = new_user_email_subject();
-        // $email = new SendEmail($email, $subject, $body);
+        $body = new_user_email_body($email, $first_name, $last_name, $key);
+        $subject = new_user_email_subject();
+        $email = new SendEmail($email, $subject, $body);
 
         if (count($errors) == 0) {
             $_SESSION['success'] = "New User was created, and an email was sent to the user.";
