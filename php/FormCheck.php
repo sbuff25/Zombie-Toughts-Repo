@@ -93,11 +93,13 @@
     }
 
     function create_temp_admin_user($errors, $privilege_level, $email, $first_name, $last_name, $key){
+        array_push($errors, "Got into create_temp_admin_user");
         $DatabaseObject = new Database();
         $database = $DatabaseObject->get_database();
         $exp_date = "CURRENT_DATE() + 4";
         $insertSQL = "INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_Date, tempkey)
                                 SELECT * FROM(SELECT '$email', '$first_name', '$last_name', '$privilege_level', '$exp_date', '$key')";
+        array_push($errors, $insertSQL);
         $result = mysqli_query($database, $insertSQL);
         array_push($errors, "ERROR: Not able to execute $insertSQL. " . mysqli_error($database));
         if($result){
@@ -147,9 +149,6 @@
 
         if (empty($email)) {
             array_push($errors, "Email is required");
-        }
-        if (empty($email)) {
-            array_push($errors, "Username is required");
         }
         if (empty($first_name)) {
             array_push($errors, "first_name is required");
