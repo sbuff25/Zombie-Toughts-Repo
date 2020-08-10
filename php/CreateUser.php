@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us">
+<?php session_start(); ?>
     <head>
         <meta charset="UTF-8">
-        <?php session_start(); ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Zombie Thoughts Project: Admin Login</title>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
