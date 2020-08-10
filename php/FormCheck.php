@@ -65,8 +65,8 @@
     }
 
     function create_admin_user($privilege_level, $email, $password, $first_name, $last_name){
-        var $salt = generate_salt();
-        var $hashed_password = hash_pbkdf2('haval256,5', $password, $salt, 10, 70);
+        $salt = generate_salt();
+        $hashed_password = hash_pbkdf2('haval256,5', $password, $salt, 10, 70);
         
 
         $insertSQL = "INSERT INTO AdminUser(email, username, first_name, last_name, password, salt, privilege_level)
