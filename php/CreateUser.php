@@ -67,11 +67,6 @@
                     <label for='last_name'>Last Name:</label>
                     <input name='last_name' placeholder="<?php echo "Enter New User's Last Name..."?>" required>
                 </div>
-                <div>
-                    <label for='privilege'>Last Name:</label>
-                    <input name='privilege' placeholder="<?php echo "Enter New User's Last Name..."?>" required>
-                </div>
-                <br>
                 <label for='privilege'>Select Privilege Level:</label>
                 <select name='privilege'>
                     <option value='low' default>Low</option>
