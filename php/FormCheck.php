@@ -64,7 +64,7 @@
         }
     }
 
-    public function create_admin_user($privilege_level, $email, $password, $first_name, $last_name){
+    function create_admin_user($privilege_level, $email, $password, $first_name, $last_name){
         var $salt = generate_salt();
         var $hashed_password = hash_pbkdf2('haval256,5', $password, $salt, 10, 70);
         
@@ -81,7 +81,7 @@
         }
     }
 
-    public function create_temp_admin_user($privilege_level, $email, $first_name, $last_name, $key){
+    function create_temp_admin_user($privilege_level, $email, $first_name, $last_name, $key){
         $exp_date = "NOW() + INTERVAL 4 DAY";
         $insertSQL = "INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_Date, tempkey)
                                 SELECT * FROM(SELECT '$email', '$first_name', '$last_name', '$privilege_level', '$exp_date', '$key')";
