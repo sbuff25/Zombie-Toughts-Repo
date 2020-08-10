@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<?php session_start(); ?>
+
     <head>
+        <?php //session_start(); ?>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Zombie Thoughts Project: Admin Login</title>

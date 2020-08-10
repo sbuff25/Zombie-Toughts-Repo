@@ -163,7 +163,7 @@
         }
         
         $key = hash_pbkdf2('haval256,5', $email, 555, 5, 50);
-        $user_created = $this->create_temp_admin_user($errors, $privilege, $email, $first_name, $last_name, $key);
+        $user_created = create_temp_admin_user($errors, $privilege, $email, $first_name, $last_name, $key);
         array_push($errors, $privilege);
         array_push($errors, $email);
         array_push($errors, $first_name);
