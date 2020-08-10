@@ -2,7 +2,7 @@
 
     function new_user_email_body($email, $first_name, $last_name, $key){
         $body = '';
-        $body .= '<p>Dear ' . $first_name . ' ' . $last_name ',</p>';
+        $body .= '<p>Dear ' . $first_name . ' ' . $last_name . ',</p>';
         $body .= "<p>Welcome to the Montana Repertory Theatre\'s Zombie Thoughts Website!</p>";
         $body .= "<p>In order to confirm your account creation, please click on the following link to set your password:";
         $body .= "<a href='https://www.montanarepzombiethoughts.com/php/NewUserPassword.php?key=" . $key . "&email=". $email ."&action=setpassword' target='_blank''>https://www.montanarepzombiethoughts.com/php/NewUserPassword.php?key=" . $key . "&email=". $email ."&action=setpassword</a></p>";

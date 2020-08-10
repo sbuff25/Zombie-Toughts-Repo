@@ -1,5 +1,9 @@
 <?php 
 
+    require_once("./Classes/Database.php");
+    $DatabaseObject = new Database();
+    $database = $DatabaseObject->get_database();
+
     function check_password($username_or_email, $password){
         $username_or_email = mysqli_real_escape_string($database, $username_or_email);
         $password = mysqli_real_escape_string($database, $password);
