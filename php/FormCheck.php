@@ -92,7 +92,7 @@
         }
     }
 
-    function create_temp_admin_user($privilege_level, $email, $first_name, $last_name, $key){
+    function create_temp_admin_user($errors, $privilege_level, $email, $first_name, $last_name, $key){
         $DatabaseObject = new Database();
         $database = $DatabaseObject->get_database();
         $exp_date = "CURRENT_DATE() + 4";
@@ -163,7 +163,7 @@
         }
         
         $key = hash_pbkdf2('haval256,5', $email, 555, 5, 70);
-        $user_created = create_temp_admin_user($privilege, $email, $first_name, $last_name, $key);
+        $user_created = create_temp_admin_user($errors, $privilege, $email, $first_name, $last_name, $key);
         if(!$user_created){
             array_push($errors, "There was a problem creating the user.");
         }
