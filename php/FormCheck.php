@@ -1,10 +1,11 @@
 <?php 
 
     require_once("./Classes/Database.php");
-    $DatabaseObject = new Database();
-    $database = $DatabaseObject->get_database();
+    
 
     function check_password($username_or_email, $password){
+        $DatabaseObject = new Database();
+        $database = $DatabaseObject->get_database();
         $username_or_email = mysqli_real_escape_string($database, $username_or_email);
         $password = mysqli_real_escape_string($database, $password);
 
@@ -40,6 +41,8 @@
     }
 
     function check_username_and_email($email, $username){
+        $DatabaseObject = new Database();
+        $database = $DatabaseObject->get_database();
         $username = mysqli_real_escape_string($database, $username);
         $email = mysqli_real_escape_string($database, $email);
 
@@ -55,6 +58,8 @@
     }
 
     function check_email($email){
+        $DatabaseObject = new Database();
+        $database = $DatabaseObject->get_database();
         $email = mysqli_real_escape_string($database, $email);
 
 
@@ -69,6 +74,8 @@
     }
 
     function create_admin_user($privilege_level, $email, $password, $first_name, $last_name){
+        $DatabaseObject = new Database();
+        $database = $DatabaseObject->get_database();
         $salt = generate_salt();
         $hashed_password = hash_pbkdf2('haval256,5', $password, $salt, 10, 70);
         
@@ -86,6 +93,8 @@
     }
 
     function create_temp_admin_user($privilege_level, $email, $first_name, $last_name, $key){
+        $DatabaseObject = new Database();
+        $database = $DatabaseObject->get_database();
         $exp_date = "NOW() + INTERVAL 4 DAY";
         $insertSQL = "INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_Date, tempkey)
                                 SELECT * FROM(SELECT '$email', '$first_name', '$last_name', '$privilege_level', '$exp_date', '$key')";
@@ -101,6 +110,8 @@
 
     $errors = array();
     if (isset($_POST['submitLogin'])) {
+        $DatabaseObject = new Database();
+        $database = $DatabaseObject->get_database();
         $email_or_username = mysqli_real_escape_string($database, $_POST['emailorusername']);
         $password = mysqli_real_escape_string($database, $_POST['password']);
 
@@ -125,6 +136,8 @@
     }
 
     if (isset($_POST['submitNewUser'])) {
+        $DatabaseObject = new Database();
+        $database = $DatabaseObject->get_database();
         $email = mysqli_real_escape_string($database, $_POST['email']);
         $first_name = mysqli_real_escape_string($database, $_POST['first_name']);
         $last_name = mysqli_real_escape_string($database, $_POST['last_name']);

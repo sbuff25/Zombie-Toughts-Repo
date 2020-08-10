@@ -79,12 +79,12 @@
                 <?php include('errors.php'); ?>
                 <?php if (isset($_SESSION['success'])) : ?>
                     <div class="error success">
-                    <h3>
+                    <p>
                     <?php 
                         echo $_SESSION['success'];
                         unset($_SESSION['success']);
                     ?>
-                    </h3>
+                    </p>
                     </div>
                 <?php endif ?>
                 <br>
