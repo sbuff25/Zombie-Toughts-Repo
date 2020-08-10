@@ -152,7 +152,7 @@
         $key = hash_pbkdf2('haval256,5', $email, 555, 5, 50);
         // $user_created = create_temp_admin_user($errors, $privilege, $email, $first_name, $last_name, $key);
         $exp_date = "CURRENT_DATE() + 4";
-        $insertSQL = "INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_Date, tempkey) VALUES('$email', '$first_name', '$last_name', '$privilege_level', '$exp_date', '$key')";
+        $insertSQL = "INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_Date, tempkey) VALUES('$email', '$first_name', '$last_name', '$privilege', '$exp_date', '$key')";
         array_push($errors, $insertSQL);
         $result = mysqli_query($database, $insertSQL);
         if(!$result){
@@ -163,9 +163,9 @@
         array_push($errors, $first_name);
         array_push($errors, $last_name);
         array_push($errors, $key);
-        if(!$user_created){
-            array_push($errors, "There was a problem creating the user.");
-        }
+        // if(!$user_created){
+        //     array_push($errors, "There was a problem creating the user.");
+        // }
 
         require_once("./Functions/NewUserEmail.php");
         require_once("./Classes/SendEmail.php");
