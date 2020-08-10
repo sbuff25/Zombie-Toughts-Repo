@@ -71,6 +71,20 @@
         }
     }
 
+    function check_user($database, $user){
+        $user = mysqli_real_escape_string($database, $user);
+
+
+        $check_user = "SELECT username FROM AdminUser WHERE username = '$user'";
+        $result = mysqli_query($database, $check_user);
+        if(mysqli_num_rows($result) >= 1){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
     function create_admin_user($database, $privilege_level, $email, $password, $first_name, $last_name){
         $salt = generate_salt();
         $hashed_password = hash_pbkdf2('haval256,5', $password, $salt, 10, 70);
@@ -171,6 +185,63 @@
 
         if (count($errors) == 0) {
             $_SESSION['success'] = "New User was created, and an email was sent to the user.";
+            header('location: AdminPage.php');
+        }
+    }
+
+    if (isset($_POST['set_new_user'])) {
+        $DatabaseObject = new Database();
+        $database = $DatabaseObject->get_database();
+        $email = mysqli_real_escape_string($database, $_POST['email']);
+        $first_name = mysqli_real_escape_string($database, $_POST['first_name']);
+        $last_name = mysqli_real_escape_string($database, $_POST['last_name']);
+        $privilege = mysqli_real_escape_string($database, $_POST['privilege_level']);
+        $password = mysqli_real_escape_string($database, $_POST['password']);
+        $confirm_password = mysqli_real_escape_string($database, $_POST['confirm_password']);
+
+        if (empty($email)) {
+            array_push($errors, "Email is required");
+        }
+        if (empty($first_name)) {
+            array_push($errors, "First Name is required");
+        }
+        if (empty($last_name)) {
+            array_push($errors, "Last Name is required");
+        }
+        if(!strcmp($password, $confirm_password)){
+            array_push($errors, "The passwords do not match.");
+        }
+
+        $user = mysqli_real_escape_string($database, $_POST['username']);
+        $check_user = "SELECT username FROM AdminUser WHERE username = '$user'";
+        $result = mysqli_query($database, $check_user);
+        if(mysqli_num_rows($result) >= 1){
+            array_push($errors, "That username is already in use.");
+        }
+
+        $salt = generate_salt();
+        $hashed_password = hash_pbkdf2('haval256,5', $password, $salt, 10, 70);
+        
+
+        $insertSQL = "INSERT INTO AdminUser(email, username, first_name, last_name, password, salt, privilege_level)
+                                VALUES ('$email', '$username', '$first_name', '$last_name', '$hashed_password', '$salt', '$privilege_level')";
+        $result = mysqli_query($database, $insertSQL);
+
+        if(!$result){
+            array_push($errors, "Could not create account.");
+        }
+
+        $deleteSQL = "DELETE FROM TempUser WHERE email='$email'";
+        $result = mysqli_query($database, $insertSQL);
+
+        if(!$result){
+            array_push($errors, "Could not remove entry from tempuser.");
+        }
+
+        
+        if (count($errors) == 0) {
+            $_SESSION['success'] = "New Account created.";
+            $_SESSION['username'] = $user;
             header('location: AdminPage.php');
         }
     }
