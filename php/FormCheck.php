@@ -225,7 +225,7 @@ require_once("./Classes/Database.php");
         if (empty($last_name)) {
             array_push($errors, "Last Name is required");
         }
-        if((strcmp($password, $confirm_password) !== 0){
+        if(strcmp($password, $confirm_password) != 0){
             array_push($errors, "The passwords do not match.");
             array_push($errors, $password);
             array_push($errors, $confirm_password);
