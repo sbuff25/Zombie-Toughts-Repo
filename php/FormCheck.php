@@ -262,7 +262,7 @@ require_once("./Classes/Database.php");
 
         if (count($errors) === 0) {
             $deleteSQL = "DELETE FROM TempUser WHERE email='$email'";
-            $result = mysqli_query($database, $insertSQL);
+            $result = mysqli_query($database, $deleteSQL);
 
             if(!$result){
                 array_push($errors, "Could not remove entry from tempuser.");
