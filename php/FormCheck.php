@@ -236,30 +236,34 @@ require_once("./Classes/Database.php");
             array_push($errors, "That username is already in use.");
         }
 
-        // Generate salt__________________________________________________________________
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $salt = '';
-        for($i = 0; $i < 30; $i++){
-            $salt .= $characters[rand(0, strlen($characters) - 1)];
+        if (count($errors) == 0) {
+            // Generate salt__________________________________________________________________
+            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            $salt = '';
+            for($i = 0; $i < 30; $i++){
+                $salt .= $characters[rand(0, strlen($characters) - 1)];
+            }
+            // End Generate salt_______________________________________________________________
+            
+            $hashed_password = hash_pbkdf2('haval256,5', $password, $salt, 10, 70);
+            
+
+            $insertSQL = "INSERT INTO AdminUser(email, username, first_name, last_name, password, salt, privilege_level)
+                                    VALUES ('$email', '$username', '$first_name', '$last_name', '$hashed_password', '$salt', '$privilege_level')";
+            $result = mysqli_query($database, $insertSQL);
+
+            if(!$result){
+                array_push($errors, "Could not create account.");
+            }
         }
-        // End Generate salt_______________________________________________________________
-        
-        $hashed_password = hash_pbkdf2('haval256,5', $password, $salt, 10, 70);
-        
 
-        $insertSQL = "INSERT INTO AdminUser(email, username, first_name, last_name, password, salt, privilege_level)
-                                VALUES ('$email', '$username', '$first_name', '$last_name', '$hashed_password', '$salt', '$privilege_level')";
-        $result = mysqli_query($database, $insertSQL);
+        if (count($errors) == 0) {
+            $deleteSQL = "DELETE FROM TempUser WHERE email='$email'";
+            $result = mysqli_query($database, $insertSQL);
 
-        if(!$result){
-            array_push($errors, "Could not create account.");
-        }
-
-        $deleteSQL = "DELETE FROM TempUser WHERE email='$email'";
-        $result = mysqli_query($database, $insertSQL);
-
-        if(!$result){
-            array_push($errors, "Could not remove entry from tempuser.");
+            if(!$result){
+                array_push($errors, "Could not remove entry from tempuser.");
+            }
         }
 
         
