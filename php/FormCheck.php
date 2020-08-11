@@ -128,25 +128,26 @@ require_once("./Classes/Database.php");
         $username_or_email = mysqli_real_escape_string($database, $email_or_username);
         $password = mysqli_real_escape_string($database, $password);
 
+        if (count($errors) == 0) {
+            $check_user = "SELECT username, email, first_name, last_name, salt FROM AdminUser WHERE email = '$username_or_email' OR username = '$username_or_email'";
+            $result = mysqli_query($database, $check_user);
+            if(mysqli_num_rows($result) == 1){
+                $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                $hashed_password = hash_pbkdf2('haval256,5', $password, $row['salt'], 10, 70);
+                $check_pass = "SELECT EXISTS(SELECT username FROM AdminUser WHERE ((password = '$hashed_password' AND username = '$username_or_email') OR (password = '$hashed_password' AND email = '$username_or_email'))";
 
-        $check_user = "SELECT username, email, first_name, last_name, salt FROM AdminUser WHERE email = '$username_or_email' OR username = '$username_or_email'";
-        $result = mysqli_query($database, $check_user);
-        if(mysqli_num_rows($result) == 1){
-            $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-            $hashed_password = hash_pbkdf2('haval256,5', $password, $row['salt'], 10, 70);
-            $check_pass = "SELECT EXISTS(SELECT username FROM AdminUser WHERE ((password = '$hashed_password' AND username = '$username_or_email') OR (password = '$hashed_password' AND email = '$username_or_email'))";
-
-            $result2 = mysqli_query($database, $check_pass);
-            if($result2){  // May need to fix and check what the result was
-                $row = mysqli_fetch_assoc($result);
-                $_SESSION['username'] = $row['username'];
-                $_SESSION['username'] = $row['email'];
-                $_SESSION['first_name'] = $row['first_name'];
-                $_SESSION['last_name'] = $row['last_name'];
+                $result2 = mysqli_query($database, $check_pass);
+                if($result2){  // May need to fix and check what the result was
+                    $row = mysqli_fetch_assoc($result);
+                    $_SESSION['username'] = $row['username'];
+                    $_SESSION['email'] = $row['email'];
+                    $_SESSION['first_name'] = $row['first_name'];
+                    $_SESSION['last_name'] = $row['last_name'];
+                }
             }
-        }
-        else{
-            array_push($errors, "Username, email, and/or password are incorrect.");
+            else{
+                array_push($errors, "Username, email, and/or password are incorrect.");
+            }
         }
 
         
