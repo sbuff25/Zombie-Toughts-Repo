@@ -256,6 +256,7 @@ require_once("./Classes/Database.php");
 
             if(!$result){
                 array_push($errors, "Could not create account.");
+                array_push($errors, "ERROR: Not able to execute $insertSQL. " . mysqli_error($database));
             }
         }
 
