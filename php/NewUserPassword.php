@@ -37,7 +37,7 @@
                     <input type="password" name="confirm_password" maxlength="15" required/>
                     <br>
                     <input type="hidden" name="email" value="<?php echo $email;?>"/>
-                    <input type="submit" value="set_new_user" />
+                    <input type="submit" value="Create Account" />
                 </form>
             <?php
             }
