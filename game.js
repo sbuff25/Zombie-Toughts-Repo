@@ -22,7 +22,7 @@ const textNodes = [{
     vid: 'awcQ9-QvZLs',
     text: 'Looks like Sam is going to be Hamilton. What hat should he wear?',
     options: [{
-        
+
             text: 'A baseball cap?',
             setState: { baseballCap: true },
             nextText: 4
@@ -304,10 +304,10 @@ const textNodes = [{
 {
     id: 12,
     text: 'Explanation of question 1 and options to ask more Hamilton',
-    setState:{question1: true},
+    setState: { question1: true },
     options: [{
             text: 'How can Sam overcome his anxiety? Hamilton',
-            setState: {question2: true},
+            setState: { question2: true },
             nextText: 13
         },
         {
@@ -324,22 +324,21 @@ const textNodes = [{
 {
     id: 12.1,
     text: 'Explanation of question 1 and options to ask more Hamilton',
-    setState:{question1: true},
+    setState: { question1: true },
     options: [{
-            text: 'Continue',
-            setState: {question2: true},
-            nextText: 16
-        },
-    ]
+        text: 'Continue',
+        setState: { question2: true },
+        nextText: 16
+    }, ]
 },
 // Girl
 {
     id: 12.2,
     text: 'Explanation of question 1 and options to ask more Annie',
-    setState:{question1: true},
+    setState: { question1: true },
     options: [{
             text: 'How can Sam overcome his anxiety? Annie',
-            setState: {question2: true},
+            setState: { question2: true },
             nextText: 13.2
         },
         {
@@ -359,8 +358,7 @@ const textNodes = [{
     options: [{
         text: 'Continue',
         nextText: 16
-    }
-    ]
+    }]
 },
 // Boy
 {
@@ -369,8 +367,7 @@ const textNodes = [{
     options: [{
         text: 'Why does Sam have anxiety?',
         nextText: 12.1
-    },
-    ]
+    }, ]
 },
 // Girl
 {
@@ -379,8 +376,7 @@ const textNodes = [{
     options: [{
         text: 'Continue',
         nextText: 16.1
-    }
-    ]
+    }]
 },
 // Boy
 {
@@ -710,31 +706,33 @@ var done = false;
 tag.src = "https://www.youtube.com/iframe_api";
 
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-function loadVideo()
-{
-    var iframe = document.getElementById("player");
-    iframe.remove();
-    var el = document.createElement("div");
-    el.innerHTML = "hi";
-    el.attributes.id = "player";
-    var div = document.getElementById("vid_box");
-    div.after(el);
+
+function loadVideo() {
+var iframe = document.getElementById("player");
+iframe.remove();
+var el = document.createElement("div");
+el.setAttribute("id", "player");
+el.innerHTML = "hi";
+
+var div = document.getElementById("vid_box");
+div.append(el);
 
 
 
-    done = false;
-    // document.getElementById('player').style.display='block';
-    document.getElementById('text').style.display='none';
-    vidTime = vidNode.vidtime;
-    console.log(vidTime);
-    Video = vidNode.vid;
-    console.log(Video);
-    // document.getElementById('player').src=Video;
-    //  tag = document.createElement('script');
-    // firstScriptTag = document.getElementsByTagName('script')[0];
-    // tag.src = "https://www.youtube.com/iframe_api";
-    // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    onYouTubeIframeAPIReady();
+done = false;
+// document.getElementById('player').style.display='block';
+document.getElementById('text').style.display = 'none';
+document.getElementById('option-buttons').style.display = 'none';
+vidTime = vidNode.vidtime;
+console.log(vidTime);
+Video = vidNode.vid;
+console.log(Video);
+// document.getElementById('player').src=Video;
+//  tag = document.createElement('script');
+// firstScriptTag = document.getElementsByTagName('script')[0];
+// tag.src = "https://www.youtube.com/iframe_api";
+// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+onYouTubeIframeAPIReady();
 }
 
 
@@ -746,21 +744,21 @@ function loadVideo()
 var player;
 
 function onYouTubeIframeAPIReady() {
-    console.log('Text'+Video);
-  player = new YT.Player('player', {
-    height: '390',
-    width: '640',
-    videoId: Video,
-    events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
-    }
-  });
+console.log('Text' + Video);
+player = new YT.Player('player', {
+height: '390',
+width: '640',
+videoId: Video,
+events: {
+    'onReady': onPlayerReady,
+    'onStateChange': onPlayerStateChange
+}
+});
 }
 
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
-    console.log('hello');
+console.log('hello');
 //   event.target.playVideo();
 }
 
@@ -768,23 +766,27 @@ function onPlayerReady(event) {
 //    The function indicates that when playing a video (state=1),
 //    the player should play for six seconds and then stop.
 var myVar;
-function onPlayerStateChange(event) {
-    console.log(event.data);
-    console.log(done);
-  if (event.data == YT.PlayerState.PLAYING && !done) {
 
-    myVar = setTimeout(stopVideo, vidTime);
-    
-    
-    done = true;
-  }
+function onPlayerStateChange(event) {
+console.log(event.data);
+console.log(done);
+if (event.data == YT.PlayerState.PLAYING && !done) {
+
+myVar = setTimeout(stopVideo, vidTime);
+
+
+done = true;
 }
+}
+
 function stopVideo() {
-  clearTimeout(myVar);
-  player.stopVideo();
-  document.getElementById('text').style.display='block';
-  document.getElementById('player').style.display='none';
-  showTextNode(1);
+clearTimeout(myVar);
+player.stopVideo();
+document.getElementById('text').style.display = 'block';
+document.getElementById('option-buttons').style.display = 'block';
+
+document.getElementById('player').style.display = 'none';
+showTextNode(1);
 }
 
 
@@ -795,145 +797,132 @@ function stopVideo() {
 const playing = true;
 
 function myFunction(vidTime) {
-    myVar = setTimeout(alertFunc, vidTime);
-    
-  }
-  
-  function alertFunc() {
-    videoElement.style.display='none';
-    showTextNode(1);
-  }
-  
+myVar = setTimeout(alertFunc, vidTime);
+
+}
+
+function alertFunc() {
+videoElement.style.display = 'none';
+showTextNode(1);
+}
+
 
 let state = {}
 
 
 function startGame() {
-    state = {}
-    showVid(1);
+state = {}
+showVid(1);
 }
 
 
 
 function showVid(textNodeIndex) {
-    vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
-    // videoElement.src = vidNode.vid
-    // myFunction(vidNode.vidtime);
-    // videoElement.onended = function()
+vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
+// videoElement.src = vidNode.vid
+// myFunction(vidNode.vidtime);
+// videoElement.onended = function()
 // {
 //     showTextNode(1);
-    
+
 // }
 }
-function showTextNode(textNodeIndex) {
-    
-    // showVid(1);
-     vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
-     if (textNodeIndex > 1) {
-        loadVideo(); 
-     }
-    
-     console.log(vidNode);
-    // videoElement.src = vidNode.vid
-    const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
-    textElement.innerText = textNode.text
-    while (optionButtonsElement.firstChild) {
-        optionButtonsElement.removeChild(optionButtonsElement.firstChild)
-    }
 
-    textNode.options.forEach(option => {
-            if (showOption(option)) {
-                const button = document.createElement('button')
-                // const vid = document.createElement('iframe')
-                // vid.innerHTML = option.vid
-                button.innerText = option.text
-                button.classList.add('btn')
-                button.addEventListener('click', () => selectOption(option))
-                optionButtonsElement.appendChild(button)
-            }
-        })
-        //This is storing the choices being made in the console. these some of these choices will effect final outcome of game. 
+function showTextNode(textNodeIndex) {
+
+// showVid(1);
+vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
+if (textNodeIndex > 1) {
+loadVideo();
+}
+
+console.log(vidNode);
+// videoElement.src = vidNode.vid
+const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
+textElement.innerText = textNode.text
+while (optionButtonsElement.firstChild) {
+optionButtonsElement.removeChild(optionButtonsElement.firstChild)
+}
+
+textNode.options.forEach(option => {
+    if (showOption(option)) {
+        const button = document.createElement('button')
+            // const vid = document.createElement('iframe')
+            // vid.innerHTML = option.vid
+        button.innerText = option.text
+        button.classList.add('btn')
+        button.addEventListener('click', () => selectOption(option))
+        optionButtonsElement.appendChild(button)
+    }
+})
+//This is storing the choices being made in the console. these some of these choices will effect final outcome of game. 
 }
 
 
 function showOption(option) {
-    return option.requiredState == null || option.requiredState(state)
+return option.requiredState == null || option.requiredState(state)
 }
 // ALL LOGICAL STATMENTS
 function selectOption(option) {
-    
-    var nextTextNodeId = option.nextText
-    // Restarts Game
-    if (nextTextNodeId <= 0) {
-        startGame();
-    }
-    state = Object.assign(state, option.setState)
 
-    if (nextTextNodeId == 20 && state.mountDoomn == true && state.stuffedHedgeHog == true && state.hamilton == true) {
-        console.log('Mount Doom');
-        nextTextNodeId = 21.1;
-    } 
-    else if (nextTextNodeId == 20 && state.mountDoomn == true && state.bandOfPacification == true && state.hamilton == true) {
-        console.log('Mount Doom');
-        nextTextNodeId = 21.2;
-    }
-    else if (nextTextNodeId == 20 && state.mountDoomn == true && state.bubbleMachine == true && state.hamilton == true) {
-        console.log('Mount Doom');
-        nextTextNodeId = 21.3;
-    }
-    else if (nextTextNodeId == 20 && state.ghostTown == true && state.stuffedHedgeHog == true && state.hamilton == true) {
+var nextTextNodeId = option.nextText
+// Restarts Game
+if (nextTextNodeId <= 0) {
+startGame();
+}
+state = Object.assign(state, option.setState)
 
-        console.log('Ghost Town');
-        nextTextNodeId = 22.1;
-    }
-    else if (nextTextNodeId == 20 && state.ghostTown == true && state.bandOfPacification == true && state.hamilton == true) {
+if (nextTextNodeId == 20 && state.mountDoomn == true && state.stuffedHedgeHog == true && state.hamilton == true) {
+console.log('Mount Doom');
+nextTextNodeId = 21.1;
+} else if (nextTextNodeId == 20 && state.mountDoomn == true && state.bandOfPacification == true && state.hamilton == true) {
+console.log('Mount Doom');
+nextTextNodeId = 21.2;
+} else if (nextTextNodeId == 20 && state.mountDoomn == true && state.bubbleMachine == true && state.hamilton == true) {
+console.log('Mount Doom');
+nextTextNodeId = 21.3;
+} else if (nextTextNodeId == 20 && state.ghostTown == true && state.stuffedHedgeHog == true && state.hamilton == true) {
 
-        console.log('Ghost Town');
-        nextTextNodeId = 22.2;
-    }
-    else if (nextTextNodeId == 20 && state.ghostTown == true && state.bubbleMachine == true && state.hamilton == true) {
+console.log('Ghost Town');
+nextTextNodeId = 22.1;
+} else if (nextTextNodeId == 20 && state.ghostTown == true && state.bandOfPacification == true && state.hamilton == true) {
 
-        console.log('Ghost Town');
-        nextTextNodeId = 22.3;
-    }
+console.log('Ghost Town');
+nextTextNodeId = 22.2;
+} else if (nextTextNodeId == 20 && state.ghostTown == true && state.bubbleMachine == true && state.hamilton == true) {
 
-    if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.stuffedHedgeHog == true && state.annie == true) {
-        console.log('Mount Doom');
-        nextTextNodeId = 21.12;
-    } 
-    else if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.bandOfPacification == true && state.annie == true) {
-        console.log('Mount Doom');
-        nextTextNodeId = 21.22;
-    }
-    else if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.bubbleMachine == true && state.annie == true) {
-        console.log('Mount Doom');
-        nextTextNodeId = 21.31;
-    }
-    else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.stuffedHedgeHog == true && state.annie == true) {
+console.log('Ghost Town');
+nextTextNodeId = 22.3;
+}
 
-        console.log('Ghost Town');
-        nextTextNodeId = 22.11;
-    }
-    else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.bandOfPacification == true && state.annie == true) {
+if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.stuffedHedgeHog == true && state.annie == true) {
+console.log('Mount Doom');
+nextTextNodeId = 21.12;
+} else if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.bandOfPacification == true && state.annie == true) {
+console.log('Mount Doom');
+nextTextNodeId = 21.22;
+} else if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.bubbleMachine == true && state.annie == true) {
+console.log('Mount Doom');
+nextTextNodeId = 21.31;
+} else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.stuffedHedgeHog == true && state.annie == true) {
 
-        console.log('Ghost Town');
-        nextTextNodeId = 22.21;
-    }
-    else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.bubbleMachine == true && state.annie == true) {
+console.log('Ghost Town');
+nextTextNodeId = 22.11;
+} else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.bandOfPacification == true && state.annie == true) {
 
-        console.log('Ghost Town');
-        nextTextNodeId = 22.31;
-    }
+console.log('Ghost Town');
+nextTextNodeId = 22.21;
+} else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.bubbleMachine == true && state.annie == true) {
 
+console.log('Ghost Town');
+nextTextNodeId = 22.31;
+} else if (nextTextNodeId == 7.1 && state.cowboyHat == true && state.annie == true) {
+nextTextNodeId = 7.2;
+} else if (nextTextNodeId == 7 && state.cowboyHat == true && state.hamilton == true) {
+nextTextNodeId = 7.3;
+}
 
-    else if (nextTextNodeId == 7.1 && state.cowboyHat == true && state.annie == true){
-        nextTextNodeId = 7.2;
-    }
-    else if (nextTextNodeId == 7 && state.cowboyHat == true && state.hamilton == true){
-        nextTextNodeId = 7.3;
-    }
-    
-    showTextNode(nextTextNodeId)
+showTextNode(nextTextNodeId)
 
 }
 
