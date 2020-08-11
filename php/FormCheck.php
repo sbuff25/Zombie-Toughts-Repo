@@ -227,6 +227,8 @@ require_once("./Classes/Database.php");
         }
         if(!strcmp($password, $confirm_password)){
             array_push($errors, "The passwords do not match.");
+            array_push($errors, $password);
+            array_push($errors, $confirm_password);
         }
 
         $user = mysqli_real_escape_string($database, $_POST['username']);
