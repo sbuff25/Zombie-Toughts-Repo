@@ -42,6 +42,8 @@
             <?php
             }
             else{
+                $sql = "DELETE FROM TempUser WHERE tempkey='$key' and email='$email'";
+                $query = mysqli_query($database, $sql);
                 $error .= "<h2>Link Expired</h2><br>";
             }
         }
