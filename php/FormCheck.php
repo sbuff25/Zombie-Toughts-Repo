@@ -1,8 +1,6 @@
 <?php 
 
 require_once("./Classes/Database.php");
-$DatabaseObject = new Database();
-$database = $DatabaseObject->get_database();
     
 
     // function check_password($username_or_email, $password){
