@@ -236,7 +236,14 @@ require_once("./Classes/Database.php");
             array_push($errors, "That username is already in use.");
         }
 
-        $salt = generate_salt();
+        // Generate salt__________________________________________________________________
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $salt = '';
+        for($i = 0; $i < 30; $i++){
+            $salt .= $characters[rand(0, strlen($characters) - 1)];
+        }
+        // End Generate salt_______________________________________________________________
+        
         $hashed_password = hash_pbkdf2('haval256,5', $password, $salt, 10, 70);
         
 
