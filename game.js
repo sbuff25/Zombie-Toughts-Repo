@@ -41,7 +41,7 @@ const textNodes = [{
 },
 {
     id: 2.1,
-    vidtime: 2000,
+    vidtime: 1000,
     vid: 'f9-J6A0mt14',
     text: 'Looks like Sam is going to be Annie. What hat should she wear?',
     options: [{
@@ -711,7 +711,7 @@ function loadVideo() {
 var iframe = document.getElementById("player");
 iframe.remove();
 var el = document.createElement("div");
-el.setAttribute("id", "player");
+el.setAttribute("id", "player",);
 el.innerHTML = "hi";
 
 var div = document.getElementById("vid_box");
@@ -732,6 +732,7 @@ console.log(Video);
 // firstScriptTag = document.getElementsByTagName('script')[0];
 // tag.src = "https://www.youtube.com/iframe_api";
 // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
 onYouTubeIframeAPIReady();
 }
 
