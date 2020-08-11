@@ -91,7 +91,7 @@
                     }
                 }
                 else{
-                    $error .= "There was an issue displaying user information";
+                    header('location: ../index.php');
                 }
                 echo $error;
 
