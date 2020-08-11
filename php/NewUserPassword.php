@@ -63,6 +63,7 @@
                         $exp_date = date('Y-m-d H:i:s', $exp_date);
                         if ($exp_date >= $cur_date){
                             $current_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                            echo $current_link;
                         ?>
                             <form method="post" action="<?php echo $current_link; ?>">
                                 <input type="hidden" name="action" value="setpassword" />
