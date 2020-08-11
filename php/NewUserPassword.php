@@ -80,6 +80,19 @@
                                 <input type="password" name="confirm_password" maxlength="15" required/>
                                 <br>
                                 <input type="hidden" name="email" value="<?php echo $email;?>"/>
+                                <?php include_once('errors.php'); ?>
+                                <?php if (isset($_SESSION['success'])) : ?>
+                                    <div class="error success">
+                                    <h3>
+                                    <?php 
+                                        echo $_SESSION['success'];
+                                        unset($_SESSION['success']);
+                                    ?>
+                                    </h3>
+                                    </div>
+                                <?php endif ?>
+                                <br>
+
                                 <input type="submit" value="Create Account"  name='set_new_user'/>
                             </form>
                         <?php
