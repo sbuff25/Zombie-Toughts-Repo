@@ -138,8 +138,9 @@ require_once("./Classes/Database.php");
 
             $result2 = mysqli_query($database, $check_pass);
             if($result2){  // May need to fix and check what the result was
-                
+                $row = mysqli_fetch_assoc($result);
                 $_SESSION['username'] = $row['username'];
+                $_SESSION['username'] = $row['email'];
                 $_SESSION['first_name'] = $row['first_name'];
                 $_SESSION['last_name'] = $row['last_name'];
             }
@@ -273,6 +274,7 @@ require_once("./Classes/Database.php");
         if (count($errors) == 0) {
             $_SESSION['success'] = "New Account created.";
             $_SESSION['username'] = $user;
+            $_SESSION['email'] = $email;
             header('location: AdminPage.php');
         }
     }

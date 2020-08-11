@@ -45,7 +45,7 @@
             <form action='LoginPage.php' method='POST'>
                 <div>
                     <label for='email'>Email or Username:</label>
-                    <input name='emailorusername' type='email' placeholder='Enter Email...'>
+                    <input name='emailorusername' placeholder='Enter Email...'>
                 </div>
                 <br>
                 <div>
@@ -53,7 +53,7 @@
                     <input name='password' type='password' placeholder='Enter Password...'>
                 </div>
                 <br>
-                <?php include('errors.php'); ?>
+                <?php include_once('errors.php'); ?>
                 <?php if (isset($_SESSION['success'])) : ?>
                     <div class="error success">
                     <h3>

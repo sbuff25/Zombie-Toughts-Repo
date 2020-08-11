@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="./scroll_bar.css">
         <link rel="stylesheet" href="./text_animiations.css">
 
-        <?php if(!isset($_SESSION['username'] || !isset($_SESSION['email']))){
+        <?php if(!isset($_SESSION['username'] && !isset($_SESSION['email']))){
 
             header('location: ../index.php');
 
