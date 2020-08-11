@@ -25,12 +25,12 @@ const textNodes = [{
 
             text: 'A baseball cap?',
             setState: { baseballCap: true },
-            nextText: 4
+            nextText: 4.01
         },
         {
             text: 'A Cowboy hat?',
             setState: { cowboyHat: true },
-            nextText: 4
+            nextText: 4.001
         },
         // {
         //     text: 'A Tophat?',
@@ -47,12 +47,12 @@ const textNodes = [{
     options: [{
             text: 'A baseball cap?',
             setState: { baseballCap: true },
-            nextText: 4.1
+            nextText: 4.019
         },
         {
             text: 'A Cowboy hat?',
             setState: { cowboyHat: true },
-            nextText: 4.1
+            nextText: 4.0019
         },
         // {
         //     text: 'A Tophat?',
@@ -62,17 +62,17 @@ const textNodes = [{
     ]
 },
 {
-    id: 4,
+    id: 4.01,
     text: 'Now That we know what our character is lets choose an accessory for our friend Pig.',
     options: [{
             text: 'A Fadora?',
             setState: { fadora: true },
-            nextText: 5
+            nextText: 4.02
         },
         {
             text: 'A Headband?',
             setState: { headband: true },
-            nextText: 5
+            nextText: 4.03
         },
         // {
         //     text: 'Or Eyeshadow',
@@ -81,113 +81,406 @@ const textNodes = [{
         // }
     ]
 },
-
 {
-    id: 4.1,
+    id: 4.001,
     text: 'Now That we know what our character is lets choose an accessory for our friend Pig.',
     options: [{
             text: 'A Fadora?',
             setState: { fadora: true },
-            nextText: 5.1
+            nextText: 4.002
         },
         {
             text: 'A Headband?',
             setState: { headband: true },
-            nextText: 5.1
+            nextText: 4.003
         },
         // {
         //     text: 'Or Eyeshadow',
         //     setSate: { eyeshadow: true },
-        //     nextText: 5.1
+        //     nextText: 5
         // }
     ]
 },
 // Boy
 {
-    id: 5,
+    id: 4.02,
     text: 'Choose your starting location. Hamilton',
     options: [{
             text: 'Mount Doom',
             setState: { mountDoomn: true },
-            nextText: 6
+            nextText: 4.021
         },
         {
             text: 'Ghost Town',
             setState: { ghostTown: true },
-            nextText: 7
+            nextText: 4.022
         }
     ]
 },
-// Girl
 {
-    id: 5.1,
-    text: 'Choose your starting location Annie.',
+    id: 4.03,
+    text: 'Choose your starting location. Hamilton',
     options: [{
             text: 'Mount Doom',
             setState: { mountDoomn: true },
-            nextText: 6.1
+            nextText: 4.031
         },
         {
             text: 'Ghost Town',
             setState: { ghostTown: true },
-            nextText: 7.1
+            nextText: 4.032
         }
     ]
 },
-// Boy
 {
-    id: 6,
+    id: 4.002,
+    text: 'Choose your starting location. Hamilton',
+    options: [{
+            text: 'Mount Doom',
+            setState: { mountDoomn: true },
+            nextText: 4.0021
+        },
+        {
+            text: 'Ghost Town',
+            setState: { ghostTown: true },
+            nextText: 4.0022
+        }
+    ]
+},
+{
+    id: 4.003,
+    text: 'Choose your starting location. Hamilton',
+    options: [{
+            text: 'Mount Doom',
+            setState: { mountDoomn: true },
+            nextText: 4.0031
+        },
+        {
+            text: 'Ghost Town',
+            setState: { ghostTown: true },
+            nextText: 4.0032
+        }
+    ]
+},
+// Boy baseball hat
+{
+    id: 4.021,
     text: 'Mount Doom Scene Hamilton',
     options: [{
         text: 'Continue',
         nextText: 8
     }]
 },
-// Girl
 {
-    id: 6.1,
-    text: 'Mount Doom Scene, Annie',
+    id: 4.031,
+    text: 'Mount Doom Scene Hamilton',
     options: [{
         text: 'Continue',
-        nextText: 8.1
+        nextText: 8
     }]
+},
+{
+    id: 4.022,
+    text: 'Ghost Town Scene Hamilton',
+    options: [{
+        text: 'Continue',
+        nextText: 8
+    }]
+},
+{
+    id: 4.032,
+    text: 'Ghost Town Scene Hamilton',
+    options: [{
+        text: 'Continue',
+        nextText: 8
+    }]
+},
+// Boy Cowboy hat
+{
+    id: 4.0021,
+    text: 'Mount Doom Scene Hamilton',
+    options: [{
+        text: 'Continue',
+        nextText: 8
+    }]
+},
+{
+    id: 4.0022,
+    text: 'Mount Doom Scene Hamilton',
+    options: [{
+        text: 'Continue',
+        nextText: 8
+    }]
+},
+{
+    id: 4.0031,
+    text: 'Ghost Town Scene Hamilton',
+    options: [{
+        text: 'Continue',
+        nextText: 8
+    }]
+},
+{
+    id: 4.0032,
+    text: 'Ghost Town Scene Hamilton',
+    options: [{
+        text: 'Continue',
+        nextText: 8
+    }]
+},
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+{
+    id: 4.019,
+    text: 'Now That we know what our character is lets choose an accessory for our friend Pig.',
+    options: [{
+            text: 'A Fadora?',
+            setState: { fadora: true },
+            nextText: 4.029
+        },
+        {
+            text: 'A Headband?',
+            setState: { headband: true },
+            nextText: 4.039
+        },
+        // {
+        //     text: 'Or Eyeshadow',
+        //     setSate: { eyeshadow: true },
+        //     nextText: 5
+        // }
+    ]
+},
+{
+    id: 4.0019,
+    text: 'Now That we know what our character is lets choose an accessory for our friend Pig.',
+    options: [{
+            text: 'A Fadora?',
+            setState: { fadora: true },
+            nextText: 4.0029
+        },
+        {
+            text: 'A Headband?',
+            setState: { headband: true },
+            nextText: 4.0039
+        },
+        // {
+        //     text: 'Or Eyeshadow',
+        //     setSate: { eyeshadow: true },
+        //     nextText: 5
+        // }
+    ]
 },
 // Boy
 {
-    id: 7,
-    text: 'Ghost Town scene Hamilton',
+    id: 4.029,
+    text: 'Choose your starting location. Hamilton',
+    options: [{
+            text: 'Mount Doom',
+            setState: { mountDoomn: true },
+            nextText: 4.0219
+        },
+        {
+            text: 'Ghost Town',
+            setState: { ghostTown: true },
+            nextText: 4.0229
+        }
+    ]
+},
+{
+    id: 4.039,
+    text: 'Choose your starting location. Hamilton',
+    options: [{
+            text: 'Mount Doom',
+            setState: { mountDoomn: true },
+            nextText: 4.0319
+        },
+        {
+            text: 'Ghost Town',
+            setState: { ghostTown: true },
+            nextText: 4.0329
+        }
+    ]
+},
+{
+    id: 4.0029,
+    text: 'Choose your starting location. Hamilton',
+    options: [{
+            text: 'Mount Doom',
+            setState: { mountDoomn: true },
+            nextText: 4.00219
+        },
+        {
+            text: 'Ghost Town',
+            setState: { ghostTown: true },
+            nextText: 4.00229
+        }
+    ]
+},
+{
+    id: 4.0039,
+    text: 'Choose your starting location. Hamilton',
+    options: [{
+            text: 'Mount Doom',
+            setState: { mountDoomn: true },
+            nextText: 4.00319
+        },
+        {
+            text: 'Ghost Town',
+            setState: { ghostTown: true },
+            nextText: 4.00329
+        }
+    ]
+},
+// Boy baseball hat
+{
+    id: 4.0219,
+    text: 'Mount Doom Scene Hamilton',
     options: [{
         text: 'Continue',
         nextText: 8
     }]
 },
-// Girl
 {
-    id: 7.1,
-    text: 'Ghost Town scene, Annie',
+    id: 4.0319,
+    text: 'Mount Doom Scene Hamilton',
     options: [{
         text: 'Continue',
         nextText: 8
     }]
 },
-// Girl
 {
-    id: 7.2,
-    text: 'Ghost Town scene were pig complements you on choosing COWBOYHAT, Annie',
+    id: 4.0229,
+    text: 'Ghost Town Scene Hamilton',
     options: [{
         text: 'Continue',
-        nextText: 8.1
+        nextText: 8
     }]
 },
+{
+    id: 4.0329,
+    text: 'Ghost Town Scene Hamilton',
+    options: [{
+        text: 'Continue',
+        nextText: 8
+    }]
+},
+// Boy Cowboy hat
+{
+    id: 4.00219,
+    text: 'Mount Doom Scene Hamilton',
+    options: [{
+        text: 'Continue',
+        nextText: 8
+    }]
+},
+{
+    id: 4.00229,
+    text: 'Mount Doom Scene Hamilton',
+    options: [{
+        text: 'Continue',
+        nextText: 8
+    }]
+},
+{
+    id: 4.00319,
+    text: 'Ghost Town Scene Hamilton',
+    options: [{
+        text: 'Continue',
+        nextText: 8
+    }]
+},
+{
+    id: 4.00329,
+    text: 'Ghost Town Scene Hamilton',
+    options: [{
+        text: 'Continue',
+        nextText: 8
+    }]
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Girl
+// {
+//     id: 6.1,
+//     text: 'Mount Doom Scene, Annie',
+//     options: [{
+//         text: 'Continue',
+//         nextText: 8.1
+//     }]
+// },
 // Boy
-{
-    id: 7.3,
-    text: 'Ghost Town scene were pig complements you on choosing COWBOYHAT, Hamilton',
-    options: [{
-        text: 'Continue',
-        nextText: 8
-    }]
-},
+// {
+//     id: 7,
+//     text: 'Ghost Town scene Hamilton',
+//     options: [{
+//         text: 'Continue',
+//         nextText: 8
+//     }]
+// },
+// Girl
+// {
+//     id: 7.1,
+//     text: 'Ghost Town scene, Annie',
+//     options: [{
+//         text: 'Continue',
+//         nextText: 8
+//     }]
+// },
+// Girl
+// {
+//     id: 7.2,
+//     text: 'Ghost Town scene were pig complements you on choosing COWBOYHAT, Annie',
+//     options: [{
+//         text: 'Continue',
+//         nextText: 8.1
+//     }]
+// },
+// Boy
+// {
+//     id: 7.3,
+//     text: 'Ghost Town scene were pig complements you on choosing COWBOYHAT, Hamilton',
+//     options: [{
+//         text: 'Continue',
+//         nextText: 8
+//     }]
+// },
 // Boy
 {
     id: 8,
