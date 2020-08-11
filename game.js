@@ -41,8 +41,8 @@ const textNodes = [{
 },
 {
     id: 2.1,
-    vidtime: 1000,
-    vid: 'https://www.youtube.com/embed/awcQ9-QvZLs',
+    vidtime: 2000,
+    vid: 'f9-J6A0mt14',
     text: 'Looks like Sam is going to be Annie. What hat should she wear?',
     options: [{
             text: 'A baseball cap?',
