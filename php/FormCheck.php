@@ -202,7 +202,7 @@ require_once("./Classes/Database.php");
         $subject = new_user_email_subject();
         $email = new SendEmail($email, $subject, $body);
 
-        if (count($errors) == 0) {
+        if (count($errors) === 0) {
             $_SESSION['success'] = "New User was created, and an email was sent to the user.";
             header('location: AdminPage.php');
         }
@@ -225,7 +225,7 @@ require_once("./Classes/Database.php");
         if (empty($last_name)) {
             array_push($errors, "Last Name is required");
         }
-        if(!strcmp($password, $confirm_password)){
+        if(!(strcmp($password, $confirm_password) !== 0){
             array_push($errors, "The passwords do not match.");
             array_push($errors, $password);
             array_push($errors, $confirm_password);
@@ -238,7 +238,7 @@ require_once("./Classes/Database.php");
             array_push($errors, "That username is already in use.");
         }
 
-        if (count($errors) == 0) {
+        if (count($errors) === 0) {
             // Generate salt__________________________________________________________________
             $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
             $salt = '';
@@ -259,7 +259,7 @@ require_once("./Classes/Database.php");
             }
         }
 
-        if (count($errors) == 0) {
+        if (count($errors) === 0) {
             $deleteSQL = "DELETE FROM TempUser WHERE email='$email'";
             $result = mysqli_query($database, $insertSQL);
 
