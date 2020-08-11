@@ -14,7 +14,7 @@
         
         <link rel="stylesheet" href="../scroll_bar.css">
         <link rel="stylesheet" href="../text_animiations.css">
-        <?php include('FormCheck.php') ?>
+        <?php include_once('FormCheck.php') ?>
         
     
 
