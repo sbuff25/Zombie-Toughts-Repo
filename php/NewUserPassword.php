@@ -1,8 +1,5 @@
 <?php
     include('./FormCheck.php');
-    include('./Classes/Database.php');
-    $DatabaseObject = new Database();
-    $database = $DatabaseObject->get_database();
     if (isset($_GET["key"]) && isset($_GET["email"]) && isset($_GET["action"]) && ($_GET["action"]=="setpassword") && !isset($_POST["action"])){
         $key = $_GET["key"];
         $email = $_GET["email"];
