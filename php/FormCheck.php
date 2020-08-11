@@ -251,7 +251,7 @@ require_once("./Classes/Database.php");
             
 
             $insertSQL = "INSERT INTO AdminUser(email, username, first_name, last_name, password, salt, privilege_level)
-                                    VALUES ('$email', '$username', '$first_name', '$last_name', '$hashed_password', '$salt', '$privilege_level')";
+                                    VALUES ('$email', '$username', '$first_name', '$last_name', '$hashed_password', '$salt', '$privilege')";
             $result = mysqli_query($database, $insertSQL);
 
             if(!$result){
