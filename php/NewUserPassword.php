@@ -18,7 +18,7 @@
             $row = mysqli_fetch_assoc($query);
             $exp_date = $row['exp_date'];
             $exp_date = strtotime($exp_date);
-            $exp_date = date('Y-m-d H:i:s', $exp_date)
+            $exp_date = date('Y-m-d H:i:s', $exp_date);
             echo $cur_date;
             echo $exp_date;
             if ($expDate >= $cur_date){
@@ -49,7 +49,7 @@
         }
     }
     else{
-
+        $error .= "There was an issue displaying user information";
     }
     echo $error;
 
