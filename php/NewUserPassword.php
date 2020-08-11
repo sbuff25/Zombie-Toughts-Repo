@@ -41,7 +41,7 @@
             <h1>Create Account</h1>
 
             <?php
-                require_once('./FormCheck.php');
+                require_once('errors.php');
                 if (isset($_GET["key"]) && isset($_GET["email"]) && isset($_GET["action"]) && ($_GET["action"]=="setpassword") && !isset($_POST["action"])){
                     $key = $_GET["key"];
                     $email = $_GET["email"];
@@ -81,7 +81,6 @@
                                 <input type="password" name="confirm_password" maxlength="15" required/>
                                 <br>
                                 <input type="hidden" name="email" value="<?php echo $email;?>"/>
-                                <?php require_once('errors.php'); ?>
                                 <?php if (isset($_SESSION['success'])) : ?>
                                     <div class="error success">
                                     <h3>
