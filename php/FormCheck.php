@@ -117,8 +117,6 @@ or die ('I cannot connect to the database.');
 
     $errors = array();
     if (isset($_POST['submitLogin'])) {
-        $DatabaseObject = new Database();
-        $database = $DatabaseObject->get_database();
         $email_or_username = mysqli_real_escape_string($database, $_POST['emailorusername']);
         $password = mysqli_real_escape_string($database, $_POST['password']);
 
@@ -161,8 +159,6 @@ or die ('I cannot connect to the database.');
     }
 
     if (isset($_POST['submitNewUser'])) {
-        $DatabaseObject = new Database();
-        $database = $DatabaseObject->get_database();
         $email = mysqli_real_escape_string($database, $_POST['email']);
         $first_name = mysqli_real_escape_string($database, $_POST['first_name']);
         $last_name = mysqli_real_escape_string($database, $_POST['last_name']);
@@ -215,8 +211,6 @@ or die ('I cannot connect to the database.');
     }
 
     if (isset($_POST['set_new_user'])) {
-        $DatabaseObject = new Database();
-        $database = $DatabaseObject->get_database();
         $email = mysqli_real_escape_string($database, $_POST['email']);
         $first_name = mysqli_real_escape_string($database, $_POST['first_name']);
         $last_name = mysqli_real_escape_string($database, $_POST['last_name']);
