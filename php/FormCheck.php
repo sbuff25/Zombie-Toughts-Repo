@@ -213,8 +213,8 @@ require_once("./Classes/Database.php");
         $first_name = mysqli_real_escape_string($database, $_POST['first_name']);
         $last_name = mysqli_real_escape_string($database, $_POST['last_name']);
         $privilege = mysqli_real_escape_string($database, $_POST['privilege_level']);
-        $password = mysqli_real_escape_string($database, $_POST['password']);
-        $confirm_password = mysqli_real_escape_string($database, $_POST['confirm_password']);
+        $password = mysqli_real_escape_string($database, trim($_POST['password']));
+        $confirm_password = mysqli_real_escape_string($database, trim($_POST['confirm_password']));
 
         if (empty($email)) {
             array_push($errors, "Email is required");
