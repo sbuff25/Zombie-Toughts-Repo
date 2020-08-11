@@ -19,9 +19,7 @@
             $exp_date = $row['exp_date'];
             $exp_date = strtotime($exp_date);
             $exp_date = date('Y-m-d H:i:s', $exp_date);
-            echo $cur_date;
-            echo $exp_date;
-            if ($expDate >= $cur_date){
+            if ($exp_date >= $cur_date){
             ?>
                 <form method="post" action="NewUserPassword.php">
                     <input type="hidden" name="action" value="setpassword" />
