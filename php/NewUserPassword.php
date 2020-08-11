@@ -17,6 +17,8 @@
         else {
             $row = mysqli_fetch_assoc($query);
             $exp_date = $row['exp_date'];
+            echo $cur_date;
+            echo $exp_date;
             if ($expDate >= $cur_date){
             ?>
                 <form method="post" action="NewUserPassword.php">
