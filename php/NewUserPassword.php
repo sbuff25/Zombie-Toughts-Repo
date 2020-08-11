@@ -62,8 +62,9 @@
                         $exp_date = strtotime($exp_date);
                         $exp_date = date('Y-m-d H:i:s', $exp_date);
                         if ($exp_date >= $cur_date){
+                            $current_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                         ?>
-                            <form method="post" action="NewUserPassword.php">
+                            <form method="post" action="<?php echo $current_link; ?>">
                                 <input type="hidden" name="action" value="setpassword" />
                                 <input type="hidden" name="first_name" value="<?php echo $row['first_name'];?>" />
                                 <input type="hidden" name="last_name" value="<?php echo $row['last_name'];?>" />
