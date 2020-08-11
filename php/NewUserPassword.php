@@ -1,5 +1,5 @@
 <?php
-    include('./FormCheck.php');
+    include_once('./FormCheck.php');
     if (isset($_GET["key"]) && isset($_GET["email"]) && isset($_GET["action"]) && ($_GET["action"]=="setpassword") && !isset($_POST["action"])){
         $key = $_GET["key"];
         $email = $_GET["email"];
