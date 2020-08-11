@@ -44,5 +44,9 @@
             }
         }
     }
+    else{
+
+    }
+    echo $error;
 
 ?>
