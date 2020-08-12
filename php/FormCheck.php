@@ -132,10 +132,14 @@ require_once("./Classes/Database.php");
             if(mysqli_num_rows($result) == 1){
                 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 $hashed_password = hash_pbkdf2('haval256,5', $password, $row['salt'], 10, 70);
-                $check_pass = "SELECT EXISTS(SELECT username FROM AdminUser WHERE ((password = '$hashed_password' AND username = '$email_or_username') OR (password = '$hashed_password' AND email = '$email_or_username'))";
+                $check_pass1 = "SELECT EXISTS(SELECT username FROM AdminUser WHERE (password = '$hashed_password' AND username = '$email_or_username')";
 
-                $result2 = mysqli_query($database, $check_pass);
-                if($result2){  // May need to fix and check what the result was
+                $result2 = mysqli_query($database, $check_pass1);
+
+                $check_pass2 = "SELECT EXISTS(SELECT username FROM AdminUser WHERE (password = '$hashed_password' AND email = '$email_or_username')";
+
+                $result3 = mysqli_query($database, $check_pass2);
+                if($result2 || $result3){  // May need to fix and check what the result was
                     $row = mysqli_fetch_assoc($result);
                     $_SESSION['username'] = $row['username'];
                     $_SESSION['email'] = $row['email'];
