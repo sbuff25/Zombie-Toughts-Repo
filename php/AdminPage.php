@@ -14,19 +14,19 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        <script defer src="./game.js"></script>
-        <link rel="stylesheet" href="./css.css">
-        <link rel="stylesheet" href="./menu.css">
+        <script defer src="../game.js"></script>
+        <link rel="stylesheet" href="../css.css">
+        <link rel="stylesheet" href="../menu.css">
         
-        <link rel="stylesheet" href="./scroll_bar.css">
-        <link rel="stylesheet" href="./text_animiations.css">
+        <link rel="stylesheet" href="../scroll_bar.css">
+        <link rel="stylesheet" href="../text_animiations.css">
     
 
     </head>
     <body>
     <?php if(!isset($_SESSION['username']) || !isset($_SESSION['email'])){
 
-        header('location: index.php');
+        header('location: ../index.php');
 
     }?>
 
@@ -46,7 +46,7 @@
         <nav class="navbar">
             <ul class="nav_links">
                 <li>
-                    <a href="../index.html">home</a>
+                    <a href="../index.php">home</a>
                 </li>
             </ul>
             <div class="burger">
