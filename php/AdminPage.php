@@ -36,7 +36,7 @@
         unset($_SESSION['username']);
         unset($_SESSION['first_name']);
         unset($_SESSION['last_name']);
-        header("location: index.php");
+        header("location: ../index.php");
         } 
     ?>
 
