@@ -143,6 +143,9 @@ require_once("./Classes/Database.php");
                     $_SESSION['last_name'] = $row['last_name'];
                     array_push($errors, $_SESSION['username'] . " " . $_SESSION['email'] . " " . $_SESSION['first_name'] . " " . $_SESSION['last_name'] . "<br>");
                 }
+                else {
+                    array_push($errors, "Username, email, and/or password are incorrect.");
+                }
             }
             else{
                 array_push($errors, "Username, email, and/or password are incorrect.");
