@@ -7,6 +7,7 @@
             if (session_status() == PHP_SESSION_NONE) {
                 session_start();
             }
+            include_once('errors.php');
         ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Zombie Thoughts Project: Admin Login</title>
@@ -57,7 +58,6 @@
                     <input name='password' type='password' placeholder='Enter Password...'>
                 </div>
                 <br>
-                <?php include_once('errors.php'); ?>
                 <?php if (isset($_SESSION['success'])) : ?>
                     <div class="error success">
                     <h3>

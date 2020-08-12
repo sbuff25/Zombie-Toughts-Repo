@@ -125,11 +125,9 @@ require_once("./Classes/Database.php");
             array_push($errors, "Password is required");
         }
 
-        $username_or_email = mysqli_real_escape_string($database, $email_or_username);
-        $password = mysqli_real_escape_string($database, $password);
 
         if (count($errors) == 0) {
-            $check_user = "SELECT username, email, first_name, last_name, salt FROM AdminUser WHERE email = '$username_or_email' OR username = '$username_or_email'";
+            $check_user = "SELECT email, username, first_name, last_name, salt FROM AdminUser WHERE email = '$email_or_username' OR username = '$email_or_username'";
             $result = mysqli_query($database, $check_user);
             if(mysqli_num_rows($result) == 1){
                 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
@@ -143,6 +141,7 @@ require_once("./Classes/Database.php");
                     $_SESSION['email'] = $row['email'];
                     $_SESSION['first_name'] = $row['first_name'];
                     $_SESSION['last_name'] = $row['last_name'];
+                    array_push($errors, $_SESSION['username'] . " " . $_SESSION['email'] . " " . $_SESSION['first_name'] . " " . $_SESSION['last_name'] . "<br>");
                 }
             }
             else{
