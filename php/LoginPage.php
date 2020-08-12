@@ -46,7 +46,7 @@
             <br><br><br><br>  <!--Delete this line when Spencer begins to style -->
             <h1>Admin Login</h1>
 
-            <form action='LoginPage.php' method='POST'>
+            <form action='AdminPage.php' method='POST'>
                 <div>
                     <label for='email'>Email or Username:</label>
                     <input name='emailorusername' placeholder='Enter Email or Username...'>
