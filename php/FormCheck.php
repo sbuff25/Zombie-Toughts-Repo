@@ -132,7 +132,7 @@ require_once("./Classes/Database.php");
             if(mysqli_num_rows($result) == 1){
                 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 $hashed_password = hash_pbkdf2('haval256,5', $password, $row['salt'], 10, 70);
-                $check_pass = "SELECT EXISTS(SELECT username FROM AdminUser WHERE ((password = '$hashed_password' AND username = '$username_or_email') OR (password = '$hashed_password' AND email = '$username_or_email'))";
+                $check_pass = "SELECT EXISTS(SELECT username FROM AdminUser WHERE ((password = '$hashed_password' AND username = '$email_or_username') OR (password = '$hashed_password' AND email = '$email_or_username'))";
 
                 $result2 = mysqli_query($database, $check_pass);
                 if($result2){  // May need to fix and check what the result was
@@ -141,7 +141,6 @@ require_once("./Classes/Database.php");
                     $_SESSION['email'] = $row['email'];
                     $_SESSION['first_name'] = $row['first_name'];
                     $_SESSION['last_name'] = $row['last_name'];
-                    array_push($errors, $_SESSION['username'] . " " . $_SESSION['email'] . " " . $_SESSION['first_name'] . " " . $_SESSION['last_name'] . "<br>");
                 }
                 else {
                     array_push($errors, "ERROR: Not able to execute $check_pass. " . mysqli_error($database));
