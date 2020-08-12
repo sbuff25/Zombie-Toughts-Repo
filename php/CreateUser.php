@@ -4,6 +4,7 @@
     <head>
         <?php
             if (session_status() == PHP_SESSION_NONE) {
+                header_remove();
                 session_start();
             }
         ?>
