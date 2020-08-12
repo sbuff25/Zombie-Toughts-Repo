@@ -160,7 +160,7 @@ require_once("./Classes/Database.php");
 
         if (count($errors) == 0) {
             $_SESSION['success'] .= "<br>You are now logged in";
-            // header('Location: AdminPage.php');
+            header('Location: ./AdminPage.php');
         }
     }
 
