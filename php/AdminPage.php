@@ -1,3 +1,7 @@
+<?php if(!isset($_SESSION['username']) && !isset($_SESSION['email'])){
+        header('location: ../index.php');
+
+}?>
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
@@ -16,6 +20,32 @@
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script defer src="../game.js"></script>
+
+        <script>
+        function openForm(form_id) {
+               document.getElementById(form_id).style.display = "block";
+         }
+
+         function closeForm(form_id) {
+               document.getElementById(form_id).style.display = "none";
+         }
+         function addInputToForm(new_input_id) {
+            var SelectForm = document.querySelector('#select_type');
+            var value = SelectForm.value;
+            var LinkFormInputArea = document.getElementById(new_input_id);
+            while(LinkFormInputArea.firstChild){
+                LinkFormInputArea.removeChild(LinkFormInputArea.firstChild);
+            }
+            if(value === "ztI"){
+                var institutionNameInput = "<label for='institution_name'>Institution Name</label><input name='institution_name' placeholder='Enter Institution's Name...'>";
+                LinkFormInputArea.appendChild(institutionNameInput);
+            }
+               
+
+         }
+         
+         </script>
+
         <link rel="stylesheet" href="../css.css">
         <link rel="stylesheet" href="../menu.css">
         
@@ -25,11 +55,9 @@
 
     </head>
     <body>
-    <?php if(!isset($_SESSION['username']) && !isset($_SESSION['email'])){
-        header_remove();
-        header('location: ../index.php');
+    <?php include_once("./LinkForm.php"); ?>
 
-    }?>
+    
 
     <?php if (isset($_GET['logout'])) {
         session_destroy();
@@ -65,6 +93,19 @@
             </section>
         
         </header>
+
+        <?php if (strcmp($_SESSION['privilege'], "high") === 0){ ?>
+
+            <button>Create New User</button>
+            <br>
+            <button>Delete User</button>
+            <br>
+
+        <?php } ?>
+
+        <button onclick="openform('LinkForm')">Generate Access Link</button>
+
+        
 
         <!--Footer-->
         <footer class="center bg-dark">
