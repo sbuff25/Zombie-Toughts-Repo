@@ -20,27 +20,26 @@
         
         <link rel="stylesheet" href="./scroll_bar.css">
         <link rel="stylesheet" href="./text_animiations.css">
-
-        <?php if(!isset($_SESSION['username'] && !isset($_SESSION['email']))){
-
-            header('location: ../index.php');
-
-        }?>
-
-        <?php if (isset($_GET['logout'])) {
-            session_destroy();
-            unset($_SESSION['email']);
-            unset($_SESSION['username']);
-            unset($_SESSION['first_name']);
-            unset($_SESSION['last_name']);
-            header("location: index.php");
-        } 
-        ?>
-        
     
 
     </head>
     <body>
+    <?php if(!isset($_SESSION['username']) || !isset($_SESSION['email'])){
+
+        header('location: index.php');
+
+    }?>
+
+    <?php if (isset($_GET['logout'])) {
+        session_destroy();
+        unset($_SESSION['email']);
+        unset($_SESSION['username']);
+        unset($_SESSION['first_name']);
+        unset($_SESSION['last_name']);
+        header("location: index.php");
+        } 
+    ?>
+
         <div id="progressbar"></div>
         <div id="scrollPath"></div>
 

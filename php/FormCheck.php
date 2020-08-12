@@ -147,8 +147,6 @@ require_once("./Classes/Database.php");
                     $_SESSION['last_name'] = $row['last_name'];
                 }
                 else {
-                    array_push($errors, "ERROR: Not able to execute $check_pass1. " . mysqli_error($database));
-                    array_push($errors, "ERROR: Not able to execute $check_pass2. " . mysqli_error($database));
                     array_push($errors, "Username, email, and/or password are incorrect.");
                 }
             }
