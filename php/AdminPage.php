@@ -24,8 +24,8 @@
 
     </head>
     <body>
-    <?php if(!isset($_SESSION['username']) || !isset($_SESSION['email'])){
-
+    <?php if(!isset($_SESSION['username']) && !isset($_SESSION['email'])){
+        header_remove();
         header('location: ../index.php');
 
     }?>
@@ -36,6 +36,7 @@
         unset($_SESSION['username']);
         unset($_SESSION['first_name']);
         unset($_SESSION['last_name']);
+        header_remove();
         header("location: ../index.php");
         } 
     ?>

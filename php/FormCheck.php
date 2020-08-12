@@ -160,6 +160,7 @@ require_once("./Classes/Database.php");
 
         if (count($errors) == 0) {
             $_SESSION['success'] .= "<br>You are now logged in";
+            header_remove();
             header('Location: ./AdminPage.php');
         }
     }
@@ -212,6 +213,7 @@ require_once("./Classes/Database.php");
 
         if (count($errors) === 0) {
             $_SESSION['success'] = "New User was created, and an email was sent to the user.";
+            header_remove();
             header('location: AdminPage.php');
         }
     }
@@ -282,6 +284,7 @@ require_once("./Classes/Database.php");
             $_SESSION['success'] = "New Account created.";
             $_SESSION['username'] = $user;
             $_SESSION['email'] = $email;
+            header_remove();
             header('location: AdminPage.php');
         }
     }
