@@ -44,7 +44,7 @@
 
         <div>
             <br><br><br><br>  <!--Delete this line when Spencer begins to style -->
-            <h1>Login</h1>
+            <h1>Admin Login</h1>
 
             <form action='LoginPage.php' method='POST'>
                 <div>
