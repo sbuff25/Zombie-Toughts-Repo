@@ -3,7 +3,11 @@
     <head>
         <meta charset="UTF-8">
 
-        <?php session_start() ?>
+        <?php
+            if (session_status() == PHP_SESSION_NONE) {
+                session_start();
+            }
+        ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Zombie Thoughts Project: Admin Login</title>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -16,7 +20,7 @@
         
         <link rel="stylesheet" href="../scroll_bar.css">
         <link rel="stylesheet" href="../text_animiations.css">
-        <?php include('FormCheck.php') ?>
+        <?php include_once('FormCheck.php') ?>
         
     
 
@@ -45,7 +49,7 @@
             <form action='LoginPage.php' method='POST'>
                 <div>
                     <label for='email'>Email or Username:</label>
-                    <input name='emailorusername' placeholder='Enter Email...'>
+                    <input name='emailorusername' placeholder='Enter Email or Username...'>
                 </div>
                 <br>
                 <div>

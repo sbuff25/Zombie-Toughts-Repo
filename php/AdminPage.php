@@ -3,7 +3,11 @@
     <head>
         <meta charset="UTF-8">
 
-        <?php session_start() ?>
+        <?php
+            if (session_status() == PHP_SESSION_NONE) {
+                session_start();
+            }
+        ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Zombie Thoughts Project: Admin</title>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">

@@ -2,7 +2,11 @@
 <html lang="en-us">
 
     <head>
-        <?php //session_start(); ?>
+        <?php
+            if (session_status() == PHP_SESSION_NONE) {
+                session_start();
+            }
+        ?>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Zombie Thoughts Project: Admin Login</title>
@@ -16,7 +20,7 @@
         
         <link rel="stylesheet" href="../scroll_bar.css">
         <link rel="stylesheet" href="../text_animiations.css">
-        <?php include('FormCheck.php') ?>
+        <?php include_once('FormCheck.php') ?>
         
         <?php /*if(!isset($_SESSION['username']) || !isset($_SESSION['email'])){
 
@@ -77,7 +81,7 @@
                 <div>
                     <p>An email will be sent to the user to set their password. If the user does not set their password within 7 days, the user will need to be created again.</p>
                 </div>
-                <?php include('errors.php'); ?>
+                <?php include_once('errors.php'); ?>
                 <?php if (isset($_SESSION['success'])) : ?>
                     <div class="error success">
                     <p>
