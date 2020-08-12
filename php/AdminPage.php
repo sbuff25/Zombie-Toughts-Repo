@@ -94,14 +94,14 @@
         
         </header>
 
-        <?php if (strcmp($_SESSION['privilege'], "high") === 0){ ?>
+        <?php //if (strcmp($_SESSION['privilege'], "high") === 0){ ?>
 
             <button>Create New User</button>
             <br>
             <button>Delete User</button>
             <br>
 
-        <?php } ?>
+        <?php //} ?>
 
         <button onclick="openform('LinkForm')">Generate Access Link</button>
 
