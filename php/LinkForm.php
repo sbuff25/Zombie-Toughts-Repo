@@ -1,5 +1,5 @@
 <div class="form-popup" id="LinkForm">
-    <form action="account.php" method='POST' class="form-container">
+    <form action="AdminPage.php" method='POST' class="form-container">
         <h1>Generate Access Link Form:</h1>
 
         <label for="access_type"><b>Select Link Type</b></label>
