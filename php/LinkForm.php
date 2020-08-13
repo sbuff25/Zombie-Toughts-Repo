@@ -9,7 +9,7 @@
         </div>
         <div class="modal-body">
             <form action="AdminPage.php" method='POST' class="form-container">
-                <label for="access_type" class='text-light'><b>Select Link Type</b></label>
+                <label for="access_type" class='text-dark'><b>Select Link Type</b></label>
                 <select name="access_type" id="select_type">
                     <option value='ztI'>Institution Access Code</option>
                     <option value='zti'>Individual Access Code</option>
