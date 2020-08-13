@@ -1,8 +1,8 @@
 <div class="modal" tabindex="-1" role="dialog" id="LinkForm">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-        <div class="modal-header bg-primary">
-            <h5 class="modal-title .text-light">Generate Access Link Form</h5>
+        <div class="modal-header bg-dark">
+            <h5 class="modal-title text-light">Generate Access Link Form</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
