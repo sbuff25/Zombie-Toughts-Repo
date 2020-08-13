@@ -94,7 +94,11 @@
 
         <script>
             $('#select_type').on('change', function() {
-            alert( this.value );
+                $('#LinkFormElement').empty();
+                if(this.value === "zti"){
+                    $( "<p>Test</p>" ).appendTo( "#LinkFormElement" );
+                }
+                
             });
         </script>
     
