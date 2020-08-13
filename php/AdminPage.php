@@ -95,7 +95,8 @@
                 characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
                 randomString = '';
                 for (i = 0; i < 14; i++) { 
-                    index = rand(0, strlen(characters) - 1); 
+                    index = Math.floor(Math.random() * 14);
+                    //index = rand(0, strlen(characters) - 1); 
                     randomString += characters[index]; 
                 } 
                 access_code = '';
