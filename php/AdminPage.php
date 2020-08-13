@@ -103,7 +103,7 @@
 
         <?php //} ?>
 
-        <button type='button' id='popupButton' class='btn btn-primary mb-3' data-top='20' data-overlay='false' data-href='LinkForm.php' data-content='ajax'>Generate Access Link</button>
+        <a href="LinkForm.php" class='btn btn-primary mb-3' rel="modal:open">Generate Access Link</button>
 
         
 
