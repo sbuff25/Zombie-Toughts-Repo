@@ -19,7 +19,7 @@ const textNodes = [{
         {
             id: 2,
             vidtime: 1000,
-            vid: 'kt2D7xl06mk',
+            vid: 'awcQ9-QvZLs',
             text: 'Looks like Sam is going to be Hamilton. What hat should he wear?',
             options: [{
 
