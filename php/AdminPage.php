@@ -104,7 +104,7 @@
 
         <?php //} ?>
 
-        <a href="LinkForm.php" class='btn btn-primary mb-3' rel="modal:open">Generate Access Link</button>
+        <a href="LinkForm.php" class='btn btn-primary mb-3' rel="modal:open">Generate Access Link</a>
 
         
 
