@@ -31,13 +31,6 @@
         <link rel="stylesheet" href="../scroll_bar.css">
         <link rel="stylesheet" href="../text_animiations.css">
 
-        <script>
-            $('select').on('change', function() {
-            alert( this.value );
-            });
-        </script>
-
-    
 
     </head>
     <body>
@@ -98,6 +91,12 @@
             <p>Missoula Repertory Theatre &copy; 2020</p>
         </footer>
 
+
+        <script>
+            $('#select_type').on('change', function() {
+            alert( this.value );
+            });
+        </script>
     
     </body>
 </html>
