@@ -1,7 +1,7 @@
 const textNodes = [{
             id: 1,
             vidtime: 1000,
-            vid: '5Yvo9Q-Vp2c',
+            vid: '5Yvo9Q-Vp2c', // kick-out
             text: 'Choose if Sam is a Annie or Hamilton',
             options: [{
                     text: 'Play as Hamilton',
@@ -19,7 +19,7 @@ const textNodes = [{
         {
             id: 2,
             vidtime: 1000,
-            vid: 'awcQ9-QvZLs',
+            vid: 'awcQ9-QvZLs', // god-less
             text: 'Looks like Sam is going to be Hamilton. What hat should he wear?',
             options: [{
 
@@ -42,7 +42,7 @@ const textNodes = [{
         {
             id: 2.1,
             vidtime: 1000,
-            vid: 'f9-J6A0mt14',
+            vid: 'f9-J6A0mt14', // 2 much 2
             text: 'Looks like Sam is going to be Annie. What hat should she wear?',
             options: [{
                     text: 'A baseball cap?',
@@ -918,8 +918,8 @@ var theNode;
 
 function loadVideo(nextNodeId) {
     theNode = nextNodeId;
-    // console.log("any: " + theNode);
-    console.log(theNode);
+    // console.log("the Node: " + theNode);
+    //console.log(theNode);
     var iframe = document.getElementById("player");
     iframe.remove();
     var el = document.createElement("div");
@@ -938,7 +938,7 @@ function loadVideo(nextNodeId) {
     vidTime = vidNode.vidtime;
     //console.log(vidTime);
     Video = vidNode.vid;
-    console.log("HI " + Video);
+    // console.log("Current Video " + Video);
     // document.getElementById('player').src=Video;
     //  tag = document.createElement('script');
     // firstScriptTag = document.getElementsByTagName('script')[0];
@@ -1043,8 +1043,8 @@ function showTextNode(textNodeIndex) {
 
     // showVid(1);
     vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
-        console.log("HI" + vidNode.vid);
-        console.log("HI" + vidNode.id);
+        // console.log("show text node vid" + vidNode.vid);
+        // console.log("show text node id" + vidNode.id);
         // if (textNodeIndex > 1) {
         // }
 
@@ -1078,6 +1078,9 @@ function showOption(option) {
 function selectOption(option) {
 
     var nextTextNodeId = option.nextText
+        // this is the line I added to get the next vidNode based on the option that 
+        // was chosen. I don't know if I created a new problem by doing so.
+    vidNode = textNodes.find(vidNode => vidNode.id === nextTextNodeId)
         // Restarts Game
     if (nextTextNodeId <= 0) {
         startGame();
@@ -1135,7 +1138,7 @@ function selectOption(option) {
     } else if (nextTextNodeId == 7 && state.cowboyHat == true && state.hamilton == true) {
         nextTextNodeId = 7.3;
     }
-    console.log(nextTextNodeId);
+    //   console.log(nextTextNodeId);
     loadVideo(nextTextNodeId);
     //showTextNode(nextTextNodeId)
 
