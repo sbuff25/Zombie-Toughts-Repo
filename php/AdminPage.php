@@ -19,19 +19,32 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        <link rel="stylesheet" href="lightweightpopup.css" type="text/css">
- 
-        <script src="<a class='vglnk' href='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js' rel='nofollow'><span>https</span><span>://</span><span>ajax</span><span>.</span><span>googleapis</span><span>.</span><span>com</span><span>/</span><span>ajax</span><span>/</span><span>libs</span><span>/</span><span>jquery</span><span>/</span><span>2</span><span>.</span><span>2</span><span>.</span><span>4</span><span>/</span><span>jquery</span><span>.</span><span>min</span><span>.</span><span>js</span></a>"></script>
-        <script src="lightWeightPopup.js"></script>
         <script defer src="../game.js"></script>
 
         <script>
-            $(document).ready(function(e) {
-                $("#popupButton").lightWeightPopup({href:"LinkForm.php", overlay:false, width:"90%", maxWidth:"600px", title:"Ajax Model"});
+        // function openForm(form_id) {
+        //        document.getElementById(form_id).style.display = "block";
+        //  }
 
-            });
+        //  function closeForm(form_id) {
+        //        document.getElementById(form_id).style.display = "none";
+        //  }
+        //  function addInputToForm(new_input_id) {
+        //     var SelectForm = document.querySelector('#select_type');
+        //     var value = SelectForm.value;
+        //     var LinkFormInputArea = document.getElementById(new_input_id);
+        //     while(LinkFormInputArea.firstChild){
+        //         LinkFormInputArea.removeChild(LinkFormInputArea.firstChild);
+        //     }
+        //     if(value === "ztI"){
+        //         var institutionNameInput = "<label for='institution_name'>Institution Name</label><input name='institution_name' placeholder='Enter Institution's Name...'>";
+        //         LinkFormInputArea.appendChild(institutionNameInput);
+        //     }
+               
+
+        //  }
          
-        </script>
+         </script>
 
         <link rel="stylesheet" href="../css.css">
         <link rel="stylesheet" href="../menu.css">
