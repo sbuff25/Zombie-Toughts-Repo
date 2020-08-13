@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="../text_animiations.css">
 
         <script>
-            $('#select_type').on('change', function() {
+            $('select').on('change', function() {
             alert( this.value );
             });
         </script>
