@@ -116,7 +116,7 @@
             $('#select_type').on('change', function() {
                 $('#LinkFormElement').empty();
                 if(this.value === "zti"){
-                    $( "<input name='generate_code' value='" + code + "'>" ).appendTo( "#LinkFormElement" );
+                    // $( "<input name='generate_code' value='" + code + "'>" ).appendTo( "#LinkFormElement" );
                     $( "<label for='first_name'>Individual's First Name:</label>" ).appendTo( "#LinkFormElement" );
                     $( "<label for='last_name'>Individual's Last Name:</label>" ).appendTo( "#LinkFormElement" );
                     $( "<label for='email'>Individual's Email:</label>" ).appendTo( "#LinkFormElement" );
