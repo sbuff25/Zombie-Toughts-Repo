@@ -919,6 +919,7 @@ var theNode;
 function loadVideo(nextNodeId) {
     theNode = nextNodeId;
     // console.log("any: " + theNode);
+    console.log(theNode);
     var iframe = document.getElementById("player");
     iframe.remove();
     var el = document.createElement("div");
@@ -937,7 +938,7 @@ function loadVideo(nextNodeId) {
     vidTime = vidNode.vidtime;
     //console.log(vidTime);
     Video = vidNode.vid;
-    //console.log("HI " + Video);
+    console.log("HI " + Video);
     // document.getElementById('player').src=Video;
     //  tag = document.createElement('script');
     // firstScriptTag = document.getElementsByTagName('script')[0];
@@ -1042,7 +1043,8 @@ function showTextNode(textNodeIndex) {
 
     // showVid(1);
     vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
-        // console.log("HI" + vidNode.id);
+        console.log("HI" + vidNode.vid);
+        console.log("HI" + vidNode.id);
         // if (textNodeIndex > 1) {
         // }
 
@@ -1079,7 +1081,7 @@ function selectOption(option) {
         // Restarts Game
     if (nextTextNodeId <= 0) {
         startGame();
-        loadVideo();
+        loadVideo(1);
 
     }
     state = Object.assign(state, option.setState)
@@ -1133,6 +1135,7 @@ function selectOption(option) {
     } else if (nextTextNodeId == 7 && state.cowboyHat == true && state.hamilton == true) {
         nextTextNodeId = 7.3;
     }
+    console.log(nextTextNodeId);
     loadVideo(nextTextNodeId);
     //showTextNode(nextTextNodeId)
 

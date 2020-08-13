@@ -44,8 +44,8 @@
 #mt_rep_logo
 {
     position: absolute;
-    right: 10%;
-    bottom: 10%;
+    left: 35%;
+    bottom: 18%;
     animation: transitionText 3.2s;
 }
 
@@ -85,23 +85,47 @@
 }
 @media(max-width: 560px)
 {
-    #author_animi
-    {
-        position: absolute;
-        bottom: 30%;
-        left: 12%;
-    }
-    #title_animi
-    {
-        position: absolute;
-        width: 75%;
-        bottom: 40%;
-    }
-    #mt_rep_logo
-    {
-        position: absolute;
-        width: 20%;
-        right: 5%;
-        bottom: 10%;
-    }
+#author_animi
+{
+    position: absolute;
+    bottom: 5%;
+    left: 12%;
+}
+#title_animi
+{
+    position: absolute;
+    width: 75%;
+    top: 70%;
+}
+#mt_rep_logo
+{
+    position: absolute;
+    width: 35%;
+    left: 2%;
+    bottom: 30%;
+}
+#atg
+{
+    position: absolute;
+    width: 35%;
+    top: 27%;
+    left: 10%;
+    animation: transitionText 1.5s;
+}
+#PSHP
+{
+    position: absolute;
+    width:35%;  
+    top: 40%;
+    left: 10%;
+    animation: transitionText 2s;
+}
+#blackfoot
+{
+  position: absolute;
+  width:25%;  
+  top: 10%;
+  left: 10%;
+  animation: transitionText 1s;
+}
 }
