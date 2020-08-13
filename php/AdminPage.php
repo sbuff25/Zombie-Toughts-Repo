@@ -55,7 +55,6 @@
 
     </head>
     <body>
-    <?php include_once("./LinkForm.php"); ?>
 
     
 
