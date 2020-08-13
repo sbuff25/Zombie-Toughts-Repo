@@ -19,34 +19,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script defer src="../game.js"></script>
-
-        <script>
-        // function openForm(form_id) {
-        //        document.getElementById(form_id).style.display = "block";
-        //  }
-
-        //  function closeForm(form_id) {
-        //        document.getElementById(form_id).style.display = "none";
-        //  }
-        //  function addInputToForm(new_input_id) {
-        //     var SelectForm = document.querySelector('#select_type');
-        //     var value = SelectForm.value;
-        //     var LinkFormInputArea = document.getElementById(new_input_id);
-        //     while(LinkFormInputArea.firstChild){
-        //         LinkFormInputArea.removeChild(LinkFormInputArea.firstChild);
-        //     }
-        //     if(value === "ztI"){
-        //         var institutionNameInput = "<label for='institution_name'>Institution Name</label><input name='institution_name' placeholder='Enter Institution's Name...'>";
-        //         LinkFormInputArea.appendChild(institutionNameInput);
-        //     }
-               
-
-        //  }
-
-         </script>
 
         <link rel="stylesheet" href="../css.css">
         <link rel="stylesheet" href="../menu.css">
