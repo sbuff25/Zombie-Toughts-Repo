@@ -997,12 +997,15 @@ function stopVideo() {
     player.stopVideo();
     document.getElementById('text').style.display = 'block';
     document.getElementById('option-buttons').style.display = 'block';
-
-    document.getElementById('player').style.display = 'none';
+    // document.getElementById('player').style.display = 'none';
     //console.log("HO " + theNode);
+    
     if (theNode == undefined)
         theNode = 1;
     showTextNode(theNode);
+    $(function(){
+        $('.moveUpVid').slideUp(1000);
+    });
 }
 
 const playing = true;
@@ -1029,27 +1032,15 @@ function startGame() {
 
 
 function showVid(textNodeIndex) {
+    $(function(){
+        $('.moveUpVid').slideDown('slow');
+    });
     vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
-        // videoElement.src = vidNode.vid
-        // myFunction(vidNode.vidtime);
-        // videoElement.onended = function()
-        // {
-        //     showTextNode(1);
-
-    // }
+    
 }
 
 function showTextNode(textNodeIndex) {
-
-    // showVid(1);
     vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
-        // console.log("show text node vid" + vidNode.vid);
-        // console.log("show text node id" + vidNode.id);
-        // if (textNodeIndex > 1) {
-        // }
-
-    // console.log(vidNode);
-    // videoElement.src = vidNode.vid
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
     while (optionButtonsElement.firstChild) {
@@ -1059,8 +1050,6 @@ function showTextNode(textNodeIndex) {
     textNode.options.forEach(option => {
             if (showOption(option)) {
                 const button = document.createElement('button')
-                    // const vid = document.createElement('iframe')
-                    // vid.innerHTML = option.vid
                 button.innerText = option.text
                 button.classList.add('btn')
                 button.addEventListener('click', () => selectOption(option))
