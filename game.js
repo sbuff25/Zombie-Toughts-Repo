@@ -1,6 +1,6 @@
 const textNodes = [{
             id: 1,
-            vidtime: 13000,
+            vidtime: 1000,
             vid: '5Yvo9Q-Vp2c',
             text: 'Choose if Sam is a Annie or Hamilton',
             options: [{
@@ -19,7 +19,7 @@ const textNodes = [{
         {
             id: 2,
             vidtime: 1000,
-            vid: 'awcQ9-QvZLs',
+            vid: 'kt2D7xl06mk',
             text: 'Looks like Sam is going to be Hamilton. What hat should he wear?',
             options: [{
 
@@ -64,6 +64,8 @@ const textNodes = [{
         {
             id: 4.01,
             text: 'Now That we know what our character is lets choose an accessory for our friend Pig.',
+            vidtime: 1000,
+            vid: 'LB_M44NCwUY',
             options: [{
                     text: 'A Fadora?',
                     setState: { fadora: true },
@@ -272,7 +274,7 @@ const textNodes = [{
         // Boy
         {
             id: 4.029,
-            text: 'Choose your starting location. Hamilton',
+            text: 'Choose your starting location. Annie',
             options: [{
                     text: 'Mount Doom',
                     setState: { mountDoomn: true },
@@ -287,7 +289,7 @@ const textNodes = [{
         },
         {
             id: 4.039,
-            text: 'Choose your starting location. Hamilton',
+            text: 'Choose your starting location. Annie',
             options: [{
                     text: 'Mount Doom',
                     setState: { mountDoomn: true },
@@ -302,7 +304,7 @@ const textNodes = [{
         },
         {
             id: 4.0029,
-            text: 'Choose your starting location. Hamilton',
+            text: 'Choose your starting location. Annie',
             options: [{
                     text: 'Mount Doom',
                     setState: { mountDoomn: true },
@@ -317,7 +319,7 @@ const textNodes = [{
         },
         {
             id: 4.0039,
-            text: 'Choose your starting location. Hamilton',
+            text: 'Choose your starting location. Annie',
             options: [{
                     text: 'Mount Doom',
                     setState: { mountDoomn: true },
@@ -330,158 +332,71 @@ const textNodes = [{
                 }
             ]
         },
-        // Boy baseball hat
         {
             id: 4.0219,
-            text: 'Mount Doom Scene Hamilton',
+            text: 'Mount Doom Scene Annie',
             options: [{
                 text: 'Continue',
-                nextText: 8
+                nextText: 8.1
             }]
         },
         {
             id: 4.0319,
-            text: 'Mount Doom Scene Hamilton',
+            text: 'Mount Doom Scene Annie',
             options: [{
                 text: 'Continue',
-                nextText: 8
+                nextText: 8.1
             }]
         },
         {
             id: 4.0229,
-            text: 'Ghost Town Scene Hamilton',
+            text: 'Ghost Town Scene Annie',
             options: [{
                 text: 'Continue',
-                nextText: 8
+                nextText: 8.1
             }]
         },
         {
             id: 4.0329,
-            text: 'Ghost Town Scene Hamilton',
+            text: 'Ghost Town Scene Annie',
             options: [{
                 text: 'Continue',
-                nextText: 8
+                nextText: 8.1
             }]
         },
         // Boy Cowboy hat
         {
             id: 4.00219,
-            text: 'Mount Doom Scene Hamilton',
+            text: 'Mount Doom Scene Annie',
             options: [{
                 text: 'Continue',
-                nextText: 8
+                nextText: 8.1
             }]
         },
         {
             id: 4.00229,
-            text: 'Mount Doom Scene Hamilton',
+            text: 'Mount Doom Scene Annie',
             options: [{
                 text: 'Continue',
-                nextText: 8
+                nextText: 8.1
             }]
         },
         {
             id: 4.00319,
-            text: 'Ghost Town Scene Hamilton',
+            text: 'Ghost Town Scene Annie',
             options: [{
                 text: 'Continue',
-                nextText: 8
+                nextText: 8.1
             }]
         },
         {
             id: 4.00329,
-            text: 'Ghost Town Scene Hamilton',
+            text: 'Ghost Town Scene Annie',
             options: [{
                 text: 'Continue',
-                nextText: 8
+                nextText: 8.1
             }]
         },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // Girl
-        // {
-        //     id: 6.1,
-        //     text: 'Mount Doom Scene, Annie',
-        //     options: [{
-        //         text: 'Continue',
-        //         nextText: 8.1
-        //     }]
-        // },
-        // Boy
-        // {
-        //     id: 7,
-        //     text: 'Ghost Town scene Hamilton',
-        //     options: [{
-        //         text: 'Continue',
-        //         nextText: 8
-        //     }]
-        // },
-        // Girl
-        // {
-        //     id: 7.1,
-        //     text: 'Ghost Town scene, Annie',
-        //     options: [{
-        //         text: 'Continue',
-        //         nextText: 8
-        //     }]
-        // },
-        // Girl
-        // {
-        //     id: 7.2,
-        //     text: 'Ghost Town scene were pig complements you on choosing COWBOYHAT, Annie',
-        //     options: [{
-        //         text: 'Continue',
-        //         nextText: 8.1
-        //     }]
-        // },
-        // Boy
-        // {
-        //     id: 7.3,
-        //     text: 'Ghost Town scene were pig complements you on choosing COWBOYHAT, Hamilton',
-        //     options: [{
-        //         text: 'Continue',
-        //         nextText: 8
-        //     }]
-        // },
-        // Boy
         {
             id: 8,
             text: 'Battlefield scene. Choose Between the shark or the wolf Hamilton',
