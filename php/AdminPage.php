@@ -45,7 +45,7 @@
                
 
         //  }
-         
+
          </script>
 
         <link rel="stylesheet" href="../css.css">
@@ -104,7 +104,7 @@
 
         <?php //} ?>
 
-        <a href="LinkForm.html" class='btn btn-primary' rel="modal:open">Generate Access Link</a>
+        <a href="./LinkForm.php" class='btn btn-primary' rel="modal:open">Generate Access Link</a>
 
         
 
