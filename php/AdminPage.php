@@ -35,8 +35,6 @@
     </head>
     <body>
 
-    
-
     <?php if (isset($_GET['logout'])) {
         session_destroy();
         unset($_SESSION['email']);
@@ -93,9 +91,47 @@
 
 
         <script>
+
+            function generateAccessCode(access_code_type){
+                characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                randomString = ''
+                for (i = 0; i < 14; i++) { 
+                    index = rand(0, strlen(characters) - 1); 
+                    randomString .= characters[index]; 
+                } 
+                access_code = '';
+                if (strcmp(access_code_type, "individual")){
+                    access_code = 'zti' . randomString;
+                }
+                elseif (strcmp(access_code_type, "institution")){
+                    access_code = 'ztI' . randomString;
+                }
+                elseif(strcmp($access_code_type, "preview")){
+                    access_code = 'ztp' . randomString;
+                }
+                return access_code;
+            }
+            const code = generateAccessCode();
+
             $('#select_type').on('change', function() {
                 $('#LinkFormElement').empty();
                 if(this.value === "zti"){
+                    $( "<input name='generate_code' value='" + code + "'>" ).appendTo( "#LinkFormElement" );
+                    $( "<label for='first_name'>Individual's First Name:</label>" ).appendTo( "#LinkFormElement" );
+                    $( "<label for='last_name'>Individual's Last Name:</label>" ).appendTo( "#LinkFormElement" );
+                    $( "<label for='email'>Individual's Email:</label>" ).appendTo( "#LinkFormElement" );
+                    $( "<label for='phone'>Individual's Phone Number:</label>" ).appendTo( "#LinkFormElement" );
+                    $( "<label for='address'>Individual's Address:</label>" ).appendTo( "#LinkFormElement" );
+                    $( "<label for='apt_num'>Individual's Apartment Number (if applicable):</label>" ).appendTo( "#LinkFormElement" );
+                    $( "<label for='city'>Individual's City:</label>" ).appendTo( "#LinkFormElement" );
+                    $( "<label for='state'>Individual's State:</label>" ).appendTo( "#LinkFormElement" );
+                    $( "<label for='zipcode'>Individual's Zipcode:</label>" ).appendTo( "#LinkFormElement" );
+                    $( "<label for='end_date'>Expiration Date:</label>" ).appendTo( "#LinkFormElement" );
+                }
+                if(this.value === "ztI"){
+                    $( "<p>Test</p>" ).appendTo( "#LinkFormElement" );
+                }
+                if(this.value === "ztp"){
                     $( "<p>Test</p>" ).appendTo( "#LinkFormElement" );
                 }
                 
