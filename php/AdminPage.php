@@ -30,6 +30,13 @@
         
         <link rel="stylesheet" href="../scroll_bar.css">
         <link rel="stylesheet" href="../text_animiations.css">
+
+        <script>
+            $('#select_type').on('change', function() {
+            alert( this.value );
+            });
+        </script>
+
     
 
     </head>
