@@ -1,3 +1,9 @@
+<script>
+    $('#select_type').on('change', function() {
+    alert( this.value );
+    });
+</script>
+
 <div class="modal" tabindex="-1" role="dialog" id="LinkForm">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
