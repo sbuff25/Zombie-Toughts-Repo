@@ -2,14 +2,14 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
         <div class="modal-header bg-dark">
-            <h5 class="modal-title">Generate Access Link Form</h5>
+            <h5 class="modal-title .text-light">Generate Access Link Form</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
         <div class="modal-body">
             <form action="AdminPage.php" method='POST' class="form-container">
-                <label for="access_type"><b>Select Link Type</b></label>
+                <label for="access_type" class='text-light'><b>Select Link Type</b></label>
                 <select name="access_type" id="select_type">
                     <option value='ztI'>Institution Access Code</option>
                     <option value='zti'>Individual Access Code</option>
