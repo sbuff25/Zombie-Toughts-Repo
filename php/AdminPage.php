@@ -80,8 +80,9 @@
             <br>
 
         <?php //} ?>
+        <?php include("LinkForm.php"); ?>
 
-        <button type="button" class='btn btn-primary' data-toggle="modal" data-target="./LinkForm.php">Generate Access Link</button>
+        <button type="button" class='btn btn-primary' data-toggle="modal" data-target="#LinkForm">Generate Access Link</button>
 
         
 
