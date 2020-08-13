@@ -100,23 +100,23 @@
                     randomString += characters[index]; 
                 } 
                 access_code = '';
-                if (strcmp(access_code_type, "individual")){
+                if (access_code_type === "zti"){
                     access_code = 'zti' + randomString;
                 }
-                elseif (strcmp(access_code_type, "institution")){
+                else if (access_code_type === "ztI"){
                     access_code = 'ztI' + randomString;
                 }
-                elseif(strcmp($access_code_type, "preview")){
+                else if($access_code_type === "ztp"){
                     access_code = 'ztp' + randomString;
                 }
                 return access_code;
             }
-            const code = generateAccessCode();
 
             $('#select_type').on('change', function() {
                 $('#LinkFormElement').empty();
+                code = generateAccessCode(this.value);
                 if(this.value === "zti"){
-                    // $( "<input name='generate_code' value='" + code + "'>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='generate_code' value='" + code + "'>" ).appendTo( "#LinkFormElement" );
                     $( "<label for='first_name'>Individual's First Name:</label>" ).appendTo( "#LinkFormElement" );
                     $( "<label for='last_name'>Individual's Last Name:</label>" ).appendTo( "#LinkFormElement" );
                     $( "<label for='email'>Individual's Email:</label>" ).appendTo( "#LinkFormElement" );
