@@ -1,7 +1,7 @@
 <div class="modal" tabindex="-1" role="dialog" id="LinkForm">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-        <div class="modal-header bg-dark">
+        <div class="modal-header bg-primary">
             <h5 class="modal-title .text-light">Generate Access Link Form</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -19,7 +19,7 @@
                 <div id='LinkFormElement'>
                 </div>
 
-                <button type="submit" name='submitAccessLink' class='btn btn-primary'>Generate Link and Send Email</button>
+                <button type="submit" name='submitAccessLink' class='btn btn-primary p-2'>Generate Link and Send Email</button>
             </form>
         </div>
         <div class="modal-footer">
