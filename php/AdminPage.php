@@ -29,20 +29,20 @@
          function closeForm(form_id) {
                document.getElementById(form_id).style.display = "none";
          }
-         function addInputToForm(new_input_id) {
-            var SelectForm = document.querySelector('#select_type');
-            var value = SelectForm.value;
-            var LinkFormInputArea = document.getElementById(new_input_id);
-            while(LinkFormInputArea.firstChild){
-                LinkFormInputArea.removeChild(LinkFormInputArea.firstChild);
-            }
-            if(value === "ztI"){
-                var institutionNameInput = "<label for='institution_name'>Institution Name</label><input name='institution_name' placeholder='Enter Institution's Name...'>";
-                LinkFormInputArea.appendChild(institutionNameInput);
-            }
+        //  function addInputToForm(new_input_id) {
+        //     var SelectForm = document.querySelector('#select_type');
+        //     var value = SelectForm.value;
+        //     var LinkFormInputArea = document.getElementById(new_input_id);
+        //     while(LinkFormInputArea.firstChild){
+        //         LinkFormInputArea.removeChild(LinkFormInputArea.firstChild);
+        //     }
+        //     if(value === "ztI"){
+        //         var institutionNameInput = "<label for='institution_name'>Institution Name</label><input name='institution_name' placeholder='Enter Institution's Name...'>";
+        //         LinkFormInputArea.appendChild(institutionNameInput);
+        //     }
                
 
-         }
+        //  }
          
          </script>
 
@@ -93,7 +93,7 @@
             </section>
         
         </header>
-
+        <br><br><br><br><br>
         <?php //if (strcmp($_SESSION['privilege'], "high") === 0){ ?>
 
             <button>Create New User</button>

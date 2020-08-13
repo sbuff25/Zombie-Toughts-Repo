@@ -3,7 +3,7 @@
         <h1>Generate Access Link Form:</h1>
 
         <label for="access_type"><b>Select Link Type</b></label>
-        <select name="access_type" id="select_type" onselect="addInputToForm('LinkFormElement')">
+        <select name="access_type" id="select_type"> <!-- onselect="addInputToForm('LinkFormElement')"> -->
             <option value='ztI'>Institution Access Code</option>
             <option value='zti'>Individual Access Code</option>
             <option value='ztp'>Preview Access Code</option>
