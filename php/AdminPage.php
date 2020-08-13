@@ -94,20 +94,20 @@
 
             function generateAccessCode(access_code_type){
                 characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-                randomString = ''
+                randomString = '';
                 for (i = 0; i < 14; i++) { 
                     index = rand(0, strlen(characters) - 1); 
-                    randomString .= characters[index]; 
+                    randomString += characters[index]; 
                 } 
                 access_code = '';
                 if (strcmp(access_code_type, "individual")){
-                    access_code = 'zti' . randomString;
+                    access_code = 'zti' + randomString;
                 }
                 elseif (strcmp(access_code_type, "institution")){
-                    access_code = 'ztI' . randomString;
+                    access_code = 'ztI' + randomString;
                 }
                 elseif(strcmp($access_code_type, "preview")){
-                    access_code = 'ztp' . randomString;
+                    access_code = 'ztp' + randomString;
                 }
                 return access_code;
             }
