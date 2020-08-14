@@ -38,7 +38,7 @@
                                                 echo "<td>$user_first</td>";
                                                 echo "<td>$user_email</td>";
                                                 echo "<td>$user_privilege</td>";
-                                                echo "<td id='button_row'><button class='btn btn-caution' type='button' id='delete_button' value='{$user_email}'>Delete</button></td>";
+                                                echo "<td id='button_row'><button class='btn btn-warning btn-sm' type='button' id='delete_button' value='{$user_email}'>Delete</button></td>";
                                             echo "</tr>";
                                         }
                                     ?>
@@ -54,7 +54,7 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
