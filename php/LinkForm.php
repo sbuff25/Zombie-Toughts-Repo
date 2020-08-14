@@ -19,7 +19,7 @@
                 <div id='LinkFormElement'>
                 </div>
 
-                <button type="submit" name='submitAccessLink' class='btn btn-primary p-2'>Generate Link and Send Email</button>
+                <!-- <button type="submit" name='submitAccessLink' class='btn btn-primary p-2'>Generate Link and Send Email</button> -->
             </form>
         </div>
         <div class="modal-footer">
