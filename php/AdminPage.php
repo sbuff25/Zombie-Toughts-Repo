@@ -65,13 +65,27 @@
         <br><br><br><br><br>
         <?php //if (strcmp($_SESSION['privilege'], "high") === 0){ ?>
 
-            <button>Create New User</button>
-            <br>
-            <button>Delete User</button>
-            <br>
+        <?php if (isset($_SESSION['success'])) : ?>
+            <div class="error success">
+            <p>
+            <?php 
+                echo $_SESSION['success'];
+                unset($_SESSION['success']);
+            ?>
+            </p>
+            </div>
+        <?php endif ?>
+
+        <button type="button" class='btn btn-primary' data-toggle="modal" data-target="#NewUserForm">Create New User</button>
+        <br>
+        <button>Delete User</button>
+        <br>
 
         <?php //} ?>
         <?php include("LinkForm.php"); ?>
+        <?php include("NewUserForm.php") ?>
+
+        
 
         <button type="button" class='btn btn-primary' data-toggle="modal" data-target="#LinkForm">Generate Access Link</button>
 
