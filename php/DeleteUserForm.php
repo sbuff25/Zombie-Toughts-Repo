@@ -38,7 +38,7 @@
                                                 echo "<td>$user_first</td>";
                                                 echo "<td>$user_email</td>";
                                                 echo "<td>$user_privilege</td>";
-                                                echo "<td><button type='button' id='delete_button' value='{$user_email}'>Delete</button></td>";
+                                                echo "<td id='button_row'><button type='button' id='delete_button' value='$user_email'>Delete</button></td>";
                                             echo "</tr>";
                                         }
                                     ?>
@@ -59,3 +59,12 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    $('#delete_button').on('click', function() {
+        var email = this.value;
+        $('#button_row').empty();
+        $( "<button>"+this.email + "</button>" ).appendTo( "#button_row" );
+    });
+</script>
