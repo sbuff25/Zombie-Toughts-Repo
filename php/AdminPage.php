@@ -34,7 +34,9 @@
     </head>
     <body>
 
-    <?php if (isset($_GET['logout'])) {
+    <?php 
+    include_once('FormCheck.php');
+    if (isset($_GET['logout'])) {
         session_destroy();
         unset($_SESSION['email']);
         unset($_SESSION['username']);
@@ -60,14 +62,6 @@
             <div class="line3"></div>
             </div>
         </nav>
-        <header class="showcase" id="home">
-            <section id="home">
-                <img src="./images/Title_Animation/Title_Animation.png" alt="" id="title_animi">
-                <img src="./images/Title_Animation/Author_Animation.png" alt="" id="author_animi">
-                <img src="./images/Title_Animation/MT_Rep_Logo.png" alt="" id="mt_rep_logo">
-            </section>
-        
-        </header>
         <br><br><br><br><br>
         <?php //if (strcmp($_SESSION['privilege'], "high") === 0){ ?>
 
@@ -95,8 +89,7 @@
                 characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
                 randomString = '';
                 for (i = 0; i < 14; i++) { 
-                    index = Math.floor(Math.random() * 14);
-                    //index = rand(0, strlen(characters) - 1); 
+                    index = Math.floor(Math.random() * characters.length);
                     randomString += characters[index]; 
                 } 
                 access_code = '';
@@ -114,19 +107,46 @@
 
             $('#select_type').on('change', function() {
                 $('#LinkFormElement').empty();
+                
+                // Generate code and add to form 
                 code = generateAccessCode(this.value);
+                $( "<input name='generate_code' value='" + code + "' hidden>" ).appendTo( "#LinkFormElement" );
+
                 if(this.value === "zti"){
-                    $( "<input name='generate_code' value='" + code + "'>" ).appendTo( "#LinkFormElement" );
                     $( "<label for='first_name'>Individual's First Name:</label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='first_name' placeholder='Enter Individual's First Name...'>" ).appendTo( "#LinkFormElement" );
+
                     $( "<label for='last_name'>Individual's Last Name:</label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='last_name' placeholder='Enter Individual's Last Name...'>" ).appendTo( "#LinkFormElement" );
+
                     $( "<label for='email'>Individual's Email:</label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='email' type='email' placeholder='Enter Individual's Email...'>" ).appendTo( "#LinkFormElement" );
+
                     $( "<label for='phone'>Individual's Phone Number:</label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='phone' type='tel' placeholder='Enter Individual's Last Name...'>" ).appendTo( "#LinkFormElement" );
+
                     $( "<label for='address'>Individual's Address:</label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='address' placeholder='Enter Individual's Address...'>" ).appendTo( "#LinkFormElement" );
+
                     $( "<label for='apt_num'>Individual's Apartment Number (if applicable):</label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='apt_num' placeholder='Enter Individual's Apartment Number...'>" ).appendTo( "#LinkFormElement" );
+
                     $( "<label for='city'>Individual's City:</label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='city' placeholder='Enter Individual's City...'>" ).appendTo( "#LinkFormElement" );
+
                     $( "<label for='state'>Individual's State:</label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='state' placeholder='Enter Individual's State...'>" ).appendTo( "#LinkFormElement" );
+
                     $( "<label for='zipcode'>Individual's Zipcode:</label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='zipcode' placeholder='Enter Individual's Zipcode...'>" ).appendTo( "#LinkFormElement" );
+
                     $( "<label for='end_date'>Expiration Date:</label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='end_date' type='date'>" ).appendTo( "#LinkFormElement" );
+
+                    time=getTime();
+                    $( "<input name='end_time' type='time' value='" + time + "'>" ).appendTo( "#LinkFormElement" );
+
+
                 }
                 if(this.value === "ztI"){
                     $( "<p>Test</p>" ).appendTo( "#LinkFormElement" );
