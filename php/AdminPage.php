@@ -83,8 +83,8 @@
 
         <?php //} ?>
         <?php include("LinkForm.php"); ?>
-        <?php include("NewUserForm.php") ?>
-        <?php include("DeleteUserForm.php") ?>
+        <?php include("NewUserForm.php"); ?>
+        <?php include("DeleteUserForm.php"); ?>
 
         
 
