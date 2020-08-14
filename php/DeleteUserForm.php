@@ -29,16 +29,16 @@
                                 </thead>
                                 <tbody>
                                     <?php
-                                        while($row){
-                                            $user_email = $row['email'];
-                                            echo "<tr>";
+                                        // while($row){
+                                        //     $user_email = $row['email'];
+                                            // echo "<tr>";
                                                 // echo "<td>$row['last_name']</td>";
                                                 // echo "<td>$row['first_name']</td>";
                                                 // echo "<td>$user_email</td>";
                                                 // echo "<td>$row['privilege_level']</td>";
                                                 // echo "<td><button type='button' id='delete_button' value='$user_email'>Delete</button></td>";
-                                            echo "</tr>";
-                                        }
+                                            // echo "</tr>";
+                                        // }
                                     ?>
                                 </tbody>
                             </table>
