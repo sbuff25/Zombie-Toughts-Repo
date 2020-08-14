@@ -16,6 +16,8 @@
                     <option value='ztp'>Preview Access Code</option>
                 </select>
                 <br>
+                <hr>
+                <br>
                 <div id='LinkFormElement'>
                 </div>
 

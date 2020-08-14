@@ -233,7 +233,7 @@
                     $( "<input name='end_time' type='time' value='" + time + "' hidden><br>" ).appendTo( "#LinkFormElement" );
                 }
 
-                $( "<button type='submit' name='submitAccessLink' class='btn btn-primary p-2'>Generate Link and Send Email</button>" ).appendTo( "#LinkFormElement" );
+                $( "<button type='submit' name='submitAccessLink' class='btn btn-primary p-2'>Generate Access Code and Send Email</button>" ).appendTo( "#LinkFormElement" );
                 
             });
         </script>
