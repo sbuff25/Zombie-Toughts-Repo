@@ -290,7 +290,7 @@ require_once("./Classes/Database.php");
     }
 
     if (isset($_POST['deleteUser'])) {
-        $email = mysqli_real_escape_string($database, $_POST['email']);
+        $email = mysqli_real_escape_string($database, $_POST['deleteUser']);
 
         $sql = "DELETE FROM AdminUser WHERE email='$email'";
         $result = mysqli_query($database, $sql);
