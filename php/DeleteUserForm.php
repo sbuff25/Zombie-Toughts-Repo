@@ -14,7 +14,6 @@
                     $result = mysqli_query($database, $sql);
 
                     if($result){
-                        $row = mysqli_fetch_assoc($result);
                 ?>
                         <form action='AdminPage.php' method='POST'>
                             <table class='table table-dark table-hover'>
@@ -29,19 +28,26 @@
                                 </thead>
                                 <tbody>
                                     <?php
-                                        while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                                            $user_email = $row['email'];
-                                            $user_first = $row['first_name'];
-                                            $user_last = $row['last_name'];
-                                            $user_privilege = $row['privilege_level'];
-                                            echo "<tr>";
-                                                echo "<td>$user_last</td>";
-                                                echo "<td>$user_first</td>";
-                                                echo "<td>$user_email</td>";
-                                                echo "<td>$user_privilege</td>";
-                                                echo "<td><button type='button' id='delete_button' value='{$user_email}'>Delete</button></td>";
-                                            echo "</tr>";
-                                        }
+                                        // while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                                        //     $user_email = $row['email'];
+                                        //     $user_first = $row['first_name'];
+                                        //     $user_last = $row['last_name'];
+                                        //     $user_privilege = $row['privilege_level'];
+                                        //     echo "<tr>";
+                                        //         echo "<td>$user_last</td>";
+                                        //         echo "<td>$user_first</td>";
+                                        //         echo "<td>$user_email</td>";
+                                        //         echo "<td>$user_privilege</td>";
+                                        //         echo "<td><button type='button' id='delete_button' value='{$user_email}'>Delete</button></td>";
+                                        //     echo "</tr>";
+                                        // }
+                                        echo "<tr>";
+                                            echo "<td>test</td>";
+                                            echo "<td>test</td>";
+                                            echo "<td>test</td>";
+                                            echo "<td>test</td>";
+                                            echo "<td>test</td>";
+                                        echo "</tr>";
                                     ?>
                                 </tbody>
                             </table>
@@ -49,40 +55,9 @@
                 <?php
                     }
                     else{
-                        echo "<h5>There are no new users</h5>";
+                        echo "<h5>There are no other users</h5>";
                     }
                 ?>
-
-                <!-- <form action='DeleteUser.php' method='POST'>
-                    <div>
-                        <label for='email'>Email:</label>
-                        <input name='email' type='email' placeholder="<?php //echo "Enter New User's Email..."?>" required>
-                    </div>
-                    <br>
-                    <div>
-                        <label for='first_name'>First Name:</label>
-                        <input name='first_name' placeholder="<?php //echo "Enter New User's First Name..."?>" required>
-                    </div>
-                    <br>
-                    <div>
-                        <label for='last_name'>Last Name:</label>
-                        <input name='last_name' placeholder="<?php //echo "Enter New User's Last Name..."?>" required>
-                    </div>
-                    <label for='privilege'>Select Privilege Level:</label>
-                    <select name='privilege'>
-                        <option value='low' default>Low</option>
-                        <option value='High' default>High</option>
-                    </select>
-                    <p>High privileged admin users can create and delete users. Low level admin users cannot.</p>
-                    <br>
-                    <div>
-                        <p>An email will be sent to the user to set their password. If the user does not set their password within 7 days, the user will need to be created again.</p>
-                    </div> -->
-                    <?php //include_once('errors.php'); ?>
-
-                    <!-- <br>
-                    <button type='submit' name='submitNewUser'>Create New Admin</button>
-                </form> -->
             </div>
 
             <div class="modal-footer">
