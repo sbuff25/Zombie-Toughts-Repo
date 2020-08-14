@@ -32,11 +32,11 @@
                                         while($row){
                                             $user_email = $row['email'];
                                             echo "<tr>";
-                                                echo "<td>$row['last_name']</td>";
-                                                echo "<td>$row['first_name']</td>";
-                                                echo "<td>$user_email</td>";
-                                                echo "<td>$row['privilege_level']</td>";
-                                                echo "<td><button type='button' id='delete_button' value='$user_email'>Delete</button></td>";
+                                                // echo "<td>$row['last_name']</td>";
+                                                // echo "<td>$row['first_name']</td>";
+                                                // echo "<td>$user_email</td>";
+                                                // echo "<td>$row['privilege_level']</td>";
+                                                // echo "<td><button type='button' id='delete_button' value='$user_email'>Delete</button></td>";
                                             echo "</tr>";
                                         }
                                     ?>
@@ -53,17 +53,17 @@
                 <!-- <form action='DeleteUser.php' method='POST'>
                     <div>
                         <label for='email'>Email:</label>
-                        <input name='email' type='email' placeholder="<?php echo "Enter New User's Email..."?>" required>
+                        <input name='email' type='email' placeholder="<?php //echo "Enter New User's Email..."?>" required>
                     </div>
                     <br>
                     <div>
                         <label for='first_name'>First Name:</label>
-                        <input name='first_name' placeholder="<?php echo "Enter New User's First Name..."?>" required>
+                        <input name='first_name' placeholder="<?php //echo "Enter New User's First Name..."?>" required>
                     </div>
                     <br>
                     <div>
                         <label for='last_name'>Last Name:</label>
-                        <input name='last_name' placeholder="<?php echo "Enter New User's Last Name..."?>" required>
+                        <input name='last_name' placeholder="<?php //echo "Enter New User's Last Name..."?>" required>
                     </div>
                     <label for='privilege'>Select Privilege Level:</label>
                     <select name='privilege'>
