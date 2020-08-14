@@ -39,9 +39,6 @@
         <li>
             <a href="#help">Resources</a>
         </li>
-        <li>
-            <a href="./php/LoginPage.php"> Admin Login</a>
-        </li>
     </ul>
     <div class="burger">
     <div class="line1"></div>
