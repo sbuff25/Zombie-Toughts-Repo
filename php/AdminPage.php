@@ -99,7 +99,7 @@
                 else if (access_code_type === "ztI"){
                     access_code = 'ztI' + randomString;
                 }
-                else if($access_code_type === "ztp"){
+                else if(access_code_type === "ztp"){
                     access_code = 'ztp' + randomString;
                 }
                 return access_code;
