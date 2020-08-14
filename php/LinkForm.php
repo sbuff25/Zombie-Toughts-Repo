@@ -7,7 +7,7 @@
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <div class="modal-body bg-muted text-light">
+        <div class="modal-body bg-muted text-dark">
             <form action="AdminPage.php" method='POST' class="form-container">
                 <label for="access_type" class='text-dark'><b>Select Link Type</b></label>
                 <select name="access_type" id="select_type">
