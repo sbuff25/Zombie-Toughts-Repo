@@ -162,7 +162,7 @@
                     $( "<input name='contact_email' type='email' placeholder='Enter Email...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<label for='contact_phone'>Contact's Phone Number:&nbsp;</label>" ).appendTo( "#LinkFormElement" );
-                    $( "<input name='contact_phone' type='tel' placeholder='Enter Last Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='contact_phone' type='tel' placeholder='Enter Last Name...' size='20'><br><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<h5><b>Institution Information:</b></h5><br>" ).appendTo( "#LinkFormElement" );
 
@@ -182,7 +182,7 @@
                     $( "<input name='institution_zipcode' placeholder='Enter Zipcode...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<label for='institution_county'>Institution's County:&nbsp;</label>" ).appendTo( "#LinkFormElement" );
-                    $( "<input name='institution_county' placeholder='Enter County...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='institution_county' placeholder='Enter County...' size='20'><br><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<h5><b>Counselor Information:</b></h5><br>" ).appendTo( "#LinkFormElement" );
 
@@ -202,7 +202,7 @@
                     $( "<input name='counselor_office' placeholder='Enter Office Number...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<label for='counselor_bldg'>Counselor Building:&nbsp;</label>" ).appendTo( "#LinkFormElement" );
-                    $( "<input name='counselor_bldg' placeholder='Enter Building...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='counselor_bldg' placeholder='Enter Building...' size='20'><br><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<h5><b>Other Information:</b></h5><br>" ).appendTo( "#LinkFormElement" );
 
