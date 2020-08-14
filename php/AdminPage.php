@@ -113,6 +113,8 @@
                 $( "<input name='generate_code' value='" + code + "' hidden>" ).appendTo( "#LinkFormElement" );
 
                 if(this.value === "zti"){
+                    $( "<h5><b>Individual's Information:</b></h5><br>" ).appendTo( "#LinkFormElement" );
+
                     $( "<label for='first_name'>Individual's First Name: </label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='first_name' placeholder='Enter First Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
@@ -140,7 +142,7 @@
                     $( "<label for='zipcode'>Individual's Zipcode: </label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='zipcode' placeholder='Enter Zipcode...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
-                    $( "<label for='end_date'>Expiration Date: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<label for='end_date'>Code Expiration Date: </label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='end_date' type='date'><br>" ).appendTo( "#LinkFormElement" );
 
                     date = new Date();
@@ -164,7 +166,7 @@
                     $( "<label for='contact_phone'>Contact's Phone Number:&nbsp;</label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='contact_phone' type='tel' placeholder='Enter Last Name...' size='20'><br><br>" ).appendTo( "#LinkFormElement" );
 
-                    $( "<h5><b>Institution Information:</b></h5><br>" ).appendTo( "#LinkFormElement" );
+                    $( "<h5><b>Institution's Information:</b></h5><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<label for='institution_name'>Institution's Name:&nbsp;</label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='institution_name' placeholder='Enter Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
@@ -184,7 +186,7 @@
                     $( "<label for='institution_county'>Institution's County:&nbsp;</label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='institution_county' placeholder='Enter County...' size='20'><br><br>" ).appendTo( "#LinkFormElement" );
 
-                    $( "<h5><b>Counselor Information:</b></h5><br>" ).appendTo( "#LinkFormElement" );
+                    $( "<h5><b>Counselor's Information:</b></h5><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<label for='counselor_first_name'>Counselor First Name:&nbsp;</label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='counselor_first_name' placeholder='Enter First Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
@@ -214,6 +216,8 @@
                 }
 
                 else if(this.value === "ztp"){
+                    $( "<h5><b>Individual's Information:</b></h5><br>" ).appendTo( "#LinkFormElement" );
+
                     $( "<label for='first_name'>Individual's First Name: </label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='first_name' placeholder='Enter First Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
@@ -227,7 +231,7 @@
                     $( "<input name='phone' type='tel' placeholder='Enter Last Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
                     
-                    $( "<label for='end_date'>Expiration Date: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<label for='end_date'>Code Expiration Date: </label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='end_date' type='date'><br>" ).appendTo( "#LinkFormElement" );
 
                     date = new Date();
