@@ -29,16 +29,19 @@
                                 </thead>
                                 <tbody>
                                     <?php
-                                        // while($row){
-                                        //     $user_email = $row['email'];
-                                            // echo "<tr>";
-                                                // echo "<td>$row['last_name']</td>";
-                                                // echo "<td>$row['first_name']</td>";
-                                                // echo "<td>$user_email</td>";
-                                                // echo "<td>$row['privilege_level']</td>";
-                                                // echo "<td><button type='button' id='delete_button' value='$user_email'>Delete</button></td>";
-                                            // echo "</tr>";
-                                        // }
+                                        while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                                            $user_email = $row['email'];
+                                            $user_first = $row['first_name'];
+                                            $user_last = $row['last_name'];
+                                            $user_privilege = $row['privilege_level'];
+                                            echo "<tr>";
+                                                echo "<td>$user_last</td>";
+                                                echo "<td>$user_first</td>";
+                                                echo "<td>$user_email</td>";
+                                                echo "<td>$user_privilege</td>";
+                                                echo "<td><button type='button' id='delete_button' value='{$user_email}'>Delete</button></td>";
+                                            echo "</tr>";
+                                        }
                                     ?>
                                 </tbody>
                             </table>
