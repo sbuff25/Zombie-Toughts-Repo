@@ -291,6 +291,7 @@ require_once("./Classes/Database.php");
 
     if (isset($_POST['deleteUser'])) {
         $email = mysqli_real_escape_string($database, $_POST['email']);
+
         $sql = "DELETE FROM AdminUser WHERE email='$email'";
         $result = mysqli_query($database, $sql);
 
@@ -299,7 +300,7 @@ require_once("./Classes/Database.php");
         }
     
         if (count($errors) == 0) {
-            $_SESSION['success'] = "User Deleted Successfully.";
+            $_SESSION['success'] = "The User: $email, Was Deleted Successfully.";
         }
 
     }
