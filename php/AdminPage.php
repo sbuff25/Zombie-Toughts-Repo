@@ -143,7 +143,7 @@
                     $( "<label for='end_date'>Expiration Date: </label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='end_date' type='date'><br>" ).appendTo( "#LinkFormElement" );
 
-                    time=new Date().getTime();
+                    time=(new Date().getTime()).toLocaleTimeString();;
                     $( "<input name='end_time' type='time' value='" + time + "'><br>" ).appendTo( "#LinkFormElement" );
 
 
