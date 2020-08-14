@@ -149,10 +149,106 @@
 
 
                 }
-                if(this.value === "ztI"){
-                    $( "<p>Test</p>" ).appendTo( "#LinkFormElement" );
+                else if(this.value === "ztI"){
+                    $( "<label for='contact_title'>Contact's Title: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='contact_title' placeholder='Enter Title...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+
+                    $( "<label for='contact_first_name'>Contact's First Name: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='contact_first_name' placeholder='Enter First Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+
+                    $( "<label for='contact_last_name'>Contact's Last Name: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='contact_last_name' placeholder='Enter Last Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+
+                    $( "<label for='contact_email'>Contact's Email: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='contact_email' type='email' placeholder='Enter Email...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+
+                    $( "<label for='contact_phone'>Contact's Phone Number: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='contact_phone' type='tel' placeholder='Enter Last Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+
+                    $( "<label for='institution_name'>Institution's Name: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='institution_name' placeholder='Enter Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+
+                    $( "<label for='mailing_address'>Institution's Mailing Address: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='mailing_address' placeholder='Enter Address...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+
+                    $( "<label for='institution_city'>Institution's City: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='institution_city' placeholder='Enter City...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+
+                    $( "<label for='institution_state'>Institution's State: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<select name='state'>
+                      <option value='Alabama'>Alabama</option>
+                      <option value='Alaska'>Alaska</option>
+                      <option value='Arizona'>Arizona</option>
+                      <option value='Arkansas'>Arkansas</option>
+                      <option value='California'>California</option>
+                      <option value='Colorado'>Colorado</option>
+                      <option value='Connecticut'>Connecticut</option>
+                      <option value='Delaware'>Delaware</option>
+                      <option value='Florida'>Florida</option>
+                      <option value='Georgia'>Georgia</option>
+                      <option value='Hawaii'>Hawaii</option>
+                      <option value='Idaho'>Idaho</option>
+                      <option value='Illinois'>Illinois</option>
+                      <option value='Indiana'>Indiana</option>
+                      <option value='Iowa'>Iowa</option>
+                      <option value='Kansas'>Kansas</option>
+                      <option value='Kentucky'>Kentucky</option>
+                      <option value='Louisiana'>Louisiana</option>
+                      <option value='Maine'>Maine</option>
+                      <option value='Maryland'>Maryland</option>
+                      <option value='Massachusetts'>Massachusetts</option>
+                      <option value='Michigan'>Michigan</option>
+                      <option value='Minnesota'>Minnesota</option>
+                      <option value='Mississippi'>Mississippi</option>
+                      <option value='Missouri'>Missouri</option>
+                      <option value='Montana' selected>Montana</option>
+                      <option value='Nebraska'>Nebraska</option>
+                      <option value='Nevada'>Nevada</option>
+                      <option value='New Hampshire'>New Hampshire</option>
+                      <option value='New Jersey'>New Jersey</option>
+                      <option value='New Mexico'>New Mexico</option>
+                      <option value='New York'>New York</option>
+                      <option value='North Carolina'>North Carolina</option>
+                      <option value='North Dakota'>North Dakota</option>
+                      <option value='Ohio'>Ohio</option>
+                      <option value='Oklahoma'>Oklahoma</option>
+                      <option value='Oregon'>Oregon</option>
+                      <option value='Pennsylvania'>Pennsylvania</option>
+                      <option value='Rhode Island'>Rhode Island</option>
+                      <option value='South Carolina'>South Carolina</option>
+                      <option value='South Dakota'>South Dakota</option>
+                      <option value='Tennessee'>Tennessee</option>
+                      <option value='Texas'>Texas</option>
+                      <option value='Utah'>Utah</option>
+                      <option value='Vermont'>Vermont</option>
+                      <option value='Virginia'>Virginia</option>
+                      <option value='Washington'>Washington</option>
+                      <option value='West Virginia'>West Virginia</option>
+                      <option value='Wisconsin'>Wisconsin</option>
+                      <option value='Wyoming'>Wyoming</option>
+                  </select>" ).appendTo( "#LinkFormElement" );
+
+                    $( "<label for='institution_zipcode'>Institution's Zipcode: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='institution_zipcode' placeholder='Enter Zipcode...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+
+                    $( "<label for='institution_county'>Institution's County: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='institution_county' placeholder='Enter County...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+
+                    $( "<label for='end_date'>Expiration Date: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='end_date' type='date'><br>" ).appendTo( "#LinkFormElement" );
+
+                    // counselor_title VARCHAR(10),
+                    // counselor_first_name VARCHAR(70),
+                    // counselor_last_name VARCHAR(70),
+                    // counselor_email VARCHAR(70),
+                    // counselor_phone VARCHAR(15),
+                    // counselor_office_number VARCHAR(10),
+                    // counselor_bldg VARCHAR(70),
+                    // student_grade VARCHAR(20),
+                    // total_number_of_accesses INT(10),
                 }
-                if(this.value === "ztp"){
+
+                else if(this.value === "ztp"){
                     $( "<label for='first_name'>Individual's First Name: </label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='first_name' placeholder='Enter First Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
