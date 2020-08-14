@@ -150,7 +150,7 @@
 
                 }
                 else if(this.value === "ztI"){
-                    $( "<h3>Contact's Information:</h3>" ).appendTo( "#LinkFormElement" );
+                    $( "<h6>Contact's Information:</h6>" ).appendTo( "#LinkFormElement" );
 
                     $( "<label for='contact_first_name'>Contact's First Name:&nbsp;</label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='contact_first_name' placeholder='Enter First Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
