@@ -38,7 +38,7 @@
                                                 echo "<td>$user_first</td>";
                                                 echo "<td>$user_email</td>";
                                                 echo "<td>$user_privilege</td>";
-                                                echo "<td id='button_row'><button type='button' id='delete_button' value='{$user_email}'>Delete</button></td>";
+                                                echo "<td id='button_row'><button class='btn btn-caution' type='button' id='delete_button' value='{$user_email}'>Delete</button></td>";
                                             echo "</tr>";
                                         }
                                     ?>
@@ -65,6 +65,6 @@
     $('#delete_button').on('click', function() {
         var email = this.value;
         $('#button_row').empty();
-        $( "<button type='submit' name='deleteUser' value='" + email + "'>Confirm</button>" ).appendTo( "#button_row" );
+        $( "<button class='btn btn-caution' type='submit' name='deleteUser' value='" + email + "'>Confirm</button>" ).appendTo( "#button_row" );
     });
 </script>
