@@ -153,7 +153,25 @@
                     $( "<p>Test</p>" ).appendTo( "#LinkFormElement" );
                 }
                 if(this.value === "ztp"){
-                    $( "<p>Test</p>" ).appendTo( "#LinkFormElement" );
+                    $( "<label for='first_name'>Individual's First Name: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='first_name' placeholder='Enter First Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+
+                    $( "<label for='last_name'>Individual's Last Name: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='last_name' placeholder='Enter Last Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+
+                    $( "<label for='email'>Individual's Email: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='email' type='email' placeholder='Enter Email...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+
+                    $( "<label for='phone'>Individual's Phone Number: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='phone' type='tel' placeholder='Enter Last Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+
+                    
+                    $( "<label for='end_date'>Expiration Date: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='end_date' type='date'><br>" ).appendTo( "#LinkFormElement" );
+
+                    date = new Date();
+                    time = date.getHours() + ':' + date.getMinutes();
+                    $( "<input name='end_time' type='time' value='" + time + "' hidden><br>" ).appendTo( "#LinkFormElement" );
                 }
                 
             });
