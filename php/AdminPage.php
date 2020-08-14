@@ -204,10 +204,10 @@
                     $( "<label for='counselor_bldg'>Counselor Building: </label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='counselor_bldg' placeholder='Enter Building...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
-                    $( "<label for='student_grade>Students\' Grade Level: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<label for='student_grade'>Students\' Grade Level: </label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='student_grade' placeholder='Enter Grade...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
-                    $( "<label for='accesses>Students\' Total Number of code uses: </label>" ).appendTo( "#LinkFormElement" );
+                    $( "<label for='accesses'>Students\' Total Number of code uses: </label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='accesses' placeholder='Enter total...' type='number' min='1' size='20'><br>" ).appendTo( "#LinkFormElement" );
                 }
 
