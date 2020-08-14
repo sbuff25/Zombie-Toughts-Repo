@@ -288,4 +288,20 @@ require_once("./Classes/Database.php");
             header('location: AdminPage.php');
         }
     }
+
+    if (isset($_POST['deleteUser'])) {
+        $email = mysqli_real_escape_string($database, $_POST['email']);
+        $sql = "DELETE FROM AdminUser WHERE email='$email'";
+        $result = mysqli_query($database, $sql);
+
+        if(!$result){
+            array_push($errors, "Could not delete user.");
+        }
+    
+        if (count($errors) == 0) {
+            $_SESSION['success'] = "User Deleted Successfully.";
+        }
+
+    }
+    
 ?>

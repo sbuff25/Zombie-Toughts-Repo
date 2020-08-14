@@ -54,7 +54,7 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
@@ -65,6 +65,6 @@
     $('#delete_button').on('click', function() {
         var email = this.value;
         $('#button_row').empty();
-        $( "<button class='btn btn-caution' type='submit' name='deleteUser' value='" + email + "'>Confirm</button>" ).appendTo( "#button_row" );
+        $( "<button class='btn btn-danger btn-sm' type='submit' name='deleteUser' value='" + email + "'>Confirm</button>" ).appendTo( "#button_row" );
     });
 </script>
