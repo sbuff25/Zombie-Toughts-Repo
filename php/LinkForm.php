@@ -11,7 +11,7 @@
             <form action="AdminPage.php" method='POST' class="form-container">
                 <label for="access_type" class='text-dark'><b>Select Link Type</b></label>
                 <select name="access_type" id="select_type">
-                    <option disabled>Select A Code Type...</option>
+                    <option selected disabled>Select A Code Type...</option>
                     <option value='ztI'>Institution Access Code</option>
                     <option value='zti'>Individual Access Code</option>
                     <option value='ztp'>Preview Access Code</option>
