@@ -114,36 +114,36 @@
 
                 if(this.value === "zti"){
                     $( "<label for='first_name'>Individual's First Name: </label>" ).appendTo( "#LinkFormElement" );
-                    $( "<input name='first_name' placeholder='Enter Individual's First Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='first_name' placeholder='Enter First Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<label for='last_name'>Individual's Last Name: </label>" ).appendTo( "#LinkFormElement" );
-                    $( "<input name='last_name' placeholder='Enter Individual's Last Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='last_name' placeholder='Enter Last Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<label for='email'>Individual's Email: </label>" ).appendTo( "#LinkFormElement" );
-                    $( "<input name='email' type='email' placeholder='Enter Individual's Email...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='email' type='email' placeholder='Enter Email...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<label for='phone'>Individual's Phone Number: </label>" ).appendTo( "#LinkFormElement" );
-                    $( "<input name='phone' type='tel' placeholder='Enter Individual's Last Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='phone' type='tel' placeholder='Enter Last Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<label for='address'>Individual's Address: </label>" ).appendTo( "#LinkFormElement" );
-                    $( "<input name='address' placeholder='Enter Individual's Address...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='address' placeholder='Enter Address...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<label for='apt_num'>Individual's Apartment Number (if applicable): </label>" ).appendTo( "#LinkFormElement" );
-                    $( "<input name='apt_num' placeholder='Enter Individual's Apartment Number...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='apt_num' placeholder='Enter Apartment Number...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<label for='city'>Individual's City: </label>" ).appendTo( "#LinkFormElement" );
-                    $( "<input name='city' placeholder='Enter Individual's City...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='city' placeholder='Enter City...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<label for='state'>Individual's State: </label>" ).appendTo( "#LinkFormElement" );
-                    $( "<input name='state' placeholder='Enter Individual's State...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='state' placeholder='Enter State...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<label for='zipcode'>Individual's Zipcode: </label>" ).appendTo( "#LinkFormElement" );
-                    $( "<input name='zipcode' placeholder='Enter Individual's Zipcode...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='zipcode' placeholder='Enter Zipcode...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<label for='end_date'>Expiration Date: </label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='end_date' type='date'><br>" ).appendTo( "#LinkFormElement" );
 
-                    time=getTime();
+                    time=new Date().getTime();
                     $( "<input name='end_time' type='time' value='" + time + "'><br>" ).appendTo( "#LinkFormElement" );
 
 
