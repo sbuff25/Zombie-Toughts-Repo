@@ -110,7 +110,7 @@
                 
                 // Generate code and add to form 
                 code = generateAccessCode(this.value);
-                $( "<input name='generate_code' value='" + code + "'>" ).appendTo( "#LinkFormElement" );
+                $( "<input name='generate_code' value='" + code + "' hidden>" ).appendTo( "#LinkFormElement" );
 
                 if(this.value === "zti"){
                     $( "<label for='first_name'>Individual's First Name: </label>" ).appendTo( "#LinkFormElement" );
