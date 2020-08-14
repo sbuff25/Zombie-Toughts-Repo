@@ -65,6 +65,6 @@
     $('#delete_button').on('click', function() {
         var email = this.value;
         $('#button_row').empty();
-        $( "<button>"+ email + "</button>" ).appendTo( "#button_row" );
+        $( "<button type='submit' name='deleteUser' value='" + email + "'>"+ Confirm + "</button>" ).appendTo( "#button_row" );
     });
 </script>
