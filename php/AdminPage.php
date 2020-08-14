@@ -78,12 +78,13 @@
 
         <button type="button" class='btn btn-primary' data-toggle="modal" data-target="#NewUserForm">Create New User</button>
         <br>
-        <button>Delete User</button>
+        <button type="button" class='btn btn-primary' data-toggle="modal" data-target="#DeleteUserForm">Delete User</button>
         <br>
 
         <?php //} ?>
         <?php include("LinkForm.php"); ?>
         <?php include("NewUserForm.php") ?>
+        <?php include("DeleteUserForm.php") ?>
 
         
 
