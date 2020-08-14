@@ -13,7 +13,7 @@
                     $sql="SELECT first_name, last_name, email, privilege_level FROM AdminUser";// WHERE NOT email='$email'";
                     $result = mysqli_query($database, $sql);
 
-                    if($result){
+                    if($result && mysqli_num_rows($result) >= 1){
                 ?>
                         <form action='AdminPage.php' method='POST'>
                             <table class='table table-dark table-hover'>
