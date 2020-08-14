@@ -150,7 +150,7 @@
 
                 }
                 else if(this.value === "ztI"){
-                    $( "<h5>Contact's Information:</h5>" ).appendTo( "#LinkFormElement" );
+                    $( "<h5><b>Contact's Information:</b></h5><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<label for='contact_first_name'>Contact's First Name:&nbsp;</label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='contact_first_name' placeholder='Enter First Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
@@ -163,6 +163,8 @@
 
                     $( "<label for='contact_phone'>Contact's Phone Number:&nbsp;</label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='contact_phone' type='tel' placeholder='Enter Last Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+
+                    $( "<h5><b>Institution Information:</b></h5><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<label for='institution_name'>Institution's Name:&nbsp;</label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='institution_name' placeholder='Enter Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
@@ -182,8 +184,7 @@
                     $( "<label for='institution_county'>Institution's County:&nbsp;</label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='institution_county' placeholder='Enter County...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
-                    $( "<label for='end_date'>Expiration Date:&nbsp;</label>" ).appendTo( "#LinkFormElement" );
-                    $( "<input name='end_date' type='date'><br>" ).appendTo( "#LinkFormElement" );
+                    $( "<h5><b>Counselor Information:</b></h5><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<label for='counselor_first_name'>Counselor First Name:&nbsp;</label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='counselor_first_name' placeholder='Enter First Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
@@ -202,6 +203,8 @@
 
                     $( "<label for='counselor_bldg'>Counselor Building:&nbsp;</label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='counselor_bldg' placeholder='Enter Building...' size='20'><br>" ).appendTo( "#LinkFormElement" );
+
+                    $( "<h5><b>Other Information:</b></h5><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<label for='student_grade'>Students\' Grade Level:&nbsp;</label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='student_grade' placeholder='Enter Grade...' size='20'><br>" ).appendTo( "#LinkFormElement" );
