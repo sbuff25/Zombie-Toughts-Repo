@@ -30,12 +30,13 @@ require_once("./Classes/Database.php");
 
                 $result3 = mysqli_query($database, $check_pass2);
                 if($result2 || $result3){  // May need to fix and check what the result was
-                    $row = mysqli_fetch_assoc($result);
-                    $_SESSION['username'] = $row['username'];
-                    $_SESSION['email'] = $row['email'];
-                    $_SESSION['first_name'] = $row['first_name'];
-                    $_SESSION['last_name'] = $row['last_name'];
-                    $_SESSION['success'] = $_SESSION['email'] . " " . $_SESSION['username'] . " " . $_SESSION['first_name'] . " " . $_SESSION['last_name'];
+                    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                        $_SESSION['username'] = $row['username'];
+                        $_SESSION['email'] = $row['email'];
+                        $_SESSION['first_name'] = $row['first_name'];
+                        $_SESSION['last_name'] = $row['last_name'];
+                        $_SESSION['success'] = $_SESSION['email'] . " " . $_SESSION['username'] . " " . $_SESSION['first_name'] . " " . $_SESSION['last_name'];
+                    }
                 }
                 else {
                     array_push($errors, "Username, email, and/or password are incorrect.");
