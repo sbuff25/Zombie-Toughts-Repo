@@ -49,7 +49,8 @@ require_once("./Classes/Database.php");
         
 
         if (count($errors) == 0) {
-            $_SESSION['success'] .= "<br>You are now logged in";
+            $_SESSION['success'] .= "<br>You are now logged in as $_SESSION['email'], $_SESSION['username'].";
+            header('Location: ./AdminPage.php');
         }
     }
 
