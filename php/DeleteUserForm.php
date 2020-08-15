@@ -16,7 +16,7 @@
                     if($result && mysqli_num_rows($result) >= 1){
                 ?>
                         <form action='AdminPage.php' method='POST'>
-                            <table class='table table-dark table-hover'>
+                            <table class='table table-dark table-striped table-hover'>
                                 <thead>
                                     <tr>
                                         <th>Last Name</th>
