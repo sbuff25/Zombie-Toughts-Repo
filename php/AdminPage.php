@@ -1,7 +1,7 @@
-<?php //if(!isset($_SESSION['username']) && !isset($_SESSION['email'])){
-       // header('location: ../index.php');
+<?php if(!isset($_SESSION['username']) && !isset($_SESSION['email'])){
+        header('location: ./LoginPage.php');
 
-//}?>
+}?>
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
