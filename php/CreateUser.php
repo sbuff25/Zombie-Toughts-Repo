@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en-us">
 
     <head>
         <?php
-            if (session_status() == PHP_SESSION_NONE) {
-                header_remove();
-                session_start();
-            }
+            // if (session_status() == PHP_SESSION_NONE) {
+            //     header_remove();
+            //     session_start();
+            // }
         ?>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
         
         <link rel="stylesheet" href="../scroll_bar.css">
         <link rel="stylesheet" href="../text_animiations.css">
-        <?php include_once('FormCheck.php') ?>
+        <?php //include_once('FormCheck.php') ?>
         
         <?php /*if(!isset($_SESSION['username']) || !isset($_SESSION['email'])){
 
@@ -49,23 +49,23 @@
         </nav>
 
         <div>
-            <br><br><br><br>  <!--Delete this line when Spencer begins to style -->
-            <h1>Create New Administrator</h1>
+            <br><br><br><br>  Delete this line when Spencer begins to style -->
+            <!-- <h1>Create New Administrator</h1>
 
             <form action='CreateUser.php' method='POST'>
                 <div>
                     <label for='email'>Email:</label>
-                    <input name='email' type='email' placeholder="<?php echo "Enter New User's Email..."?>" required>
+                    <input name='email' type='email' placeholder="<?php //echo "Enter New User's Email..."?>" required>
                 </div>
                 <br>
                 <div>
                     <label for='first_name'>First Name:</label>
-                    <input name='first_name' placeholder="<?php echo "Enter New User's First Name..."?>" required>
+                    <input name='first_name' placeholder="<?php //echo "Enter New User's First Name..."?>" required>
                 </div>
                 <br>
                 <div>
                     <label for='last_name'>Last Name:</label>
-                    <input name='last_name' placeholder="<?php echo "Enter New User's Last Name..."?>" required>
+                    <input name='last_name' placeholder="<?php //echo "Enter New User's Last Name..."?>" required>
                 </div>
                 <label for='privilege'>Select Privilege Level:</label>
                 <select name='privilege'>
@@ -73,38 +73,38 @@
                     <option value='High' default>High</option>
                 </select>
                 <p>High privileged admin users can create and delete users. Low level admin users cannot.</p>
-                <br>
+                <br> -->
                 <!--<div>
                     <label for='password'>Password:</label>
                     <input name='password' type='password' placeholder="<?php //echo "Enter New User's Password..."?>">
                 </div>
                 <br>-->
-                <div>
+                <!-- <div>
                     <p>An email will be sent to the user to set their password. If the user does not set their password within 7 days, the user will need to be created again.</p>
-                </div>
-                <?php include_once('errors.php'); ?>
-                <?php if (isset($_SESSION['success'])) : ?>
-                    <div class="error success">
-                    <p>
+                </div> -->
+                <?php //include_once('errors.php'); ?>
+                <?php //if (isset($_SESSION['success'])) : ?>
+                    <!-- <div class="error success">
+                    <p> -->
                     <?php 
-                        echo $_SESSION['success'];
-                        unset($_SESSION['success']);
+                        //echo $_SESSION['success'];
+                        //unset($_SESSION['success']);
                     ?>
-                    </p>
-                    </div>
-                <?php endif ?>
-                <br>
+                    <!-- </p>
+                    </div> -->
+                <?php //endif ?>
+                <!-- <br>
                 <button type='submit' name='submitNewUser'>Create New Admin</button>
             </form>
             <a href="javascript:history.back()" class='button'>Back</a>
         </div>
         
 
-        <!--Footer-->
-        <footer class="center bg-dark">
+        Footer-->
+        <!-- <footer class="center bg-dark">
             <p>Missoula Repertory Theatre &copy; 2020</p>
         </footer>
 
     
     </body>
-</html>
+</html> -->

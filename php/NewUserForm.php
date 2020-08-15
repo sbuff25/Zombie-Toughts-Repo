@@ -9,7 +9,7 @@
             </div>
             <div class="modal-body bg-muted text-dark">
 
-                <form action='CreateUser.php' method='POST'>
+                <form action='AdminPage.php' method='POST'>
                     <div>
                         <label for='email'>Email:</label>
                         <input name='email' type='email' placeholder="<?php echo "Enter New User's Email..."?>" required>
@@ -32,7 +32,7 @@
                     <p>High privileged admin users can create and delete users. Low level admin users cannot.</p>
                     <br>
                     <div>
-                        <p>An email will be sent to the user to set their password. If the user does not set their password within 7 days, the user will need to be created again.</p>
+                        <p>An email will be sent to the user to set their password. If the user does not set their password within 4 days, the user will need to be created again.</p>
                     </div>
                     <?php include_once('errors.php'); ?>
 

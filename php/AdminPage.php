@@ -9,7 +9,6 @@
 
         <?php
             if (session_status() == PHP_SESSION_NONE) {
-                header_remove();
                 session_start();
             }
         ?>
@@ -42,7 +41,6 @@
         unset($_SESSION['username']);
         unset($_SESSION['first_name']);
         unset($_SESSION['last_name']);
-        header_remove();
         header("location: ../index.php");
         } 
     ?>

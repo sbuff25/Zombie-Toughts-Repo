@@ -1,116 +1,6 @@
 <?php 
 
 require_once("./Classes/Database.php");
-    
-
-    // function check_password($username_or_email, $password){
-    //     $DatabaseObject = new Database();
-    //     $database = $DatabaseObject->get_database();
-    //     $username_or_email = mysqli_real_escape_string($database, $username_or_email);
-    //     $password = mysqli_real_escape_string($database, $password);
-
-
-    //     $check_user = "SELECT username, email, first_name, last_name, salt FROM AdminUser WHERE email = '$username_or_email' OR username = '$username_or_email'";
-    //     $result = mysqli_query($database, $check_user);
-    //     if(mysqli_num_rows($result) == 1){
-    //         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-    //         $hashed_password = hash_pbkdf2('haval256,5', $password, $row['salt'], 10, 70);
-    //         $check_pass = "SELECT EXISTS(SELECT username FROM AdminUser WHERE ((password = '$hashed_password' AND username = '$username_or_email') OR (password = '$hashed_password' AND email = '$username_or_email'))";
-
-    //         $result2 = mysqli_query($database, $check_pass);
-    //         if($result2){  // May need to fix and check what the result was
-    //             while ($row) { 
-                
-    //                 $_SESSION['username'] = $row['username'];
-    //                 $_SESSION['first_name'] = $row['first_name'];
-    //                 $_SESSION['last_name'] = $row['last_name'];
-
-    //             } 
-    //             return true;
-    //         }
-    //         else{
-    //             return false;
-    //         }
-            
-    //     }
-    //     else{
-    //         return false;
-    //     }
-        
-
-    // }
-
-    // function check_username_and_email($email, $username){
-    //     $DatabaseObject = new Database();
-    //     $database = $DatabaseObject->get_database();
-    //     $username = mysqli_real_escape_string($database, $username);
-    //     $email = mysqli_real_escape_string($database, $email);
-
-
-    //     $check_user = "SELECT username, email FROM AdminUser WHERE email = '$email' OR username = '$username'";
-    //     $result = mysqli_query($database, $check_user);
-    //     if(mysqli_num_rows($result) >= 1){
-    //         return true;
-    //     }
-    //     else{
-    //         return false;
-    //     }
-    // }
-
-    // function check_email($database, $email){
-    //     $email = mysqli_real_escape_string($database, $email);
-
-
-    //     $check_user = "SELECT username, email FROM AdminUser WHERE email = '$email'";
-    //     $result = mysqli_query($database, $check_user);
-    //     if(mysqli_num_rows($result) >= 1){
-    //         return true;
-    //     }
-    //     else{
-    //         return false;
-    //     }
-    // }
-
-    // function check_user($database, $user){
-    //     $user = mysqli_real_escape_string($database, $user);
-
-
-    //     $check_user = "SELECT username FROM AdminUser WHERE username = '$user'";
-    //     $result = mysqli_query($database, $check_user);
-    //     if(mysqli_num_rows($result) >= 1){
-    //         return true;
-    //     }
-    //     else{
-    //         return false;
-    //     }
-    // }
-
-    // function create_admin_user($database, $privilege_level, $email, $password, $first_name, $last_name){
-    //     $salt = generate_salt();
-    //     $hashed_password = hash_pbkdf2('haval256,5', $password, $salt, 10, 70);
-        
-
-    //     $insertSQL = "INSERT INTO AdminUser(email, username, first_name, last_name, password, salt, privilege_level)
-    //                             SELECT * FROM(SELECT '$email', '$username', '$first_name', '$last_name', '$hashed_password', '$salt', '$privilege_level') AS user 
-    //                             WHERE NOT EXISTS (SELECT email, username FROM AdminUser WHERE email = '$email' OR username = '$username')";
-    //     $result = mysqli_query($database, $insertSQL);
-    //     if($result){
-    //         return 1;
-    //     }
-    //     else{
-    //         return -1;
-    //     }
-    // }
-
-    // function create_temp_admin_user($database, $errors, $privilege_level, $email, $first_name, $last_name, $key){
-    //     $exp_date = "CURRENT_DATE() + 4";
-    //     $insertSQL = "INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_Date, tempkey) VALUES('$email', '$first_name', '$last_name', '$privilege_level', '$exp_date', '$key')";
-    //     array_push($errors, $insertSQL);
-    //     $result = mysqli_query($database, $insertSQL);
-    //     if(!$result){
-    //         array_push($errors, "ERROR: Not able to execute $insertSQL. " . mysqli_error($database));
-    //     }
-    // }
 
 
     $errors = array();
@@ -160,8 +50,6 @@ require_once("./Classes/Database.php");
 
         if (count($errors) == 0) {
             $_SESSION['success'] .= "<br>You are now logged in";
-            header_remove();
-            header('Location: ./AdminPage.php');
         }
     }
 
@@ -282,8 +170,6 @@ require_once("./Classes/Database.php");
             $_SESSION['success'] = "New Account created.";
             $_SESSION['username'] = $user;
             $_SESSION['email'] = $email;
-            header_remove();
-            header('location: AdminPage.php');
         }
     }
 
