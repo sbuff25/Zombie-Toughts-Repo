@@ -30,7 +30,7 @@ require_once("./Classes/Database.php");
 
                 $result3 = mysqli_query($database, $check_pass2);
                 if($result2 || $result3){  // May need to fix and check what the result was
-                    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                    while($row){
                         $_SESSION['username'] = $row['username'];
                         $_SESSION['email'] = $row['email'];
                         $_SESSION['first_name'] = $row['first_name'];
