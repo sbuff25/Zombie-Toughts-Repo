@@ -986,13 +986,14 @@ function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING && !done) {
 
         myVar = setTimeout(stopVideo, vidTime);
-
+        
 
         done = true;
     }
 }
 
 function stopVideo() {
+    
     clearTimeout(myVar);
     player.stopVideo();
     document.getElementById('text').style.display = 'block';
@@ -1006,6 +1007,7 @@ function stopVideo() {
     $(function(){
         $('.moveUpVid').slideUp(1000);
     });
+   
 }
 
 const playing = true;
@@ -1032,14 +1034,17 @@ function startGame() {
 
 
 function showVid(textNodeIndex) {
-    $(function(){
-        $('.moveUpVid').slideDown('slow');
-    });
     vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
     
 }
 
 function showTextNode(textNodeIndex) {
+    $(function(){
+
+        //add opacity here
+        
+       
+    });
     vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
