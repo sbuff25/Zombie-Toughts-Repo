@@ -132,8 +132,24 @@
         <div class="game expand container center">
             <h3 class="center" id="lighten">Zombie Thoughts</h3>
             <div class="collapsed center" id='restricted'>
-                <?php if(!isset($_SESSION['code'])){
-                    echo "This is restricted content.";
+                <?php if(!isset($_SESSION['code'])){?>
+                    <h4>Have an Access Code?</h4>
+                    <form action='index.php' method='POST'>
+                        <input name='accessCode' placeholder='Enter Access Code Here...'>
+                        <button type='submit' name='submitCode'>Submit Code</button>
+                    </form>
+                    <br>
+                    <h4>Individual?</h4>
+                    <button>Click here</button>
+                    <br>
+                    <h4>Guidance counselor wanting to watch a preview?</h4>
+                    <button>Click Here</button>
+                    <br>
+                    <h4>Institution</h4>
+                    <button>Click Here</button>
+                    <br>
+
+                <?php
                 }
                 else{
                 ?>
