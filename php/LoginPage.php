@@ -1,4 +1,13 @@
 <?php session_start(); ?>
+<?php
+    if (isset($_GET['logout'])) {
+        unset($_SESSION['email']);
+        unset($_SESSION['username']);
+        unset($_SESSION['first_name']);
+        unset($_SESSION['last_name']);
+        session_destroy();
+    } 
+?>
 <?php if(isset($_SESSION['username']) && isset($_SESSION['email'])){
         header('location: ./AdminPage.php');
         exit;
