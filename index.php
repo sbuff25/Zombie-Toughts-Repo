@@ -132,7 +132,7 @@
         <div class="game expand container center">
             <h3 class="center" id="lighten">Zombie Thoughts</h3>
             <div class="collapsed center" id='restricted'>
-                <?php if(isset($_SESSION['code'])){
+                <?php if(!isset($_SESSION['code'])){
 
                 }
                 else{
