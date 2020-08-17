@@ -50,7 +50,14 @@ h3::before
 #text
 {
     color: black;
-    font-size: 30px;
+    font-size: 25px;
+    position: absolute;
+    background-color: #e3e3e3;
+    
+    top: 20%;
+    left: 25%;
+    right: 25%;
+    
 }
 #lighten
 {
@@ -218,8 +225,8 @@ section#help
 
 .center
 {
-    text-align: center;
-    /* margin-top: 5px; */
+    align-content: center;
+    position: relative;
 }
 .bg-light
 {
@@ -245,6 +252,7 @@ footer
 {
     margin-top: 10px;
     z-index: 1;
+    align-items: center;
 }
 
 .btn
@@ -303,12 +311,13 @@ footer
 .option-buttons
 {
     position: absolute;
-    /* top: 50%; */
+    top: 50%;
     margin: auto;
 }
 .collapsed
 {
     display: none;
+    position: relative;
 }
 a
 {
@@ -423,6 +432,7 @@ section#help
     {
         /* border-bottom: #333 solid 1px; */
         padding: 1.2rem 1rem;
+        position: relative;
     }
 }
 

@@ -918,33 +918,19 @@ var theNode;
 
 function loadVideo(nextNodeId) {
     theNode = nextNodeId;
-    // console.log("the Node: " + theNode);
-    //console.log(theNode);
     var iframe = document.getElementById("player");
     iframe.remove();
     var el = document.createElement("div");
     el.setAttribute("id", "player", );
     el.innerHTML = "hi";
-
     var div = document.getElementById("vid_box");
     div.append(el);
-
-
-
     done = false;
-    // document.getElementById('player').style.display='block';
+    document.getElementById('player').style.display='block';
     document.getElementById('text').style.display = 'none';
     document.getElementById('option-buttons').style.display = 'none';
     vidTime = vidNode.vidtime;
-    //console.log(vidTime);
     Video = vidNode.vid;
-    // console.log("Current Video " + Video);
-    // document.getElementById('player').src=Video;
-    //  tag = document.createElement('script');
-    // firstScriptTag = document.getElementsByTagName('script')[0];
-    // tag.src = "https://www.youtube.com/iframe_api";
-    // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
     onYouTubeIframeAPIReady();
 }
 
@@ -975,9 +961,6 @@ function onPlayerReady(event) {
     //   event.target.playVideo();
 }
 
-// 5. The API calls this function when the player's state changes.
-//    The function indicates that when playing a video (state=1),
-//    the player should play for six seconds and then stop.
 var myVar;
 
 function onPlayerStateChange(event) {
@@ -998,29 +981,18 @@ function stopVideo() {
     player.stopVideo();
     document.getElementById('text').style.display = 'block';
     document.getElementById('option-buttons').style.display = 'block';
-    // document.getElementById('player').style.display = 'none';
-    //console.log("HO " + theNode);
-    
     if (theNode == undefined)
         theNode = 1;
     showTextNode(theNode);
-    $(function(){
-        $('.moveUpVid').slideUp(1000);
-    });
+    // $(function(){
+    //     $('.moveUpVid').slideUp(1000);
+    // });
    
 }
 
 const playing = true;
 
-function myFunction(vidTime) {
-    myVar = setTimeout(alertFunc, vidTime);
 
-}
-
-function alertFunc() {
-    videoElement.style.display = 'none';
-    showTextNode(1);
-}
 
 
 let state = {}
@@ -1039,12 +1011,6 @@ function showVid(textNodeIndex) {
 }
 
 function showTextNode(textNodeIndex) {
-    $(function(){
-
-        //add opacity here
-        
-       
-    });
     vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
@@ -1060,13 +1026,14 @@ function showTextNode(textNodeIndex) {
                 button.addEventListener('click', () => selectOption(option))
                 optionButtonsElement.appendChild(button)
             }
-        })
-        //This is storing the choices being made in the console. these some of these choices will effect final outcome of game. 
+        }) 
 }
 
 
 function showOption(option) {
     return option.requiredState == null || option.requiredState(state)
+    
+    
 }
 // ALL LOGICAL STATMENTS
 function selectOption(option) {
@@ -1105,7 +1072,6 @@ function selectOption(option) {
         console.log('Ghost Town');
         nextTextNodeId = 22.3;
     }
-
     if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.stuffedHedgeHog == true && state.annie == true) {
         console.log('Mount Doom');
         nextTextNodeId = 21.12;
@@ -1132,15 +1098,6 @@ function selectOption(option) {
     } else if (nextTextNodeId == 7 && state.cowboyHat == true && state.hamilton == true) {
         nextTextNodeId = 7.3;
     }
-    //   console.log(nextTextNodeId);
     loadVideo(nextTextNodeId);
-    //showTextNode(nextTextNodeId)
-
-
 }
-
-
-
-
-
 startGame();
