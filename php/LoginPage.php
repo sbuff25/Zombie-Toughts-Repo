@@ -4,6 +4,7 @@
         exit;
 
 }?>
+<?php include_once('FormCheck.php'); ?>
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
@@ -21,7 +22,6 @@
         
         <link rel="stylesheet" href="../scroll_bar.css">
         <link rel="stylesheet" href="../text_animiations.css">
-        <?php include_once('FormCheck.php'); ?>
         
     
 
