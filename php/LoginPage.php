@@ -1,4 +1,9 @@
 <?php session_start(); ?>
+<?php if(isset($_SESSION['username']) && isset($_SESSION['email'])){
+        header('location: ./AdminPage.php');
+        exit;
+
+}?>
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
