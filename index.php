@@ -133,7 +133,7 @@
             <h3 class="center" id="lighten">Zombie Thoughts</h3>
             <div class="collapsed center" id='restricted'>
                 <?php if(!isset($_SESSION['code'])){
-
+                    echo "This is restricted content.";
                 }
                 else{
                 ?>
