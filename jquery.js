@@ -22,5 +22,8 @@ $('.navbar a').on('click',function(e)
       );
    }
 });
+
+
+
  
 
