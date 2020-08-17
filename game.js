@@ -943,7 +943,7 @@ function loadVideo(nextNodeId) {
 var player;
 
 function onYouTubeIframeAPIReady() {
-    //console.log('Text' + Video);
+    
     player = new YT.Player('player', {
         height: '390',
         width: '640',
@@ -951,7 +951,7 @@ function onYouTubeIframeAPIReady() {
         events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
-        }
+        },
     });
 }
 
@@ -987,8 +987,8 @@ function stopVideo() {
     showTextNode(theNode);
     if (done == true) {
         $(function(){
-            $('.moveUpText').show("slide", {direction: "down" }, "slow")
-            $('.moveUpBtn').show("slide", {direction: "up" }, "slow");
+            $('.moveUpText').delay(1000).show("slide", {direction: "down" }, "slow")
+            $('.moveUpBtn').delay(1000).show("slide", {direction: "up" }, "slow");
             });
     }
 }
