@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
@@ -129,13 +131,19 @@
     <section  class="info" id="game">
         <div class="game expand container center">
             <h3 class="center" id="lighten">Zombie Thoughts</h3>
-            <div class="collapsed center">
-                
+            <div class="collapsed center" id='restricted'>
+                <?php if(isset($_SESSION['code'])){
+
+                }
+                else{
+                ?>
+
                 <div id="vid_box">
                     <div id="player" class="moveUpVid"></div>
                 </div>
                 <div id="text" class="moveUpText"></div>
                 <div id="option-buttons" class="moveUpBtn"></div>
+                <?php } ?>
             </div>
         </div>
     </section>
