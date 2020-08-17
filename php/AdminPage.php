@@ -3,7 +3,9 @@
         header('location: ./LoginPage.php');
         exit;
 
-}?>
+}
+include_once('FormCheck.php');
+?>
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
@@ -30,8 +32,7 @@
     </head>
     <body>
 
-    <?php 
-    include_once('FormCheck.php');
+    <?php
     include_once('Navbar.php');
     ?>
         <br><br><br><br><br>
