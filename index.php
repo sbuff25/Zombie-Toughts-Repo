@@ -138,11 +138,11 @@
                 else{
                 ?>
 
-                <div id="vid_box">
-                    <div id="player" class="moveUpVid"></div>
-                </div>
-                <div id="text" class="moveUpText"></div>
-                <div id="option-buttons" class="moveUpBtn"></div>
+                    <div id="vid_box">
+                        <div id="player" class="moveUpVid"></div>
+                    </div>
+                    <div id="text" class="moveUpText"></div>
+                    <div id="option-buttons" class="moveUpBtn"></div>
                 <?php } ?>
             </div>
         </div>
