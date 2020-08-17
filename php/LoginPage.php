@@ -22,22 +22,6 @@
 
     </head>
     <body>
-        <div id="progressbar"></div>
-        <div id="scrollPath"></div>
-
-        <nav class="navbar">
-            <ul class="nav_links">
-                <li>
-                    <a href="../index.php">home</a>
-                </li>
-            </ul>
-            <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-            </div>
-        </nav>
-
         <div>
             <br><br><br><br>  <!--Delete this line when Spencer begins to style -->
             <h1>Admin Login</h1>
