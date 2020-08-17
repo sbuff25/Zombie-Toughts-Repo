@@ -53,6 +53,7 @@ h3::before
     font-size: 25px;
     position: absolute;
     background-color: #e3e3e3;
+    display: none;
     
     top: 20%;
     left: 25%;
@@ -277,7 +278,7 @@ footer
 
 
 /* Button With Slide Effect */
-/* .btn::before
+.btn::before
 {
     content: '';
     position: absolute;
@@ -287,14 +288,14 @@ footer
     bottom: 0;
     z-index: -1;
     background-color: var(--accent-color);
-    transform: scaleX(0);
+    transform: scaleY(0);
     transition: transform 500ms ease-in-out;
 
 }
 .btn:hover::before,
 .btn:focus::before
 {
-    transform: scaleX(1);
+    transform: scaleY(1);
 }
 .btn
 {
@@ -306,12 +307,16 @@ footer
 .btn:focus
 {
     color: #fff;
-} */
+}
 
-.option-buttons
+#option-buttons
 {
+    display: none;
     position: absolute;
-    top: 50%;
+    top: 70%;
+    left: 25%;
+    right: 25%;
+    
     margin: auto;
 }
 .collapsed

@@ -905,7 +905,7 @@ const textNodes = [{
 const textElement = document.getElementById('text');
 const optionButtonsElement = document.getElementById('option-buttons');
 var vidNode = 1;
-var vidTime = 3000;
+var vidTime = 1000;
 var Video = 'kt2D7xl06mk';
 var tag = document.createElement('script');
 var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -966,6 +966,7 @@ var myVar;
 function onPlayerStateChange(event) {
     //console.log(event.data);
     //console.log(done);
+   
     if (event.data == YT.PlayerState.PLAYING && !done) {
 
         myVar = setTimeout(stopVideo, vidTime);
@@ -979,15 +980,17 @@ function stopVideo() {
     
     clearTimeout(myVar);
     player.stopVideo();
-    document.getElementById('text').style.display = 'block';
-    document.getElementById('option-buttons').style.display = 'block';
+    // document.getElementById('text').style.display = 'block';
+    // document.getElementById('option-buttons').style.display = 'block';
     if (theNode == undefined)
         theNode = 1;
     showTextNode(theNode);
-    // $(function(){
-    //     $('.moveUpVid').slideUp(1000);
-    // });
-   
+    if (done == true) {
+        $(function(){
+            $('.moveUpText').show("slide", {direction: "down" }, "slow")
+            $('.moveUpBtn').show("slide", {direction: "up" }, "slow");
+            });
+    }
 }
 
 const playing = true;
