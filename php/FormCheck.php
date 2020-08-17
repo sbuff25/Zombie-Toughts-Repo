@@ -35,7 +35,6 @@ require_once("./Classes/Database.php");
                     $_SESSION['email'] = $row['email'];
                     $_SESSION['first_name'] = $row['first_name'];
                     $_SESSION['last_name'] = $row['last_name'];
-                    $_SESSION['success'] = $_SESSION['email'] . " " . $_SESSION['username'] . " " . $_SESSION['first_name'] . " " . $_SESSION['last_name'];
 
                 }
                 else {

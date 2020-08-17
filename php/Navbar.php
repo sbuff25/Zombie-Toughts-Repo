@@ -1,13 +1,3 @@
-<?php
-    if (isset($_GET['logout'])) {
-        unset($_SESSION['email']);
-        unset($_SESSION['username']);
-        unset($_SESSION['first_name']);
-        unset($_SESSION['last_name']);
-        session_destroy();
-    } 
-?>
-
 <div id="progressbar"></div>
 <div id="scrollPath"></div>
 
