@@ -1,12 +1,10 @@
 <?php session_start(); ?>
 <?php
     if (isset($_GET['logout'])) {
-        $_SESSION['success'] = "Successfully Logged out!"
         unset($_SESSION['email']);
         unset($_SESSION['username']);
         unset($_SESSION['first_name']);
         unset($_SESSION['last_name']);
-        unset($_SESSION['success']);
         session_destroy();
     } 
 ?>
@@ -60,6 +58,7 @@
                     <h3>
                     <?php 
                         echo $_SESSION['success'];
+                        unset($_SESSION['success']);
                     ?>
                     </h3>
                     </div>
