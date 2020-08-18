@@ -194,7 +194,7 @@ require_once("./Classes/Database.php");
 
         if (count($errors) === 0) {
             $deleteSQL = $database->prepare("DELETE FROM TempUser WHERE email=?");
-            $deleteSQL->bind_param("s", $email)
+            $deleteSQL->bind_param("s", $email);
             $deleteSQL->execute();
             //$result = mysqli_query($database, $deleteSQL);
 
