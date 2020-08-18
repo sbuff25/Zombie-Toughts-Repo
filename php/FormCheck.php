@@ -48,6 +48,9 @@ require_once("./Classes/Database.php");
                 else {
                     array_push($errors, "Username, email, and/or password are incorrect.");
                 }
+                $check_pass1->close();
+                $check_pass2->close();
+
             }
             else{
                 array_push($errors, "Username, email, and/or password are incorrect.");
@@ -60,8 +63,9 @@ require_once("./Classes/Database.php");
         if (count($errors) == 0) {
             $email = $_SESSION['email'];
             $username = $_SESSION['username'];
-            $_SESSION['success'] .= "<br>You are now logged in as $email, $username.";
-            header('Location: ./AdminPage.php');
+            $privilege = $_SESSION['privilege_level'];
+            $_SESSION['success'] .= "<br>You are now logged in as $email, $username, $privilege.";
+            //header('Location: ./AdminPage.php');
         }
     }
 
