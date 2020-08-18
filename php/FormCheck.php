@@ -111,22 +111,20 @@ require_once("./Classes/Database.php");
         $stmt = $database->prepare("INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_Date, tempkey) VALUES(?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("ssssss", $email, $first_name, $last_name, $privilege, $exp_date, $key);
         $stmt->execute();
-        $result = $stmt->get_result();
+        //$result = $stmt->get_result();
 
-        if(!$result){
+        if(!$stmt){
             array_push($errors, "ERROR: Not able to execute. " . mysqli_error($database));
         }
-        // if(!$user_created){
-        //     array_push($errors, "There was a problem creating the user.");
-        // }
+        else{
+            require_once("./Functions/NewUserEmail.php");
+            require_once("./Classes/SendEmail.php");
+            $body = new_user_email_body($email, $first_name, $last_name, $key);
+            $subject = new_user_email_subject();
+            $email = new SendEmail($email, $subject, $body);
+        }
+        $stmt->close();
 
-        require_once("./Functions/NewUserEmail.php");
-        require_once("./Classes/SendEmail.php");
-
-        
-        $body = new_user_email_body($email, $first_name, $last_name, $key);
-        $subject = new_user_email_subject();
-        $email = new SendEmail($email, $subject, $body);
 
         if (count($errors) === 0) {
             $_SESSION['success'] = "New User was created, and an email was sent to the user.";
