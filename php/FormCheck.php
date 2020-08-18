@@ -17,7 +17,7 @@ require_once("./Classes/Database.php");
 
 
         if (count($errors) == 0) {
-            $stmt = $database->prepare("SELECT email, username, first_name, last_name, salt FROM AdminUser WHERE email = ? OR username = ?");
+            $stmt = $database->prepare("SELECT email, username, first_name, last_name, salt, privilege_level FROM AdminUser WHERE email = ? OR username = ?");
             $stmt->bind_param("ss", $email_or_username, $email_or_username);
             $stmt->execute();
             $result = $stmt->get_result();
@@ -42,6 +42,7 @@ require_once("./Classes/Database.php");
                     $_SESSION['email'] = $row['email'];
                     $_SESSION['first_name'] = $row['first_name'];
                     $_SESSION['last_name'] = $row['last_name'];
+                    $_SESSION['privilege'] = $row['privilege_level'];
 
                 }
                 else {
