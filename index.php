@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start(); 
+include_once("accessCheck.php");
+?>
 
 <!DOCTYPE html>
 <html lang="en-us">
