@@ -18,15 +18,15 @@ require_once("./Classes/Database.php");
 
         if (count($errors) == 0) {
             // $check_user = "SELECT email, username, first_name, last_name, salt FROM AdminUser WHERE email = '$email_or_username' OR username = '$email_or_username'";
-            $stmt = $database.prepare("SELECT email, username, first_name, last_name, salt FROM AdminUser WHERE email = ? OR username = ?");
-            $stmt.bind_param("ss", $email_or_username, $email_or_username);
-            $stmt.execute();
+            $stmt = $database->prepare("SELECT email, username, first_name, last_name, salt FROM AdminUser WHERE email = ? OR username = ?");
+            $stmt->bind_param("ss", $email_or_username, $email_or_username);
+            $stmt->execute();
             //$result = mysqli_query($database, $check_user);
-            $result = $stmt.get_result();
+            $result = $stmt->get_result();
             //if(mysqli_num_rows($result) == 1){
-            if($result.num_rows() === 1){
+            if($result->num_rows === 1){
                 //$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-                $row = $result.fetch_assoc();
+                $row = $result->fetch_assoc();
                 $hashed_password = hash_pbkdf2('haval256,5', $password, $row['salt'], 10, 70);
                 $check_pass1 = "SELECT EXISTS(SELECT * FROM AdminUser WHERE (password = '$hashed_password' AND username = '$email_or_username'))";
 
