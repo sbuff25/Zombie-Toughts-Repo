@@ -212,6 +212,7 @@ require_once("./Classes/Database.php");
             $_SESSION['privilege'] = $privilege;
             $_SESSION['first_name'] = $first_name;
             $_SESSION['last_name'] = $last_name;
+            header('Location: ./AdminPage.php');
         }
         $check_user->close();
     }
