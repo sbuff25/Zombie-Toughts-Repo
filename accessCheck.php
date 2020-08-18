@@ -1,6 +1,6 @@
 <?php 
 
-require_once("./Classes/Database.php");
+require_once("./php/Classes/Database.php");
 
 
     $errors = array();
