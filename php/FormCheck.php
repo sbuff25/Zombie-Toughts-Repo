@@ -50,7 +50,7 @@ require_once("./Classes/Database.php");
             else{
                 array_push($errors, "Username, email, and/or password are incorrect.");
             }
-            $stmt.close();
+            $stmt->close();
         }
 
         
