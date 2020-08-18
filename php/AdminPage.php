@@ -1,9 +1,9 @@
 <?php session_start(); ?>
-<?php if(!isset($_SESSION['username']) && !isset($_SESSION['email'])){
+<?php /*if(!isset($_SESSION['username']) && !isset($_SESSION['email'])){
         header('location: ./LoginPage.php');
         exit;
 
-}
+}*/
 include_once('FormCheck.php');
 ?>
 <!DOCTYPE html>
@@ -47,7 +47,7 @@ include_once('FormCheck.php');
         </p>
         </div>
     <?php endif ?>
-    <?php if (isset($_SESSION['privilege']) && strtolower($_SESSION['privilege']) === "high"){ ?>
+    <?php /*if (isset($_SESSION['privilege']) && strtolower($_SESSION['privilege']) === "high"){ */?>
 
 
         <button type="button" class='btn btn-primary' data-toggle="modal" data-target="#NewUserForm">Create New User</button>
@@ -57,7 +57,7 @@ include_once('FormCheck.php');
 
         <?php include("NewUserForm.php"); ?>
         <?php include("DeleteUserForm.php"); ?>
-    <?php } ?>
+    <?php /*}*/ ?>
         <?php include("LinkForm.php"); ?>
 
         
