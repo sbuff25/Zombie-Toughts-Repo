@@ -108,7 +108,7 @@ require_once("./Classes/Database.php");
         // $insertSQL = "INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_Date, tempkey) VALUES('$email', '$first_name', '$last_name', '$privilege', $exp_date, '$key')";
         // $result = mysqli_query($database, $insertSQL);
 
-        $stmt = $database->prepare("INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_Date, tempkey) VALUES(?, ?, ?, ?, ?, ?)");
+        $stmt = $database->prepare("INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_date, tempkey) VALUES(?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("ssssss", $email, $first_name, $last_name, $privilege, $exp_date, $key);
         $stmt->execute();
         //$result = $stmt->get_result();
