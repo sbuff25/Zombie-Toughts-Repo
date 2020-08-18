@@ -155,9 +155,13 @@ require_once("./Classes/Database.php");
         }
 
         $user = mysqli_real_escape_string($database, $_POST['username']);
-        $check_user = "SELECT username FROM AdminUser WHERE username = '$user'";
-        $result = mysqli_query($database, $check_user);
-        if(mysqli_num_rows($result) >= 1){
+        $check_user = $database->prepare("SELECT username FROM AdminUser WHERE username = ?");
+        $check_user->bind_param("s", $user);
+        $check_user->execute();
+        $result = $check_user->get_result();
+
+        
+        if($result->num_rows >= 1){
             array_push($errors, "That username is already in use.");
         }
 
@@ -173,23 +177,31 @@ require_once("./Classes/Database.php");
             $hashed_password = hash_pbkdf2('haval256,5', $password, $salt, 10, 70);
             
 
-            $insertSQL = "INSERT INTO AdminUser(email, username, first_name, last_name, password, salt, privilege_level)
-                                    VALUES ('$email', '$user', '$first_name', '$last_name', '$hashed_password', '$salt', '$privilege')";
-            $result = mysqli_query($database, $insertSQL);
+            $insertSQL = $database->prepare("INSERT INTO AdminUser(email, username, first_name, last_name, password, salt, privilege_level)
+                                    VALUES (?, ?, ?, ?, ?, ?, ?)");
+            $insertSQL->bind_param("sssssss", $email, $user, $first_name, $last_name, $hashed_password, $salt, $privilege);
+            $insertSQL->execute();
+            // $result = $insertSQL->get_result();
+            // $result = mysqli_query($database, $insertSQL);
 
-            if(!$result){
+            if(!$insertSQL){
                 array_push($errors, "Could not create account.");
-                array_push($errors, "ERROR: Not able to execute $insertSQL. " . mysqli_error($database));
+                array_push($errors, "ERROR: Not able to execute. " . mysqli_error($database));
             }
+            $insertSQL->close();
+
         }
 
         if (count($errors) === 0) {
-            $deleteSQL = "DELETE FROM TempUser WHERE email='$email'";
-            $result = mysqli_query($database, $deleteSQL);
+            $deleteSQL = $database->prepare("DELETE FROM TempUser WHERE email=?");
+            $deleteSQL->bind_param("s", $email)
+            $deleteSQL->execute();
+            //$result = mysqli_query($database, $deleteSQL);
 
-            if(!$result){
+            if(!$deleteSQL){
                 array_push($errors, "Could not remove entry from tempuser.");
             }
+            $deleteSQL->close();
         }
 
         
@@ -197,16 +209,22 @@ require_once("./Classes/Database.php");
             $_SESSION['success'] = "New Account created.";
             $_SESSION['username'] = $user;
             $_SESSION['email'] = $email;
+            $_SESSION['privilege'] = $privilege;
+            $_SESSION['first_name'] = $first_name;
+            $_SESSION['last_name'] = $last_name;
         }
+        $check_user->close();
     }
 
     if (isset($_POST['deleteUser'])) {
         $email = mysqli_real_escape_string($database, $_POST['deleteUser']);
 
-        $sql = "DELETE FROM AdminUser WHERE email='$email'";
-        $result = mysqli_query($database, $sql);
+        $sql = "DELETE FROM AdminUser WHERE email=?";
+        $sql->bind_param("s", $email)
+        $sql->execute();
+        //$result = mysqli_query($database, $sql);
 
-        if(!$result){
+        if(!$sql){
             array_push($errors, "Could not delete user.");
         }
     
