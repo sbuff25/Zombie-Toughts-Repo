@@ -65,7 +65,7 @@ require_once("./Classes/Database.php");
             $username = $_SESSION['username'];
             $privilege = $_SESSION['privilege_level'];
             $_SESSION['success'] .= "<br>You are now logged in as $email, $username, $privilege.";
-            //header('Location: ./AdminPage.php');
+            header('Location: ./AdminPage.php');
         }
     }
 

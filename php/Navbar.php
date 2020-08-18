@@ -9,6 +9,9 @@
             <li>
                 <a href="../AdminPage.php">Admin Home</a>
                 <a href="LoginPage.php?logout='1'">Logout</a>
+                <p>You are logged in as: <?php echo $_SESSION['email']; ?></p>
+                <p>Privilege: <?php echo $_SESSION['privilege']; ?></p>
+
             </li>
         <?php } 
         else {?>
