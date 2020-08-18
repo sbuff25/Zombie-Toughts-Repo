@@ -30,14 +30,12 @@ require_once("./Classes/Database.php");
                 $check_pass1->execute();
                 $result2 = $check_pass1->get_result();
 
-                //$result2 = mysqli_query($database, $check_pass1);
 
                 $check_pass2 = $database->prepare("SELECT EXISTS(SELECT * FROM AdminUser WHERE (password = ? AND email = ?))");
                 $check_pass2->bind_param("ss", $hashed_password, $email_or_username);
                 $check_pass2->execute();
                 $result3 = $check_pass1->get_result();
 
-                //$result3 = mysqli_query($database, $check_pass2);
                 if($result2 || $result3){  // May need to fix and check what the result was
 
                     $_SESSION['username'] = $row['username'];
@@ -85,9 +83,16 @@ require_once("./Classes/Database.php");
         $email = mysqli_real_escape_string($database, $email);
 
 
-        $check_user = "SELECT username, email FROM AdminUser WHERE email = '$email'";
-        $result = mysqli_query($database, $check_user);
-        if(mysqli_num_rows($result) >= 1){
+        //$check_user = "SELECT username, email FROM AdminUser WHERE email = '$email'";
+
+        $stmt = $database->prepare("SELECT username, email FROM AdminUser WHERE email = ?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        //$result = mysqli_query($database, $check_user);
+        //if(mysqli_num_rows($result) >= 1){
+        if($result->num_rows >= 1){
             array_push($errors, "That email is already in use.");
         }
 
@@ -95,10 +100,16 @@ require_once("./Classes/Database.php");
         $key = hash_pbkdf2('haval256,5', $email, 555, 5, 50);
         // $user_created = create_temp_admin_user($errors, $privilege, $email, $first_name, $last_name, $key);
         $exp_date = "DATE_ADD(NOW(), INTERVAL 4 DAY)";
-        $insertSQL = "INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_Date, tempkey) VALUES('$email', '$first_name', '$last_name', '$privilege', $exp_date, '$key')";
-        $result = mysqli_query($database, $insertSQL);
+        // $insertSQL = "INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_Date, tempkey) VALUES('$email', '$first_name', '$last_name', '$privilege', $exp_date, '$key')";
+        // $result = mysqli_query($database, $insertSQL);
+
+        $stmt = $database->prepare("INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_Date, tempkey) VALUES(?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssss", $email, $first_name, $last_name, $privilege, $exp_date, $key);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
         if(!$result){
-            array_push($errors, "ERROR: Not able to execute $insertSQL. " . mysqli_error($database));
+            array_push($errors, "ERROR: Not able to execute. " . mysqli_error($database));
         }
         // if(!$user_created){
         //     array_push($errors, "There was a problem creating the user.");
