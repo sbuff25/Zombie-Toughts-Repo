@@ -43,8 +43,8 @@ include_once('FormCheck.php');
         ?>
             <form action='RequestsPage.php' method='POST'>
                 <table class='table table-bordered text-dark table-hover table-striped table-light'>
-                    <thead class='thead-dark'>
-                        <tr class='text-center bg-secondary text-dark'>
+                    <thead class='thead-secondary'>
+                        <tr class='text-center'>
                             <th colspan='9'><b>Montana Residents Zombie Thought Requests</b></th>
                         </tr>
                         <tr>
@@ -111,7 +111,7 @@ include_once('FormCheck.php');
         ?>
             <form action='RequestsPage.php' method='POST'>
                 <table class='table table-bordered text-dark table-hover table-striped table-light'>
-                    <thead class='thead-dark'>
+                    <thead class='thead-secondary'>
                         <tr class='text-center'>
                             <th colspan='10'><b>Out of State Zombie Thought Requests</b></th>
                         </tr>
