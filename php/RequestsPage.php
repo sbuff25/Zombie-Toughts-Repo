@@ -42,7 +42,7 @@ include_once('FormCheck.php');
             $result = $stmt->get_result();
         ?>
             <form action='RequestsPage.php' method='POST'>
-                <table class='table table-light'>
+                <table class='table table-bordered text-dark table-hover table-striped table-light'>
                     <thead>
                         <tr>
                             <th><b>Montana Residents Zombie Thought Requests</b></th>
