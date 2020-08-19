@@ -42,7 +42,7 @@ include_once('FormCheck.php');
             $result = $stmt->get_result();
         ?>
             <form action='RequestsPage.php' method='POST'>
-                <table>
+                <table class='table table-light'>
                     <thead>
                         <tr>
                             <th><b>Montana Residents Zombie Thought Requests</b></th>
@@ -63,7 +63,7 @@ include_once('FormCheck.php');
         <?php
             if($result->num_rows > 0){   
                 $row = $result->fetch_assoc();   
-                for($i = 0; $i < $row->num_rows; $i++){
+                for($i = 0; $i < $result->num_rows; $i++){
         ?>
                         <tr>
                             <td><?php echo $row['date_requested']; ?></td>
