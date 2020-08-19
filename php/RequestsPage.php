@@ -89,7 +89,11 @@ include_once('FormCheck.php');
                 }
             }
             else{
-
+        ?>
+                <tr class='text-center'>
+                    <td colspan='9'>There are currently no Montana requests.</td>
+                </tr>
+        <?php
             }
             $stmt->close();
 
