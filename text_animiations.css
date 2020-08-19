@@ -16,7 +16,7 @@
   top: 10%;
   left: 8%;
   animation: transitionTextFromLeft 1.5s;
-  /* opacity: 75%; */
+  opacity: 75%;
 }
 #atg
 {
@@ -25,6 +25,8 @@
     top: 11%;
     left: 25%;
     animation: transitionTextFromLeft 1s;
+    opacity: 75%;
+
     
 }
 #PSHP
@@ -34,7 +36,7 @@
     top: 20%;
     left: 50%;
     animation: transitionTextFromRight 1s;
-    /* opacity: 75%; */
+    opacity: 75%;
 
 }
 
@@ -48,7 +50,7 @@
     top: 8%;
     left: 75%;
     animation: transitionTextFromRight 1.5s;
-    /* opacity: 75%; */
+    opacity: 75%;
 
 }
 #UWMC
@@ -58,7 +60,7 @@
     top: 80%;
     left: 70%;
     animation: transitionTextFromRight 2s;
-    /* opacity: 75%; */
+    opacity: 75%;
   
 }
 
@@ -69,7 +71,7 @@
     top: 40%;
     left: 55%;
     animation: transitionText 1.5s;
-    /* opacity: 75%; */
+    opacity: 75%;
 
 }
 #ProjectTomorrowMT
@@ -79,7 +81,7 @@
     top: 60%;
     left: 55%;
     animation: transitionText 2.5s;
-    /* opacity: 75%; */
+    opacity: 75%;
  
 }
 #WF
@@ -89,7 +91,7 @@
     right: 10%;
     top: 55%;
     animation: transitionTextFromRight 3s;
-    /* opacity: 75%; */
+    opacity: 75%;
 
 }
 #shubert
@@ -99,7 +101,7 @@
     top: 40%;
     left: 75%;
     animation: transitionText 2s;
-    /* opacity: 75%; */
+    opacity: 75%;
 
 }
 
@@ -111,7 +113,7 @@
     bottom: 15%;
     width: 30%;
     animation: transitionText 1s;
-    /* opacity: 75%; */
+    opacity: 75%;
 
 
 }
@@ -137,7 +139,7 @@
     }
     to
     {
-        opacity: 1;
+        
         transform: translateY(0px);
     }
 }
