@@ -4,8 +4,18 @@
     left: 8%;
     top: 40%;
     width:30%;
-    animation: transitionText 3s;
+    animation: transitionText 4.5s;
 
+}
+
+/* First Tier */
+#blackfoot
+{
+  position: absolute;
+  width:15%;  
+  top: 10%;
+  left: 8%;
+  animation: transitionText 1s;
 }
 #atg
 {
@@ -14,6 +24,7 @@
     top: 11%;
     left: 25%;
     animation: transitionText 1.5s;
+    
 }
 #PSHP
 {
@@ -23,14 +34,52 @@
     left: 50%;
     animation: transitionText 2s;
 }
-#blackfoot
+/* Second Tier */
+
+/* Third Tier */
+#MCT
 {
-  position: absolute;
-  width:15%;  
-  top: 10%;
-  left: 8%;
-  animation: transitionText 1s;
+    position: absolute;
+    width: 20%;
+    top: 8%;
+    left: 75%;
+    animation: transitionText 2.5s;
 }
+#UWMC
+{
+    position: absolute;
+    width:10%;  
+    top: 60%;
+    left: 70%;
+    animation: transitionText 4.5s;   
+}
+
+#CHC
+{
+    position: absolute;
+    width:20%;  
+    top: 40%;
+    left: 55%;
+    animation: transitionText 3.5s;
+}
+#ProjectTomorrowMT
+{
+    position: absolute;
+    width:10%;  
+    top: 60%;
+    left: 55%;
+    animation: transitionText 4s; 
+}
+
+#shubert
+{
+    position: absolute;
+    width: 20%;
+    top: 40%;
+    left: 75%;
+    animation: transitionText 3s;
+}
+
 
 #author_animi
 {
@@ -38,7 +87,7 @@
     left: 10%;
     bottom: 15%;
     width: 30%;
-    animation: transitionText 3s;
+    animation: transitionText 4.5s;
 
 }
 #mt_rep_logo

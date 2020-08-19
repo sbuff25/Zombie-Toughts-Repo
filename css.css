@@ -324,14 +324,14 @@ footer
     display: none;
     position: relative;
 }
-a
+nav ul li a
 {
     /* filter: blur(2px); */
     opacity: 50%;
     transition: all 1000ms;
     letter-spacing: 1px;
 }
-a:hover
+nav ul li a:hover
 {
     opacity: 100%;
     filter: blur(0px);
