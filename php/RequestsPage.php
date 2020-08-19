@@ -111,11 +111,11 @@ include_once('FormCheck.php');
         ?>
             <form action='RequestsPage.php' method='POST'>
                 <table class='table table-bordered text-dark table-hover table-striped table-light'>
-                    <thead class='thead-secondary'>
-                        <tr class='text-center'>
+                    <thead>
+                        <tr class='text-center bg-secondary'>
                             <th colspan='10'><b>Out of State Zombie Thought Requests</b></th>
                         </tr>
-                        <tr>
+                        <tr class='bg-muted'>
                             <th>Date Requested</th>
                             <th>Contact First Name</th>
                             <th>Contact Last Name</th>
