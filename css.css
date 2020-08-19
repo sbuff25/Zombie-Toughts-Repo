@@ -190,18 +190,22 @@ section#help
 .about_text
 {
     color: black;
+    padding: 20px;
+    font-size: 1em;
     
 }
 .bios
 {
     padding: 10px;
     text-align: left;
+    font-family: 'Roboto', sans-serif;
 }
 .bios_title
 {
     padding: 10px;
     font-size: 1.5em;
     text-align: left;
+    color: #f3e113
 }
 .container
 {
