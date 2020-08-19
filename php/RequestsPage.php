@@ -161,7 +161,7 @@ include_once('FormCheck.php');
             else{
         ?>
                 <tr class='text-center'>
-                    <td colspan='9'>There are currently no Montana residents' requests.</td>
+                    <td colspan='9'>There are currently no out of state requests.</td>
                 </tr>
         <?php
             }
