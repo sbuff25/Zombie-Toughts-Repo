@@ -38,6 +38,10 @@ include_once('FormCheck.php');
         ?>
             <br><br><br><br><br>
 
+        <h1>Zombie Thoughts Requests</h1>
+        <br>
+        <h2>Institution Requests</h2>
+
         <!-- __________________________________Montana Requests Table______________________________ -->
         <?php
             $stmt = $database->prepare("SELECT * FROM InstitutionInformation WHERE institution_state='Montana'");
@@ -48,7 +52,7 @@ include_once('FormCheck.php');
                 <table class='table table-bordered text-dark table-hover table-striped table-light'>
                     <thead>
                         <tr class='text-center bg-secondary'>
-                            <th colspan='9'><b>Institution: Montana Residents Zombie Thought Requests</b></th>
+                            <th colspan='9'><b>Montana Residents Zombie Thought Requests</b></th>
                         </tr>
                         <tr>
                             <th>Date Requested</th>
@@ -116,7 +120,7 @@ include_once('FormCheck.php');
                 <table class='table table-bordered text-dark table-hover table-striped table-light'>
                     <thead>
                         <tr class='text-center bg-secondary'>
-                            <th colspan='10'><b>Institution: Out of State Zombie Thought Requests</b></th>
+                            <th colspan='10'><b>Out of State Zombie Thought Requests</b></th>
                         </tr>
                         <tr>
                             <th>Date Requested</th>
