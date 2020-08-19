@@ -43,13 +43,14 @@ include_once('FormCheck.php');
         ?>
             <form action='RequestsPage.php' method='POST'>
                 <table class='table table-bordered text-dark table-hover table-striped table-light'>
-                    <thead>
+                    <thead class='thead-dark'>
                         <tr>
-                            <th><b>Montana Residents Zombie Thought Requests</b></th>
+                            <th colspan='8'><b>Montana Residents Zombie Thought Requests</b></th>
                         </tr>
                         <tr>
                             <th>Date Requested</th>
-                            <th>Contact Name</th>
+                            <th>Contact First Name</th>
+                            <th>Contact Last Name</th>
                             <th>Contact Phone Number</th>
                             <th>Contact Email</th>
                             <th>Institution Name</th>
@@ -67,7 +68,8 @@ include_once('FormCheck.php');
         ?>
                         <tr>
                             <td><?php echo $row['date_requested']; ?></td>
-                            <td><?php echo $row['contact_name']; ?></td>
+                            <td><?php echo $row['contact_first_name']; ?></td>
+                            <td><?php echo $row['contact_last_name']; ?></td>
                             <td><?php echo $row['contact_phone']; ?></td>
                             <td><?php echo $row['contact_email']; ?></td>
                             <td><?php echo $row['institution_name']; ?></td>
