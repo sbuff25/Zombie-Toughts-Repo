@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\Web_Server_Tech_Fall_2020"
+		},
+		{
+			"path": "..\\..\\Game_Engines_Fall_2020"
+		},
+		{
+			"path": "..\\..\\Blender_Independent_Study_Fall_2020"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "VS Projects"
+	}
+}
