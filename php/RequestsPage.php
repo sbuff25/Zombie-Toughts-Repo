@@ -104,6 +104,74 @@ include_once('FormCheck.php');
 
         <!-- __________________________________Out of state Requests Table______________________________ -->
 
+        <?php
+            $stmt = $database->prepare("SELECT * FROM InstitutionInformation WHERE NOT institution_state='Montana'");
+            $stmt->execute();
+            $result = $stmt->get_result();
+        ?>
+            <form action='RequestsPage.php' method='POST'>
+                <table class='table table-bordered text-dark table-hover table-striped table-light'>
+                    <thead class='thead-dark'>
+                        <tr class='text-center'>
+                            <th colspan='9'><b>Out of State Zombie Thought Requests</b></th>
+                        </tr>
+                        <tr>
+                            <th>Date Requested</th>
+                            <th>Contact First Name</th>
+                            <th>Contact Last Name</th>
+                            <th>Contact Phone Number</th>
+                            <th>Contact Email</th>
+                            <th>Institution Name</th>
+                            <th>Institution City</th>
+                            <th>Institution State</th>
+                            <th>Institution County</th>
+                            <th>Options</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+        <?php
+            if($result->num_rows > 0){   
+                //$row = $result->fetch_assoc();   
+                // for($i = 0; $i < $result->num_rows; $i++){
+                while($row = $result->fetch_assoc()){
+        ?>
+                        <tr>
+                            <td><?php echo date_format($row['date_requested'], 'm/d/Y'); ?></td>
+                            <td><?php echo $row['contact_first_name']; ?></td>
+                            <td><?php echo $row['contact_last_name']; ?></td>
+                            <td><?php echo $row['contact_phone']; ?></td>
+                            <td><?php echo $row['contact_email']; ?></td>
+                            <td><?php echo $row['institution_name']; ?></td>
+                            <td><?php echo $row['institution_city']; ?></td>
+                            <td><?php echo $row['institution_state']; ?></td>
+                            <td><?php echo $row['institution_county']; ?></td>
+                            <td> <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">FORM</a>
+                                    <a class="dropdown-item" href="#">DELETE</a>
+                                </div>
+                            </td>
+
+                        </tr>
+        <?php
+
+                }
+            }
+            else{
+        ?>
+                <tr class='text-center'>
+                    <td colspan='9'>There are currently no Montana residents' requests.</td>
+                </tr>
+        <?php
+            }
+            $stmt->close();
+
+        ?>
+                    </tbody>
+                </table>
+            </form>
+
         <!--Footer-->
         <footer class="center bg-dark">
             <p>Missoula Repertory Theatre &copy; 2020</p>
