@@ -2,7 +2,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
         <div class="modal-header bg-dark">
-            <h5 class="modal-title text-light">Enter Information</h5>
+            <h5 class="modal-title text-light">Request Access for Zombie Thoughts</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
@@ -44,7 +44,8 @@
                 <div id='countyDiv'>
 
                 </div>
-
+                
+                <button type='submit' name='institutionAccessRequest' class='btn btn-primary'>Submit Request</button>
                 
             </form>
         </div>
