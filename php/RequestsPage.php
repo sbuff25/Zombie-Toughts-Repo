@@ -44,8 +44,8 @@ include_once('FormCheck.php');
             <form action='RequestsPage.php' method='POST'>
                 <table class='table table-bordered text-dark table-hover table-striped table-light'>
                     <thead class='thead-dark'>
-                        <tr>
-                            <th colspan='8'><b>Montana Residents Zombie Thought Requests</b></th>
+                        <tr class='center'>
+                            <th colspan='9'><b>Montana Residents Zombie Thought Requests</b></th>
                         </tr>
                         <tr>
                             <th>Date Requested</th>
