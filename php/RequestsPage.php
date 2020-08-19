@@ -68,7 +68,7 @@ include_once('FormCheck.php');
                 while($row = $result->fetch_assoc()){
         ?>
                         <tr>
-                            <td><?php echo date_format($row['date_requested'], 'm/d/Y'); ?></td>
+                            <td><?php echo date('m/d/Y', strtotime($row['date_requested'])); ?></td>
                             <td><?php echo $row['contact_first_name']; ?></td>
                             <td><?php echo $row['contact_last_name']; ?></td>
                             <td><?php echo $row['contact_phone']; ?></td>
@@ -137,7 +137,7 @@ include_once('FormCheck.php');
                 while($row = $result->fetch_assoc()){
         ?>
                         <tr>
-                            <td><?php echo date_format($row['date_requested'], 'm/d/Y'); ?></td>
+                            <td><?php echo date('m/d/Y', strtotime($row['date_requested'])); ?></td>
                             <td><?php echo $row['contact_first_name']; ?></td>
                             <td><?php echo $row['contact_last_name']; ?></td>
                             <td><?php echo $row['contact_phone']; ?></td>
