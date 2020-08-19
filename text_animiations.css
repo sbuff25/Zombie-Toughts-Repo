@@ -55,9 +55,9 @@
 {
     position: absolute;
     width:10%;  
-    top: 60%;
+    top: 80%;
     left: 70%;
-    animation: transitionText 3s;
+    animation: transitionTextFromRight 2s;
     /* opacity: 75%; */
   
 }
@@ -87,8 +87,8 @@
     position: absolute;
     width: 25%;
     right: 10%;
-    bottom: 2%;
-    animation: transitionText 3s;
+    top: 55%;
+    animation: transitionTextFromRight 3s;
     /* opacity: 75%; */
 
 }
