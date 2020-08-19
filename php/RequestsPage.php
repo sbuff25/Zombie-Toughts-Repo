@@ -32,6 +32,7 @@ include_once('FormCheck.php');
 
         <?php
         include_once('Navbar.php');
+        include_once('LinkForm.php');
         ?>
             <br><br><br><br><br>
 
