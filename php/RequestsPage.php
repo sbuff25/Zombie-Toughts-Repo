@@ -68,7 +68,7 @@ include_once('FormCheck.php');
                 while($row = $result->fetch_assoc()){
         ?>
                         <tr>
-                            <td><?php echo $row['date_requested']; ?></td>
+                            <td><?php echo date_format($row['date_requested'], 'm/d/Y'); ?></td>
                             <td><?php echo $row['contact_first_name']; ?></td>
                             <td><?php echo $row['contact_last_name']; ?></td>
                             <td><?php echo $row['contact_phone']; ?></td>
@@ -91,7 +91,7 @@ include_once('FormCheck.php');
             else{
         ?>
                 <tr class='text-center'>
-                    <td colspan='9'>There are currently no Montana requests.</td>
+                    <td colspan='9'>There are currently no Montana residents' requests.</td>
                 </tr>
         <?php
             }
