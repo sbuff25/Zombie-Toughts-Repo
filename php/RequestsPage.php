@@ -21,6 +21,8 @@ include_once('FormCheck.php');
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
         <link rel="stylesheet" href="../css.css">
         <link rel="stylesheet" href="../menu.css">
@@ -46,7 +48,7 @@ include_once('FormCheck.php');
                 <table class='table table-bordered text-dark table-hover table-striped table-light'>
                     <thead>
                         <tr class='text-center bg-secondary'>
-                            <th colspan='9'><b>Montana Residents Zombie Thought Requests</b></th>
+                            <th colspan='9'><b>Institution: Montana Residents Zombie Thought Requests</b></th>
                         </tr>
                         <tr>
                             <th>Date Requested</th>
@@ -79,8 +81,8 @@ include_once('FormCheck.php');
                             <td><?php echo $row['institution_county']; ?></td>
                             <td> <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">FORM</a>
-                                    <a class="dropdown-item" href="#">DELETE</a>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#LinkForm"><span class="material-icons">description</span>FORM</a>
+                                    <a class="dropdown-item" href="#"><span class="material-icons">delete</span>DELETE</a>
                                 </div>
                             </td>
 
@@ -114,7 +116,7 @@ include_once('FormCheck.php');
                 <table class='table table-bordered text-dark table-hover table-striped table-light'>
                     <thead>
                         <tr class='text-center bg-secondary'>
-                            <th colspan='10'><b>Out of State Zombie Thought Requests</b></th>
+                            <th colspan='10'><b>Institution: Out of State Zombie Thought Requests</b></th>
                         </tr>
                         <tr>
                             <th>Date Requested</th>
@@ -149,8 +151,8 @@ include_once('FormCheck.php');
                             <td><?php echo $row['institution_county']; ?></td>
                             <td> <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a href='#' class="dropdown-item" data-toggle="modal" data-target="#LinkForm">FORM</a>
-                                    <button class="dropdown-item" href="#">DELETE</button>
+                                    <a href='#' class="dropdown-item" data-toggle="modal" data-target="#LinkForm"><span class="material-icons">description</span>FORM</a>
+                                    <button class="dropdown-item" href="#"><span class="material-icons">delete</span>DELETE</button>
                                 </div>
                             </td>
 
