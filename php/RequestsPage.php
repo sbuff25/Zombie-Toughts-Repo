@@ -149,7 +149,7 @@ include_once('FormCheck.php');
                             <td><?php echo $row['institution_county']; ?></td>
                             <td> <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <button class="dropdown-item" data-toggle="modal" data-target="#LinkForm">FORM</button>
+                                    <a href='#' class="dropdown-item" data-toggle="modal" data-target="#LinkForm">FORM</a>
                                     <button class="dropdown-item" href="#">DELETE</button>
                                 </div>
                             </td>
