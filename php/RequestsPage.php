@@ -61,9 +61,9 @@ include_once('FormCheck.php');
                     </thead>
                     <tbody>
         <?php
-            if($result->num_rows > 0){
-                $row = $result->fetch_assoc();
-                while($row){
+            if($result->num_rows > 0){   
+                $row = $result->fetch_assoc();   
+                for($i = 0; $i < $row->num_rows; $i++){
         ?>
                         <tr>
                             <td><?php echo $row['date_requested']; ?></td>
