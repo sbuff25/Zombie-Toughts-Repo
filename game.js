@@ -906,7 +906,7 @@ const textElement = document.getElementById('text');
 const optionButtonsElement = document.getElementById('option-buttons');
 var vidNode = 1;
 var vidTime = 1000;
-var Video = 'kt2D7xl06mk';
+var Video = 'wmR5MS6xMPQ';
 var tag = document.createElement('script');
 var firstScriptTag = document.getElementsByTagName('script')[0];
 
@@ -953,7 +953,8 @@ function onYouTubeIframeAPIReady() {
             'controls': 0,
             'modestbranding': 1,
             'rel': 0,
-            'showInfo': 0,
+            'showinfo': 0,
+        
 
         },
         events: {
