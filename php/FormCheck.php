@@ -243,12 +243,16 @@ require_once("./Classes/Database.php");
         $sql = $database->prepare("DELETE FROM InstitutionInformation WHERE id=?");
         $sql->bind_param("i", $id);
         $sql->execute();
+        $result = $sql->get_result();
 
         if(!$sql){
             array_push($errors, "Could not delete contact.");
         }
+        else{
+            array_push($errors, "num_rows=" . $result->num_rows);
+        }
 
-        if (count($errors) == 0) {
+        if (count($errors) === 0) {
             $_SESSION['success'] = "Successfully deleted contact";
         }
     }
