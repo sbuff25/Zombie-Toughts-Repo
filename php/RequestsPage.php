@@ -87,7 +87,7 @@ include_once('FormCheck.php');
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#InstitutionForm"><span class="material-icons">description</span>FORM</a>
                                     <form action='RequestsPage.php' method='POST'>
-                                        <a class="dropdown-item" href="#" role='submit' value="<?php echo $row['id']; ?>" name='deleteInstitution'><span class="material-icons">delete</span>DELETE</a>
+                                        <button class="dropdown-item" role='submit' value="<?php echo $row['id']; ?>" name='deleteInstitution'><span class="material-icons">delete</span>DELETE</button>
                                     </form>
                                 </div>
                             </td>
