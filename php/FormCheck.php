@@ -238,9 +238,10 @@ require_once("./Classes/Database.php");
 
     if (isset($_POST['deleteInstitution'])) {
         $id = mysqli_real_escape_string($database, $_POST['id']);
+        $id = intval($id);
 
         $sql = $database->prepare("DELETE FROM InstitutionInformation WHERE id=?");
-        $sql->bind_param("i", intval($id));
+        $sql->bind_param("i", $id);
         $sql->execute();
 
         if(!$sql){
