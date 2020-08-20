@@ -232,7 +232,24 @@ require_once("./Classes/Database.php");
         if (count($errors) == 0) {
             $_SESSION['success'] = "The User: $email, Was Deleted Successfully.";
         }
+        $sql->close();
 
+    }
+
+    if (isset($_POST['deleteInstitution'])) {
+        $id = mysqli_real_escape_string($database, $_POST['id']);
+
+        $sql = $database->prepare("DELETE FROM InstitutionInformation WHERE id=?");
+        $sql->bind_param("s", $id);
+        $sql->execute();
+
+        if(!$sql){
+            array_push($errors, "Could not delete contact.");
+        }
+
+        if (count($errors) == 0) {
+            $_SESSION['success'] = "Successfully deleted contact";
+        }
     }
     
 ?>

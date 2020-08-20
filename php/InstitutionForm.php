@@ -82,7 +82,7 @@
                     <option value='12'>12th</option>
                 </select><br>
 
-                <label for='accesses'>Students\' Total Number of code uses:&nbsp;</label>
+                <label for='accesses'>Number of students/access codes needed:&nbsp;</label>
                 <input name='accesses' placeholder='Enter total...' type='number' min='1' size='20'><br>
 
             </form>

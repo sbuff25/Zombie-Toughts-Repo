@@ -86,7 +86,9 @@ include_once('FormCheck.php');
                             <td> <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#InstitutionForm"><span class="material-icons">description</span>FORM</a>
-                                    <a class="dropdown-item" href="#"><span class="material-icons">delete</span>DELETE</a>
+                                    <form action='RequestsPage.php' method='POST'>
+                                        <a class="dropdown-item" href="#" role='submit' value="<?php echo $row['id']; ?>" name='deleteInstitution'><span class="material-icons">delete</span>DELETE</a>
+                                    </form>
                                 </div>
                             </td>
 
@@ -156,7 +158,7 @@ include_once('FormCheck.php');
                             <td> <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a href='#' class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm"><span class="material-icons">description</span>FORM</a>
-                                    <button class="dropdown-item" href="#"><span class="material-icons">delete</span>DELETE</button>
+                                    <a class="dropdown-item" href="#"><span class="material-icons">delete</span>DELETE</a>
                                 </div>
                             </td>
 
