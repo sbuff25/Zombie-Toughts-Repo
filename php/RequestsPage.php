@@ -40,6 +40,20 @@ include_once('FormCheck.php');
 
         <h1>Zombie Thoughts Requests</h1>
         <br>
+
+        <?php include_once("errors.php");
+
+        <?php if (isset($_SESSION['success'])) : ?>
+        <div class="error success">
+        <p>
+        <?php 
+            echo $_SESSION['success'];
+            unset($_SESSION['success']);
+        ?>
+        </p>
+        </div>
+        <?php endif ?>
+
         <h2>Institution Requests</h2>
 
         <!-- __________________________________Montana Requests Table______________________________ -->
