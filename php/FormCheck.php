@@ -249,7 +249,7 @@ require_once("./Classes/Database.php");
             array_push($errors, "Could not delete contact.");
         }
         else{
-            array_push($errors, "num_rows=" . $result->num_rows);
+            array_push($errors, "num_rows=" . $result->num_rows . " id:" . $id);
         }
 
         if (count($errors) === 0) {
