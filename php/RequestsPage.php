@@ -41,7 +41,7 @@ include_once('FormCheck.php');
         <h1>Zombie Thoughts Requests</h1>
         <br>
 
-        <?php include_once("errors.php");
+        <?php include_once("errors.php"); ?>
 
         <?php if (isset($_SESSION['success'])) : ?>
         <div class="error success">
