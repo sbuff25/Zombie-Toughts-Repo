@@ -237,8 +237,7 @@ require_once("./Classes/Database.php");
     }
 
     if (isset($_POST['deleteInstitution'])) {
-        $id = mysqli_real_escape_string($database, $_POST['id']);
-        $id = intval($id);
+        $id = mysqli_real_escape_string($database, $_POST['deleteInstitution']);
 
         $sql = $database->prepare("DELETE FROM InstitutionInformation WHERE id=?");
         $sql->bind_param("i", $id);
@@ -248,9 +247,9 @@ require_once("./Classes/Database.php");
         if(!$sql){
             array_push($errors, "Could not delete contact.");
         }
-        else{
-            array_push($errors, "num_rows=" . $result->num_rows . " id:" . $id);
-        }
+        // else{
+        //     array_push($errors, "num_rows=" . $result->num_rows . " id:" . $id);
+        // }
 
         if (count($errors) === 0) {
             $_SESSION['success'] = "Successfully deleted contact";
