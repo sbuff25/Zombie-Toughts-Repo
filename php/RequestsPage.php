@@ -100,8 +100,6 @@ include_once('FormCheck.php');
                             <tbody>
                 <?php
                     if($result->num_rows > 0){   
-                        //$row = $result->fetch_assoc();   
-                        // for($i = 0; $i < $result->num_rows; $i++){
                         while($row = $result->fetch_assoc()){
                             $stmt2 = $database->prepare("SELECT note FROM InstitutionNotes WHERE institution_id=?");
                             $stmt2->bind_param('i', $row['id']);
@@ -160,14 +158,15 @@ include_once('FormCheck.php');
                                     </td>
 
                                 </tr>
+                            
                 <?php
-
+                    $stmt2->close();
                         }
                     }
                     else{
                 ?>
                         <tr class='text-center'>
-                            <td colspan='9'>There are currently no Montana residents' requests.</td>
+                            <td colspan='11'>There are currently no Montana residents' requests.</td>
                         </tr>
                 <?php
                     }
@@ -191,7 +190,7 @@ include_once('FormCheck.php');
                         <table class='table table-bordered text-dark table-hover table-striped table-light'>
                             <thead>
                                 <tr class='text-center bg-secondary'>
-                                    <th colspan='10'><b>Out of State Zombie Thought Requests</b></th>
+                                    <th colspan='12'><b>Out of State Zombie Thought Requests</b></th>
                                 </tr>
                                 <tr>
                                     <th>Date Requested</th>
@@ -203,16 +202,20 @@ include_once('FormCheck.php');
                                     <th>Institution City</th>
                                     <th>Institution State</th>
                                     <th>Institution County</th>
+                                    <th>Contacted</th>
+                                    <th>Notes</th>
                                     <th>Options</th>
 
                                 </tr>
                             </thead>
                             <tbody>
-                <?php
+                            <?php
                     if($result->num_rows > 0){   
-                        //$row = $result->fetch_assoc();   
-                        // for($i = 0; $i < $result->num_rows; $i++){
                         while($row = $result->fetch_assoc()){
+                            $stmt2 = $database->prepare("SELECT note FROM InstitutionNotes WHERE institution_id=?");
+                            $stmt2->bind_param('i', $row['id']);
+                            $stmt2->execute();
+                            $result2 = $stmt2->get_result();
                 ?>
                                 <tr>
                                     <td><?php echo date('m/d/Y', strtotime($row['date_requested'])); ?></td>
@@ -224,24 +227,59 @@ include_once('FormCheck.php');
                                     <td><?php echo $row['institution_city']; ?></td>
                                     <td><?php echo $row['institution_state']; ?></td>
                                     <td><?php echo $row['institution_county']; ?></td>
+                                    <td>
+                                        <?php echo $row['contacted']; ?><br>
+                                        <form action='RequestsPage.php' method='POST'>
+                                            <label for='contacted'>Contact Status</label>
+                                            <select name='contacted' id='contact_select'>
+                                                <option value='not contacted'>Not Contacted</option>
+                                                <option value='in-progress'>In Progress</option>
+                                                <option value='completed'>Complete</option>
+                                            </select>
+                                            <button type='submit' name='submitContacted' value='<?php echo $row['id']; ?>'>Submit</button>
+                                            <script>
+                                                document.getElementById('contact_select').selectedIndex=<?php echo $row['contacted']; ?>;
+                                            </script>
+                                        </form>
+                                    
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <?php
+                                                while($row2 = $result2->fetch_assoc()){
+                                            ?>
+                                                    <li><?php echo $row2['note']; ?></li>
+                                            <?php
+                                                }
+                                            ?>
+                                        
+                                        </ul>
+                                        <form action='RequestsPage.php' method='POST'>
+                                            <label for='note'>Create New Note</label>
+                                            <textarea class='form-control' size='5' name='note' placeholder='Enter New Note...'></textarea>
+                                            <button type='submit' name='newNote' value='<?php echo $row['id'];?>'>Submit Note</button>
+                                        </form>
+                                    </td>
                                     <td> <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a href='#' class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm"><span class="material-icons">description</span>FORM</a>
+                                            <button class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php echo $row['id']; ?>"><span class="material-icons">description</span>FORM</button>
                                             <form action='RequestsPage.php' method='POST'>
-                                                <button class="dropdown-item" type='submit' value="<?php echo $row['id']; ?>" name='deleteInstitution'><span class="material-icons">delete</span>DELETE</button>
+                                                <button class="dropdown-item bg-danger" type='submit' value="<?php echo $row['id']; ?>" name='deleteInstitution'><span class="material-icons">delete</span>DELETE</button>
                                             </form>
                                         </div>
                                     </td>
 
                                 </tr>
+                            
                 <?php
+                            $stmt2->close();
 
                         }
                     }
                     else{
                 ?>
                         <tr class='text-center'>
-                            <td colspan='10'>There are currently no out of state requests.</td>
+                            <td colspan='12'>There are currently no out of state requests.</td>
                         </tr>
                 <?php
                     }
