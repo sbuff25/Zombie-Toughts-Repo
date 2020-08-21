@@ -181,7 +181,7 @@ include_once('FormCheck.php');
 
             <!-- __________________________________Out of state Requests Table______________________________ -->
 
-            <div class='tab-pane container active' id='OutInstitution'>
+            <div class='tab-pane container fade' id='OutInstitution'>
                 <?php
                     $stmt = $database->prepare("SELECT * FROM InstitutionInformation WHERE NOT institution_state='Montana'");
                     $stmt->execute();
