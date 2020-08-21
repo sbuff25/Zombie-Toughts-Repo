@@ -21,7 +21,7 @@
                 <input name='contact_email' type='email' placeholder='Enter Email...' size='20'><br>
 
                 <label for='contact_phone'>Contact's Phone Number:&nbsp;</label>
-                <input name='contact_phone' type='tel' placeholder='Enter Last Name...' size='20'><br><br>
+                <input name='contact_phone' type='tel' placeholder='Enter Phone Number...' size='20'><br><br>
 
                 <h5><b>Institution Information:</b></h5><br>
 

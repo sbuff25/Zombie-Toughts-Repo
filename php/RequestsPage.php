@@ -66,7 +66,7 @@ include_once('FormCheck.php');
                 <table class='table table-bordered text-dark table-hover table-striped table-light'>
                     <thead>
                         <tr class='text-center bg-secondary'>
-                            <th colspan='9'><b>Montana Residents Zombie Thought Requests</b></th>
+                            <th colspan='11'><b>Montana Residents Zombie Thought Requests</b></th>
                         </tr>
                         <tr>
                             <th>Date Requested</th>
@@ -104,7 +104,7 @@ include_once('FormCheck.php');
                             <td><?php echo $row['institution_city']; ?></td>
                             <td><?php echo $row['institution_county']; ?></td>
                             <td>
-                                <?php echo $row['contacted']; ?>
+                                <?php echo $row['contacted']; ?><br>
                                 <form action='RequestsPage.php' method='POST'>
                                     <select name='contacted' id='contact_select'>
                                         <option value='not contacted'>Not Contacted</option>
@@ -131,7 +131,7 @@ include_once('FormCheck.php');
                                 </ul>
                                 <form action='RequestsPage.php' method='POST'>
                                     <label for='note'>Create New Note</label>
-                                    <textarea class='form-control' size='5' name='note' placeholder='Enter New Note...'><textarea>
+                                    <textarea class='form-control' size='5' name='note' placeholder='Enter New Note...'></textarea>
                                     <button type='submit' name='newNote' value='<?php echo $row['id'];?>'>Submit Note</button>
                                 </form>
                             </td>
