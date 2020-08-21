@@ -62,7 +62,7 @@ require_once("./php/Classes/Database.php");
         $zipcode = mysqli_real_escape_string($database, $_POST['institution_zipcode']);
         $county = mysqli_real_escape_string($database, $_POST['institution_county']);
 
-        $stmt = $database->prepare("INSERT INTO InstitutionInformation (contact_first_name, contact_last_name, contact_email, contact_phone, institution_name, institution_mailing_address, institution_city, institution_state, institution_zipcode, institution_county, contacted) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'no')");
+        $stmt = $database->prepare("INSERT INTO InstitutionInformation (contact_first_name, contact_last_name, contact_email, contact_phone, institution_name, institution_mailing_address, institution_city, institution_state, institution_zipcode, institution_county, contacted) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'not contacted')");
         $stmt->bind_param("ssssssssss", $first_name, $last_name, $email, $phone, $institution_name, $address, $city, $state, $zipcode, $county);
         $stmt->execute();
 

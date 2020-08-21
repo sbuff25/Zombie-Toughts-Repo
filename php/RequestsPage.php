@@ -77,6 +77,8 @@ include_once('FormCheck.php');
                             <th>Institution Name</th>
                             <th>Institution City</th>
                             <th>Institution County</th>
+                            <th>Contacted</th>
+                            <th>Notes</th>
                             <th>Options</th>
 
                         </tr>
@@ -97,6 +99,8 @@ include_once('FormCheck.php');
                             <td><?php echo $row['institution_name']; ?></td>
                             <td><?php echo $row['institution_city']; ?></td>
                             <td><?php echo $row['institution_county']; ?></td>
+                            <td><?php echo $row['contacted']; ?></td>
+                            <td><?php echo $row['notes']; ?></td>
                             <td> <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="#" data-toggle="modal" data-target="#InstitutionForm"><span class="material-icons">description</span>FORM</a>
