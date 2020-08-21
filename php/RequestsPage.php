@@ -89,6 +89,10 @@ include_once('FormCheck.php');
                 //$row = $result->fetch_assoc();   
                 // for($i = 0; $i < $result->num_rows; $i++){
                 while($row = $result->fetch_assoc()){
+                    $stmt2 = $database->prepare("SELECT note FROM InstitutionNotes WHERE institution_id=?");
+                    $stmt2->bind_param('i', $row['id']);
+                    $stmt2->execute();
+                    $result2 = $stmt2->get_result();
         ?>
                         <tr>
                             <td><?php echo date('m/d/Y', strtotime($row['date_requested'])); ?></td>
@@ -99,11 +103,41 @@ include_once('FormCheck.php');
                             <td><?php echo $row['institution_name']; ?></td>
                             <td><?php echo $row['institution_city']; ?></td>
                             <td><?php echo $row['institution_county']; ?></td>
-                            <td><?php echo $row['contacted']; ?></td>
-                            <td><?php echo $row['notes']; ?></td>
+                            <td>
+                                <?php echo $row['contacted']; ?>
+                                <form action='RequestsPage.php' method='POST'>
+                                    <select name='contacted' id='contact_select'>
+                                        <option value='not contacted'>Not Contacted</option>
+                                        <option value='in-progress'>In Progress</option>
+                                        <option value='completed'>Complete</option>
+                                    </select>
+                                    <button type='submit' name='submitContacted' value='<?php echo $row['id']; ?>'>Submit</button>
+                                    <script>
+                                        document.getElementById('contact_select').selectedIndex=<?php echo $row['contacted']; ?>;
+                                    </script>
+                                </form>
+                            
+                            </td>
+                            <td>
+                                <ul>
+                                    <?php
+                                        while($row2 = $result2->fetch_assoc()){
+                                    ?>
+                                            <li><?php echo $row2['note']; ?></li>
+                                    <?php
+                                        }
+                                    ?>
+                                
+                                </ul>
+                                <form action='RequestsPage.php' method='POST'>
+                                    <label for='note'>Create New Note</label>
+                                    <textarea class='form-control' size='5' name='note' placeholder='Enter New Note...'><textarea>
+                                    <button type='submit' name='newNote' value='<?php echo $row['id'];?>'>Submit Note</button>
+                                </form>
+                            </td>
                             <td> <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#InstitutionForm"><span class="material-icons">description</span>FORM</a>
+                                    <button class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php echo $row['id']; ?>"><span class="material-icons">description</span>FORM</button>
                                     <form action='RequestsPage.php' method='POST'>
                                         <button class="dropdown-item" type='submit' value="<?php echo $row['id']; ?>" name='deleteInstitution'><span class="material-icons">delete</span>DELETE</button>
                                     </form>

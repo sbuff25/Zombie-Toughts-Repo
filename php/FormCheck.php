@@ -252,5 +252,48 @@ require_once("./Classes/Database.php");
             $_SESSION['success'] = "Successfully deleted contact";
         }
     }
+
+    if (isset($_POST['newNote'])) {
+        $id = mysqli_real_escape_string($database, $_POST['newNote']);
+        $note = mysqli_real_escape_string($database, $_POST['note']);
+
+        $checkMax = $database->prepare("SELECT MAX(note_id) as max_note_id FROM InstitutionNotes WHERE id=?");
+        $checkMax->bind_param("i", $id);
+        $checkMax->execute();
+        $result = $checkMax->get_result();
+        $row = $result->fetch_assoc();
+
+        if($checkMax){
+            if($result->num_rows > 0){
+                $note_id = intval($row['max_note_id']) + 1;
+                $insertSQL = $database->prepare("INSERT INTO InstitutionNotes (note_id, institution_id, note) VALUES (?, ?, ?)");
+                $insertSQL->bind_param("iis", $note_id , $id, $note);
+                $insertSQL->execute();
+                if(!$insertSQL){
+                    array_push($errors, "Unable to insert note.");
+                }
+                $insertSQL->close();
+            }
+            else{
+                $insertSQL = $database->prepare("INSERT INTO InstitutionNotes (note_id, institution_id, note) VALUES (0, ?, ?)");
+                $insertSQL->bind_param("is", $id, $note);
+                $insertSQL->execute();
+                if(!$insertSQL){
+                    array_push($errors, "Unable to insert note.");
+                }
+                $insertSQL->close();
+            }
+        }
+        else{
+            array_push($errors, "Unable to insert note.");
+        }
+        $checkMax->close();
+
+        
+
+        if (count($errors) === 0) {
+            $_SESSION['success'] = "Successfully deleted contact";
+        }
+    }
     
 ?>
