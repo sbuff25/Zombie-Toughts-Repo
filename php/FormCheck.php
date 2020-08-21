@@ -295,5 +295,23 @@ require_once("./Classes/Database.php");
             $_SESSION['success'] = "Successfully deleted contact";
         }
     }
+
+    if (isset($_POST['submitContacted'])) {
+        $id = mysqli_real_escape_string($database, $_POST['submitContacted']);
+        $contacted = mysqli_real_escape_string($database, $_POST['contacted']);
+        
+        $updateSQL = $database->prepare("UPDATE InstitutionInformation SET contacted=? WHERE id=?");
+        $updateSQL->bind_param("si", $contacted , $id);
+        $updateSQL->execute();
+
+        if(!$updateSQL){
+            array_push($errors, "Could not update contacted.");
+        }
+
+
+        if (count($errors) === 0) {
+            $_SESSION['success'] = "Change Contact Status";
+        }
+    }
     
 ?>

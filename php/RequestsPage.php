@@ -106,6 +106,7 @@ include_once('FormCheck.php');
                             <td>
                                 <?php echo $row['contacted']; ?><br>
                                 <form action='RequestsPage.php' method='POST'>
+                                    <label for='contacted'>Contact Status</label>
                                     <select name='contacted' id='contact_select'>
                                         <option value='not contacted'>Not Contacted</option>
                                         <option value='in-progress'>In Progress</option>
