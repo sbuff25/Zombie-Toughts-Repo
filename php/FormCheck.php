@@ -257,7 +257,7 @@ require_once("./Classes/Database.php");
         $id = mysqli_real_escape_string($database, $_POST['newNote']);
         $note = mysqli_real_escape_string($database, $_POST['note']);
 
-        $checkMax = $database->prepare("SELECT MAX(note_id) max_note_id FROM InstitutionNotes WHERE id=?");
+        $checkMax = $database->prepare("SELECT MAX(note_id) as max_note_id FROM InstitutionNotes WHERE institution_id=?");
         $checkMax->bind_param("i", $id);
         $checkMax->execute();
         $result = $checkMax->get_result();
