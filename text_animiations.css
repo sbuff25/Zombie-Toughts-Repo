@@ -1,4 +1,144 @@
-#title_animi
+@media(max-width:2560px)
+{
+    #title_animi
+    {
+        position: absolute;
+        left: 8%;
+        top: 50%;
+        width:30%;
+        animation: transitionText 1.5s;
+    
+    }
+    #author_animi
+    {
+        position: absolute;
+        left: 10%;
+        bottom: 5%;
+        width: 30%;
+        animation: transitionText 1.5s;
+        
+    
+    
+    }
+    /*Corporate Sponsors*/
+    #blackfoot
+    {
+      position: absolute;
+      width:15%;  
+      top: 10%;
+      left: 10%;
+      animation: transitionTextFromLeft 1.5s;
+      /* opacity: 75%; */
+    }
+    #atg
+    {
+        position: absolute;
+        width: 20%;
+        top: 13%;
+        left: 35%;
+        animation: transitionTextFromTop 1.5s;
+        /* opacity: 75%; */
+    
+        
+    }
+    #PSHP
+    {
+        position: absolute;
+        width:25%;  
+        top: 20%;
+        left: 65%;
+        animation: transitionTextFromRight .5s;
+        /* opacity: 75%; */
+    
+    }
+    
+    /*Foundations*/
+    #MCT
+    {
+        position: absolute;
+        width: 25%;
+        top: 40%;
+        left: 75%;
+        animation: transitionTextFromRight .8s;
+        /* opacity: 75%; */
+    
+    }
+    #WF
+    {
+        position: absolute;
+        width: 25%;
+        left: 75%;
+        top: 70%;
+        animation: transitionTextFromRight 1s;
+        /* opacity: 75%; */
+    
+    }
+    
+    #shubert
+    {
+        position: absolute;
+        width: 20%;
+        top: 43%;
+        left: 75%;
+        animation: transitionTextFromRight .7s;
+        /* opacity: 75%; */
+    
+    }
+    /* Partners */
+    #PBS
+    {
+    position: absolute;
+    width:25%;  
+    top: 85%;
+    left: 54.4%;
+    animation: transitionText 1s; 
+    }
+    #UWMC
+    {
+        position: absolute;
+        width:10%;  
+        top: 45%;
+        left: 54.4%;
+        animation: transitionText 1s;
+        /* opacity: 75%; */
+      
+    }
+    
+    #CHC
+    {
+        position: absolute;
+        width:20%;  
+        bottom: 7%;
+        left: 55%;
+        animation: transitionText 2s;
+        /* opacity: 75%; */
+    
+    }
+    #ProjectTomorrowMT
+    {
+        position: absolute;
+        width:10%;  
+        bottom: 20%;
+        left: 55%;
+        animation: transitionText 1.5s;
+     
+    }
+    
+    
+    
+    #mt_rep_logo
+    {
+        position: absolute;
+        left: 35%;
+        bottom: 8%;
+        animation: transitionText 1s;
+        
+    
+    }
+}
+@media(max-width: 1920px)
+{
+    #title_animi
 {
     position: absolute;
     left: 8%;
@@ -83,11 +223,19 @@
 
 }
 /* Partners */
+#PBS
+{
+    position: absolute;
+    width:25%;  
+    top: 85%;
+    left: 54.4%;
+    animation: transitionText 1s; 
+}
 #UWMC
 {
     position: absolute;
     width:10%;  
-    top: 45%;
+    top: 37%;
     left: 54.4%;
     animation: transitionText 1s;
     /* opacity: 75%; */
@@ -98,7 +246,7 @@
 {
     position: absolute;
     width:20%;  
-    bottom: 7%;
+    bottom: 15%;
     left: 55%;
     animation: transitionText 2s;
     /* opacity: 75%; */
@@ -108,7 +256,7 @@
 {
     position: absolute;
     width:10%;  
-    bottom: 20%;
+    bottom: 28%;
     left: 55%;
     animation: transitionText 1.5s;
  
@@ -123,6 +271,8 @@
     bottom: 8%;
     animation: transitionText 1s;
     
+
+}
 
 }
 
@@ -170,24 +320,7 @@
         transform: translateX(1000px);
     }
 }
-@media(max-width: 768px)
-{
-    #title_animi
-    {
-        width: 75%;
-        bottom: 10%;
-    }
-    #mt_rep_logo
-    {
-        right: 55%;
-        bottom: 46%;
-    }
-    #author_animi
-    {
-        bottom: 2%;
-        left: 12%;
-    }
-}
+
 @media(max-width: 560px)
 {
 #author_animi
