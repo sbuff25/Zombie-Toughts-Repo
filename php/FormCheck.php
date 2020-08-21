@@ -292,7 +292,7 @@ require_once("./Classes/Database.php");
         
 
         if (count($errors) === 0) {
-            $_SESSION['success'] = "Successfully deleted contact";
+            $_SESSION['success'] = "Successfully added note!";
         }
     }
 
