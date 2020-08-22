@@ -304,6 +304,7 @@
         top: 82%;
         left: 61%;
         animation: transitionText 1s; 
+        display: none;
     }
     #united
     {
@@ -312,6 +313,8 @@
         top: 65%;
         left: 60%;
         animation: transitionText 1s;
+        display: none;
+
         /* opacity: 75%; */
     
     }
@@ -323,6 +326,8 @@
         bottom: 10%;
         left: 60%;
         animation: transitionText 1s;
+        display: none;
+
         /* opacity: 75%; */
 
     }
@@ -333,6 +338,8 @@
         bottom: 20%;
         left: 61%;
         animation: transitionText 1.5s;
+        display: none;
+
     
     }
     #mt_rep_logo
@@ -342,6 +349,8 @@
         left: .01%;
         bottom: 20%;
         animation: transitionText 1s;
+        
+
     }
     /* Foundations */
     #MCT
@@ -351,6 +360,8 @@
     top: 25%;
     left: 56%;
     animation: transitionTextFromRight .8s;
+    display: none;
+
     /* opacity: 75%; */
 
 }
@@ -361,6 +372,8 @@
     left: 60%;
     top: 40%;
     animation: transitionTextFromRight 1s;
+    display: none;
+
     /* opacity: 75%; */
 
 }
@@ -372,6 +385,8 @@
     top: 25%;
     left: 60%;
     animation: transitionTextFromRight .7s;
+    display: none;
+
     /* opacity: 75%; */
 
 }
@@ -388,6 +403,8 @@
         top: 40%;
         left: 10%;
         animation: transitionText 1.5s;
+        display: none;
+
     }
 
     #PSHP
@@ -397,6 +414,8 @@
         top: 60%;
         left: 10%;
         animation: transitionText 2s;
+        display: none;
+
     }
     #blackfoot
     {
@@ -405,6 +424,8 @@
       top: 20%;
       left: 10%;
       animation: transitionText 1s;
+      display: none;
+
     } 
 }
 @media(max-width: 560px)
