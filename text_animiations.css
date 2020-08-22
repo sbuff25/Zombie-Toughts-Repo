@@ -281,14 +281,14 @@
     {
         width: 30%;
         position: absolute;
-        top: 95%;
+        bottom: 5%;
         left: 10%;
     }
     #title_animi
     {
         position: absolute;
         width: 50%;
-        top: 83%;
+        top: 80%;
     }
     /* Partnership */
         /* 
@@ -301,7 +301,7 @@
     {
         position: absolute;
         width:25%;  
-        top: 67%;
+        top: 82%;
         left: 61%;
         animation: transitionText 1s; 
     }
@@ -309,7 +309,7 @@
     {
         position: absolute;
         width:20%;  
-        top: 50%;
+        top: 65%;
         left: 60%;
         animation: transitionText 1s;
         /* opacity: 75%; */
@@ -320,7 +320,7 @@
     {
         position: absolute;
         width:30%;  
-        bottom: 25%;
+        bottom: 10%;
         left: 60%;
         animation: transitionText 1s;
         /* opacity: 75%; */
@@ -330,7 +330,7 @@
     {
         position: absolute;
         width:20%;  
-        bottom: 34%;
+        bottom: 20%;
         left: 61%;
         animation: transitionText 1.5s;
     
@@ -340,7 +340,7 @@
         position: absolute;
         width: 30%;
         left: .01%;
-        bottom: 30%;
+        bottom: 20%;
         animation: transitionText 1s;
     }
     /* Foundations */
@@ -385,7 +385,7 @@
     {
         position: absolute;
         width: 50%;
-        top: 45%;
+        top: 40%;
         left: 10%;
         animation: transitionText 1.5s;
     }
