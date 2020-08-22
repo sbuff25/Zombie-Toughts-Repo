@@ -901,7 +901,7 @@ const textNodes = [{
 
 
     ]
-    // const videoElement = document.getElementById('video');
+const videoElement = document.getElementById('video');
 const textElement = document.getElementById('text');
 const optionButtonsElement = document.getElementById('option-buttons');
 var vidNode = 1;
