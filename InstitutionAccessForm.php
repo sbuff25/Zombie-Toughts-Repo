@@ -69,11 +69,10 @@
                     <option value='inst'>Institution</option>
                     <option value='ind'>Individual</option>
                 </select>
+                <br>
                 <div id='add_here'>
                 </div>
                 
-                
-                <button type='submit' name='institutionAccessRequest' class='btn btn-primary'>Submit Request</button>
                 
             </form>
         </div>
@@ -122,8 +121,9 @@ $("#ind_or_inst_select").on('change', function() {
             $(" <label for='institution_county'>Institution's County:&nbsp;</label><input name='institution_county' placeholder='Enter County...' size='20'><br><br>").appendTo( "#add_here" );
         }
         else{
-            
+
         }
+        $(" <button type='submit' name='institutionAccessRequest' class='btn btn-primary'>Submit Request</button>").appendTo( "#add_here" );
 });
 </script>
 
