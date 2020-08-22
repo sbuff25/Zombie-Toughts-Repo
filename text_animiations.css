@@ -91,13 +91,13 @@
     width:25%;  
     top: 85%;
     left: 54.4%;
-    animation: transitionText 1s; 
+    animation: transitionText 1.8s; 
     }
-    #UWMC
+    #united
     {
         position: absolute;
         width:10%;  
-        top: 45%;
+        top: 35%;
         left: 54.4%;
         animation: transitionText 1s;
         /* opacity: 75%; */
@@ -108,9 +108,9 @@
     {
         position: absolute;
         width:20%;  
-        bottom: 7%;
+        bottom: 15%;
         left: 55%;
-        animation: transitionText 2s;
+        animation: transitionText 1.6s;
         /* opacity: 75%; */
     
     }
@@ -118,9 +118,9 @@
     {
         position: absolute;
         width:10%;  
-        bottom: 20%;
+        bottom: 30%;
         left: 55%;
-        animation: transitionText 1.5s;
+        animation: transitionText 1.3s;
      
     }
     
@@ -197,7 +197,7 @@
     width: 25%;
     top: 40%;
     left: 75%;
-    animation: transitionTextFromRight .8s;
+    animation: transitionTextFromRight 1.3s;
     /* opacity: 75%; */
 
 }
@@ -207,7 +207,7 @@
     width: 25%;
     left: 75%;
     top: 70%;
-    animation: transitionTextFromRight 1s;
+    animation: transitionTextFromRight 1.6s;
     /* opacity: 75%; */
 
 }
@@ -218,7 +218,7 @@
     width: 20%;
     top: 43%;
     left: 75%;
-    animation: transitionTextFromRight .7s;
+    animation: transitionTextFromRight 1s;
     /* opacity: 75%; */
 
 }
@@ -229,9 +229,9 @@
     width:25%;  
     top: 85%;
     left: 54.4%;
-    animation: transitionText 1s; 
+    animation: transitionText 2s; 
 }
-#UWMC
+#united
 {
     position: absolute;
     width:10%;  
@@ -248,7 +248,7 @@
     width:20%;  
     bottom: 15%;
     left: 55%;
-    animation: transitionText 2s;
+    animation: transitionText 1.5s;
     /* opacity: 75%; */
 
 }
@@ -258,7 +258,7 @@
     width:10%;  
     bottom: 28%;
     left: 55%;
-    animation: transitionText 1.5s;
+    animation: transitionText 1.2s;
  
 }
 
@@ -275,7 +275,138 @@
 }
 
 }
+@media(max-width: 560px)
+{
+    #author_animi
+    {
+        width: 60%;
+        position: absolute;
+        top: 95%;
+        left: 12%;
+    }
+    #title_animi
+    {
+        position: absolute;
+        width: 75%;
+        top: 75%;
+    }
+    /* Partnership */
+        /* 
+           MT Rep
+           PBS
+           Project Tomorrow
+           Curry Health Center
+        */
+    #PBS
+    {
+        position: absolute;
+        width:25%;  
+        top: 67%;
+        left: 61%;
+        animation: transitionText 1s; 
+    }
+    #united
+    {
+        position: absolute;
+        width:20%;  
+        top: 50%;
+        left: 60%;
+        animation: transitionText 1s;
+        /* opacity: 75%; */
+    
+    }
 
+    #CHC
+    {
+        position: absolute;
+        width:30%;  
+        bottom: 25%;
+        left: 60%;
+        animation: transitionText 1s;
+        /* opacity: 75%; */
+
+    }
+    #ProjectTomorrowMT
+    {
+        position: absolute;
+        width:20%;  
+        bottom: 34%;
+        left: 61%;
+        animation: transitionText 1.5s;
+    
+    }
+    #mt_rep_logo
+    {
+        position: absolute;
+        width: 60%;
+        left: .01%;
+        bottom: 25%;
+        animation: transitionText 1s;
+    }
+    /* Foundations */
+    #MCT
+{
+    position: absolute;
+    width: 45%;
+    top: 25%;
+    left: 56%;
+    animation: transitionTextFromRight .8s;
+    /* opacity: 75%; */
+
+}
+#WF
+{
+    position: absolute;
+    width: 35%;
+    left: 60%;
+    top: 40%;
+    animation: transitionTextFromRight 1s;
+    /* opacity: 75%; */
+
+}
+
+#shubert
+{
+    position: absolute;
+    width: 35%;
+    top: 25%;
+    left: 60%;
+    animation: transitionTextFromRight .7s;
+    /* opacity: 75%; */
+
+}
+    /* Corporate Sponsors */
+        /* 
+           blackfoot
+           atg
+           PSHP 
+        */
+    #atg
+    {
+        position: absolute;
+        width: 50%;
+        top: 27%;
+        left: 10%;
+        animation: transitionText 1.5s;
+    }
+
+    #PSHP
+    {
+        position: absolute;
+        width:50%;  
+        top: 40%;
+        left: 10%;
+        animation: transitionText 2s;
+    }
+    #blackfoot
+    {
+      position: absolute;
+      width:40%;  
+      top: 10%;
+      left: 10%;
+      animation: transitionText 1s;
+    }
+}
 
 
 @keyframes transitionTextFromTop
@@ -321,50 +452,3 @@
     }
 }
 
-@media(max-width: 560px)
-{
-#author_animi
-{
-    position: absolute;
-    bottom: 5%;
-    left: 12%;
-}
-#title_animi
-{
-    position: absolute;
-    width: 75%;
-    top: 70%;
-}
-#mt_rep_logo
-{
-    position: absolute;
-    width: 35%;
-    left: 2%;
-    bottom: 30%;
-}
-#atg
-{
-    position: absolute;
-    width: 35%;
-    top: 27%;
-    left: 10%;
-    animation: transitionText 1.5s;
-}
-
-#PSHP
-{
-    position: absolute;
-    width:35%;  
-    top: 40%;
-    left: 10%;
-    animation: transitionText 2s;
-}
-#blackfoot
-{
-  position: absolute;
-  width:20%;  
-  top: 10%;
-  left: 10%;
-  animation: transitionText 1s;
-}
-}
