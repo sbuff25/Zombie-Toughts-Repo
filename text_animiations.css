@@ -275,6 +275,138 @@
 }
 
 }
+@media(max-width: 1125px)
+{
+    #author_animi
+    {
+        width: 30%;
+        position: absolute;
+        top: 95%;
+        left: 10%;
+    }
+    #title_animi
+    {
+        position: absolute;
+        width: 50%;
+        top: 83%;
+    }
+    /* Partnership */
+        /* 
+           MT Rep
+           PBS
+           Project Tomorrow
+           Curry Health Center
+        */
+    #PBS
+    {
+        position: absolute;
+        width:25%;  
+        top: 67%;
+        left: 61%;
+        animation: transitionText 1s; 
+    }
+    #united
+    {
+        position: absolute;
+        width:20%;  
+        top: 50%;
+        left: 60%;
+        animation: transitionText 1s;
+        /* opacity: 75%; */
+    
+    }
+
+    #CHC
+    {
+        position: absolute;
+        width:30%;  
+        bottom: 25%;
+        left: 60%;
+        animation: transitionText 1s;
+        /* opacity: 75%; */
+
+    }
+    #ProjectTomorrowMT
+    {
+        position: absolute;
+        width:20%;  
+        bottom: 34%;
+        left: 61%;
+        animation: transitionText 1.5s;
+    
+    }
+    #mt_rep_logo
+    {
+        position: absolute;
+        width: 30%;
+        left: .01%;
+        bottom: 18%;
+        animation: transitionText 1s;
+    }
+    /* Foundations */
+    #MCT
+{
+    position: absolute;
+    width: 45%;
+    top: 25%;
+    left: 56%;
+    animation: transitionTextFromRight .8s;
+    /* opacity: 75%; */
+
+}
+#WF
+{
+    position: absolute;
+    width: 35%;
+    left: 60%;
+    top: 40%;
+    animation: transitionTextFromRight 1s;
+    /* opacity: 75%; */
+
+}
+
+#shubert
+{
+    position: absolute;
+    width: 35%;
+    top: 25%;
+    left: 60%;
+    animation: transitionTextFromRight .7s;
+    /* opacity: 75%; */
+
+}
+    /* Corporate Sponsors */
+        /* 
+           blackfoot
+           atg
+           PSHP 
+        */
+    #atg
+    {
+        position: absolute;
+        width: 50%;
+        top: 45%;
+        left: 10%;
+        animation: transitionText 1.5s;
+    }
+
+    #PSHP
+    {
+        position: absolute;
+        width:50%;  
+        top: 60%;
+        left: 10%;
+        animation: transitionText 2s;
+    }
+    #blackfoot
+    {
+      position: absolute;
+      width:40%;  
+      top: 20%;
+      left: 10%;
+      animation: transitionText 1s;
+    } 
+}
 @media(max-width: 560px)
 {
     #author_animi
@@ -407,138 +539,7 @@
       animation: transitionText 1s;
     }
 }
-@media(max-width: 375px)
-{
-    #author_animi
-    {
-        width: 30%;
-        position: absolute;
-        top: 95%;
-        left: 10%;
-    }
-    #title_animi
-    {
-        position: absolute;
-        width: 50%;
-        top: 83%;
-    }
-    /* Partnership */
-        /* 
-           MT Rep
-           PBS
-           Project Tomorrow
-           Curry Health Center
-        */
-    #PBS
-    {
-        position: absolute;
-        width:25%;  
-        top: 67%;
-        left: 61%;
-        animation: transitionText 1s; 
-    }
-    #united
-    {
-        position: absolute;
-        width:20%;  
-        top: 50%;
-        left: 60%;
-        animation: transitionText 1s;
-        /* opacity: 75%; */
-    
-    }
 
-    #CHC
-    {
-        position: absolute;
-        width:30%;  
-        bottom: 25%;
-        left: 60%;
-        animation: transitionText 1s;
-        /* opacity: 75%; */
-
-    }
-    #ProjectTomorrowMT
-    {
-        position: absolute;
-        width:20%;  
-        bottom: 34%;
-        left: 61%;
-        animation: transitionText 1.5s;
-    
-    }
-    #mt_rep_logo
-    {
-        position: absolute;
-        width: 30%;
-        left: .01%;
-        bottom: 18%;
-        animation: transitionText 1s;
-    }
-    /* Foundations */
-    #MCT
-{
-    position: absolute;
-    width: 45%;
-    top: 25%;
-    left: 56%;
-    animation: transitionTextFromRight .8s;
-    /* opacity: 75%; */
-
-}
-#WF
-{
-    position: absolute;
-    width: 35%;
-    left: 60%;
-    top: 40%;
-    animation: transitionTextFromRight 1s;
-    /* opacity: 75%; */
-
-}
-
-#shubert
-{
-    position: absolute;
-    width: 35%;
-    top: 25%;
-    left: 60%;
-    animation: transitionTextFromRight .7s;
-    /* opacity: 75%; */
-
-}
-    /* Corporate Sponsors */
-        /* 
-           blackfoot
-           atg
-           PSHP 
-        */
-    #atg
-    {
-        position: absolute;
-        width: 50%;
-        top: 27%;
-        left: 10%;
-        animation: transitionText 1.5s;
-    }
-
-    #PSHP
-    {
-        position: absolute;
-        width:50%;  
-        top: 40%;
-        left: 10%;
-        animation: transitionText 2s;
-    }
-    #blackfoot
-    {
-      position: absolute;
-      width:40%;  
-      top: 10%;
-      left: 10%;
-      animation: transitionText 1s;
-    } 
-}
 @keyframes transitionTextFromTop
 {
     from
