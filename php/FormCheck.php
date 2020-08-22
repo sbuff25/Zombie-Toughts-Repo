@@ -313,5 +313,83 @@ require_once("./Classes/Database.php");
             $_SESSION['success'] = "Change Contact Status";
         }
     }
+
+    if (isset($_POST['newIndividualNote'])) {
+        $id = mysqli_real_escape_string($database, $_POST['newIndividualNote']);
+        $note = mysqli_real_escape_string($database, $_POST['note']);
+
+        $checkMax = $database->prepare("SELECT MAX(note_id) as max_note_id FROM OSIndividualNotes WHERE individual_id=?");
+        $checkMax->bind_param("i", $id);
+        $checkMax->execute();
+        $result = $checkMax->get_result();
+        $row = $result->fetch_assoc();
+
+        if($checkMax){
+            if($result->num_rows > 0){
+                $note_id = intval($row['max_note_id']) + 1;
+                $insertSQL = $database->prepare("INSERT INTO OSIndividualNotes (note_id, individual_id, note) VALUES (?, ?, ?)");
+                $insertSQL->bind_param("iis", $note_id , $id, $note);
+                $insertSQL->execute();
+                if(!$insertSQL){
+                    array_push($errors, "Unable to insert note.");
+                }
+                $insertSQL->close();
+            }
+            else{
+                $insertSQL = $database->prepare("INSERT INTO OSIndividualNotes (note_id, individual_id, note) VALUES (0, ?, ?)");
+                $insertSQL->bind_param("is", $id, $note);
+                $insertSQL->execute();
+                if(!$insertSQL){
+                    array_push($errors, "Unable to insert note.");
+                }
+                $insertSQL->close();
+            }
+        }
+        else{
+            array_push($errors, "Unable to insert note.");
+        }
+        $checkMax->close();
+
+        
+
+        if (count($errors) === 0) {
+            $_SESSION['success'] = "Successfully added note!";
+        }
+    }
+
+    if (isset($_POST['submitContactedIndividual'])) {
+        $id = mysqli_real_escape_string($database, $_POST['submitContactedIndividual']);
+        $contacted = mysqli_real_escape_string($database, $_POST['contacted']);
+        
+        $updateSQL = $database->prepare("UPDATE OutOfStateIndividual SET contacted=? WHERE id=?");
+        $updateSQL->bind_param("si", $contacted , $id);
+        $updateSQL->execute();
+
+        if(!$updateSQL){
+            array_push($errors, "Could not update contacted.");
+        }
+
+
+        if (count($errors) === 0) {
+            $_SESSION['success'] = "Changed Contact Status";
+        }
+    }
+
+    if (isset($_POST['deleteIndividual'])) {
+        $id = mysqli_real_escape_string($database, $_POST['deleteIndividual']);
+
+        $sql = $database->prepare("DELETE FROM OutOfStateIndividual WHERE id=?");
+        $sql->bind_param("i", $id);
+        $sql->execute();
+        $result = $sql->get_result();
+
+        if(!$sql){
+            array_push($errors, "Could not delete contact.");
+        }
+
+        if (count($errors) === 0) {
+            $_SESSION['success'] = "Successfully deleted contact";
+        }
+    }
     
 ?>

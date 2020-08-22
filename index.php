@@ -142,20 +142,24 @@ include_once("accessCheck.php");
             <h3 class="center" id="lighten">Zombie Thoughts</h3>
             <div class="collapsed center" id='restricted'>
                 <?php if(!isset($_SESSION['code'])){?>
-                    <h4>Have an Access Code?</h4>
+
+                    <label for='institution_button'>If you’re representing a school, group, or educational institution in the state of Montana,&nbsp;</label>
+                    <button name='institution_button'>Click here</button>
+                    <br>
+
+                    <label for='montana_individual_button'>If you’re an individual living in the state of Montana,&nbsp;</label>
+                    <button name='montana_individual_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#InstitutionForm">Click here</button>
+                    <br>
+
+                    <label for='os_inst_ind_button'>If you’re a school or an individual outside of Montana,&nbsp;</label>
+                    <button name='os_inst_ind_button'>Click here</button>
+                    <br>
+
                     <form action='index.php' method='POST'>
+                        <label for='accessCode'>Have a code? Enter it here:&nbsp;</label>
                         <input name='accessCode' placeholder='Enter Access Code Here...'>
                         <button type='submit' name='submitCode'>Submit Code</button>
                     </form>
-                    <br>
-                    <h4>Individual?</h4>
-                    <button>Click here</button>
-                    <br>
-                    <h4>Guidance counselor wanting to watch a preview?</h4>
-                    <button>Click Here</button>
-                    <br>
-                    <h4>Institution</h4>
-                    <button type="button" class='btn btn-primary' data-toggle="modal" data-target="#InstitutionForm">Click Here</button>
                     <br>
 
                 <?php
