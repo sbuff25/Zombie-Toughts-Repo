@@ -411,16 +411,16 @@
 {
     #author_animi
     {
-        width: 60%;
+        width: 30%;
         position: absolute;
         top: 95%;
-        left: 12%;
+        left: 10%;
     }
     #title_animi
     {
         position: absolute;
-        width: 75%;
-        top: 75%;
+        width: 50%;
+        top: 83%;
     }
     /* Partnership */
         /* 
@@ -470,9 +470,9 @@
     #mt_rep_logo
     {
         position: absolute;
-        width: 60%;
+        width: 30%;
         left: .01%;
-        bottom: 25%;
+        bottom: 18%;
         animation: transitionText 1s;
     }
     /* Foundations */
