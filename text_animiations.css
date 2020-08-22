@@ -289,7 +289,7 @@
     {
         position: absolute;
         width: 40%;
-        top: 76%;
+        top: 80%;
         padding: 5px;
 
     }
@@ -304,9 +304,9 @@
     {
 
         position: absolute;
-        width:25%;  
-        top: 67%;
-        left: 61%;
+        width:15%;  
+        top: 79%;
+        left: 78%;
         animation: transitionText 1s; 
     }
     #united
@@ -314,8 +314,8 @@
 
         position: absolute;
         width:20%;  
-        top: 50%;
-        left: 60%;
+        top: 70%;
+        left: 75%;
         animation: transitionText 1s;
         /* opacity: 75%; */
     
@@ -325,9 +325,9 @@
     {
         
         position: absolute;
-        width:30%;  
-        bottom: 25%;
-        left: 60%;
+        width:15%;  
+        bottom: 15%;
+        left: 78%;
         animation: transitionText 1s;
         /* opacity: 75%; */
 
@@ -336,17 +336,17 @@
     {
         position: absolute;
         width:20%;  
-        bottom: 34%;
-        left: 61%;
+        bottom: 2%;
+        left: 75%;
         animation: transitionText 1.5s;
     
     }
     #mt_rep_logo
     {
         position: absolute;
-        width: 60%;
-        right: 100%;
-        top: 335px;
+        width: 40%;
+        left: 40%;
+        top: 69%;
         animation: transitionText 1s;
     }
     /* Foundations */
@@ -354,7 +354,7 @@
 {
     position: absolute;
     width: 45%;
-    top: 25%;
+    top: 30%;
     left: 56%;
     animation: transitionTextFromRight .8s;
     /* opacity: 75%; */
@@ -365,7 +365,7 @@
     position: absolute;
     width: 35%;
     left: 60%;
-    top: 40%;
+    top: 55%;
     animation: transitionTextFromRight 1s;
     /* opacity: 75%; */
 
@@ -375,7 +375,7 @@
 {
     position: absolute;
     width: 35%;
-    top: 100px;
+    top: 20%;
     left: 60%;
     animation: transitionTextFromRight .7s;
     /* opacity: 75%; */
@@ -391,8 +391,8 @@
     {
         position: absolute;
         width: 50%;
-        top: 200px;
-        left: 10%;
+        top: 60%;
+        left: 5%;
         animation: transitionText 1.5s;
     }
 
@@ -400,15 +400,15 @@
     {
         position: absolute;
         width:50%;  
-        top: 300px;
+        top: 50%;
         left: 10%;
         animation: transitionText 2s;
     }
     #blackfoot
     {
       position: absolute;
-      width:40%;  
-      top: 80px;
+      width:50%;  
+      top: 10%;
       left: 10%;
       animation: transitionText 1s;
     }
