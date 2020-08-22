@@ -152,7 +152,7 @@ include_once("accessCheck.php");
                     <br>
 
                     <label for='os_inst_ind_button'>If you’re a school or an individual outside of Montana,&nbsp;</label>
-                    <button name='os_inst_ind_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#MontanaInstitutionForm">Click here</button>
+                    <button name='os_inst_ind_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#OOSForm">Click here</button>
                     <br>
 
                     <form action='index.php' method='POST'>
