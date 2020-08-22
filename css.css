@@ -4,6 +4,7 @@ body
     margin: 0;
     color: #fff;
     font-family: 'Bebas Neue', cursive;
+    height: 100vh;
     /* overflow: auto; */
    
     
@@ -235,6 +236,7 @@ section#help
 .bios_title
 {
     padding: 10px;
+    padding-bottom: 0;
     font-size: 1.5em;
     text-align: left;
     color: #f3e113
@@ -551,8 +553,9 @@ section#help
 {
     padding: 10px;
     font-size: 1.5em;
-    text-align: left;
-    color: #f3e113
+    text-align: center;
+    color: #f3e113;
+    margin: 0;
 }
 .container
 {
@@ -821,7 +824,7 @@ section#help
         position: relative;
     }
 }
-@media(max-width: 370px)
+@media(max-width: 375px)
 {
     section
     {
@@ -829,7 +832,7 @@ section#help
     }
     .showcase::after
     {
-        height: 50vh;
+        height: 100vh;
     
     }
     .content
@@ -846,6 +849,23 @@ section#help
         justify-content: center;
         
 
+    }
+    .bios
+{
+    padding: 5px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.bios_title
+{
+    padding: 5px;
+    font-size: 1.5em;
+    text-align: center;
+    color: #f3e113
+}
+    .about_text
+    {
+        font-size: .5em;
     }
     .content .text
     {
