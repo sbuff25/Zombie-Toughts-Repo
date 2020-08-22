@@ -144,15 +144,15 @@ include_once("accessCheck.php");
                 <?php if(!isset($_SESSION['code'])){?>
 
                     <label for='institution_button'>If you’re representing a school, group, or educational institution in the state of Montana,&nbsp;</label>
-                    <button name='institution_button'>Click here</button>
+                    <button name='institution_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#MontanaInstitutionForm">Click here</button>
                     <br>
 
                     <label for='montana_individual_button'>If you’re an individual living in the state of Montana,&nbsp;</label>
-                    <button name='montana_individual_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#InstitutionForm">Click here</button>
+                    <button name='montana_individual_button' >Click here</button>
                     <br>
 
                     <label for='os_inst_ind_button'>If you’re a school or an individual outside of Montana,&nbsp;</label>
-                    <button name='os_inst_ind_button'>Click here</button>
+                    <button name='os_inst_ind_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#MontanaInstitutionForm">Click here</button>
                     <br>
 
                     <form action='index.php' method='POST'>
