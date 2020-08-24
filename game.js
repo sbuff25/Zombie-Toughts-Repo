@@ -1,7 +1,7 @@
 const textNodes = [{
             id: 1,
             vidtime: 1000,
-            vid: '5Yvo9Q-Vp2c', // kick-out
+            vid: 'video/sample.mp4', // kick-out
             text: 'Choose if Sam is a Annie or Hamilton',
             options: [{
                     text: 'Play as Hamilton',
@@ -19,7 +19,7 @@ const textNodes = [{
         {
             id: 2,
             vidtime: 1000,
-            vid: 'awcQ9-QvZLs', // god-less
+            vid: 'video/sample.mp4', // god-less
             text: 'Looks like Sam is going to be Hamilton. What hat should he wear?',
             options: [{
 
@@ -906,25 +906,25 @@ const textElement = document.getElementById('text');
 const optionButtonsElement = document.getElementById('option-buttons');
 var vidNode = 1;
 var vidTime = 1000;
-var Video = 'MIAttlFcO6g';
-var tag = document.createElement('script');
-var firstScriptTag = document.getElementsByTagName('script')[0];
+// var Video = 'MIAttlFcO6g';
+// var tag = document.createElement('script');
+// var firstScriptTag = document.getElementsByTagName('script')[0];
 
 var done = false;
-tag.src = "https://www.youtube.com/iframe_api";
+// tag.src = "https://www.youtube.com/iframe_api";
 
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var theNode;
 
 function loadVideo(nextNodeId) {
     theNode = nextNodeId;
-    var iframe = document.getElementById("player");
-    iframe.remove();
-    var el = document.createElement("div");
-    el.setAttribute("id", "player", );
-    el.innerHTML = "hi";
-    var div = document.getElementById("vid_box");
-    div.append(el);
+    // var iframe = document.getElementById("player");
+    // iframe.remove();
+    // var el = document.createElement("div");
+    // el.setAttribute("id", "player", );
+    // el.innerHTML = "hi";
+    // var div = document.getElementById("vid_box");
+    // div.append(el);
     done = false;
     document.getElementById('player').style.display='block';
     document.getElementById('text').style.display = 'none';
@@ -972,6 +972,31 @@ function onPlayerReady(event) {
 
 var myVar;
 
+// If Video is Playing
+videoElement.onplay = function()
+{
+    // alert("Video Is Playing")
+    
+}
+// If Video is Stopped
+videoElement.onended = function()
+{
+    clearTimeout(myVar);
+    setTimeout(vidTime);
+    if (theNode == undefined)
+        theNode = 1;
+    showTextNode(theNode);
+    done = true;
+    if (done == true) 
+    {
+        $(function(){
+            $('.moveUpText').delay(1000).show("slide", {direction: "down" }, "slow")
+            $('.moveUpBtn').delay(1000).show("slide", {direction: "up" }, "slow");
+        });
+    }
+        
+}
+
 function onPlayerStateChange(event) {
     //console.log(event.data);
     //console.log(done);
@@ -988,7 +1013,7 @@ function onPlayerStateChange(event) {
 function stopVideo() {
     
     clearTimeout(myVar);
-    player.stopVideo();
+    vidNode.stopVideo();
     // document.getElementById('text').style.display = 'block';
     // document.getElementById('option-buttons').style.display = 'block';
     if (theNode == undefined)
@@ -1001,6 +1026,8 @@ function stopVideo() {
             });
     }
 }
+
+
 
 const playing = true;
 
@@ -1019,6 +1046,13 @@ function startGame() {
 
 function showVid(textNodeIndex) {
     vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
+    var video =  document.getElementsByTagName('video')[0];
+    console.log(video);
+    var sources = video.getElementsByTagName('source');
+    sources[0].src = vidNode.vid;
+    video.load();
+
+
     
 }
 
@@ -1110,6 +1144,6 @@ function selectOption(option) {
     } else if (nextTextNodeId == 7 && state.cowboyHat == true && state.hamilton == true) {
         nextTextNodeId = 7.3;
     }
-    loadVideo(nextTextNodeId);
+    showVid(nextTextNodeId);
 }
 startGame();

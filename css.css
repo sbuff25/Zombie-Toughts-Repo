@@ -9,6 +9,10 @@ body
    
     
 }
+video
+{
+    width:600px
+}
 .info
 {
     width: 100%;
@@ -203,6 +207,7 @@ section#help
     text-align: center;
     transition: all 1000ms;
 }
+
 .content .logo
 {
     height: 35%;
@@ -347,7 +352,7 @@ footer
 {
     display: none;
     position: absolute;
-    top: 70%;
+    top: 40%;
     left: 25%;
     right: 25%;
     

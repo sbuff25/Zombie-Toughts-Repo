@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script defer src="./game.js"></script>
+    <!-- <script defer src="./game_YT_API.js"></script> -->
     <link rel="stylesheet" href="./css.css">
     <link rel="stylesheet" href="./menu.css">
     <link rel="stylesheet" href="./scroll_in.css">
@@ -211,7 +212,9 @@
             <div class="collapsed center">
                 
                 <div id="vid_box">
-                    <video src="./video/sample.mp4"></video>
+                    <video id="video"  controls>
+                        <source src="" type="video/mp4">
+                    </video>
                     <div id="player" class="moveUpVid"></div>
                 </div>
                 <div id="text" class="moveUpText"></div>
