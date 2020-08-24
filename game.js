@@ -979,6 +979,8 @@ videoElement.onplay = function()
     
 }
 // If Video is Stopped
+
+
 videoElement.onended = function()
 {
     clearTimeout(myVar);
