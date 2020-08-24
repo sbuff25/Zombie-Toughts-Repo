@@ -19,7 +19,7 @@ const textNodes = [{
         {
             id: 2,
             vidtime: 1000,
-            vid: 'video/sample.mp4', // god-less
+            vid: 'video/earth.mp4', // god-less
             text: 'Looks like Sam is going to be Hamilton. What hat should he wear?',
             options: [{
 
@@ -926,12 +926,12 @@ function loadVideo(nextNodeId) {
     // var div = document.getElementById("vid_box");
     // div.append(el);
     done = false;
-    document.getElementById('player').style.display='block';
+    document.getElementById('video').style.display='block';
     document.getElementById('text').style.display = 'none';
     document.getElementById('option-buttons').style.display = 'none';
     vidTime = vidNode.vidtime;
     Video = vidNode.vid;
-    onYouTubeIframeAPIReady();
+    // onYouTubeIframeAPIReady();
 }
 
 
@@ -940,29 +940,29 @@ function loadVideo(nextNodeId) {
 
 // 3. This function creates an <iframe> (and YouTube player)
 //    after the API code downloads.
-var player;
+// var player;
 
-function onYouTubeIframeAPIReady() {
+// function onYouTubeIframeAPIReady() {
     
-    player = new YT.Player('player', {
-        height: '390',
-        width: '640',
-        videoId: Video,
-        playerVars:{
-            'autoplay': 0,
-            'controls': 0,
-            'modestbranding': 1,
-            'rel': 0,
-            'showinfo': 0,
+//     player = new YT.Player('player', {
+//         height: '390',
+//         width: '640',
+//         videoId: Video,
+//         playerVars:{
+//             'autoplay': 0,
+//             'controls': 0,
+//             'modestbranding': 1,
+//             'rel': 0,
+//             'showinfo': 0,
         
 
-        },
-        events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-        },
-    });
-}
+//         },
+//         events: {
+//             'onReady': onPlayerReady,
+//             'onStateChange': onPlayerStateChange
+//         },
+//     });
+// }
 
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
@@ -1091,7 +1091,7 @@ function selectOption(option) {
         // Restarts Game
     if (nextTextNodeId <= 0) {
         startGame();
-        loadVideo(1);
+        // loadVideo(1);
 
     }
     state = Object.assign(state, option.setState)
