@@ -1012,22 +1012,22 @@ function onPlayerStateChange(event) {
     }
 }
 
-function stopVideo() {
+// function stopVideo() {
     
-    clearTimeout(myVar);
-    vidNode.stopVideo();
-    // document.getElementById('text').style.display = 'block';
-    // document.getElementById('option-buttons').style.display = 'block';
-    if (theNode == undefined)
-        theNode = 1;
-    showTextNode(theNode);
-    if (done == true) {
-        $(function(){
-            $('.moveUpText').delay(1000).show("slide", {direction: "down" }, "slow")
-            $('.moveUpBtn').delay(1000).show("slide", {direction: "up" }, "slow");
-            });
-    }
-}
+//     clearTimeout(myVar);
+//     vidNode.stopVideo();
+//     document.getElementById('text').style.display = 'block';
+//     document.getElementById('option-buttons').style.display = 'block';
+//     if (theNode == undefined)
+//         theNode = 1;
+//     showTextNode(theNode);
+//     if (done == true) {
+//         $(function(){
+//             $('.moveUpText').delay(1000).show("slide", {direction: "down" }, "slow")
+//             $('.moveUpBtn').delay(1000).show("slide", {direction: "up" }, "slow");
+//             });
+//     }
+// }
 
 
 
