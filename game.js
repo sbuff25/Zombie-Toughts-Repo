@@ -906,63 +906,22 @@ const textElement = document.getElementById('text');
 const optionButtonsElement = document.getElementById('option-buttons');
 var vidNode = 1;
 var vidTime = 1000;
-// var Video = 'MIAttlFcO6g';
-// var tag = document.createElement('script');
-// var firstScriptTag = document.getElementsByTagName('script')[0];
+
 
 var done = false;
-// tag.src = "https://www.youtube.com/iframe_api";
 
-// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var theNode;
 
 function loadVideo(nextNodeId) {
     theNode = nextNodeId;
-    // var iframe = document.getElementById("player");
-    // iframe.remove();
-    // var el = document.createElement("div");
-    // el.setAttribute("id", "player", );
-    // el.innerHTML = "hi";
-    // var div = document.getElementById("vid_box");
-    // div.append(el);
     done = false;
     document.getElementById('video').style.display='block';
     document.getElementById('text').style.display = 'none';
     document.getElementById('option-buttons').style.display = 'none';
     vidTime = vidNode.vidtime;
     Video = vidNode.vid;
-    // onYouTubeIframeAPIReady();
+
 }
-
-
-
-
-
-// 3. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
-// var player;
-
-// function onYouTubeIframeAPIReady() {
-    
-//     player = new YT.Player('player', {
-//         height: '390',
-//         width: '640',
-//         videoId: Video,
-//         playerVars:{
-//             'autoplay': 0,
-//             'controls': 0,
-//             'modestbranding': 1,
-//             'rel': 0,
-//             'showinfo': 0,
-        
-
-//         },
-//         events: {
-//             'onReady': onPlayerReady,
-//             'onStateChange': onPlayerStateChange
-//         },
-//     });
-// }
 
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
@@ -975,8 +934,8 @@ var myVar;
 // If Video is Playing
 videoElement.onplay = function()
 {
-    // alert("Video Is Playing")
-    
+    console.log('Video Is PLaying');
+
 }
 // If Video is Stopped
 
@@ -987,6 +946,7 @@ videoElement.onended = function()
     setTimeout(vidTime);
     if (theNode == undefined)
         theNode = 1;
+        console.log(theNode);
     showTextNode(theNode);
     done = true;
     if (done == true) 
@@ -995,40 +955,9 @@ videoElement.onended = function()
             $('.moveUpText').delay(1000).show("slide", {direction: "down" }, "slow")
             $('.moveUpBtn').delay(1000).show("slide", {direction: "up" }, "slow");
         });
-    }
         
+    } 
 }
-
-function onPlayerStateChange(event) {
-    //console.log(event.data);
-    //console.log(done);
-   
-    if (event.data == YT.PlayerState.PLAYING && !done) {
-
-        myVar = setTimeout(stopVideo, vidTime);
-        
-
-        done = true;
-    }
-}
-
-// function stopVideo() {
-    
-//     clearTimeout(myVar);
-//     vidNode.stopVideo();
-//     document.getElementById('text').style.display = 'block';
-//     document.getElementById('option-buttons').style.display = 'block';
-//     if (theNode == undefined)
-//         theNode = 1;
-//     showTextNode(theNode);
-//     if (done == true) {
-//         $(function(){
-//             $('.moveUpText').delay(1000).show("slide", {direction: "down" }, "slow")
-//             $('.moveUpBtn').delay(1000).show("slide", {direction: "up" }, "slow");
-//             });
-//     }
-// }
-
 
 
 const playing = true;
@@ -1048,14 +977,16 @@ function startGame() {
 
 function showVid(textNodeIndex) {
     vidNode = textNodes.find(vidNode => vidNode.id === textNodeIndex)
+    theNode = vidNode.id;
+    console.log(theNode);
     var video =  document.getElementsByTagName('video')[0];
     console.log(video);
     var sources = video.getElementsByTagName('source');
     sources[0].src = vidNode.vid;
     video.load();
+    document.getElementById('text').style.display = 'none';
+    document.getElementById('option-buttons').style.display = 'none';
 
-
-    
 }
 
 function showTextNode(textNodeIndex) {
@@ -1093,7 +1024,7 @@ function selectOption(option) {
         // Restarts Game
     if (nextTextNodeId <= 0) {
         startGame();
-        // loadVideo(1);
+        loadVideo(1);
 
     }
     state = Object.assign(state, option.setState)
