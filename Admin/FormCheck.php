@@ -65,7 +65,7 @@ require_once("./Classes/Database.php");
             $username = $_SESSION['username'];
             $privilege = $_SESSION['privilege_level'];
             $_SESSION['success'] .= "<br>You are now logged in as $email, $username, $privilege.";
-            header('Location: ./AdminPage.php');
+            header('Location: ./AdminPage');
         }
     }
 
@@ -117,8 +117,8 @@ require_once("./Classes/Database.php");
             array_push($errors, "ERROR: Not able to execute. " . mysqli_error($database));
         }
         else{
-            require_once("./Functions/NewUserEmail.php");
-            require_once("./Classes/SendEmail.php");
+            require_once("./Functions/NewUserEmail");
+            require_once("./Classes/SendEmail");
             $body = new_user_email_body($email, $first_name, $last_name, $key);
             $subject = new_user_email_subject();
             $email = new SendEmail($email, $subject, $body);
@@ -212,7 +212,7 @@ require_once("./Classes/Database.php");
             $_SESSION['privilege'] = $privilege;
             $_SESSION['first_name'] = $first_name;
             $_SESSION['last_name'] = $last_name;
-            header('Location: ./AdminPage.php');
+            header('Location: ./AdminPage');
         }
         $check_user->close();
     }

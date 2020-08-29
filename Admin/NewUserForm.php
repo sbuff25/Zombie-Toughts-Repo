@@ -9,7 +9,7 @@
             </div>
             <div class="modal-body bg-muted text-dark">
 
-                <form action='AdminPage.php' method='POST'>
+                <form action='AdminPage' method='POST'>
                     <div>
                         <label for='email'>Email:</label>
                         <input name='email' type='email' placeholder="<?php echo "Enter New User's Email..."?>" required>

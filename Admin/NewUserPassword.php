@@ -94,7 +94,7 @@ require_once('FormCheck.php') ?>
                     }
                 }
                 else{
-                    header('location: ../index.php');
+                    header('location: ../index');
                 }
                 echo $error;
 

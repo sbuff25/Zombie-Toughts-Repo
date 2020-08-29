@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php if(!isset($_SESSION['username']) && !isset($_SESSION['email'])){
-        header('location: ./LoginPage.php');
+        header('location: ./LoginPage');
         exit;
 
 }
@@ -82,7 +82,7 @@ include_once('FormCheck.php');
                     $stmt->execute();
                     $result = $stmt->get_result();
                 ?>
-                    <form action='RequestsPage.php' method='POST'>
+                    <form action='RequestsPage' method='POST'>
                         <table class='table table-bordered text-dark table-hover table-striped table-light'>
                             <thead>
                                 <tr class='text-center bg-secondary'>
@@ -123,7 +123,7 @@ include_once('FormCheck.php');
                                     <td><?php echo $row['institution_county']; ?></td>
                                     <td>
                                         <?php echo $row['contacted']; ?><br>
-                                        <form action='RequestsPage.php' method='POST'>
+                                        <form action='RequestsPage' method='POST'>
                                             <label for='contacted'>Contact Status</label>
                                             <select name='contacted' id='contact_select'>
                                                 <option value='not contacted'>Not Contacted</option>
@@ -148,7 +148,7 @@ include_once('FormCheck.php');
                                             ?>
                                         
                                         </ul>
-                                        <form action='RequestsPage.php' method='POST'>
+                                        <form action='RequestsPage' method='POST'>
                                             <label for='note'>Create New Note</label>
                                             <textarea class='form-control' size='5' name='note' placeholder='Enter New Note...'></textarea>
                                             <button type='submit' name='newNote' value='<?php echo $row['id'];?>'>Submit Note</button>
@@ -157,7 +157,7 @@ include_once('FormCheck.php');
                                     <td> <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <button class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php echo $row['id']; ?>"><span class="material-icons">description</span>FORM</button>
-                                            <form action='RequestsPage.php' method='POST'>
+                                            <form action='RequestsPage' method='POST'>
                                                 <button class="dropdown-item bg-danger" type='submit' value="<?php echo $row['id']; ?>" name='deleteInstitution'><span class="material-icons">delete</span>DELETE</button>
                                             </form>
                                         </div>
@@ -194,7 +194,7 @@ include_once('FormCheck.php');
                     $stmt->execute();
                     $result = $stmt->get_result();
                 ?>
-                    <form action='RequestsPage.php' method='POST'>
+                    <form action='RequestsPage' method='POST'>
                         <table class='table table-bordered text-dark table-hover table-striped table-light'>
                             <thead>
                                 <tr class='text-center bg-secondary'>
@@ -237,7 +237,7 @@ include_once('FormCheck.php');
                                     <td><?php echo $row['institution_county']; ?></td>
                                     <td>
                                         <?php echo $row['contacted']; ?><br>
-                                        <form action='RequestsPage.php' method='POST'>
+                                        <form action='RequestsPage' method='POST'>
                                             <label for='contacted'>Contact Status</label>
                                             <select name='contacted' id='contact_select'>
                                                 <option value='not contacted'>Not Contacted</option>
@@ -262,7 +262,7 @@ include_once('FormCheck.php');
                                             ?>
                                         
                                         </ul>
-                                        <form action='RequestsPage.php' method='POST'>
+                                        <form action='RequestsPage' method='POST'>
                                             <label for='note'>Create New Note</label>
                                             <textarea class='form-control' size='5' name='note' placeholder='Enter New Note...'></textarea>
                                             <button type='submit' name='newNote' value='<?php echo $row['id'];?>'>Submit Note</button>
@@ -271,7 +271,7 @@ include_once('FormCheck.php');
                                     <td> <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <button class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php echo $row['id']; ?>"><span class="material-icons">description</span>FORM</button>
-                                            <form action='RequestsPage.php' method='POST'>
+                                            <form action='RequestsPage' method='POST'>
                                                 <button class="dropdown-item bg-danger" type='submit' value="<?php echo $row['id']; ?>" name='deleteInstitution'><span class="material-icons">delete</span>DELETE</button>
                                             </form>
                                         </div>
@@ -309,7 +309,7 @@ include_once('FormCheck.php');
                     $stmt->execute();
                     $result = $stmt->get_result();
                 ?>
-                    <form action='RequestsPage.php' method='POST'>
+                    <form action='RequestsPage' method='POST'>
                         <table class='table table-bordered text-dark table-hover table-striped table-light'>
                             <thead>
                                 <tr class='text-center bg-secondary'>
@@ -350,7 +350,7 @@ include_once('FormCheck.php');
                                     <td><?php echo $row['county']; ?></td>
                                     <td>
                                         <?php echo $row['contacted']; ?><br>
-                                        <form action='RequestsPage.php' method='POST'>
+                                        <form action='RequestsPage' method='POST'>
                                             <label for='contacted'>Contact Status</label>
                                             <select name='contacted' id='contact_select'>
                                                 <option value='not contacted'>Not Contacted</option>
@@ -375,7 +375,7 @@ include_once('FormCheck.php');
                                             ?>
                                         
                                         </ul>
-                                        <form action='RequestsPage.php' method='POST'>
+                                        <form action='RequestsPage' method='POST'>
                                             <label for='note'>Create New Note</label>
                                             <textarea class='form-control' size='5' name='note' placeholder='Enter New Note...'></textarea>
                                             <button type='submit' name='newIndividualNote' value='<?php echo $row['id'];?>'>Submit Note</button>
@@ -384,7 +384,7 @@ include_once('FormCheck.php');
                                     <td> <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <button class="dropdown-item" data-toggle="modal" data-target="#IndividualForm" value="<?php echo $row['id']; ?>"><span class="material-icons">description</span>FORM</button>
-                                            <form action='RequestsPage.php' method='POST'>
+                                            <form action='RequestsPage' method='POST'>
                                                 <button class="dropdown-item bg-danger" type='submit' value="<?php echo $row['id']; ?>" name='deleteIndividual'><span class="material-icons">delete</span>DELETE</button>
                                             </form>
                                         </div>

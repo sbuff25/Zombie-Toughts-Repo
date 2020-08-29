@@ -8,7 +8,7 @@
             </button>
         </div>
         <div class="modal-body bg-muted text-dark">
-            <form action="AdminPage.php" method='POST' class="form-container">
+            <form action="AdminPage" method='POST' class="form-container">
                 <h5><b>Contact's Information:</b></h5><br>
 
                 <label for='contact_first_name'>Contact's First Name:&nbsp;</label>

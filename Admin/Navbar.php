@@ -7,9 +7,9 @@
         <?php if(isset($_SESSION['email'])){
         ?>
             <li>
-                <a href="./AdminPage.php">Admin Home</a>
-                <a href="./RequestsPage.php">Requests</a>
-                <a href="LoginPage.php?logout='1'">Logout</a>
+                <a href="./AdminPage">Admin Home</a>
+                <a href="./RequestsPage">Requests</a>
+                <a href="LoginPage?logout='1'">Logout</a>
                 <p>You are logged in as: <?php echo $_SESSION['email']; ?></p>
                 <p>Privilege: <?php echo $_SESSION['privilege']; ?></p>
 
@@ -17,7 +17,7 @@
         <?php } 
         else {?>
             <li>
-                <a href="LoginPage.php">Login</a>
+                <a href="LoginPage">Login</a>
             </li>
         <?php } ?>
     </ul>
