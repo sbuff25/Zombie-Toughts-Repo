@@ -1,57 +1,431 @@
-#title_animi
+@media(max-width:2560px)
+{
+    #title_animi
+    {
+        position: absolute;
+        left: 8%;
+        top: 50%;
+        width:30%;
+        animation: transitionText 1.5s;
+    
+    }
+    #author_animi
+    {
+        position: absolute;
+        left: 10%;
+        bottom: 5%;
+        width: 30%;
+        animation: transitionText 1.5s;
+        
+    
+    
+    }
+    /*Corporate Sponsors*/
+    #blackfoot
+    {
+      position: absolute;
+      width:15%;  
+      top: 10%;
+      left: 10%;
+      animation: transitionTextFromLeft 1.5s;
+      /* opacity: 75%; */
+    }
+    #atg
+    {
+        position: absolute;
+        width: 20%;
+        top: 13%;
+        left: 35%;
+        animation: transitionTextFromTop 1.5s;
+        /* opacity: 75%; */
+    
+        
+    }
+    #PSHP
+    {
+        position: absolute;
+        width:25%;  
+        top: 20%;
+        left: 65%;
+        animation: transitionTextFromRight .5s;
+        /* opacity: 75%; */
+    
+    }
+    
+    /*Foundations*/
+    #MCT
+    {
+        position: absolute;
+        width: 25%;
+        top: 40%;
+        left: 75%;
+        animation: transitionTextFromRight .8s;
+        /* opacity: 75%; */
+    
+    }
+    #WF
+    {
+        position: absolute;
+        width: 25%;
+        left: 75%;
+        top: 70%;
+        animation: transitionTextFromRight 1s;
+        /* opacity: 75%; */
+    
+    }
+    
+    #shubert
+    {
+        position: absolute;
+        width: 20%;
+        top: 43%;
+        left: 75%;
+        animation: transitionTextFromRight .7s;
+        /* opacity: 75%; */
+    
+    }
+    /* Partners */
+    #PBS
+    {
+    position: absolute;
+    width:25%;  
+    top: 85%;
+    left: 54.4%;
+    animation: transitionText 1.8s; 
+    }
+    #united
+    {
+        position: absolute;
+        width:10%;  
+        top: 35%;
+        left: 54.4%;
+        animation: transitionText 1s;
+        /* opacity: 75%; */
+      
+    }
+    
+    #CHC
+    {
+        position: absolute;
+        width:20%;  
+        bottom: 15%;
+        left: 55%;
+        animation: transitionText 1.6s;
+        /* opacity: 75%; */
+    
+    }
+    #ProjectTomorrowMT
+    {
+        position: absolute;
+        width:10%;  
+        bottom: 30%;
+        left: 55%;
+        animation: transitionText 1.3s;
+     
+    }
+    
+    
+    
+    #mt_rep_logo
+    {
+        position: absolute;
+        left: 35%;
+        bottom: 8%;
+        animation: transitionText 1s;
+        
+    
+    }
+}
+@media(max-width: 1920px)
+{
+    #title_animi
 {
     position: absolute;
     left: 8%;
-    top: 40%;
+    top: 50%;
     width:30%;
-    animation: transitionText 3s;
+    animation: transitionText 1.5s;
 
+}
+#author_animi
+{
+    position: absolute;
+    left: 10%;
+    bottom: 5%;
+    width: 30%;
+    animation: transitionText 1.5s;
+    
+
+
+}
+/*Corporate Sponsors*/
+#blackfoot
+{
+  position: absolute;
+  width:20%;  
+  top: 10%;
+  left: 10%;
+  animation: transitionTextFromLeft 1.5s;
+  /* opacity: 75%; */
 }
 #atg
 {
     position: absolute;
     width: 20%;
-    top: 11%;
-    left: 25%;
-    animation: transitionText 1.5s;
+    top: 13%;
+    left: 35%;
+    animation: transitionTextFromTop 1.5s;
+    /* opacity: 75%; */
+
+    
 }
 #PSHP
 {
     position: absolute;
     width:25%;  
     top: 20%;
-    left: 50%;
-    animation: transitionText 2s;
-}
-#blackfoot
-{
-  position: absolute;
-  width:15%;  
-  top: 10%;
-  left: 8%;
-  animation: transitionText 1s;
+    left: 65%;
+    animation: transitionTextFromRight .5s;
+    /* opacity: 75%; */
+
 }
 
-#author_animi
+/*Foundations*/
+#MCT
 {
     position: absolute;
-    left: 10%;
-    bottom: 15%;
-    width: 30%;
-    animation: transitionText 3s;
+    width: 25%;
+    top: 40%;
+    left: 75%;
+    animation: transitionTextFromRight 1.3s;
+    /* opacity: 75%; */
 
 }
+#WF
+{
+    position: absolute;
+    width: 25%;
+    left: 75%;
+    top: 70%;
+    animation: transitionTextFromRight 1.6s;
+    /* opacity: 75%; */
+
+}
+
+#shubert
+{
+    position: absolute;
+    width: 20%;
+    top: 43%;
+    left: 75%;
+    animation: transitionTextFromRight 1s;
+    /* opacity: 75%; */
+
+}
+/* Partners */
+#PBS
+{
+    position: absolute;
+    width:25%;  
+    top: 85%;
+    left: 54.4%;
+    animation: transitionText 2s; 
+}
+#united
+{
+    position: absolute;
+    width:10%;  
+    top: 37%;
+    left: 54.4%;
+    animation: transitionText 1s;
+    /* opacity: 75%; */
+  
+}
+
+#CHC
+{
+    position: absolute;
+    width:20%;  
+    bottom: 15%;
+    left: 55%;
+    animation: transitionText 1.5s;
+    /* opacity: 75%; */
+
+}
+#ProjectTomorrowMT
+{
+    position: absolute;
+    width:10%;  
+    bottom: 28%;
+    left: 55%;
+    animation: transitionText 1.2s;
+ 
+}
+
+
+
 #mt_rep_logo
 {
     position: absolute;
     left: 35%;
-    bottom: 18%;
-    animation: transitionText 3.2s;
+    bottom: 8%;
+    animation: transitionText 1s;
+    
+
 }
 
+}
+@media(max-width: 560px)
+{
+    #author_animi
+    {
+        width: 40%;
+        position: absolute;
+        top: 95%;
+        left: 10%;
+    }
+    #title_animi
+    {
+        position: absolute;
+        width: 40%;
+        top: 80%;
+        padding: 5px;
 
+    }
+    /* Partnership */
+        /* 
+           MT Rep
+           PBS
+           Project Tomorrow
+           Curry Health Center
+        */
+    #PBS
+    {
 
+        position: absolute;
+        width:15%;  
+        top: 79%;
+        left: 78%;
+        animation: transitionText 1s; 
+    }
+    #united
+    {
 
+        position: absolute;
+        width:20%;  
+        top: 70%;
+        left: 75%;
+        animation: transitionText 1s;
+        /* opacity: 75%; */
+    
+    }
+
+    #CHC
+    {
+        
+        position: absolute;
+        width:15%;  
+        bottom: 15%;
+        left: 78%;
+        animation: transitionText 1s;
+        /* opacity: 75%; */
+
+    }
+    #ProjectTomorrowMT
+    {
+        position: absolute;
+        width:20%;  
+        bottom: 2%;
+        left: 75%;
+        animation: transitionText 1.5s;
+    
+    }
+    #mt_rep_logo
+    {
+        position: absolute;
+        width: 40%;
+        left: 40%;
+        top: 69%;
+        animation: transitionText 1s;
+    }
+    /* Foundations */
+    #MCT
+{
+    position: absolute;
+    width: 45%;
+    top: 30%;
+    left: 56%;
+    animation: transitionTextFromRight .8s;
+    /* opacity: 75%; */
+
+}
+#WF
+{
+    position: absolute;
+    width: 35%;
+    left: 60%;
+    top: 55%;
+    animation: transitionTextFromRight 1s;
+    /* opacity: 75%; */
+
+}
+
+#shubert
+{
+    position: absolute;
+    width: 35%;
+    top: 20%;
+    left: 60%;
+    animation: transitionTextFromRight .7s;
+    /* opacity: 75%; */
+
+}
+    /* Corporate Sponsors */
+        /* 
+           blackfoot
+           atg
+           PSHP 
+        */
+    #atg
+    {
+        position: absolute;
+        width: 50%;
+        top: 60%;
+        left: 5%;
+        animation: transitionText 1.5s;
+    }
+
+    #PSHP
+    {
+        position: absolute;
+        width:50%;  
+        top: 50%;
+        left: 10%;
+        animation: transitionText 2s;
+    }
+    #blackfoot
+    {
+      position: absolute;
+      width:50%;  
+      top: 10%;
+      left: 10%;
+      animation: transitionText 1s;
+    }
+}
+
+@keyframes transitionTextFromTop
+{
+    from
+    {
+        opacity: 0;
+        transform: translateY(-1000px);
+    }
+    to
+    {
+        
+        transform: translateY(0px);
+    } 
+}
 @keyframes transitionText
 {
     from
@@ -61,71 +435,24 @@
     }
     to
     {
-        opacity: 1;
+        
         transform: translateY(0px);
     }
 }
-@media(max-width: 768px)
+@keyframes transitionTextFromLeft
 {
-    #title_animi
+    from
     {
-        width: 75%;
-        bottom: 10%;
-    }
-    #mt_rep_logo
-    {
-        right: 55%;
-        bottom: 46%;
-    }
-    #author_animi
-    {
-        bottom: 2%;
-        left: 12%;
+        opacity: 0;
+        transform: translateX(-1000px);
     }
 }
-@media(max-width: 560px)
+@keyframes transitionTextFromRight
 {
-#author_animi
-{
-    position: absolute;
-    bottom: 5%;
-    left: 12%;
+    from
+    {
+        opacity: 0;
+        transform: translateX(1000px);
+    }
 }
-#title_animi
-{
-    position: absolute;
-    width: 75%;
-    top: 70%;
-}
-#mt_rep_logo
-{
-    position: absolute;
-    width: 35%;
-    left: 2%;
-    bottom: 30%;
-}
-#atg
-{
-    position: absolute;
-    width: 35%;
-    top: 27%;
-    left: 10%;
-    animation: transitionText 1.5s;
-}
-#PSHP
-{
-    position: absolute;
-    width:35%;  
-    top: 40%;
-    left: 10%;
-    animation: transitionText 2s;
-}
-#blackfoot
-{
-  position: absolute;
-  width:25%;  
-  top: 10%;
-  left: 10%;
-  animation: transitionText 1s;
-}
-}
+

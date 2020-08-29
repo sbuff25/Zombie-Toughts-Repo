@@ -4,9 +4,14 @@ body
     margin: 0;
     color: #fff;
     font-family: 'Bebas Neue', cursive;
+    height: 100vh;
     /* overflow: auto; */
    
     
+}
+video
+{
+    width:600px
 }
 .info
 {
@@ -28,6 +33,351 @@ h3
     transform: scaleY(0);
     
 }
+@media(max-width:2560px)
+{
+    body
+    {
+        background: rgba(0, 0, 0, 0.9);
+        margin: 0;
+        color: #fff;
+        font-family: 'Bebas Neue', cursive;
+        /* overflow: auto; */
+       
+        
+    }
+    .info
+    {
+        width: 100%;
+    }
+    .headShot
+    {
+        width: 20%;
+    }
+    h3
+    {
+        color: #f3e113;
+        font-size: 80px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+        display: inline-block;
+        transition: 0.1s;
+        transform-origin: left;
+        transform: scaleY(0);
+        
+    }
+    h3[data-scroll="in"]
+{
+    transform: scaleY(1);
+}
+h3[data-scroll="out"]
+{
+    transform: scaleY(0);
+}
+h3::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: right;
+    transition: 0.1s;
+}
+#text
+{
+    color: black;
+    font-size: 25px;
+    position: absolute;
+    background-color: #e3e3e3;
+    display: none;
+    
+    top: 20%;
+    left: 25%;
+    right: 25%;
+    
+}
+#lighten
+{
+    opacity: 0.4;
+    transition: all 1000ms ease-in-out;
+    cursor: pointer;
+}
+#lighten:hover
+{
+    
+    opacity: 1;
+}
+#vid_box
+{
+    position: relative;
+    width: 1080px;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+#vid_box iframe
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Section Backgrounds */
+
+section
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+}
+section#home
+{
+    background: url(./images/Large_Screens/Background_Home.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: .75;
+}
+section#about
+{
+    background: url(./images/Large_Screens/Background_Boy.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: .75;
+}
+section#cast
+{
+    background: url(./images/Large_Screens/Background_Pig.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: .75;
+}
+section#game
+{
+    background: url(./images/Large_Screens/Background_Brain.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: .75;
+}
+section#help
+{
+    background: url(./images/Seperated_Peices_For_ZT_V1/Bottom_mts.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: .75;
+}
+.gameBg::after
+{
+    
+    content: '';
+    height: 100vh;
+    width: 100%;
+    background-image: url(./placeHolderBG/placeholder_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .75;
+    background-attachment: fixed;
+    display: block;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: all 1000ms;
+}
+
+.content
+{
+    position: absolute;
+    z-index: 1;
+    top: 20%;
+    margin-top: 20px;
+    text-align: center;
+    transition: all 1000ms;
+}
+
+.content .logo
+{
+    height: 35%;
+    width: 35%;
+    padding-bottom: 20px;
+
+}
+.content .title
+{
+    font-size: 2.2rem;
+    margin-top: 1rem;
+}
+.content .text
+{
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+.about_text
+{
+    color: black;
+    padding: 20px;
+    font-size: 1.5em;
+    
+}
+.bios
+{
+    padding: 10px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+}
+.bios_title
+{
+    padding: 10px;
+    padding-bottom: 0;
+    font-size: 1.5em;
+    text-align: left;
+    color: #f3e113
+}
+.container
+{
+    max-width: 100vw;
+    max-height: 100vh;
+ 
+    overflow: auto;
+    padding: 4rem 1rem;
+}
+.grid-3
+{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+
+.center
+{
+    align-content: center;
+    position: relative;
+}
+.bg-light
+{
+    background: #f4f4f4;
+    color: #333;
+}
+.bg-dark
+{
+    background: #333;
+    color: #333;
+}
+footer p
+{
+    margin: 0;
+}
+footer
+{
+    padding: 2.2rem;
+}
+/* Styling for Game and Game Buttons */
+/* Background Slide */
+.game
+{
+    margin-top: 10px;
+    z-index: 1;
+    align-items: center;
+}
+
+.btn
+{
+    background-color: var(--background-color);
+    color: #222;
+    margin: 5px;
+    padding: .5em 4em;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    font-size: larger;
+    font-family: 'Bebas Neue', cursive;
+
+    --background-color: #e3e3e3;
+    --border-size: 2px;
+    --accent-color:  #323232;
+}
+
+
+
+
+/* Button With Slide Effect */
+.btn::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transform: scaleY(0);
+    transition: transform 500ms ease-in-out;
+
+}
+.btn:hover::before,
+.btn:focus::before
+{
+    transform: scaleY(1);
+}
+.btn
+{
+    transition: color 1000ms ease-in-out;
+    z-index: 1;
+}
+
+.btn:hover,
+.btn:focus
+{
+    color: #fff;
+}
+
+#option-buttons
+{
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    right: 25%;
+    
+    margin: auto;
+}
+.collapsed
+{
+    display: none;
+    position: relative;
+}
+nav ul li a
+{
+    /* filter: blur(2px); */
+    opacity: 50%;
+    transition: all 1000ms;
+    letter-spacing: 1px;
+}
+nav ul li a:hover
+{
+    opacity: 100%;
+    filter: blur(0px);
+} 
+}
+@media(max-width: 1920px)
+{
 h3[data-scroll="in"]
 {
     transform: scaleY(1);
@@ -74,7 +424,7 @@ h3::before
 #vid_box
 {
     position: relative;
-    width: 640px;
+    width: 1080px;
     padding-bottom: 56.25%;
     height: 0;
 }
@@ -190,18 +540,24 @@ section#help
 .about_text
 {
     color: black;
+    padding: 20px;
+    font-size: 1em;
     
 }
 .bios
 {
-    padding: 10px;
+    padding: 2px;
     text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
 }
 .bios_title
 {
     padding: 10px;
-    font-size: 1.5em;
-    text-align: left;
+    font-size: 30px;
+    text-align: center;
+    color: #f3e113;
+    margin: 0;
 }
 .container
 {
@@ -324,35 +680,65 @@ footer
     display: none;
     position: relative;
 }
-a
+nav ul li a
 {
     /* filter: blur(2px); */
     opacity: 50%;
     transition: all 1000ms;
     letter-spacing: 1px;
 }
-a:hover
+nav ul li a:hover
 {
     opacity: 100%;
     filter: blur(0px);
 }
-
-
-/* Small Screens*/
-@media(max-width: 378px)
-{
-    section#home
-{
-    background: url(./images/SP/ZombieThoughtsGraphic_For\ Smart\ Phones_BG.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    opacity: .75;
-}
 }
 @media(max-width: 560px)
+{   
+.center
 {
+    align-content: center;
+    position: relative;
+}
+    #option-buttons
+{
+    display: none;
+    position: absolute;
+    top: 60%;
+    left: 25%;
+    right: 25%;
+    font-size: 5px;
+    
+    margin: auto;
+}
+    #text
+{
+    color: black;
+    font-size: 10px;
+    position: absolute;
+    background-color: #e3e3e3;
+    display: none;
+    
+    top: 20%;
+    left: 25%;
+    right: 25%;
+    
+}
+    #vid_box
+    {
+        position: relative;
+        width: 300px;
+        padding-bottom: 56.25%;
+        height: 0;
+    }
+    #vid_box iframe
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }  
 .grid_team
 {
     display: grid;
@@ -440,20 +826,7 @@ section#help
         position: relative;
     }
 }
-
-/* Small Screens*/
-@media(max-height: 450px)
-{
-    .content .logo
-    {
-        /* position: absolute; */
-        top: 50%;
-        justify-content: center;
-        
-
-    }
-}
-@media(max-width: 370px)
+@media(max-width: 375px)
 {
     section
     {
@@ -461,7 +834,7 @@ section#help
     }
     .showcase::after
     {
-        height: 50vh;
+        height: 100vh;
     
     }
     .content
@@ -478,6 +851,24 @@ section#help
         justify-content: center;
         
 
+    }
+    .bios
+{
+    padding: 5px;
+    text-align: center;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+.bios_title
+{
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
+    color: #f3e113
+}
+    .about_text
+    {
+        font-size: .5em;
     }
     .content .text
     {
@@ -497,15 +888,3 @@ section#help
         padding: 1.2rem 1rem;
     } */
 }
-/* Landscape */
-@media(max-height: 500px)
-    {
-    .content .title, .content .text
-        {
-            display: none;
-        }
-    .content
-    {
-        top: 0;    }
-
-    }
