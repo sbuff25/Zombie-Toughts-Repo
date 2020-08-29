@@ -100,7 +100,7 @@ $("#ind_or_inst_select").on('change', function() {
 
             $(" <label for='contact_phone'>Contact's Phone Number:&nbsp;</label>").appendTo( "#add_here" );
             $(" <input name='contact_phone' type='text' placeholder='Enter Phone Number...' size='20' id='phoneNum'><br><br>").appendTo( "#add_here" );
-            $('#phoneNum').mask('(999) 999-9999? 9');
+            // $('#phoneNum').mask('(999) 999-9999? 9');
 
             $(" <h5><b>Institution Information:</b></h5><br>").appendTo( "#add_here" );
 
@@ -136,7 +136,7 @@ $("#ind_or_inst_select").on('change', function() {
 
             $("<label for='phone'>Phone Number:&nbsp;</label>").appendTo( "#add_here" );
             $("<input name='phone' type='text' placeholder='Enter Phone Number...' size='20' id='phoneNum'><br>").appendTo( "#add_here" );
-            $('#phoneNum').mask('(999) 999-9999? 9');
+            // $('#phoneNum').mask('(999) 999-9999? 9');
 
             $("<label for='ext'>Extension Number:&nbsp;</label>").appendTo( "#add_here" );
             $("<input name='ext' placeholder='Enter Extension...' size='20'><br>").appendTo( "#add_here" );
