@@ -55,6 +55,7 @@ require_once("./php/Classes/Database.php");
         $last_name = mysqli_real_escape_string($database, $_POST['contact_last_name']);
         $email = mysqli_real_escape_string($database, $_POST['contact_email']);
         $phone = mysqli_real_escape_string($database, $_POST['contact_phone']);
+        $ext = mysqli_real_escape_string($database, $_POST['ext']);
         $institution_name = mysqli_real_escape_string($database, $_POST['institution_name']);
         $address = mysqli_real_escape_string($database, $_POST['mailing_address']);
         $city = mysqli_real_escape_string($database, $_POST['institution_city']);
@@ -62,8 +63,8 @@ require_once("./php/Classes/Database.php");
         $zipcode = mysqli_real_escape_string($database, $_POST['institution_zipcode']);
         $county = mysqli_real_escape_string($database, $_POST['institution_county']);
 
-        $stmt = $database->prepare("INSERT INTO InstitutionInformation (contact_first_name, contact_last_name, contact_email, contact_phone, institution_name, institution_mailing_address, institution_city, institution_state, institution_zipcode, institution_county, contacted) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'not contacted')");
-        $stmt->bind_param("ssssssssss", $first_name, $last_name, $email, $phone, $institution_name, $address, $city, $state, $zipcode, $county);
+        $stmt = $database->prepare("INSERT INTO InstitutionInformation (contact_first_name, contact_last_name, contact_email, contact_phone, contact_ext, institution_name, institution_mailing_address, institution_city, institution_state, institution_zipcode, institution_county, contacted) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? 'not contacted')");
+        $stmt->bind_param("sssssssssss", $first_name, $last_name, $email, $phone, $ext, $institution_name, $address, $city, $state, $zipcode, $county);
         $stmt->execute();
 
         if(!$stmt){
@@ -78,5 +79,25 @@ require_once("./php/Classes/Database.php");
 
     if (isset($_POST['individualAccessRequest'])) {
 
+        $first_name = mysqli_real_escape_string($database, $_POST['first_name']);
+        $last_name = mysqli_real_escape_string($database, $_POST['last_name']);
+        $email = mysqli_real_escape_string($database, $_POST['email']);
+        $phone = mysqli_real_escape_string($database, $_POST['phone']);
+        $city = mysqli_real_escape_string($database, $_POST['city']);
+        $state = mysqli_real_escape_string($database, $_POST['state']);
+        $zipcode = mysqli_real_escape_string($database, $_POST['zipcode']);
+        $county = mysqli_real_escape_string($database, $_POST['county']);
+
+        $stmt = $database->prepare("INSERT INTO OutOfStateIndividual (first_name, last_name, email, phone, city, state, zipcode, county, contacted) VALUES(?, ?, ?, ?, ?, ?, ?, ?, 'not contacted')");
+        $stmt->bind_param("ssssssss", $first_name, $last_name, $email, $phone, $city, $state, $zipcode, $county);
+        $stmt->execute();
+
+        if(!$stmt){
+            array_push($errors, "There was a problem processing your request. Please try your request again, and if it still does not work please contact the Montana Repertory Theatre directly for access.");
+        }
+
+        if(count($errors) === 0){
+            // Send request processing email
+        }
     }
 ?>

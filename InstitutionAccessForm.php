@@ -99,7 +99,13 @@ $("#ind_or_inst_select").on('change', function() {
             $(" <input name='contact_email' type='email' placeholder='Enter Email...' size='20'><br>").appendTo( "#add_here" );
 
             $(" <label for='contact_phone'>Contact's Phone Number:&nbsp;</label>").appendTo( "#add_here" );
-            $(" <input name='contact_phone' type='tel' placeholder='Enter Phone Number...' size='20'><br><br>").appendTo( "#add_here" );
+            $(" <input name='contact_phone' type='tel' placeholder='Enter Phone Number...' size='20' id='phone_num'><br><br>").appendTo( "#add_here" );
+
+            $(function(){
+                $('#phone_num').usPhoneFormat({
+                format:'(xxx) xxx-xxxx'
+            });
+            });
 
             $(" <h5><b>Institution Information:</b></h5><br>").appendTo( "#add_here" );
 
@@ -134,7 +140,15 @@ $("#ind_or_inst_select").on('change', function() {
             $("<input name='email' type='email' placeholder='Enter Email...' size='20'><br>").appendTo( "#add_here" );
 
             $("<label for='phone'>Phone Number:&nbsp;</label>").appendTo( "#add_here" );
-            $("<input name='phone' type='tel' placeholder='Enter Phone Number...' size='20'><br>").appendTo( "#add_here" );
+            $("<input name='phone' type='tel' placeholder='Enter Phone Number...' size='20' id='phone_num'><br>").appendTo( "#add_here" );
+
+            $(function(){
+                $('#phone_num').usPhoneFormat({
+                format:'(xxx) xxx-xxxx'
+            });
+            });
+            $("<label for='ext'>Extension Number:&nbsp;</label>").appendTo( "#add_here" );
+            $("<input name='ext' placeholder='Enter Extension...' size='20'><br>").appendTo( "#add_here" );
 
             $("<label for='city'>City:&nbsp;</label>").appendTo( "#add_here" );
             $("<input name='city' placeholder='Enter City...' size='20'><br>").appendTo( "#add_here" );
@@ -151,7 +165,10 @@ $("#ind_or_inst_select").on('change', function() {
 
         }
 });
+
+
 </script>
+
 
 <!-- <script>
     $("#select_state').on('change', function() {
