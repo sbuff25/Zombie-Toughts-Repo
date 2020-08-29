@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php if(!isset($_SESSION['username']) && !isset($_SESSION['email'])){
-        header('location: ./LoginPage.php');
+        header('location: ./LoginPage');
         exit;
 
 }

@@ -75,4 +75,8 @@ require_once("./php/Classes/Database.php");
         }
 
     }
+
+    if (isset($_POST['individualAccessRequest'])) {
+
+    }
 ?>
