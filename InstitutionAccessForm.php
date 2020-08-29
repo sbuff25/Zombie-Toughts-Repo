@@ -99,7 +99,7 @@ $("#ind_or_inst_select").on('change', function() {
             $(" <input name='contact_email' type='email' placeholder='Enter Email...' size='20'><br>").appendTo( "#add_here" );
 
             $(" <label for='contact_phone'>Contact's Phone Number (Format: (XXX)XXX-XXXX ):&nbsp;</label>").appendTo( "#add_here" );
-            $(" <input name='contact_phone' type='tel' placeholder='Enter Phone Number...' size='20' id='phoneNum' pattern='([0-9]{3})[0-9]{3}-[0-9]{4}'><br><br>").appendTo( "#add_here" );
+            $(" <input name='contact_phone' type='tel' placeholder='Enter Phone Number...' size='20' id='phoneNum' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'><br><br>").appendTo( "#add_here" );
             // $('#phoneNum').mask('(999) 999-9999? 9');
 
             $(" <h5><b>Institution Information:</b></h5><br>").appendTo( "#add_here" );
@@ -135,7 +135,7 @@ $("#ind_or_inst_select").on('change', function() {
             $("<input name='email' type='email' placeholder='Enter Email...' size='20'><br>").appendTo( "#add_here" );
 
             $("<label for='phone'>Phone Number (Format: (XXX)XXX-XXXX ):&nbsp;</label>").appendTo( "#add_here" );
-            $("<input name='phone' type='tel' placeholder='Enter Phone Number...' size='20' pattern='([0-9]{3})[0-9]{3}-[0-9]{4}'><br>").appendTo( "#add_here" );
+            $("<input name='phone' type='tel' placeholder='Enter Phone Number...' size='20' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'><br>").appendTo( "#add_here" );
             // $('#phoneNum').mask('(999) 999-9999? 9');
 
             $("<label for='ext'>Extension Number:&nbsp;</label>").appendTo( "#add_here" );
