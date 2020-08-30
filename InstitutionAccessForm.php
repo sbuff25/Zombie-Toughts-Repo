@@ -20,8 +20,8 @@
                 <label for='contact_email'>Contact's Email:&nbsp;</label>
                 <input name='contact_email' type='email' placeholder='Enter Email...' size='20'><br>
 
-                <label for='contact_phone'>Contact's Phone Number:&nbsp;</label>
-                <input name='contact_phone' type='tel' placeholder='Enter Phone Number...' size='20'><br>
+                <label for='contact_phone'>Contact's Phone Number (Format: XXX-XXX-XXXX ):&nbsp;</label>
+                <input name='contact_phone' type='tel' placeholder='Enter Phone Number...' size='20' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'><br>
 
                 <label for='contact_ext'>Contact's Extension (if available):&nbsp;</label>
                 <input name='contact_ext' placeholder='Enter Extension...' size='20'><br><br>
