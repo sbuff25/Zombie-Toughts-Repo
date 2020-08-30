@@ -155,7 +155,10 @@ include_once('FormCheck.php');
                     $( "<input name='contact_email' type='email' placeholder='Enter Email...' size='20'><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<label for='contact_phone'>Contact's Phone Number:&nbsp;</label>" ).appendTo( "#LinkFormElement" );
-                    $( "<input name='contact_phone' type='tel' placeholder='Enter Last Name...' size='20'><br><br>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='contact_phone' type='tel' placeholder='Enter Phone Number...' size='20'><br><br>" ).appendTo( "#LinkFormElement" );
+
+                    $( "<label for='contact_ext'>Contact's Extension Number (if applicable):&nbsp;</label>" ).appendTo( "#LinkFormElement" );
+                    $( "<input name='contact_ext' type='tel' placeholder='Enter Extension Number...' size='20'><br><br>" ).appendTo( "#LinkFormElement" );
 
                     $( "<h5><b>Institution's Information:</b></h5><br>" ).appendTo( "#LinkFormElement" );
 

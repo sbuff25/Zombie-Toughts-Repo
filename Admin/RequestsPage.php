@@ -93,6 +93,7 @@ include_once('FormCheck.php');
                                     <th>Contact First Name</th>
                                     <th>Contact Last Name</th>
                                     <th>Contact Phone Number</th>
+                                    <th>Contact Extension (if available)</th>
                                     <th>Contact Email</th>
                                     <th>Institution Name</th>
                                     <th>Institution City</th>
@@ -117,6 +118,7 @@ include_once('FormCheck.php');
                                     <td><?php echo $row['contact_first_name']; ?></td>
                                     <td><?php echo $row['contact_last_name']; ?></td>
                                     <td><?php echo $row['contact_phone']; ?></td>
+                                    <td><?php echo $row['contact_ext']; ?></td>
                                     <td><?php echo $row['contact_email']; ?></td>
                                     <td><?php echo $row['institution_name']; ?></td>
                                     <td><?php echo $row['institution_city']; ?></td>
@@ -205,6 +207,7 @@ include_once('FormCheck.php');
                                     <th>Contact First Name</th>
                                     <th>Contact Last Name</th>
                                     <th>Contact Phone Number</th>
+                                    <th>Contact Extension (if available)</th>
                                     <th>Contact Email</th>
                                     <th>Institution Name</th>
                                     <th>Institution City</th>
@@ -230,6 +233,7 @@ include_once('FormCheck.php');
                                     <td><?php echo $row['contact_first_name']; ?></td>
                                     <td><?php echo $row['contact_last_name']; ?></td>
                                     <td><?php echo $row['contact_phone']; ?></td>
+                                    <td><?php echo $row['contact_ext']; ?></td>
                                     <td><?php echo $row['contact_email']; ?></td>
                                     <td><?php echo $row['institution_name']; ?></td>
                                     <td><?php echo $row['institution_city']; ?></td>

@@ -4,11 +4,11 @@
         <div class="modal-header bg-dark">
             <h5 class="modal-title text-light">Request Access for Zombie Thoughts</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+                <span aria-hidden="true">&times;</span>
             </button>
         </div>
         <div class="modal-body bg-muted text-dark">
-            <form action="index.php" method='POST' class="form-container">
+            <form action="index" method='POST' class="form-container">
                 <h5><b>Contact Information:</b></h5><br>
 
                 <label for='contact_first_name'>Contact's First Name:&nbsp;</label>
@@ -62,7 +62,7 @@
             </button>
         </div>
         <div class="modal-body bg-muted text-dark">
-            <form action="index.php" method='POST' class="form-container">
+            <form action="index" method='POST' class="form-container">
                 <label for='ind_or_inst_select'>Please select the option that best describes you:</label>
                 <select id='ind_or_inst_select'>
                     <option selected disabled>Select Institution or Individual...</option>
@@ -71,9 +71,7 @@
                 </select>
                 <br>
                 <div id='add_here'>
-                </div>
-                
-                
+                </div>          
             </form>
         </div>
         <div class="modal-footer">
@@ -99,10 +97,10 @@ $("#ind_or_inst_select").on('change', function() {
             $(" <input name='contact_email' type='email' placeholder='Enter Email...' size='20'><br>").appendTo( "#add_here" );
 
             $(" <label for='contact_phone'>Contact's Phone Number (Format: XXX-XXX-XXXX ):&nbsp;</label>").appendTo( "#add_here" );
-            $(" <input name='contact_phone' type='tel' placeholder='Enter Phone Number...' size='20' id='phoneNum' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'><br><br>").appendTo( "#add_here" );
+            $(" <input name='contact_phone' type='tel' placeholder='Enter Phone Number...' size='20' id='phoneNum' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'><br>").appendTo( "#add_here" );
             
             $("<label for='ext'>Extension Number:&nbsp;</label>").appendTo( "#add_here" );
-            $("<input name='ext' placeholder='Enter Extension...' size='20'><br>").appendTo( "#add_here" );
+            $("<input name='ext' placeholder='Enter Extension...' size='20'><br><br>").appendTo( "#add_here" );
 
             $(" <h5><b>Institution Information:</b></h5><br>").appendTo( "#add_here" );
 
@@ -128,19 +126,19 @@ $("#ind_or_inst_select").on('change', function() {
         else{
 
             $("<label for='first_name'>First Name:&nbsp;</label>").appendTo( "#add_here" );
-            $("<input name='first_name' placeholder='Enter First Name...' size='20'><br>").appendTo( "#add_here" );
+            $("<input name='first_name' placeholder='Enter First Name...' size='20' required><br>").appendTo( "#add_here" );
 
             $("<label for='last_name'>Last Name:&nbsp;</label>").appendTo( "#add_here" );
-            $("<input name='last_name' placeholder='Enter Last Name...' size='20'><br>").appendTo( "#add_here" );
+            $("<input name='last_name' placeholder='Enter Last Name...' size='20' required><br>").appendTo( "#add_here" );
 
             $("<label for='email'>Email:&nbsp;</label>").appendTo( "#add_here" );
-            $("<input name='email' type='email' placeholder='Enter Email...' size='20'><br>").appendTo( "#add_here" );
+            $("<input name='email' type='email' placeholder='Enter Email...' size='20' required><br>").appendTo( "#add_here" );
 
             $("<label for='phone'>Phone Number (Format: XXX-XXX-XXXX ):&nbsp;</label>").appendTo( "#add_here" );
-            $("<input name='phone' type='tel' placeholder='Enter Phone Number...' size='20' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'><br>").appendTo( "#add_here" );
+            $("<input name='phone' type='tel' placeholder='Enter Phone Number...' size='20' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}' required><br>").appendTo( "#add_here" );
 
             $("<label for='city'>City:&nbsp;</label>").appendTo( "#add_here" );
-            $("<input name='city' placeholder='Enter City...' size='20'><br>").appendTo( "#add_here" );
+            $("<input name='city' placeholder='Enter City...' size='20' required><br>").appendTo( "#add_here" );
 
             $(" <label for='state'>State:&nbsp;</label>").appendTo( "#add_here" );
             $(" <select name='state' id='select_state'><option selected disabled>Select State...</option><option value='Alabama'>Alabama</option><option value='Alaska'>Alaska</option><option value='Arizona'>Arizona</option><option value='Arkansas'>Arkansas</option><option value='California'>California</option><option value='Colorado'>Colorado</option><option value='Connecticut'>Connecticut</option><option value='Delaware'>Delaware</option><option value='Florida'>Florida</option><option value='Georgia'>Georgia</option><option value='Hawaii'>Hawaii</option><option value='Idaho'>Idaho</option><option value='Illinois'>Illinois</option><option value='Indiana'>Indiana</option><option value='Iowa'>Iowa</option><option value='Kansas'>Kansas</option><option value='Kentucky'>Kentucky</option><option value='Louisiana'>Louisiana</option><option value='Maine'>Maine</option><option value='Maryland'>Maryland</option><option value='Massachusetts'>Massachusetts</option><option value='Michigan'>Michigan</option><option value='Minnesota'>Minnesota</option><option value='Mississippi'>Mississippi</option><option value='Missouri'>Missouri</option><option value='Nebraska'>Nebraska</option><option value='Nevada'>Nevada</option><option value='New Hampshire'>New Hampshire</option><option value='New Jersey'>New Jersey</option><option value='New Mexico'>New Mexico</option><option value='New York'>New York</option><option value='North Carolina'>North Carolina</option><option value='North Dakota'>North Dakota</option><option value='Ohio'>Ohio</option><option value='Oklahoma'>Oklahoma</option><option value='Oregon'>Oregon</option><option value='Pennsylvania'>Pennsylvania</option><option value='Rhode Island'>Rhode Island</option><option value='South Carolina'>South Carolina</option><option value='South Dakota'>South Dakota</option><option value='Tennessee'>Tennessee</option><option value='Texas'>Texas</option><option value='Utah'>Utah</option><option value='Vermont'>Vermont</option><option value='Virginia'>Virginia</option><option value='Washington'>Washington</option><option value='West Virginia'>West Virginia</option><option value='Wisconsin'>Wisconsin</option><option value='Wyoming'>Wyoming</option></select><br>").appendTo( "#add_here" );

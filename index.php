@@ -236,7 +236,7 @@ include_once("accessCheck.php");
                 <button name='os_inst_ind_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#OOSForm">Click here</button>
                 <br>
 
-                <form action='index.php' method='POST'>
+                <form action='index' method='POST'>
                     <label for='accessCode'>Have a code? Enter it here:&nbsp;</label>
                     <input name='accessCode' placeholder='Enter Access Code Here...'>
                     <button type='submit' name='submitCode'>Submit Code</button>
