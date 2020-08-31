@@ -11,9 +11,7 @@ require_once "Mail.php";
             $headers = array (
                 'From' => $sender,
                 'To' => $recipient,
-                'Subject' => $subject,
-                'MIME-Version' => 1,
-                'Content-type' => 'text/html;UTF-8');
+                'Subject' => $subject);
             $smtp = Mail::factory('smtp',
                 array (
                 'host' => $host,
