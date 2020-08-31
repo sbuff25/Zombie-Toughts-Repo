@@ -86,7 +86,7 @@ include_once('FormCheck.php');
                         <table class='table table-bordered text-dark table-hover table-striped table-light'>
                             <thead>
                                 <tr class='text-center bg-secondary'>
-                                    <th colspan='11'><b>Montana Residents Zombie Thought Requests</b></th>
+                                    <th colspan='12'><b>Montana Residents Zombie Thought Requests</b></th>
                                 </tr>
                                 <tr>
                                     <th>Date Requested</th>
@@ -174,7 +174,7 @@ include_once('FormCheck.php');
                     else{
                 ?>
                         <tr class='text-center'>
-                            <td colspan='11'>There are currently no Montana residents' requests.</td>
+                            <td colspan='12'>There are currently no Montana residents' requests.</td>
                         </tr>
                 <?php
                     }
@@ -200,7 +200,7 @@ include_once('FormCheck.php');
                         <table class='table table-bordered text-dark table-hover table-striped table-light'>
                             <thead>
                                 <tr class='text-center bg-secondary'>
-                                    <th colspan='12'><b>Out of State Zombie Thought Requests</b></th>
+                                    <th colspan='13'><b>Out of State Zombie Thought Requests</b></th>
                                 </tr>
                                 <tr>
                                     <th>Date Requested</th>
@@ -291,7 +291,7 @@ include_once('FormCheck.php');
                     else{
                 ?>
                         <tr class='text-center'>
-                            <td colspan='12'>There are currently no out of state requests.</td>
+                            <td colspan='13'>There are currently no out of state requests.</td>
                         </tr>
                 <?php
                     }
