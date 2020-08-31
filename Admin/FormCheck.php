@@ -109,13 +109,6 @@ require_once("./Classes/Database.php");
             // $insertSQL = "INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_Date, tempkey) VALUES('$email', '$first_name', '$last_name', '$privilege', $exp_date, '$key')";
             // $result = mysqli_query($database, $insertSQL);
 
-            $stmt = $database->prepare("INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_date, tempkey) VALUES(?, ?, ?, ?, DATE_ADD(NOW(), INTERVAL 4 DAY), ?)");
-            $stmt->bind_param("sssss", $email, $first_name, $last_name, $privilege, $key);
-            $stmt->execute();
-            //$result = $stmt->get_result();
-            if(!$stmt){
-                array_push($errors, "ERROR: Not able to execute. " . mysqli_error($database));
-            }
 
             require_once("./Functions/NewUserEmail.php");
             require_once("./Classes/SendEmail.php");
@@ -123,6 +116,19 @@ require_once("./Classes/Database.php");
             $subject = new_user_email_subject();
             $email = new SendEmail($email, $subject, $body, $errors);
             $stmt->close();
+
+            if(count($errors) === 0){
+                $stmt = $database->prepare("INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_date, tempkey) VALUES(?, ?, ?, ?, DATE_ADD(NOW(), INTERVAL 4 DAY), ?)");
+                $stmt->bind_param("sssss", $email, $first_name, $last_name, $privilege, $key);
+                $stmt->execute();
+                //$result = $stmt->get_result();
+                if(!$stmt){
+                    array_push($errors, "ERROR: Not able to execute. " . mysqli_error($database));
+                }
+
+            }
+
+            
         }
 
 
