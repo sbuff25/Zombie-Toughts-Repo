@@ -13,6 +13,7 @@ require_once "Mail.php";
                 'Subject' => $subject);
             $smtp = Mail::factory('smtp',
                 array ('host' => $host,
+                'port' => $ini_file['po'],
                 'auth' => true,
                 'username' => $ini_file['u'],
                 'password' => $ini_file['p']));

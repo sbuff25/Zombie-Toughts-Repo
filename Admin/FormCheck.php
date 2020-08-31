@@ -117,8 +117,8 @@ require_once("./Classes/Database.php");
             array_push($errors, "ERROR: Not able to execute. " . mysqli_error($database));
         }
         else{
-            require_once("./Functions/NewUserEmail");
-            require_once("./Classes/SendEmail");
+            require_once("./Functions/NewUserEmail.php");
+            require_once("./Classes/SendEmail.php");
             $body = new_user_email_body($email, $first_name, $last_name, $key);
             $subject = new_user_email_subject();
             $email = new SendEmail($email, $subject, $body);
