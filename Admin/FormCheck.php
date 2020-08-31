@@ -121,7 +121,7 @@ require_once("./Classes/Database.php");
             require_once("./Classes/SendEmail.php");
             $body = new_user_email_body($email, $first_name, $last_name, $key);
             $subject = new_user_email_subject();
-            $email = new SendEmail($email, $subject, $body);
+            $email = new SendEmail($email, $subject, $body, $errors);
             $stmt->close();
         }
 
