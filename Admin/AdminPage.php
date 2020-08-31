@@ -226,8 +226,7 @@ include_once('FormCheck.php');
 
                     $( "<label for='phone'>Individual's Phone Number: </label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='phone' type='tel' placeholder='Enter Last Name...' size='20'><br>" ).appendTo( "#LinkFormElement" );
-
-                    
+                 
                     $( "<label for='end_date'>Code Expiration Date: </label>" ).appendTo( "#LinkFormElement" );
                     $( "<input name='end_date' type='date'><br>" ).appendTo( "#LinkFormElement" );
 

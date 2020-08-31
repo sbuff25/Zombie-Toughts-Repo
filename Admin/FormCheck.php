@@ -99,31 +99,32 @@ require_once("./Classes/Database.php");
         //if(mysqli_num_rows($result) >= 1){
         if($result->num_rows >= 1){
             array_push($errors, "That email is already in use.");
-        }
-
-        
-        $key = hash_pbkdf2('haval256,5', $email, 555, 5, 50);
-        // $user_created = create_temp_admin_user($errors, $privilege, $email, $first_name, $last_name, $key);
-        $exp_date = "DATE_ADD(NOW(), INTERVAL 4 DAY)";
-        // $insertSQL = "INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_Date, tempkey) VALUES('$email', '$first_name', '$last_name', '$privilege', $exp_date, '$key')";
-        // $result = mysqli_query($database, $insertSQL);
-
-        $stmt = $database->prepare("INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_date, tempkey) VALUES(?, ?, ?, ?, DATE_ADD(NOW(), INTERVAL 4 DAY), ?)");
-        $stmt->bind_param("sssss", $email, $first_name, $last_name, $privilege, $key);
-        $stmt->execute();
-        //$result = $stmt->get_result();
-
-        if(!$stmt){
-            array_push($errors, "ERROR: Not able to execute. " . mysqli_error($database));
+            $stmt->close();
         }
         else{
+
+            $key = hash_pbkdf2('haval256,5', $email, 555, 5, 50);
+            // $user_created = create_temp_admin_user($errors, $privilege, $email, $first_name, $last_name, $key);
+            $exp_date = "DATE_ADD(NOW(), INTERVAL 4 DAY)";
+            // $insertSQL = "INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_Date, tempkey) VALUES('$email', '$first_name', '$last_name', '$privilege', $exp_date, '$key')";
+            // $result = mysqli_query($database, $insertSQL);
+
+            $stmt = $database->prepare("INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_date, tempkey) VALUES(?, ?, ?, ?, DATE_ADD(NOW(), INTERVAL 4 DAY), ?)");
+            $stmt->bind_param("sssss", $email, $first_name, $last_name, $privilege, $key);
+            $stmt->execute();
+            //$result = $stmt->get_result();
+            if(!$stmt){
+                array_push($errors, "ERROR: Not able to execute. " . mysqli_error($database));
+            }
+
             require_once("./Functions/NewUserEmail.php");
             require_once("./Classes/SendEmail.php");
             $body = new_user_email_body($email, $first_name, $last_name, $key);
             $subject = new_user_email_subject();
             $email = new SendEmail($email, $subject, $body);
+            $stmt->close();
         }
-        $stmt->close();
+
 
 
         if (count($errors) === 0) {
