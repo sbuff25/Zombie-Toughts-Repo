@@ -225,7 +225,7 @@ include_once("accessCheck.php");
             <div class="collapsed center" id='restricted'>
             <?php if(!isset($_SESSION['code'])){?>
 
-                <?php include_once('errors.php'); ?>
+                <?php include_once('./Admin/errors.php'); ?>
 
                 <?php if (isset($_SESSION['success'])) : ?>
                     <div class="error success">
