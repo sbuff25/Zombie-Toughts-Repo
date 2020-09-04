@@ -225,6 +225,19 @@ include_once("accessCheck.php");
             <div class="collapsed center" id='restricted'>
             <?php if(!isset($_SESSION['code'])){?>
 
+                <?php include_once('errors.php'); ?>
+
+                <?php if (isset($_SESSION['success'])) : ?>
+                    <div class="error success">
+                    <p>
+                    <?php 
+                        echo $_SESSION['success'];
+                        unset($_SESSION['success']);
+                    ?>
+                    </p>
+                    </div>
+                <?php endif ?>
+
                 <label for='institution_button'>If you’re representing a school, group, or educational institution in the state of Montana,&nbsp;</label>
                 <button name='institution_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#MontanaInstitutionForm">Click here</button>
                 <br>
