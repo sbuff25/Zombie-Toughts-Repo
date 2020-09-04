@@ -34,6 +34,7 @@ include_once("accessCheck.php");
 </head>
 <body>
     <?php include_once("InstitutionAccessForm.php"); ?>
+    <?php include_once("MTResidentForm.php"); ?>
     <div id="progressbar"></div>
     <div id="scrollPath"></div>
 
@@ -229,7 +230,7 @@ include_once("accessCheck.php");
                 <br>
 
                 <label for='montana_individual_button'>If you’re an individual living in the state of Montana,&nbsp;</label>
-                <button name='montana_individual_button' >Click here</button>
+                <button name='montana_individual_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#MTIndividualForm">Click here</button>
                 <br>
 
                 <label for='os_inst_ind_button'>If you’re a school or an individual outside of Montana,&nbsp;</label>

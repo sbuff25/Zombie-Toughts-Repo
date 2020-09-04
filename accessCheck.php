@@ -100,4 +100,31 @@ require_once("./php/Classes/Database.php");
             // Send request processing email
         }
     }
+
+    if (isset($_POST['individualMTAccessForm'])) {
+
+        $first_name = mysqli_real_escape_string($database, $_POST['first_name']);
+        $last_name = mysqli_real_escape_string($database, $_POST['last_name']);
+        $email = mysqli_real_escape_string($database, $_POST['email']);
+        $phone = mysqli_real_escape_string($database, $_POST['phone']);
+        $address = mysqli_real_escape_string($database, $_POST['address']);
+        $apt_num = mysqli_real_escape_string($database, $_POST['apt_num']);
+        $city = mysqli_real_escape_string($database, $_POST['city']);
+        $state = mysqli_real_escape_string($database, $_POST['state']);
+        $zipcode = mysqli_real_escape_string($database, $_POST['zipcode']);
+        $code = mysqli_real_escape_string($database, $_POST['generate_code']);
+        
+
+        $stmt = $database->prepare("INSERT INTO IndividualAccessCode (code, first_name, last_name, email, phone, address, apt_num, city, state, zipcode, end_date) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DATE_ADD(NOW(), INTERVAL 7 DAY))");
+        $stmt->bind_param("ssssssssssss", $code, $first_name, $last_name, $email, $phone, $address, $apt_num, $city, $state, $zipcode, $county);
+        $stmt->execute();
+
+        if(!$stmt){
+            array_push($errors, "There was a problem processing your request. Please try your request again, and if it still does not work please contact the Montana Repertory Theatre directly for access.");
+        }
+
+        if(count($errors) === 0){
+            // Send request processing email
+        }
+    }
 ?>
