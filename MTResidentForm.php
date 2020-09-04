@@ -4,63 +4,6 @@
         <div class="modal-header bg-dark">
             <h5 class="modal-title text-light">Request Access for Zombie Thoughts</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body bg-muted text-dark">
-            <form action="index.php" method='POST' class="form-container">
-                <h5><b>Contact Information:</b></h5><br>
-
-                <label for='contact_first_name'>Contact's First Name:&nbsp;</label>
-                <input name='contact_first_name' placeholder='Enter First Name...' size='20'><br>
-
-                <label for='contact_last_name'>Contact's Last Name:&nbsp;</label>
-                <input name='contact_last_name' placeholder='Enter Last Name...' size='20'><br>
-
-                <label for='contact_email'>Contact's Email:&nbsp;</label>
-                <input name='contact_email' type='email' placeholder='Enter Email...' size='20'><br>
-
-                <label for='contact_phone'>Contact's Phone Number (Format: XXX-XXX-XXXX ):&nbsp;</label>
-                <input name='contact_phone' type='tel' placeholder='Enter Phone Number...' size='20' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'><br>
-
-                <label for='ext'>Contact's Extension (if available):&nbsp;</label>
-                <input name='ext' placeholder='Enter Extension...' size='20'><br><br>
-
-                <h5><b>Institution Information:</b></h5><br>
-
-                <label for='institution_name'>Institution's Name:&nbsp;</label>
-                <input name='institution_name' placeholder='Enter Name...' size='20'><br>
-
-                <label for='mailing_address'>Institution's Mailing Address:&nbsp;</label>
-                <input name='mailing_address' placeholder='Enter Address...' size='20'><br>
-
-                <label for='institution_city'>Institution's City:&nbsp;</label>
-                <input name='institution_city' placeholder='Enter City...' size='20'><br>
-
-                <input name='institution_state' value='Montana' hidden>
-
-                <label for='institution_zipcode'>Institution's Zipcode:&nbsp;</label>
-                <input name='institution_zipcode' placeholder='Enter Zipcode...' size='20'><br>
-              
-                <label for='institution_county'>Institution's County:&nbsp;</label><select name='institution_county'><option selected disabled>Select County...</option><option value='Beaverhead'>Beaverhead</option><option value='Big Horn'>Big Horn</option><option value='Blaine'>Blaine</option><option value='Broadwater'>Broadwater</option><option value='Carbon'>Carbon</option><option value='Carter'>Carter</option><option value='Cascade'>Cascade</option><option value='Chouteau'>Chouteau</option><option value='Custer'>Custer</option><option value='Daniels'>Daniels</option><option value='Dawson'>Dawson</option><option value='Deer Lodge'>Deer Lodge</option><option value='Fallon'>Fallon</option><option value='Fergus'>Fergus</option><option value='Flathead'>Flathead</option><option value='Gallatin'>Gallatin</option><option value='Garfield'>Garfield</option><option value='Glacier'>Glacier</option><option value='Golden Valley'>Golden Valley</option><option value='Granite'>Granite</option><option value='Hill'>Hill</option><option value='Jefferson'>Jefferson</option><option value='Judith Basin'>Judith Basin</option><option value='Lake'>Lake</option><option value='Lewis And Clark'>Lewis And Clark</option><option value='Liberty'>Liberty</option><option value='Lincoln'>Lincoln</option><option value='Madison'>Madison</option><option value='McCone'>McCone</option><option value='Meagher'>Meagher</option><option value='Mineral'>Mineral</option><option value='Missoula'>Missoula</option><option value='Musselshell'>Musselshell</option><option value='Park'>Park</option><option value='Petroleum'>Petroleum</option><option value='Phillips'>Phillips</option><option value='Pondera'>Pondera</option><option value='Powder River'>Powder River</option><option value='Powell'>Powell</option><option value='Prairie'>Prairie</option><option value='Ravalli'>Ravalli</option><option value='Richland'>Richland</option><option value='Roosevelt'>Roosevelt</option><option value='Rosebud'>Rosebud</option><option value='Sanders'>Sanders</option><option value='Sheridan'>Sheridan</option><option value='Silver Bow'>Silver Bow</option><option value='Stillwater'>Stillwater</option><option value='Sweet Grass'>Sweet Grass</option><option value='Teton'>Teton</option><option value='Toole'>Toole</option><option value='Treasure'>Treasure</option><option value='Valley'>Valley</option><option value='Wheatland'>Wheatland</option><option value='Wibaux'>Wibaux</option><option value='Yellowstone'>Yellowstone</option><option value='Yellowstone National Park'>Yellowstone National Park</option></select><br>
-                
-                <button type='submit' name='institutionAccessRequest' class='btn btn-primary'>Submit Request</button>
-                
-            </form>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal" tabindex="-1" role="dialog" id="OOSForm">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-        <div class="modal-header bg-dark">
-            <h5 class="modal-title text-light">Request Access for Zombie Thoughts</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
@@ -84,6 +27,9 @@
 
                 <label for='address'>Address:&nbsp;</label>
                 <input name='address' placeholder='Enter Address...' size='20' required><br>
+
+                <label for='apt_num'>Apartment Number (If applicable):&nbsp;</label>
+                <input name='apt_num' placeholder='Enter Address...' size='20' required><br>
 
                 <label for='city'>City:&nbsp;</label>
                 <input name='city' placeholder='Enter City...' size='20' required><br>
