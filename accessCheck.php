@@ -122,6 +122,7 @@ require_once("./php/Classes/Database.php");
         if(!$stmt){
             array_push($errors, "There was a problem processing your request. Please try your request again, and if it still does not work please contact the Montana Repertory Theatre directly for access.");
         }
+        $stmt->close()
 
         if(count($errors) === 0){
             // Send request processing email

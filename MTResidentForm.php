@@ -80,6 +80,6 @@
                 
                 // Generate code and add to form 
                 code = generateAccessCode(this.value);
-                $( "<input name='generate_code' value='" + code + "' hidden>" ).appendTo( "#accesscodearea" );
+                $( "<input name='generate_code' value='" + code + "'>" ).appendTo( "#accesscodearea" );
             });
 </script>
