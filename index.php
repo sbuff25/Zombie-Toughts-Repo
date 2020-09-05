@@ -225,7 +225,7 @@ include_once("accessCheck.php");
         <div class="game expand container center">
             <h3 class="center game_play" id="lighten">Zombie Thoughts</h3>
             <div class="collapsed center">
-                <?php echo file_exists("~/video/H3.mp4");?>
+                <h1><?php echo file_exists("~/video/H3.mp4");?></h1>
 
                 <?php //if(!isset($_SESSION['code'])){?>
 
