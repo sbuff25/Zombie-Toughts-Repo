@@ -1,6 +1,6 @@
 const textNodes = [{
             id: 1,
-            vid: '~/video/AH1.mp4', // kick-out
+            vid: '/home3/yqepxzmy/video/AH1.mp4', // kick-out
             text: 'Choose if Sam is a Annie or Hamilton',
             options: [{
                     text: 'A',
@@ -16,7 +16,7 @@ const textNodes = [{
         },
         {
             id: 1.1,
-            vid: '~/video/A2.mp4',
+            vid: '/home3/yqepxzmy/video/A2.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -27,7 +27,7 @@ const textNodes = [{
         },
         {
             id: 1.01,
-            vid: '~/video/H2.mp4', // kick-out
+            vid: '/home3/yqepxzmy/video/H2.mp4', // kick-out
             text: '',
             options: [{
                     text: 'Continue',
@@ -38,7 +38,7 @@ const textNodes = [{
         },
         {
             id: 2,
-            vid: '~/video/H3.mp4', // god-less
+            vid: '/home3/yqepxzmy/video/H3.mp4', // god-less
             text: '',
             options: [{
 
@@ -55,7 +55,7 @@ const textNodes = [{
         },
         {
             id: 2.1,
-            vid: '~/video/A3.mp4', // 2 much 2
+            vid: '/home3/yqepxzmy/video/A3.mp4', // 2 much 2
             text: '',
             options: [{
                     text: 'Cowboy Hat?',
@@ -72,7 +72,7 @@ const textNodes = [{
         {
             id: 4.01,//B-hat
             text: 'Now That we know what our character is lets choose an accessory for our friend Pig.',
-            vid: '~/video/H4B.mp4',
+            vid: '/home3/yqepxzmy/video/H4B.mp4',
             options: [{
                     text: 'A Fedora?',
                     setState: { fedora: true },
@@ -87,7 +87,7 @@ const textNodes = [{
         },
         {
             id: 4.001,
-            vid: '~/video/H4A.mp4',//C-hat
+            vid: '/home3/yqepxzmy/video/H4A.mp4',//C-hat
             text: 'Now That we know what our character is lets choose an accessory for our friend Pig.',
             options: [{
                     text: 'A Fedora?',
@@ -104,7 +104,7 @@ const textNodes = [{
         // Boy
         {
             id: 4.02,
-            vid: '~/video/H5D.mp4',
+            vid: '/home3/yqepxzmy/video/H5D.mp4',
             text: 'Choose your starting location.',
             options: [{
                     text: 'Ghost Town',
@@ -120,7 +120,7 @@ const textNodes = [{
         },
         {
             id: 4.03,
-            vid: '~/video/H5C.mp4',
+            vid: '/home3/yqepxzmy/video/H5C.mp4',
             text: 'Choose your starting location.',
             options: [{
                     text: 'Ghost Town',
@@ -136,7 +136,7 @@ const textNodes = [{
         },
         {
             id: 4.002,
-            vid: '~/video/H5B.mp4',
+            vid: '/home3/yqepxzmy/video/H5B.mp4',
             text: 'Choose your starting location. Hamilton',
             options: [{
                     text: 'Ghost Town',
@@ -152,7 +152,7 @@ const textNodes = [{
         },
         {
             id: 4.003,
-            vid: '~/video/H5A.mp4',
+            vid: '/home3/yqepxzmy/video/H5A.mp4',
             text: 'Choose your starting location. Hamilton',
             options: [{
                     text: 'Ghost Town',
@@ -169,7 +169,7 @@ const textNodes = [{
         // Boy baseball hat
         {
             id: 4.021,
-            vid: '~/video/H6D.mp4',
+            vid: '/home3/yqepxzmy/video/H6D.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -178,7 +178,7 @@ const textNodes = [{
         },
         {
             id: 4.031,
-            vid: '~/video/H6C.mp4',
+            vid: '/home3/yqepxzmy/video/H6C.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -187,7 +187,7 @@ const textNodes = [{
         },
         {
             id: 4.022,
-            vid: '~/video/H7D.mp4',
+            vid: '/home3/yqepxzmy/video/H7D.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -196,7 +196,7 @@ const textNodes = [{
         },
         {
             id: 4.032,
-            vid: '~/video/H7C.mp4',
+            vid: '/home3/yqepxzmy/video/H7C.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -206,7 +206,7 @@ const textNodes = [{
         // Boy Cowboy hat
         {
             id: 4.0021,
-            vid: '~/video/H6B.mp4',
+            vid: '/home3/yqepxzmy/video/H6B.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -215,7 +215,7 @@ const textNodes = [{
         },
         {
             id: 4.0022,
-            vid: '~/video/H7B.mp4',
+            vid: '/home3/yqepxzmy/video/H7B.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -224,7 +224,7 @@ const textNodes = [{
         },
         {
             id: 4.0031,
-            vid: '~/video/H6A.mp4',
+            vid: '/home3/yqepxzmy/video/H6A.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -233,7 +233,7 @@ const textNodes = [{
         },
         {
             id: 4.0032,
-            vid: '~/video/H7A.mp4',
+            vid: '/home3/yqepxzmy/video/H7A.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -243,7 +243,7 @@ const textNodes = [{
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         {
             id: 4.019,
-            vid: '~/video/A4B.mp4',
+            vid: '/home3/yqepxzmy/video/A4B.mp4',
             text: '',
             options: [{
                     text: 'A Headband',
@@ -264,7 +264,7 @@ const textNodes = [{
         },
         {
             id: 4.0019,
-            vid: '~/video/A4A.mp4',
+            vid: '/home3/yqepxzmy/video/A4A.mp4',
             text: '',
             options: [{
                     text: 'Headband?',
@@ -286,7 +286,7 @@ const textNodes = [{
         // Boy
         {
             id: 4.029,
-            vid: '~/video/A5D.mp4',
+            vid: '/home3/yqepxzmy/video/A5D.mp4',
             text: '',
             options: [
                 {
@@ -304,7 +304,7 @@ const textNodes = [{
         //Baseball hat head band
         {
             id: 4.039,
-            vid: '~/video/A5C.mp4',
+            vid: '/home3/yqepxzmy/video/A5C.mp4',
             text: '',
             options: [
                 {
@@ -323,7 +323,7 @@ const textNodes = [{
             // Still need Correct video for A5B
             // Annie with Cowboy hat and Pig with the fedora
             id: 4.0029,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: '',
             options: [{
                     text: 'Mount Doom',
@@ -341,7 +341,7 @@ const textNodes = [{
             // Still need Correct video for A5B
             // Annie with Cowboy hat and Pig with the fedora
             id: 4.0002299,
-            vid: '~/video/A6B.mp4',
+            vid: '/home3/yqepxzmy/video/A6B.mp4',
             text: '',
             options: [
                 {
@@ -354,7 +354,7 @@ const textNodes = [{
         //Annie Cowboyhat Headband
         {
             id: 4.0039,
-            vid: '~/video/A5A.mp4',
+            vid: '/home3/yqepxzmy/video/A5A.mp4',
             text: '',
             options: [{
                     text: 'Ghost Town',
@@ -370,7 +370,7 @@ const textNodes = [{
         },
         {
             id: 4.100329,
-            vid: '~/video/A7A.mp4',
+            vid: '/home3/yqepxzmy/video/A7A.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -380,7 +380,7 @@ const textNodes = [{
         },
         {
             id: 4.0219,
-            vid: '~/video/A6D.mp4',
+            vid: '/home3/yqepxzmy/video/A6D.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -389,7 +389,7 @@ const textNodes = [{
         },
         {
             id: 4.0319,
-            vid: '~/video/A6C.mp4',
+            vid: '/home3/yqepxzmy/video/A6C.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -398,7 +398,7 @@ const textNodes = [{
         },
         {
             id: 4.0229,
-            vid: '~/video/A7D.mp4',
+            vid: '/home3/yqepxzmy/video/A7D.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -407,7 +407,7 @@ const textNodes = [{
         },
         {
             id: 4.0329,
-            vid: '~/video/A7C.mp4',
+            vid: '/home3/yqepxzmy/video/A7C.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -418,7 +418,7 @@ const textNodes = [{
         // Fedora Cowboy hat Mount Doom
         {
             id: 4.00219,
-            vid: '~/video/A6B.mp4',
+            vid: '/home3/yqepxzmy/video/A6B.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -431,7 +431,7 @@ const textNodes = [{
         /////////////////////////////////////////////////////////////////////////////
         {
             id: 4.002299,
-            vid: '~/video/A10B.mp4',
+            vid: '/home3/yqepxzmy/video/A10B.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -440,7 +440,7 @@ const textNodes = [{
         },
         {
             id: 4.00229,
-            vid: '~/video/A8D.mp4',
+            vid: '/home3/yqepxzmy/video/A8D.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -449,7 +449,7 @@ const textNodes = [{
         },
         {
             id: 4.00319,
-            vid: '~/video/A6A.mp4',
+            vid: '/home3/yqepxzmy/video/A6A.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -458,7 +458,7 @@ const textNodes = [{
         },
         {
             id: 4.00329,
-            vid: '~/video/A10A.mp4',
+            vid: '/home3/yqepxzmy/video/A10A.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -469,7 +469,7 @@ const textNodes = [{
 
         {
             id: 'H_GHOST_TOWN_C_F',
-            vid: '~/video/H10B.mp4',
+            vid: '/home3/yqepxzmy/video/H10B.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -482,7 +482,7 @@ const textNodes = [{
         // Add Mount Doom Here Hamilton
         {
             id: 'H_MT_DOOM_C_H',
-            vid: '~/video/H8A.mp4',
+            vid: '/home3/yqepxzmy/video/H8A.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -492,7 +492,7 @@ const textNodes = [{
         },
         {
             id: 'H_MT_DOOM_C_F',
-            vid: '~/video/H8B.mp4',
+            vid: '/home3/yqepxzmy/video/H8B.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -502,7 +502,7 @@ const textNodes = [{
         },
         {
             id: 'H_MT_DOOM_B_F',
-            vid: '~/video/H8D.mp4',
+            vid: '/home3/yqepxzmy/video/H8D.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -512,7 +512,7 @@ const textNodes = [{
         },
         {
             id: 'H_MT_DOOM_B_H',
-            vid: '~/video/H8C.mp4',
+            vid: '/home3/yqepxzmy/video/H8C.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -523,7 +523,7 @@ const textNodes = [{
         // Add Mount Doom Annie
         {
             id: 'MT_DOOM_C_H',
-            vid: '~/video/A8A.mp4',
+            vid: '/home3/yqepxzmy/video/A8A.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -533,7 +533,7 @@ const textNodes = [{
         },
         {
             id: 'MT_DOOM_C_F',
-            vid: '~/video/A8B.mp4',
+            vid: '/home3/yqepxzmy/video/A8B.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -543,7 +543,7 @@ const textNodes = [{
         },
         {
             id: 'MT_DOOM_C_F_PT_2',
-            vid: '~/video/A9.mp4',
+            vid: '/home3/yqepxzmy/video/A9.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -554,7 +554,7 @@ const textNodes = [{
         // MT DOOM Baseball Hat
         {
             id: 'MT_DOOM_B_H',
-            vid: '~/video/A8C.mp4',
+            vid: '/home3/yqepxzmy/video/A8C.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -566,7 +566,7 @@ const textNodes = [{
         // Still Needs Vid Upload
         {
             id: 8,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: '',
             options: [{
                     text: 'Continue',
@@ -577,7 +577,7 @@ const textNodes = [{
         },
         {
             id: 8.02,
-            vid: '~/video/H10D.mp4',
+            vid: '/home3/yqepxzmy/video/H10D.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -588,7 +588,7 @@ const textNodes = [{
         },
         {
             id: 8.002,
-            vid: '~/video/H10C.mp4',
+            vid: '/home3/yqepxzmy/video/H10C.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -600,7 +600,7 @@ const textNodes = [{
         // Girl
         {
             id: 8.1,
-            vid: '~/video/A10D.mp4',
+            vid: '/home3/yqepxzmy/video/A10D.mp4',
             text: '',
             options: [{
                     text: 'continue',
@@ -611,7 +611,7 @@ const textNodes = [{
         },
         {
             id: 8.01,
-            vid: '~/video/A10C.mp4',
+            vid: '/home3/yqepxzmy/video/A10C.mp4',
             text: '',
             options: [{
                     text: 'continue',
@@ -624,7 +624,7 @@ const textNodes = [{
         // After Hats are lost
         {
             id: 'G_Town_Annie',
-            vid: '~/video/A11.mp4',
+            vid: '/home3/yqepxzmy/video/A11.mp4',
             text: '',
             options: [{
                     text: 'continue',
@@ -637,7 +637,7 @@ const textNodes = [{
         ///// When hamilton loses hat 
         {
             id: 9,
-            vid: '~/video/H11.mp4',
+            vid: '/home3/yqepxzmy/video/H11.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -646,7 +646,7 @@ const textNodes = [{
         },
         {
             id: 9.02,
-            vid: '~/video/H9.mp4',
+            vid: '/home3/yqepxzmy/video/H9.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -656,7 +656,7 @@ const textNodes = [{
         // Girl
         {
             id: 9.1,
-            vid: '~/video/A12.mp4',
+            vid: '/home3/yqepxzmy/video/A12.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -666,7 +666,7 @@ const textNodes = [{
         // Boy
         {
             id: 10,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'You chose to fight the wolf.Hamilton',
             options: [{
                 text: 'Continue',
@@ -676,7 +676,7 @@ const textNodes = [{
         // Girl
         {
             id: 10.1,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'You chose to fight the wolf.Annie',
             options: [{
                 text: 'Continue',
@@ -686,7 +686,7 @@ const textNodes = [{
         // Boy
         {
             id: 11,
-            vid: '~/video/H12.mp4',
+            vid: '/home3/yqepxzmy/video/H12.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -696,7 +696,7 @@ const textNodes = [{
         },
         {
             id: 11.11,
-            vid: '~/video/H13.mp4',
+            vid: '/home3/yqepxzmy/video/H13.mp4',
             text: '',
             options: [{
                     text: 'Why does Sam have anxiety Hamilton?',
@@ -715,7 +715,7 @@ const textNodes = [{
         // Girl
         {
             id: 11.1,
-            vid: '~/video/A13.mp4',
+            vid: '/home3/yqepxzmy/video/A13.mp4',
             text: 'Vampire Bat Scene as Annie',
             options: [{
                     text: 'Why does Sam have anxiety? Annie',
@@ -737,7 +737,7 @@ const textNodes = [{
         },
         {
             id: 'retry',
-            vid: '~/video/A18B.mp4',
+            vid: '/home3/yqepxzmy/video/A18B.mp4',
             text: 'Vampire Bat Scene as Annie',
             options: [{
                     text: 'Why does Sam have anxiety? Annie',
@@ -759,7 +759,7 @@ const textNodes = [{
         },
         {
             id: 'retry_02',
-            vid: '~/video/A19B.mp4',
+            vid: '/home3/yqepxzmy/video/A19B.mp4',
             text: 'Vampire Bat Scene as Annie',
             options: [
                 {
@@ -774,7 +774,7 @@ const textNodes = [{
         },
         {
             id: 'final_move',
-            vid: '~/video/A17.mp4',
+            vid: '/home3/yqepxzmy/video/A17.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -784,7 +784,7 @@ const textNodes = [{
         // Boy
         {
             id: 12,
-            vid: '~/video/H14.mp4',
+            vid: '/home3/yqepxzmy/video/H14.mp4',
             text: '',
 
             options: [{
@@ -804,7 +804,7 @@ const textNodes = [{
         },
         {
             id: '12_2',
-            vid: '~/video/H18B.mp4',
+            vid: '/home3/yqepxzmy/video/H18B.mp4',
             text: '',
 
             options: [{
@@ -824,7 +824,7 @@ const textNodes = [{
         },
         {
             id: '12_3',
-            vid: '~/video/H19B.mp4',
+            vid: '/home3/yqepxzmy/video/H19B.mp4',
             text: '',
 
             options: [{
@@ -836,7 +836,7 @@ const textNodes = [{
         },
         {
             id: '13_2',
-            vid: '~/video/H14.mp4',
+            vid: '/home3/yqepxzmy/video/H14.mp4',
             text: '',
 
             options: [{
@@ -853,7 +853,7 @@ const textNodes = [{
         // Boy
         {
             id: 12.1,
-            vid: '~/video/A14.mp4',
+            vid: '/home3/yqepxzmy/video/A14.mp4',
             text: 'Explanation of question 1 and options to ask more Hamilton',
 
             options: [{
@@ -874,7 +874,7 @@ const textNodes = [{
         // Girl
         {
             id: 12.2,
-            vid: '~/video/A14.mp4',
+            vid: '/home3/yqepxzmy/video/A14.mp4',
             text: 'Explanation of question 1 and options to ask more Annie',
 
             options: [{
@@ -895,7 +895,7 @@ const textNodes = [{
         // Boy
         {
             id: 13,
-            vid: '~/video/H17.mp4',
+            vid: '/home3/yqepxzmy/video/H17.mp4',
             text: 'Explanation of question 2 and option to ask more',
             options: [{
                 text: 'Continue',
@@ -904,7 +904,7 @@ const textNodes = [{
         },
         {
             id: '13_2',
-            vid: '~/video/H15.mp4',
+            vid: '/home3/yqepxzmy/video/H15.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -914,7 +914,7 @@ const textNodes = [{
         // Boy
         {
             id: 13.1,
-            vid: '~/video/H16.mp4',
+            vid: '/home3/yqepxzmy/video/H16.mp4',
             text: '',
             options: [{
                 text: 'Why does Sam have anxiety?',
@@ -929,7 +929,7 @@ const textNodes = [{
         // Girl
         {
             id: 13.02,
-            vid: '~/video/A16.mp4',
+            vid: '/home3/yqepxzmy/video/A16.mp4',
             text: '',
             options: [{
                 text: 'Why does same have anxiety',
@@ -943,7 +943,7 @@ const textNodes = [{
         },
         {
             id: 13.2,
-            vid: '~/video/A17.mp4',
+            vid: '/home3/yqepxzmy/video/A17.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -953,7 +953,7 @@ const textNodes = [{
         // Boy
         {
             id: 14,
-            vid: '~/video/H18A.mp4',
+            vid: '/home3/yqepxzmy/video/H18A.mp4',
             text: '',
             options: [{
                     text: 'Try Again',
@@ -964,7 +964,7 @@ const textNodes = [{
         },
         {
             id: '14_2',
-            vid: '~/video/H18A.mp4',
+            vid: '/home3/yqepxzmy/video/H18A.mp4',
             text: '',
             options: [{
                     text: 'Try Again',
@@ -976,7 +976,7 @@ const textNodes = [{
         // Girl
         {
             id: 14.1,
-            vid: '~/video/A18.mp4',
+            vid: '/home3/yqepxzmy/video/A18.mp4',
             text: 'Game Over',
             options: [{
                     text: 'Why does Sam have anxiety? Annie',
@@ -1001,7 +1001,7 @@ const textNodes = [{
         // Boy
         {
             id: 18,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'Asking Question 3 twice Results in this form of a game over Hamilton',
             options: [{
                     text: 'Try Again',
@@ -1013,7 +1013,7 @@ const textNodes = [{
         // Girl
         {
             id: 18.1,
-            vid: '~/video/A18A.mp4',
+            vid: '/home3/yqepxzmy/video/A18A.mp4',
             text: 'Game Over',
             options: [{
                     text: 'Try Again',
@@ -1025,7 +1025,7 @@ const textNodes = [{
         // Boy
         {
             id: 15,
-            vid: '~/video/H19A.mp4',
+            vid: '/home3/yqepxzmy/video/H19A.mp4',
             text: '',
             options: [{
                     text: 'Try Again',
@@ -1037,7 +1037,7 @@ const textNodes = [{
         // Girl
         {
             id: 15.1,
-            vid: '~/video/A19A.mp4',
+            vid: '/home3/yqepxzmy/video/A19A.mp4',
             text: '',
             options: [{
                     text: 'Try Again',
@@ -1049,7 +1049,7 @@ const textNodes = [{
         // Boy
         {
             id: 16,
-            vid: '~/video/H20.mp4',
+            vid: '/home3/yqepxzmy/video/H20.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -1061,7 +1061,7 @@ const textNodes = [{
         // Girl
         {
             id: 16.01,
-            vid: '~/video/A15.mp4',
+            vid: '/home3/yqepxzmy/video/A15.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -1072,7 +1072,7 @@ const textNodes = [{
         },
         {
             id: 16.1,
-            vid: '~/video/A20.mp4',
+            vid: '/home3/yqepxzmy/video/A20.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -1084,7 +1084,7 @@ const textNodes = [{
         // Boy
         {
             id: 17,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'Zombie Apocalypse Scene, no Choices Hamilton',
             options: [{
                 text: 'Continue',
@@ -1095,7 +1095,7 @@ const textNodes = [{
         // Boy
         {
             id: 19,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'Level Up Scene. Player gains 50xp and a copper mind shield as well as the ability to pick one of three items Hamilton',
             options: [{
                     text: 'Bubble Machine Hamilton',
@@ -1117,7 +1117,7 @@ const textNodes = [{
         // Girl
         {
             id: 19.1,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'Level Up Scene. Player gains 50xp and a copper mind shield as well as the ability to pick one of three items Annie',
             options: [{
                     text: 'Bubble Machine Annie',
@@ -1139,7 +1139,7 @@ const textNodes = [{
         // Boys Final Out Comes
         {
             id: 20,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'Final Scene. Depending on which path the player originally chose they will either focus on a memory of being at Mount Doom or the Ghost Town Boy',
             options: [{
                 text: 'Continue',
@@ -1148,7 +1148,7 @@ const textNodes = [{
         },
         {
             id: 21.1,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'Focuses on HEDGEHOG Memory of MT Doom Hamilton',
             options: [{
                 text: 'Continue',
@@ -1157,7 +1157,7 @@ const textNodes = [{
         },
         {
             id: 21.2,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'Focuses on BAND OF PACIFICATION Memory of MT Doom Hamilton',
             options: [{
                 text: 'Continue',
@@ -1166,7 +1166,7 @@ const textNodes = [{
         },
         {
             id: 21.3,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'Focuses on BUBBLE MACHINE Memory of MT Doom Hamilton',
             options: [{
                 text: 'Continue',
@@ -1175,7 +1175,7 @@ const textNodes = [{
         },
         {
             id: 22.1,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'Focuses on HEDGEHOG Memory of Ghost Town Hamilton',
             options: [{
                 text: 'Continue',
@@ -1184,7 +1184,7 @@ const textNodes = [{
         },
         {
             id: 22.2,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'Focuses on BAND OF PACIFICATION Memory of Ghost Town Hamilton',
             options: [{
                 text: 'Continue',
@@ -1193,7 +1193,7 @@ const textNodes = [{
         },
         {
             id: 22.3,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'Focuses on BUBBLE MACHINE Memory of Ghost Town Hamilton',
             options: [{
                 text: 'Continue',
@@ -1202,7 +1202,7 @@ const textNodes = [{
         },
         {
             id: 23,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'END OF GAME Hamilton',
             options: [{
                 text: 'RESTART GAME',
@@ -1214,7 +1214,7 @@ const textNodes = [{
         // Girls Final Out Comes
         {
             id: 20.1,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'Final Scene. Depending on which path the player originally chose they will either focus on a memory of being at Mount Doom or the Ghost Town Annie',
             options: [{
                 text: 'Continue',
@@ -1223,7 +1223,7 @@ const textNodes = [{
         },
         {
             id: 21.12,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'Focuses on HEDGEHOG Memory of MT Doom Annie',
             options: [{
                 text: 'Continue',
@@ -1232,7 +1232,7 @@ const textNodes = [{
         },
         {
             id: 21.22,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'Focuses on BAND OF PACIFICATION Memory of MT Doom Annie',
             options: [{
                 text: 'Continue',
@@ -1241,7 +1241,7 @@ const textNodes = [{
         },
         {
             id: 21.31,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'Focuses on BUBBLE MACHINE Memory of MT Doom Annie',
             options: [{
                 text: 'Continue',
@@ -1250,7 +1250,7 @@ const textNodes = [{
         },
         {
             id: 22.11,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'Focuses on HEDGEHOG Memory of Ghost Town Annie',
             options: [{
                 text: 'Continue',
@@ -1259,7 +1259,7 @@ const textNodes = [{
         },
         {
             id: 22.21,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'Focuses on BAND OF PACIFICATION Memory of Ghost Town Annie',
             options: [{
                 text: 'Continue',
@@ -1268,7 +1268,7 @@ const textNodes = [{
         },
         {
             id: 22.31,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'Focuses on BUBBLE MACHINE Memory of Ghost Town Annie',
             options: [{
                 text: 'Continue',
@@ -1277,7 +1277,7 @@ const textNodes = [{
         },
         {
             id: 23.1,
-            vid: '~/video/',
+            vid: '/home3/yqepxzmy/video/',
             text: 'END OF GAME as Annie',
             options: [{
                 text: 'RESTART GAME',
