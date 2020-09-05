@@ -314,7 +314,11 @@ footer
 }
 
 
-
+label
+{
+    color: black;
+    font-size: 25px;
+}
 
 /* Button With Slide Effect */
 .btn::before
