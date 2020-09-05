@@ -35,8 +35,8 @@ include_once("accessCheck.php");
 
 </head>
 <body>
-    <?php include_once("InstitutionAccessForm.php"); ?>
-    <?php include_once("MTResidentForm.php"); ?>
+    <?php //include_once("InstitutionAccessForm.php"); ?>
+    <?php //include_once("MTResidentForm.php"); ?>
     <div id="progressbar"></div>
     <div id="scrollPath"></div>
 
