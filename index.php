@@ -17,11 +17,11 @@ include_once("accessCheck.php");
     
         
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    -->
+   
     
     <script defer src="./game.js"></script>
     <!-- <script defer src="./game_YT_API.js"></script> -->
@@ -35,8 +35,8 @@ include_once("accessCheck.php");
 
 </head>
 <body>
-    <?php //include_once("InstitutionAccessForm.php"); ?>
-    <?php //include_once("MTResidentForm.php"); ?>
+    <?php include_once("InstitutionAccessForm.php"); ?>
+    <?php include_once("MTResidentForm.php"); ?>
     <div id="progressbar"></div>
     <div id="scrollPath"></div>
 
@@ -226,22 +226,22 @@ include_once("accessCheck.php");
             <h3 class="center game_play" id="lighten">Zombie Thoughts</h3>
             <div class="collapsed center">
 
-                <?php //if(!isset($_SESSION['code'])){?>
+                <?php if(!isset($_SESSION['code'])){?>
 
-                    <?php //include_once('./Admin/errors.php'); ?>
+                    <?php include_once('./Admin/errors.php'); ?>
     
-                    <?php //if (isset($_SESSION['success'])) : ?>
-                        <!-- <div class="error success">
-                        <p> -->
+                    <?php if (isset($_SESSION['success'])) : ?>
+                        <div class="error success">
+                        <p>
                         <?php 
-                           // echo $_SESSION['success'];
-                           // unset($_SESSION['success']);
+                           echo $_SESSION['success'];
+                           unset($_SESSION['success']);
                         ?>
-                        <!-- </p>
-                        </div> -->
-                <?php //endif ?>
+                        </p>
+                        </div>
+                <?php endif ?>
 
-                <!--<label for='institution_button'>If you’re representing a school, group, or educational institution in the state of Montana,&nbsp;</label>
+                <label for='institution_button'>If you’re representing a school, group, or educational institution in the state of Montana,&nbsp;</label>
                 <button name='institution_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#MontanaInstitutionForm">Click here</button>
                 <br>
 
@@ -258,11 +258,11 @@ include_once("accessCheck.php");
                     <input name='accessCode' placeholder='Enter Access Code Here...'>
                     <button type='submit' name='submitCode'>Submit Code</button>
                 </form>
-                <br>-->
+                <br>
 
                 <?php
-                // }
-                // else{
+                }
+                else{
                 ?>
                 
                 <div id="vid_box">
@@ -282,7 +282,7 @@ include_once("accessCheck.php");
                     <audio id="audio_select">
                         <source src="./audio/selector_tone.wav">
                     </audio>
-                    <?php //} ?>
+                    <?php } ?>
             </div>
         </div>
     </section>
