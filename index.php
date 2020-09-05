@@ -35,8 +35,8 @@ include_once("accessCheck.php");
 
 </head>
 <body>
-    <?php include_once("InstitutionAccessForm.php"); ?>
-    <?php include_once("MTResidentForm.php"); ?>
+    <?php //include_once("InstitutionAccessForm.php"); ?>
+    <?php //include_once("MTResidentForm.php"); ?>
     <div id="progressbar"></div>
     <div id="scrollPath"></div>
 
@@ -226,22 +226,22 @@ include_once("accessCheck.php");
             <h3 class="center game_play" id="lighten">Zombie Thoughts</h3>
             <div class="collapsed center">
 
-                <?php if(!isset($_SESSION['code'])){?>
+                <?php //if(!isset($_SESSION['code'])){?>
 
-                    <?php include_once('./Admin/errors.php'); ?>
+                    <?php //include_once('./Admin/errors.php'); ?>
     
-                    <?php if (isset($_SESSION['success'])) : ?>
-                        <div class="error success">
-                        <p>
+                    <?php //if (isset($_SESSION['success'])) : ?>
+                        <!-- <div class="error success">
+                        <p> -->
                         <?php 
-                           echo $_SESSION['success'];
-                           unset($_SESSION['success']);
+                           //echo $_SESSION['success'];
+                           //unset($_SESSION['success']);
                         ?>
-                        </p>
-                        </div>
-                <?php endif ?>
+                        <!-- </p>
+                        </div> -->
+                <?php// endif ?>
 
-                <label for='institution_button'>If you’re representing a school, group, or educational institution in the state of Montana,&nbsp;</label>
+                <!-- <label for='institution_button'>If you’re representing a school, group, or educational institution in the state of Montana,&nbsp;</label>
                 <button name='institution_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#MontanaInstitutionForm">Click here</button>
                 <br>
 
@@ -258,11 +258,11 @@ include_once("accessCheck.php");
                     <input name='accessCode' placeholder='Enter Access Code Here...'>
                     <button type='submit' name='submitCode'>Submit Code</button>
                 </form>
-                <br>
+                <br> -->
 
                 <?php
-                }
-                else{
+                //}
+                //else{
                 ?>
                 
                 <div id="vid_box">
