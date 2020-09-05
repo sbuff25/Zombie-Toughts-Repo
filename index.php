@@ -15,11 +15,13 @@ include_once("accessCheck.php");
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     
+        
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+   
     
     <script defer src="./game.js"></script>
     <!-- <script defer src="./game_YT_API.js"></script> -->
@@ -28,7 +30,7 @@ include_once("accessCheck.php");
     <link rel="stylesheet" href="./scroll_in.css">
     <link rel="stylesheet" href="./scroll_bar.css">
     <link rel="stylesheet" href="./text_animiations.css">
-
+    <link rel="stylesheet" href="./video.css">
    
 
 </head>
@@ -221,21 +223,22 @@ include_once("accessCheck.php");
    
     <section  class="info" id="game">
         <div class="game expand container center">
-            <h3 class="center" id="lighten">Zombie Thoughts</h3>
-            <div class="collapsed center" id='restricted'>
-            <?php if(!isset($_SESSION['code'])){?>
+            <h3 class="center game_play" id="lighten">Zombie Thoughts</h3>
+            <div class="collapsed center">
 
-                <?php include_once('./Admin/errors.php'); ?>
+                <?php if(!isset($_SESSION['code'])){?>
 
-                <?php if (isset($_SESSION['success'])) : ?>
-                    <div class="error success">
-                    <p>
-                    <?php 
-                        echo $_SESSION['success'];
-                        unset($_SESSION['success']);
-                    ?>
-                    </p>
-                    </div>
+                    <?php include_once('./Admin/errors.php'); ?>
+    
+                    <?php if (isset($_SESSION['success'])) : ?>
+                        <div class="error success">
+                        <p>
+                        <?php 
+                            echo $_SESSION['success'];
+                            unset($_SESSION['success']);
+                        ?>
+                        </p>
+                        </div>
                 <?php endif ?>
 
                 <label for='institution_button'>If you’re representing a school, group, or educational institution in the state of Montana,&nbsp;</label>
@@ -257,20 +260,29 @@ include_once("accessCheck.php");
                 </form>
                 <br>
 
-            <?php
-            }
-            else{
-            ?>
+                <?php
+                }
+                else{
+                ?>
                 
                 <div id="vid_box">
-                    <video id="video"  controls>
+                    <video id="video" controls controlsList="nodownload">
                         <source src="" type="video/mp4">
                     </video>
                     <div id="player" class="moveUpVid"></div>
                 </div>
                 <div id="text" class="moveUpText"></div>
                 <div id="option-buttons" class="moveUpBtn"></div>
-                <?php } ?>
+                    <audio id="audio">
+                        <source src="./audio/select_granted.wav"></source>
+                    </audio>
+                    <audio id="audio_menu">
+                        <source src="./audio/menu_slide.wav">
+                    </audio>
+                    <audio id="audio_select">
+                        <source src="./audio/selector_tone.wav">
+                    </audio>
+                    <?php } ?>
             </div>
         </div>
     </section>
