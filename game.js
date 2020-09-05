@@ -191,7 +191,7 @@ const textNodes = [{
             text: '',
             options: [{
                 text: 'Continue',
-                nextText: 8
+                nextText: 8.02
             }]
         },
         {
@@ -200,7 +200,7 @@ const textNodes = [{
             text: '',
             options: [{
                 text: 'Continue',
-                nextText: 8
+                nextText: 8.002
             }]
         },
         // Boy Cowboy hat
@@ -469,7 +469,7 @@ const textNodes = [{
 
         {
             id: 'H_GHOST_TOWN_C_F',
-            vid: './video/H8A.mp4',
+            vid: './video/H10B.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -486,7 +486,7 @@ const textNodes = [{
             text: '',
             options: [{
                     text: 'Continue',
-                    nextText: 9
+                    nextText: 9.02
                 }
             ]
         },
@@ -496,7 +496,7 @@ const textNodes = [{
             text: '',
             options: [{
                     text: 'Continue',
-                    nextText: 9
+                    nextText: 9.02
                 }
             ]
         },
@@ -506,7 +506,7 @@ const textNodes = [{
             text: '',
             options: [{
                     text: 'Continue',
-                    nextText: 9
+                    nextText: 9.02
                 }
             ]
         },
@@ -516,7 +516,7 @@ const textNodes = [{
             text: '',
             options: [{
                     text: 'Continue',
-                    nextText: 9
+                    nextText: 9.02
                 }
             ]
         },
@@ -562,10 +562,34 @@ const textNodes = [{
                 }
             ]
         },
-        
+        // H10A.MP4
+        // Still Needs Vid Upload
         {
             id: 8,
             vid: './video/',
+            text: '',
+            options: [{
+                    text: 'Continue',
+    
+                    nextText: 9
+                }
+            ]
+        },
+        {
+            id: 8.02,
+            vid: './video/H10D.mp4',
+            text: '',
+            options: [{
+                    text: 'Continue',
+    
+                    nextText: 9
+                }
+            ]
+        },
+        {
+            id: 8.002,
+            vid: './video/H10C.mp4',
+            text: '',
             options: [{
                     text: 'Continue',
     
@@ -610,16 +634,25 @@ const textNodes = [{
             ]
         },
         // Boy
+        ///// When hamilton loses hat 
         {
             id: 9,
-            vid: './video/',
-            text: 'You chose to fight the shark.Hamilton',
+            vid: './video/H11.mp4',
+            text: '',
             options: [{
                 text: 'Continue',
                 nextText: 11
             }]
         },
-
+        {
+            id: 9.02,
+            vid: './video/H9.mp4',
+            text: '',
+            options: [{
+                text: 'Continue',
+                nextText: 11
+            }]
+        },
         // Girl
         {
             id: 9.1,
@@ -653,8 +686,18 @@ const textNodes = [{
         // Boy
         {
             id: 11,
-            vid: './video/',
-            text: 'Vampire Bat Scene as Hamilton',
+            vid: './video/H12.mp4',
+            text: '',
+            options: [{
+                    text: 'Continue',
+                    nextText: 11.11
+                },
+            ]
+        },
+        {
+            id: 11.11,
+            vid: './video/H13.mp4',
+            text: '',
             options: [{
                     text: 'Why does Sam have anxiety Hamilton?',
                     nextText: 12
@@ -666,10 +709,6 @@ const textNodes = [{
                 {
                     text: 'Why is a raven like a writing desk Hamilton?',
                     nextText: 14
-                },
-                {
-                    text: 'Skip dialouge and proceed to fight the bats Hamilton',
-                    nextText: 15
                 },
             ]
         },
@@ -745,8 +784,8 @@ const textNodes = [{
         // Boy
         {
             id: 12,
-            vid: './video/',
-            text: 'Explanation of question 1 and options to ask more Hamilton',
+            vid: './video/H14.mp4',
+            text: '',
 
             options: [{
                     text: 'How can Sam overcome his anxiety? Hamilton',
@@ -761,6 +800,54 @@ const textNodes = [{
                     text: 'Skip dialouge and proceed to fight the bats Hamilton',
                     nextText: 15
                 },
+            ]
+        },
+        {
+            id: '12_2',
+            vid: './video/H18B.mp4',
+            text: '',
+
+            options: [{
+                    text: 'A',
+        
+                    nextText: '13_2'
+                },
+                {
+                    text: 'B',
+                    nextText: 13
+                },
+                {
+                    text: 'C',
+                    nextText: '14_2'
+                },
+            ]
+        },
+        {
+            id: '12_3',
+            vid: './video/H19B.mp4',
+            text: '',
+
+            options: [{
+                    text: 'How can Sam overcome Anxiety',
+        
+                    nextText: 13
+                },
+            ]
+        },
+        {
+            id: '13_2',
+            vid: './video/H14.mp4',
+            text: '',
+
+            options: [{
+                    text: 'A',
+                    nextText: 13
+                },
+                {
+                    text: 'B',
+                    nextText: '14_2'
+                }
+                
             ]
         },
         // Boy
@@ -808,8 +895,17 @@ const textNodes = [{
         // Boy
         {
             id: 13,
-            vid: './video/',
+            vid: './video/H17.mp4',
             text: 'Explanation of question 2 and option to ask more',
+            options: [{
+                text: 'Continue',
+                nextText: 16
+            }]
+        },
+        {
+            id: '13_2',
+            vid: './video/H15.mp4',
+            text: '',
             options: [{
                 text: 'Continue',
                 nextText: 16
@@ -818,12 +914,17 @@ const textNodes = [{
         // Boy
         {
             id: 13.1,
-            vid: './video/',
-            text: 'Explanation of question 2, No option to repeat Hamilton',
+            vid: './video/H16.mp4',
+            text: '',
             options: [{
                 text: 'Why does Sam have anxiety?',
-                nextText: 12.1
-            }, ]
+                nextText: '13_2',
+            },
+            {
+                text: 'Why is a Raven like a writing desk?',
+                nextText: 18.1  
+            }, 
+        ]
         },
         // Girl
         {
@@ -852,25 +953,23 @@ const textNodes = [{
         // Boy
         {
             id: 14,
-            vid: './video/',
-            text: 'Question 3 tells the player to not as silly questions and focus on the task at hand Hamilton',
+            vid: './video/H18A.mp4',
+            text: '',
             options: [{
-                    text: 'Why does Sam have anxiety?Hamilton',
+                    text: 'Try Again',
 
-                    nextText: 12
+                    nextText: '12_2'
                 },
-                {
-                    text: 'Why does Sam have anxiety?Hamilton',
+            ]
+        },
+        {
+            id: '14_2',
+            vid: './video/H18A.mp4',
+            text: '',
+            options: [{
+                    text: 'Try Again',
 
-                    nextText: 12
-                },
-                {
-                    text: 'Skip dialouge and proceed to fight the bats Hamilton',
-                    nextText: 15
-                },
-                {
-                    text: 'Why is a raven like a writing desk? Hamilton',
-                    nextText: 18
+                    nextText: '12_3'
                 },
             ]
         },
@@ -926,11 +1025,11 @@ const textNodes = [{
         // Boy
         {
             id: 15,
-            vid: './video/',
-            text: 'This option is reckless and results in a game over restarting the scinario Hamilton',
+            vid: './video/H19A.mp4',
+            text: '',
             options: [{
                     text: 'Try Again',
-                    nextText: 11
+                    nextText: '12_2'
                 }
 
             ]
@@ -939,7 +1038,7 @@ const textNodes = [{
         {
             id: 15.1,
             vid: './video/A19A.mp4',
-            text: 'This option is reckless and results in a game over restarting the scinario Annie',
+            text: '',
             options: [{
                     text: 'Try Again',
                     nextText: 'retry_02'
@@ -950,8 +1049,8 @@ const textNodes = [{
         // Boy
         {
             id: 16,
-            vid: './video/',
-            text: 'Sam defeats the bats and learns a valuable lesson about his anxiety Hamilton',
+            vid: './video/H20.mp4',
+            text: '',
             options: [{
                     text: 'Continue',
                     nextText: 17
@@ -966,7 +1065,7 @@ const textNodes = [{
             text: '',
             options: [{
                     text: 'Continue',
-                    nextText: 17.1
+                    nextText: 16.1
                 }
 
             ]
@@ -974,7 +1073,7 @@ const textNodes = [{
         {
             id: 16.1,
             vid: './video/A20.mp4',
-            text: 'Sam defeats the bats and learns a valuable lesson about his anxiety Annie',
+            text: '',
             options: [{
                     text: 'Continue',
                     nextText: 17.1
@@ -992,16 +1091,7 @@ const textNodes = [{
                 nextText: 19
             }]
         },
-        // Girl
-        {
-            id: 17.1,
-            vid: './video/',
-            text: 'Zombie Apocalypse Scene, no Choices Annie',
-            options: [{
-                text: 'Continue',
-                nextText: 19.1
-            }]
-        },
+        
         // Boy
         {
             id: 19,
@@ -1312,7 +1402,7 @@ let state = {}
 /////////////////////////////////////////////////////////////////////////////////////////////////
 function startGame() {
     state = {}
-    showVid(1);
+    showVid(12);
 }
 
 
