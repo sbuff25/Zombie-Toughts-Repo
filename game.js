@@ -1297,7 +1297,7 @@ const audio_menu = document.getElementById('audio_menu');
 const audio = document.getElementById('audio');
 const audio_select = document.getElementById('audio_select');
 const videoElement = document.getElementById('video');
-const autoplay = document.getElementById('video');
+var autoplay = document.getElementById('video');
 const textElement = document.getElementById('text');
 const optionButtonsElement = document.getElementById('option-buttons');
 var vidNode = 1;
@@ -1355,7 +1355,7 @@ $.fn.PlayAudio = function()
 // Needs Work
 $(function()
 {
-    $('.game_play').click(function()
+    $('#video').click(function()
     {
         $(this).SetAutoPlay();
     })
