@@ -57,7 +57,7 @@ include_once("accessCheck.php");
         <li>
             <a href="#help">Resources</a>
         </li>
-        <li><a><?php echo "The file " . file_exists("~/video");?></a></li>
+        <li><a><?php echo file_exists("~/video") ? "The file Exists" : "The file does not exist" ;?></a></li>
     </ul>
     <div class="burger">
     <div class="line1"></div>
