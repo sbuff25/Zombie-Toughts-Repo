@@ -282,7 +282,7 @@ include_once("accessCheck.php");
                     <audio id="audio_select">
                         <source src="./audio/selector_tone.wav">
                     </audio>
-                    <?php } ?>
+                    <?php //} ?>
             </div>
         </div>
     </section>
