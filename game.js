@@ -1355,7 +1355,7 @@ $.fn.PlayAudio = function()
 // Needs Work
 $(function()
 {
-    $('.game_play').click(function()
+    $('#video').click(function()
     {
         $(this).SetAutoPlay();
     })
