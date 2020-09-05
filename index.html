@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./scroll_in.css">
     <link rel="stylesheet" href="./scroll_bar.css">
     <link rel="stylesheet" href="./text_animiations.css">
-
+    <link rel="stylesheet" href="./video.css">
    
 
 </head>
@@ -208,17 +208,26 @@
    
     <section  class="info" id="game">
         <div class="game expand container center">
-            <h3 class="center" id="lighten">Zombie Thoughts</h3>
+            <h3 class="center game_play" id="lighten">Zombie Thoughts</h3>
             <div class="collapsed center">
                 
                 <div id="vid_box">
-                    <video id="video"  controls>
+                    <video id="video" controls controlsList="nodownload">
                         <source src="" type="video/mp4">
                     </video>
                     <div id="player" class="moveUpVid"></div>
                 </div>
                 <div id="text" class="moveUpText"></div>
                 <div id="option-buttons" class="moveUpBtn"></div>
+                    <audio id="audio">
+                        <source src="./audio/select_granted.wav"></source>
+                    </audio>
+                    <audio id="audio_menu">
+                        <source src="./audio/menu_slide.wav">
+                    </audio>
+                    <audio id="audio_select">
+                        <source src="./audio/selector_tone.wav">
+                    </audio>
             </div>
         </div>
     </section>
