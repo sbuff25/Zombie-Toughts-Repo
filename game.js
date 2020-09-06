@@ -1333,7 +1333,8 @@ var myVar;
 videoElement.onplay = function()
 {
     console.log('Video Is PLaying');
-
+    $(this).SetAutoPlay();
+        console.log("video clicked");
 }
 $.fn.SetAutoPlay = function()
 {
@@ -1355,9 +1356,10 @@ $.fn.PlayAudio = function()
 // Needs Work
 $(function()
 {
-    $('#video').click(function()
+    $(videoElement).click(function()
     {
         $(this).SetAutoPlay();
+        console.log("video clicked");
     })
 })
 
