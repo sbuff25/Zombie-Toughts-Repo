@@ -2,16 +2,93 @@ body
 {
     background: rgba(0, 0, 0, 0.9);
     margin: 0;
-    color: #fff;
+    /* color: #fff; */
     font-family: 'Bebas Neue', cursive;
     height: 100vh;
     /* overflow: auto; */
    
     
 }
-video
+.parentAndEducators ul li a
 {
-    width:600px
+    color: black;
+}
+.grid-2
+{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+ul{
+    list-style-type: none;
+    color: #f3e113;
+    text-align: center;
+    font-family: 'Bebas Neue';
+}
+li
+{
+    
+    color: black;
+    padding: 10px;
+    text-align: left;
+    /* font-family: 'Roboto', sans-serif; */
+}
+.btn
+{
+    background-color: var(--background-color);
+    color: #222;
+    margin: 5px;
+    padding: .5em 4em;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    font-size: larger;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    --background-color: #000000;
+    --border-size: 2px;
+    --accent-color:  #f3e113;
+}
+
+label
+{
+    color: black;
+    font-size: 25px;
+}
+
+
+/* Button With Slide Effect */
+.btn::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transform: scaleY(0);
+    transition: transform 500ms ease-in-out;
+
+}
+.btn:hover::before,
+.btn:focus::before
+{
+    transform: scaleY(1);
+}
+.btn
+{
+    transition: color 1000ms ease-in-out;
+    z-index: 1;
+}
+
+.btn:hover,
+.btn:focus
+{
+    color: #000000;
 }
 .info
 {
@@ -32,6 +109,11 @@ h3
     transform-origin: left;
     transform: scaleY(0);
     
+}
+label
+{
+    color: black;
+    font-size: 25px;
 }
 @media(max-width:2560px)
 {
@@ -71,7 +153,7 @@ h3
 }
 h3[data-scroll="out"]
 {
-    transform: scaleY(0);
+    transform: scaleY(1);
 }
 h3::before
 {
@@ -99,7 +181,7 @@ h3::before
 }
 #lighten
 {
-    opacity: 0.4;
+    opacity: 0.75;
     transition: all 1000ms ease-in-out;
     cursor: pointer;
 }
@@ -254,12 +336,7 @@ section#help
     overflow: auto;
     padding: 4rem 1rem;
 }
-.grid-3
-{
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
-}
+
 
 
 
@@ -295,7 +372,7 @@ footer
     align-items: center;
 }
 
-.btn
+/* .btn
 {
     background-color: var(--background-color);
     color: #222;
@@ -321,7 +398,7 @@ label
 }
 
 /* Button With Slide Effect */
-.btn::before
+/* .btn::before
 {
     content: '';
     position: absolute;
@@ -350,7 +427,7 @@ label
 .btn:focus
 {
     color: #fff;
-}
+}  */
 
 #option-buttons
 {
@@ -384,11 +461,11 @@ nav ul li a:hover
 {
 h3[data-scroll="in"]
 {
-    transform: scaleY(1);
+    transform: scaleX(1);
 }
 h3[data-scroll="out"]
 {
-    transform: scaleY(0);
+    transform: scaleX(1);
 }
 h3::before
 {
@@ -416,7 +493,7 @@ h3::before
 }
 #lighten
 {
-    opacity: 0.4;
+    opacity: 0.8;
     transition: all 1000ms ease-in-out;
     cursor: pointer;
 }
@@ -628,13 +705,17 @@ footer
     cursor: pointer;
     font-size: larger;
     font-family: 'Bebas Neue', cursive;
-
-    --background-color: #e3e3e3;
+    color: white;
+    --background-color: #000000;
     --border-size: 2px;
-    --accent-color:  #323232;
+    --accent-color:  #f3e113;
 }
 
-
+label
+{
+    color: black;
+    font-size: 25px;
+}
 
 
 /* Button With Slide Effect */
@@ -666,7 +747,7 @@ footer
 .btn:hover,
 .btn:focus
 {
-    color: #fff;
+    color: #000000;
 }
 
 #option-buttons
