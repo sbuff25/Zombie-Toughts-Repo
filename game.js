@@ -237,7 +237,7 @@ const textNodes = [{
             text: '',
             options: [{
                 text: 'Continue',
-                nextText: 8
+                nextText: 'H_GHOST_TOWN_C_H'
             }]
         },
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -487,7 +487,7 @@ const textNodes = [{
         /////////////////////////////////
         {
             id: 'H_GHOST_TOWN_C_H',
-            vid: './video/H10B.mp4',
+            vid: './video/H10Abesttry.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -1430,7 +1430,7 @@ let state = {}
 /////////////////////////////////////////////////////////////////////////////////////////////////
 function startGame() {
     state = {}
-    showVid(4.0032);
+    showVid(1);
 }
 
 
