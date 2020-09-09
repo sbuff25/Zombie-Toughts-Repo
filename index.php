@@ -14,15 +14,6 @@ include_once("accessCheck.php");
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    
-        
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    -->
-    
     <script defer src="./game.js"></script>
     <!-- <script defer src="./game_YT_API.js"></script> -->
     <link rel="stylesheet" href="./css.css">
@@ -31,6 +22,13 @@ include_once("accessCheck.php");
     <link rel="stylesheet" href="./scroll_bar.css">
     <link rel="stylesheet" href="./text_animiations.css">
     <link rel="stylesheet" href="./video.css">
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    -->
    
 
 </head>
@@ -110,9 +108,9 @@ include_once("accessCheck.php");
     <!-- About the Project -->
     <section class="info" id="about">
         <div class="container center">
-        <div class="expandToggle ">
+        <div>
                 <h3 id="lighten">About</h3>
-                <div class="collapsed">
+                <div>
                     <div class="grid about_text">
                        <div class="bios_title">What is Zombie Thoughts?</div>
                         
@@ -133,9 +131,9 @@ include_once("accessCheck.php");
   
     <section class="info" id="cast">
         <div class="container center">
-            <div class="expandToggle">
+            <div>
                 <h3 id="lighten">Meet the Team</h3>
-                    <div class="collapsed">
+                    <div>
                         <div class=" container about_text">
                             <div class="bios_title">
                                 Oliver Kokai-Means (playwright)
@@ -210,7 +208,7 @@ include_once("accessCheck.php");
                                 Spencer Buffum (Programer/ Front End Developer)
                             </div>
                             <div class="bios">
-                                 Currently a senior at the University of Montana pursuing a BFA in graphic design and web development. His role in the project was the creation of the Zombie Thoughts Website as well as the game logic system that makes the play possible.    
+                                 Currently a senior at the University of Montana pursuing a BFA in graphic design and web development. His role in the project was the creation of the Zombie Thoughts Website and game.    
                             </div>
                         </div>
                     </div> 
@@ -225,7 +223,6 @@ include_once("accessCheck.php");
         <div class="game expand container center">
             <h3 class="center game_play" id="lighten">Zombie Thoughts</h3>
             <div class="collapsed center">
-
                 <?php //if(!isset($_SESSION['code'])){?>
 
                     <?php //include_once('./Admin/errors.php'); ?>
@@ -273,26 +270,42 @@ include_once("accessCheck.php");
                 </div>
                 <div id="text" class="moveUpText"></div>
                 <div id="option-buttons" class="moveUpBtn"></div>
-                    <audio id="audio">
-                        <source src="./audio/select_granted.wav"></source>
-                    </audio>
-                    <audio id="audio_menu">
-                        <source src="./audio/menu_slide.wav">
-                    </audio>
-                    <audio id="audio_select">
-                        <source src="./audio/selector_tone.wav">
-                    </audio>
-                    <?php //} ?>
+                <audio id="audio">
+                    <source src="./audio/select_granted.wav"></source>
+                </audio>
+                <audio id="audio_menu">
+                    <source src="./audio/menu_slide.wav">
+                </audio>
+                <audio id="audio_select">
+                    <source src="./audio/selector_tone.wav">
+                </audio>
+                <?php //} ?>
             </div>
         </div>
     </section>
     <section class="info bg-light" id="help">
-        <div class="container center">
-            <div class="expand Toggle">
-                <h3 id="lighten">Resources</h3>
-                    <div class="collapsed">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus labore ipsa accusantium dolore. Sapiente fuga perferendis placeat sequi minus non laudantium vitae voluptate delectus, dicta, ipsam porro aliquam vel, molestias ex quibusdam autem quidem? Facere, non voluptatibus! Illum obcaecati repellendus perferendis natus necessitatibus veritatis similique assumenda quaerat sapiente minus cupiditate, magnam modi eius fugit dolore eligendi molestias ipsam animi consequatur nulla eveniet. Vero labore minima, quam a natus sunt iure rerum odio ea porro dolore officia iusto dolores quia, in veniam, alias recusandae! Veritatis, ullam. Officiis earum architecto reiciendis debitis, modi autem alias suscipit quas est, obcaecati itaque veniam commodi mollitia cumque minus cum? Nemo voluptatem velit accusamus illo, possimus, voluptas doloremque excepturi incidunt nobis soluta rem consequuntur explicabo quia voluptatum consequatur animi magni doloribus perferendis nisi vel esse perspiciatis et? Corrupti, minima, sapiente eligendi dicta aliquid tenetur eius quod et alias explicabo iste, eaque ex modi saepe voluptatem nemo fugiat ducimus porro reiciendis? Repellendus rem facere officia dolorum animi dolores nisi quos ea sapiente earum. Vel in id aspernatur nam beatae dolorum at optio labore atque voluptate tempore blanditiis iure velit dicta veritatis, porro officia ea minima necessitatibus, repudiandae rerum. Atque suscipit vitae non. Omnis, eveniet. Vel, fuga quaerat.
-                    </div> 
+        <h3 class="center">Resources</h3>
+        <div class="container center about_text">
+            
+            <div>
+                
+                <div class="parentAndEducators"> 
+                    <ul>
+                        <h1>Parents and educators :</h1>
+                        <li id="lighten"><a href="./resources/MT-ZombieThoughtsRepPack.pdf">Zombie Thoughts Classroom Guide (PDF attached)</a></li>
+                        <li id="lighten"><a href="https://www.amightygirl.com/blog?p=22612&fbclid=IwAR0H5s7x_RjLdLK2x_-KPjE7EnIh4SF-Z2cG-j7a3C0Uo8o-AOaYkiQC_7s">25 Books to Help Kids Overcome Anxiety, Worry & Fear</a></li>
+                        <li id="lighten"><a href="https://akidsbookabout.com/products/a-kids-book-about-anxiety?gclid=EAIaIQobChMI5bCW1NnU6wIV9j6tBh1r7wArEAAYASAAEgLNW_D_BwE">A Kids Book About Anxiety</a></li>
+                        <li id="lighten"><a href="https://www.nhsinform.scot/illnesses-and-conditions/mental-health/mental-health-self-help-guides/anxiety-self-help-guide">Scotland’s National Health Services Anxiety Self-Help Guide</a></li>
+                        <li id="lighten"><a href="https://theweek.com/articles/888213/anxiety-different-kids?fbclid=IwAR09XPor_umxRlFAneJ23RJtfdjaw5QJ3_Gc9NqQxvCRqjgRtm_5RNxRsUU">“Anxiety is Different for Kids”</a></li>
+                    </ul>
+                </div>
+                <div class="kids"> 
+                        
+                        <ul>
+                            <h1>For Kids :</h1>
+                            <li id="lighten"><a href="https://www.self.com/story/grounding-techniques-for-anxiety?fbclid=IwAR0XXDdJctF7cDHSbIZe-HPGPCdKXTV47ZsLlPBTV_376a_I5i-hsLloG18">8 Grounding Techniques for When You’re Spiraling</a></li>
+                        </ul>
+                </div>
             </div>
         </div>
     </section>
