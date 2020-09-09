@@ -158,7 +158,19 @@ include_once('FormCheck.php');
                                     </td>
                                     <td> <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <button class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php echo $row['id']; ?>"><span class="material-icons">description</span>FORM</button>
+                                            <form>
+                                                <input name="cFirstName" value=<?php echo $row['contact_first_name']; ?> hidden>
+                                                <input name="cLastName" value=<?php echo $row['contact_last_name']; ?> hidden>
+                                                <input name="cPhone" value=<?php echo $row['contact_phone']; ?> hidden>
+                                                <input name="cExt" value=<?php echo $row['contact_ext']; ?> hidden>
+                                                <input name='cEmail' value=<?php echo $row['contact_email']; ?> hidden>
+                                                <input name='iName' value=<?php echo $row['institution_name']; ?> hidden>
+                                                <input name='iCity' value=<?php echo $row['institution_city']; ?> hidden>
+                                                <input name='iState' value='Montana' hidden>
+                                                <input name='iCounty' value=<?php echo $row['institution_county']; ?> hidden>
+
+                                                <button name='MTInstitution' type='submit' class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php echo $row['id']; ?>"><span class="material-icons">description</span>FORM</button>
+                                            </form>
                                             <form action='RequestsPage' method='POST'>
                                                 <button class="dropdown-item bg-danger" type='submit' value="<?php echo $row['id']; ?>" name='deleteInstitution'><span class="material-icons">delete</span>DELETE</button>
                                             </form>
