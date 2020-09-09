@@ -254,12 +254,7 @@ const textNodes = [{
                     text: 'A Fedora',
                     setState: { fedora: true },
                     nextText: 4.029
-                },
-                // {
-                //     text: 'Or Eyeshadow',
-                //     setSate: { eyeshadow: true },
-                //     nextText: 5
-                // }
+                }
             ]
         },
         {
@@ -682,27 +677,6 @@ const textNodes = [{
                 nextText: 11.1
             }]
         },
-        // Boy
-        {
-            id: 10,
-            vid: './video/',
-            text: '',
-            options: [{
-                text: 'Continue',
-                nextText: 11
-            }]
-        },
-        // Girl
-        {
-            id: 10.1,
-            vid: './video/',
-            text: '',
-            options: [{
-                text: 'Continue',
-                nextText: 11.1
-            }]
-        },
-        // Boy
         {
             id: 11,
             vid: './video/H12.mp4',
@@ -747,11 +721,7 @@ const textNodes = [{
                 {
                     text: 'C',
                     nextText: 18.1
-                },
-                // {
-                //     text: 'Skip dialouge and proceed to fight the bats Annie',
-                //     nextText: 15.1
-                // },
+                }
             ]
         },
         {
@@ -768,27 +738,19 @@ const textNodes = [{
                 },
                 {
                     text: 'C',
-                    nextText: 18.1
+                    nextText: '18.1retry'
                 },
-                // {
-                //     text: 'Skip dialouge and proceed to fight the bats Annie',
-                //     nextText: 15.1
-                // },
             ]
         },
         {
             id: 'retry_02',
             vid: './video/A19B.mp4',
-            text: 'Vampire Bat Scene as Annie',
+            text: '',
             options: [
                 {
                     text: 'How can Sam overcome anxiety?',
                     nextText: 'final_move'
                 },
-                // {
-                //     text: 'Skip dialouge and proceed to fight the bats Annie',
-                //     nextText: 15.1
-                // },
             ]
         },
         {
@@ -887,7 +849,7 @@ const textNodes = [{
             },
             {
                 text: 'B',
-                nextText: 14.1
+                nextText: 18.1
             },
             {
                 text: 'C',
@@ -908,10 +870,10 @@ const textNodes = [{
                 },
                 {
                     text: 'Why is a raven like a writing desk? Annie',
-                    nextText: 14.1
+                    nextText: 18.1
                 },
                 {
-                    text: 'Skip dialouge and proceed to fight the bats Annie',
+                    text: 'Skip dialogue and proceed to fight the bats Annie',
                     nextText: 15.1
                 },
             ]
@@ -927,7 +889,7 @@ const textNodes = [{
             }]
         },
         {
-            id: '13_2',
+            id: '13_02',
             vid: './video/H15.mp4',
             text: '',
             options: [{
@@ -942,7 +904,7 @@ const textNodes = [{
             text: '',
             options: [{
                 text: 'A',
-                nextText: '13_2',
+                nextText: '13_02',
             },
             {
                 text: 'B',
@@ -997,51 +959,24 @@ const textNodes = [{
                 },
             ]
         },
-        // Girl
         {
-            id: 14.1,
-            vid: './video/A18.mp4',
-            text: 'Game Over',
-            options: [{
-                    text: 'Why does Sam have anxiety? Annie',
-
-                    nextText: 12.2
-                },
-                {
-                    text: 'How can sam overcome Anxiety, Annie',
-
-                    nextText: 12.2
-                },
-                {
-                    text: 'Skip dialouge and proceed to fight the bats Annie',
-                    nextText: 15.1
-                },
-                {
-                    text: 'Why is a raven like a writing desk? Annie',
-                    nextText: 18.1
-                },
-            ]
-        },
-        // Boy
-        {
-            id: 18,
-            vid: './video/',
-            text: 'Asking Question 3 twice Results in this form of a game over Hamilton',
+            id: 18.1,
+            vid: './video/A18A.mp4',
+            text: '',
             options: [{
                     text: 'Try Again',
-                    nextText: 11
+                    nextText: 'retry'
                 }
 
             ]
         },
-        // Girl
         {
-            id: 18.1,
+            id: '18.1retry',
             vid: './video/A18A.mp4',
-            text: 'Game Over',
+            text: '',
             options: [{
                     text: 'Try Again',
-                    nextText: 'retry'
+                    nextText: 'retry_02'
                 }
 
             ]
@@ -1153,11 +1088,11 @@ const textNodes = [{
             text: '',
             options: [
                 {
-                    text: 'Band of Pacification Annie',
+                    text: 'Band of Pacification',
                     nextText: '20.1A'
                 },
                 {
-                    text: 'Stuffed Hedgehog Annie',
+                    text: 'Stuffed Hedgehog',
                     nextText: '20.1B'
                 }
             ]
@@ -1215,90 +1150,6 @@ const textNodes = [{
             options: [{
                 text: 'Continue',
                 nextText: 'FINAL_VID'
-            }]
-        },
-        {
-            id: 23,
-            vid: './video/',
-            text: 'END OF GAME Hamilton',
-            options: [{
-                text: 'RESTART GAME',
-                nextText: -1
-            }]
-        },
-
-
-        // Girls Final Out Comes
-        {
-            id: 20.1,
-            vid: './video/',
-            text: 'Final Scene. Depending on which path the player originally chose they will either focus on a memory of being at Mount Doom or the Ghost Town Annie',
-            options: [{
-                text: 'Continue',
-                nextText: 21.12
-            }]
-        },
-        {
-            id: 21.12,
-            vid: './video/',
-            text: 'Focuses on HEDGEHOG Memory of MT Doom Annie',
-            options: [{
-                text: 'Continue',
-                nextText: 23.1
-            }]
-        },
-        {
-            id: 21.22,
-            vid: './video/',
-            text: 'Focuses on BAND OF PACIFICATION Memory of MT Doom Annie',
-            options: [{
-                text: 'Continue',
-                nextText: 23.1
-            }]
-        },
-        {
-            id: 21.31,
-            vid: './video/',
-            text: 'Focuses on BUBBLE MACHINE Memory of MT Doom Annie',
-            options: [{
-                text: 'Continue',
-                nextText: 23.1
-            }]
-        },
-        {
-            id: 22.11,
-            vid: './video/',
-            text: 'Focuses on HEDGEHOG Memory of Ghost Town Annie',
-            options: [{
-                text: 'Continue',
-                nextText: 23.1
-            }]
-        },
-        {
-            id: 22.21,
-            vid: './video/',
-            text: 'Focuses on BAND OF PACIFICATION Memory of Ghost Town Annie',
-            options: [{
-                text: 'Continue',
-                nextText: 23.1
-            }]
-        },
-        {
-            id: 22.31,
-            vid: './video/',
-            text: 'Focuses on BUBBLE MACHINE Memory of Ghost Town Annie',
-            options: [{
-                text: 'Continue',
-                nextText: 23.1
-            }]
-        },
-        {
-            id: 23.1,
-            vid: './video/',
-            text: 'END OF GAME as Annie',
-            options: [{
-                text: 'RESTART GAME',
-                nextText: 1
             }]
         },
         {
@@ -1430,7 +1281,7 @@ let state = {}
 /////////////////////////////////////////////////////////////////////////////////////////////////
 function startGame() {
     state = {}
-    showVid(1);
+    showVid(11.1);
 }
 
 
