@@ -1,7 +1,7 @@
 const textNodes = [{
             id: 1,
             vid: './video/AH1.mp4', // kick-out
-            text: 'Choose if Sam is a Annie or Hamilton',
+            text: '',
             options: [{
                     text: 'A',
                     setState: { annie: true },
@@ -71,7 +71,7 @@ const textNodes = [{
         },
         {
             id: 4.01,//B-hat
-            text: 'Now That we know what our character is lets choose an accessory for our friend Pig.',
+            text: '',
             vid: './video/H4B.mp4',
             options: [{
                     text: 'A Fedora?',
@@ -88,7 +88,7 @@ const textNodes = [{
         {
             id: 4.001,
             vid: './video/H4A.mp4',//C-hat
-            text: 'Now That we know what our character is lets choose an accessory for our friend Pig.',
+            text: '',
             options: [{
                     text: 'A Fedora?',
                     setState: { fedora: true },
@@ -105,7 +105,7 @@ const textNodes = [{
         {
             id: 4.02,
             vid: './video/H5D.mp4',
-            text: 'Choose your starting location.',
+            text: '',
             options: [{
                     text: 'Ghost Town',
                     setState: { ghostTown: true },
@@ -121,7 +121,7 @@ const textNodes = [{
         {
             id: 4.03,
             vid: './video/H5C.mp4',
-            text: 'Choose your starting location.',
+            text: '',
             options: [{
                     text: 'Ghost Town',
                     setState: { ghostTown: true },
@@ -137,7 +137,7 @@ const textNodes = [{
         {
             id: 4.002,
             vid: './video/H5B.mp4',
-            text: 'Choose your starting location. Hamilton',
+            text: '',
             options: [{
                     text: 'Ghost Town',
                     setState: { mountDoom: true },
@@ -153,7 +153,7 @@ const textNodes = [{
         {
             id: 4.003,
             vid: './video/H5A.mp4',
-            text: 'Choose your starting location. Hamilton',
+            text: '',
             options: [{
                     text: 'Ghost Town',
                     setState: { ghostTown: true },
@@ -323,20 +323,25 @@ const textNodes = [{
             // Still need Correct video for A5B
             // Annie with Cowboy hat and Pig with the fedora
             id: 4.0029,
-            vid: './video/',
+            vid: './video/A5Bupdated.mp4',
             text: '',
             options: [{
-                    text: 'Mount Doom',
-                    setState: { mountDoom: true },
-                    nextText: 4.002199
-                },
-                {
                     text: 'Ghost Town',
                     setState: { ghostTown: true },
-                    nextText: 4.0002299
+                    nextText: 4.002299
+                },
+                {
+                    text: 'Mount Doom',
+                    setState: { mountDoom: true },
+                    nextText: 'MT_DOOM_C_F'
                 }
             ]
         },
+
+        ////////////////////////////
+        
+
+
         {
             // Still need Correct video for A5B
             // Annie with Cowboy hat and Pig with the fedora
@@ -477,6 +482,20 @@ const textNodes = [{
                 }
             ]
         },
+        //////////////////////////////////
+        /////////////////////////////////
+        /////////////////////////////////
+        {
+            id: 'H_GHOST_TOWN_C_H',
+            vid: './video/H10B.mp4',
+            text: '',
+            options: [{
+                    text: 'Continue',
+                    nextText: 9
+                }
+            ]
+        },
+
 
 
         // Add Mount Doom Here Hamilton
@@ -667,7 +686,7 @@ const textNodes = [{
         {
             id: 10,
             vid: './video/',
-            text: 'You chose to fight the wolf.Hamilton',
+            text: '',
             options: [{
                 text: 'Continue',
                 nextText: 11
@@ -677,7 +696,7 @@ const textNodes = [{
         {
             id: 10.1,
             vid: './video/',
-            text: 'You chose to fight the wolf.Annie',
+            text: '',
             options: [{
                 text: 'Continue',
                 nextText: 11.1
@@ -699,15 +718,15 @@ const textNodes = [{
             vid: './video/H13.mp4',
             text: '',
             options: [{
-                    text: 'Why does Sam have anxiety Hamilton?',
+                    text: 'A',
                     nextText: 12
                 },
                 {
-                    text: 'How can Sam overcome his anxiety Hamilton?',
+                    text: 'B',
                     nextText: 13.1
                 },
                 {
-                    text: 'Why is a raven like a writing desk Hamilton?',
+                    text: 'C',
                     nextText: 14
                 },
             ]
@@ -716,17 +735,17 @@ const textNodes = [{
         {
             id: 11.1,
             vid: './video/A13.mp4',
-            text: 'Vampire Bat Scene as Annie',
+            text: '',
             options: [{
-                    text: 'Why does Sam have anxiety? Annie',
+                    text: 'A',
                     nextText: 12.1
                 },
                 {
-                    text: 'How can Sam overcome his anxiety? Annie',
+                    text: 'B',
                     nextText: 13.02
                 },
                 {
-                    text: 'Why is a raven like a writing desk? Annie',
+                    text: 'C',
                     nextText: 18.1
                 },
                 // {
@@ -738,17 +757,17 @@ const textNodes = [{
         {
             id: 'retry',
             vid: './video/A18B.mp4',
-            text: 'Vampire Bat Scene as Annie',
+            text: '',
             options: [{
-                    text: 'Why does Sam have anxiety? Annie',
+                    text: 'A',
                     nextText: 12.2
                 },
                 {
-                    text: 'How can Sam overcome his anxiety? Annie',
+                    text: 'B',
                     nextText: 13.02
                 },
                 {
-                    text: 'Why is a raven like a writing desk? Annie',
+                    text: 'C',
                     nextText: 18.1
                 },
                 // {
@@ -763,7 +782,7 @@ const textNodes = [{
             text: 'Vampire Bat Scene as Annie',
             options: [
                 {
-                    text: 'How can Sam overcome his anxiety? Annie',
+                    text: 'How can Sam overcome anxiety?',
                     nextText: 'final_move'
                 },
                 // {
@@ -788,16 +807,16 @@ const textNodes = [{
             text: '',
 
             options: [{
-                    text: 'How can Sam overcome his anxiety? Hamilton',
+                    text: 'A',
         
                     nextText: 13
                 },
                 {
-                    text: 'Why is a raven like a writing desk? Hamilton',
+                    text: 'B',
                     nextText: 14
                 },
                 {
-                    text: 'Skip dialouge and proceed to fight the bats Hamilton',
+                    text: 'C',
                     nextText: 15
                 },
             ]
@@ -846,7 +865,12 @@ const textNodes = [{
                 {
                     text: 'B',
                     nextText: '14_2'
+                },
+                {
+                    text: 'C',
+                    nextText: 15
                 }
+
                 
             ]
         },
@@ -854,19 +878,19 @@ const textNodes = [{
         {
             id: 12.1,
             vid: './video/A14.mp4',
-            text: 'Explanation of question 1 and options to ask more Hamilton',
+            text: '',
 
             options: [{
-                text: 'How can Sam overcome his anxiety? Annie',
+                text: 'A',
     
                 nextText: 13.2
             },
             {
-                text: 'Why is a raven like a writing desk? Annie',
+                text: 'B',
                 nextText: 14.1
             },
             {
-                text: 'Skip dialouge and proceed to fight the bats Annie',
+                text: 'C',
                 nextText: 15.1
             },
         ]
@@ -875,7 +899,7 @@ const textNodes = [{
         {
             id: 12.2,
             vid: './video/A14.mp4',
-            text: 'Explanation of question 1 and options to ask more Annie',
+            text: '',
 
             options: [{
                     text: 'How can Sam overcome his anxiety? Annie',
@@ -896,7 +920,7 @@ const textNodes = [{
         {
             id: 13,
             vid: './video/H17.mp4',
-            text: 'Explanation of question 2 and option to ask more',
+            text: '',
             options: [{
                 text: 'Continue',
                 nextText: 16
@@ -917,11 +941,11 @@ const textNodes = [{
             vid: './video/H16.mp4',
             text: '',
             options: [{
-                text: 'Why does Sam have anxiety?',
+                text: 'A',
                 nextText: '13_2',
             },
             {
-                text: 'Why is a Raven like a writing desk?',
+                text: 'B',
                 nextText: 18.1  
             }, 
         ]
@@ -932,11 +956,11 @@ const textNodes = [{
             vid: './video/A16.mp4',
             text: '',
             options: [{
-                text: 'Why does same have anxiety',
+                text: 'A',
                 nextText: 16.01
             },
             {
-                text: 'Why is a Raven like a writing desk?',
+                text: 'B',
                 nextText: 18.1
             }
         ]
@@ -1076,7 +1100,7 @@ const textNodes = [{
             text: '',
             options: [{
                     text: 'Continue',
-                    nextText: 17.1
+                    nextText: 19.1
                 }
 
             ]
@@ -1084,120 +1108,113 @@ const textNodes = [{
         // Boy
         {
             id: 17,
-            vid: './video/',
-            text: 'Zombie Apocalypse Scene, no Choices Hamilton',
-            options: [{
-                text: 'Continue',
-                nextText: 19
-            }]
+            vid: './video/H21.mp4',
+            text: '',
+            options: [
+                {
+                text: 'Tangle Band of Pacification',
+                nextText: '19A' 
+                },
+                {
+                    text: 'Stuffed Hedgehog',
+                    nextText: '19B'
+                }
+
+            ]   
         },
         
         // Boy
         {
-            id: 19,
-            vid: './video/',
-            text: 'Level Up Scene. Player gains 50xp and a copper mind shield as well as the ability to pick one of three items Hamilton',
-            options: [{
-                    text: 'Bubble Machine Hamilton',
-                    setState: { bubbleMachine: true, experiancePoints: true, copperMindShield: true },
-                    nextText: 20
-                },
+            id: '19A',
+            vid: './video/H22B.mp4',
+            text: '',
+            options: [
                 {
-                    text: 'Band of Pacification Hamilton',
-                    setState: { bandOfPacification: true, experiancePoints: true, copperMindShield: true },
-                    nextText: 20
-                },
+                    text: 'Continue',
+                    nextText: '20A'
+                }
+            ]
+        },
+        {
+            id: '19B',
+            vid: './video/H22A.mp4',
+            text: '',
+            options: [
                 {
-                    text: 'Stuffed Hedgehog Hamilton',
-                    setState: { stuffedHedgeHog: true, experiancePoints: true, copperMindShield: true },
-                    nextText: 20
+                    text: 'Continue',
+                    nextText: '20B'
                 }
             ]
         },
         // Girl
         {
             id: 19.1,
-            vid: './video/',
-            text: 'Level Up Scene. Player gains 50xp and a copper mind shield as well as the ability to pick one of three items Annie',
-            options: [{
-                    text: 'Bubble Machine Annie',
-                    setState: { bubbleMachine: true, experiancePoints: true, copperMindShield: true },
-                    nextText: 20.1
-                },
+            vid: './video/A21.mp4',
+            text: '',
+            options: [
                 {
                     text: 'Band of Pacification Annie',
-                    setState: { bandOfPacification: true, experiancePoints: true, copperMindShield: true },
-                    nextText: 20.1
+                    nextText: '20.1A'
                 },
                 {
                     text: 'Stuffed Hedgehog Annie',
-                    setState: { stuffedHedgeHog: true, experiancePoints: true, copperMindShield: true },
-                    nextText: 20.1
+                    nextText: '20.1B'
                 }
             ]
         },
+        {
+            id: '20.1A',
+            vid: './video/A22A.mp4',
+            text: '',
+            options: [{
+                text: 'Continue',
+                nextText: 'A23A'
+            }]
+        },
+        {
+            id: '20.1B',
+            vid: './video/A22B.mp4',
+            text: '',
+            options: [{
+                text: 'Continue',
+                nextText: 'A23B'
+            }]
+        },
+        {
+            id: 'A23A',
+            vid: './video/A23A.mp4',
+            text: '',
+            options: [{
+                text: 'Continue',
+                nextText: 'FINAL_VID'
+            }]
+        },
+        {
+            id: 'A23B',
+            vid: './video/A23B.mp4',
+            text: '',
+            options: [{
+                text: 'Continue',
+                nextText: 'FINAL_VID'
+            }]
+        },
         // Boys Final Out Comes
         {
-            id: 20,
-            vid: './video/',
-            text: 'Final Scene. Depending on which path the player originally chose they will either focus on a memory of being at Mount Doom or the Ghost Town Boy',
+            id: '20A',
+            vid: './video/H23A.mp4',
+            text: '',
             options: [{
                 text: 'Continue',
-                nextText: 21
+                nextText: 'FINAL_VID'
             }]
         },
         {
-            id: 21.1,
-            vid: './video/',
-            text: 'Focuses on HEDGEHOG Memory of MT Doom Hamilton',
+            id: '20B',
+            vid: './video/H23B.mp4',
+            text: '',
             options: [{
                 text: 'Continue',
-                nextText: 23
-            }]
-        },
-        {
-            id: 21.2,
-            vid: './video/',
-            text: 'Focuses on BAND OF PACIFICATION Memory of MT Doom Hamilton',
-            options: [{
-                text: 'Continue',
-                nextText: 23
-            }]
-        },
-        {
-            id: 21.3,
-            vid: './video/',
-            text: 'Focuses on BUBBLE MACHINE Memory of MT Doom Hamilton',
-            options: [{
-                text: 'Continue',
-                nextText: 23
-            }]
-        },
-        {
-            id: 22.1,
-            vid: './video/',
-            text: 'Focuses on HEDGEHOG Memory of Ghost Town Hamilton',
-            options: [{
-                text: 'Continue',
-                nextText: 23
-            }]
-        },
-        {
-            id: 22.2,
-            vid: './video/',
-            text: 'Focuses on BAND OF PACIFICATION Memory of Ghost Town Hamilton',
-            options: [{
-                text: 'Continue',
-                nextText: 23
-            }]
-        },
-        {
-            id: 22.3,
-            vid: './video/',
-            text: 'Focuses on BUBBLE MACHINE Memory of Ghost Town Hamilton',
-            options: [{
-                text: 'Continue',
-                nextText: 23
+                nextText: 'FINAL_VID'
             }]
         },
         {
@@ -1281,7 +1298,16 @@ const textNodes = [{
             text: 'END OF GAME as Annie',
             options: [{
                 text: 'RESTART GAME',
-                nextText: -1
+                nextText: 1
+            }]
+        },
+        {
+            id: 'FINAL_VID',
+            vid: './video/Ayers.mp4',
+            text: '',
+            options: [{
+                text: 'RESTART GAME',
+                nextText: 1
             }]
         },
 
@@ -1404,7 +1430,7 @@ let state = {}
 /////////////////////////////////////////////////////////////////////////////////////////////////
 function startGame() {
     state = {}
-    showVid(1);
+    showVid(4.0032);
 }
 
 
@@ -1456,61 +1482,61 @@ function selectOption(option) {
         // was chosen. I don't know if I created a new problem by doing so.
     vidNode = textNodes.find(vidNode => vidNode.id === nextTextNodeId)
         // Restarts Game
-    if (nextTextNodeId <= 0) {
-        startGame();
-        loadVideo(1);
+    // if (nextTextNodeId == -1) {
+    //     startGame();
+    //     loadVideo();
 
-    }
-    state = Object.assign(state, option.setState)
+    // }
+    // state = Object.assign(state, option.setState)
 
-    if (nextTextNodeId == 20 && state.mountDoomn == true && state.stuffedHedgeHog == true && state.hamilton == true) {
-        console.log('Mount Doom');
-        nextTextNodeId = 21.1;
-    } else if (nextTextNodeId == 20 && state.mountDoomn == true && state.bandOfPacification == true && state.hamilton == true) {
-        console.log('Mount Doom');
-        nextTextNodeId = 21.2;
-    } else if (nextTextNodeId == 20 && state.mountDoomn == true && state.bubbleMachine == true && state.hamilton == true) {
-        console.log('Mount Doom');
-        nextTextNodeId = 21.3;
-    } else if (nextTextNodeId == 20 && state.ghostTown == true && state.stuffedHedgeHog == true && state.hamilton == true) {
+    // if (nextTextNodeId == 20 && state.mountDoomn == true && state.stuffedHedgeHog == true && state.hamilton == true) {
+    //     console.log('Mount Doom');
+    //     nextTextNodeId = 21.1;
+    // } else if (nextTextNodeId == 20 && state.mountDoomn == true && state.bandOfPacification == true && state.hamilton == true) {
+    //     console.log('Mount Doom');
+    //     nextTextNodeId = 21.2;
+    // } else if (nextTextNodeId == 20 && state.mountDoomn == true && state.bubbleMachine == true && state.hamilton == true) {
+    //     console.log('Mount Doom');
+    //     nextTextNodeId = 21.3;
+    // } else if (nextTextNodeId == 20 && state.ghostTown == true && state.stuffedHedgeHog == true && state.hamilton == true) {
 
-        console.log('Ghost Town');
-        nextTextNodeId = 22.1;
-    } else if (nextTextNodeId == 20 && state.ghostTown == true && state.bandOfPacification == true && state.hamilton == true) {
+    //     console.log('Ghost Town');
+    //     nextTextNodeId = 22.1;
+    // } else if (nextTextNodeId == 20 && state.ghostTown == true && state.bandOfPacification == true && state.hamilton == true) {
 
-        console.log('Ghost Town');
-        nextTextNodeId = 22.2;
-    } else if (nextTextNodeId == 20 && state.ghostTown == true && state.bubbleMachine == true && state.hamilton == true) {
+    //     console.log('Ghost Town');
+    //     nextTextNodeId = 22.2;
+    // } else if (nextTextNodeId == 20 && state.ghostTown == true && state.bubbleMachine == true && state.hamilton == true) {
 
-        console.log('Ghost Town');
-        nextTextNodeId = 22.3;
-    }
-    if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.stuffedHedgeHog == true && state.annie == true) {
-        console.log('Mount Doom');
-        nextTextNodeId = 21.12;
-    } else if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.bandOfPacification == true && state.annie == true) {
-        console.log('Mount Doom');
-        nextTextNodeId = 21.22;
-    } else if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.bubbleMachine == true && state.annie == true) {
-        console.log('Mount Doom');
-        nextTextNodeId = 21.31;
-    } else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.stuffedHedgeHog == true && state.annie == true) {
+    //     console.log('Ghost Town');
+    //     nextTextNodeId = 22.3;
+    // }
+    // if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.stuffedHedgeHog == true && state.annie == true) {
+    //     console.log('Mount Doom');
+    //     nextTextNodeId = 21.12;
+    // } else if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.bandOfPacification == true && state.annie == true) {
+    //     console.log('Mount Doom');
+    //     nextTextNodeId = 21.22;
+    // } else if (nextTextNodeId == 20.1 && state.mountDoomn == true && state.bubbleMachine == true && state.annie == true) {
+    //     console.log('Mount Doom');
+    //     nextTextNodeId = 21.31;
+    // } else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.stuffedHedgeHog == true && state.annie == true) {
 
-        console.log('Ghost Town');
-        nextTextNodeId = 22.11;
-    } else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.bandOfPacification == true && state.annie == true) {
+    //     console.log('Ghost Town');
+    //     nextTextNodeId = 22.11;
+    // } else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.bandOfPacification == true && state.annie == true) {
 
-        console.log('Ghost Town');
-        nextTextNodeId = 22.21;
-    } else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.bubbleMachine == true && state.annie == true) {
+    //     console.log('Ghost Town');
+    //     nextTextNodeId = 22.21;
+    // } else if (nextTextNodeId == 20.1 && state.ghostTown == true && state.bubbleMachine == true && state.annie == true) {
 
-        console.log('Ghost Town');
-        nextTextNodeId = 22.31;
-    } else if (nextTextNodeId == 7.1 && state.cowboyHat == true && state.annie == true) {
-        nextTextNodeId = 7.2;
-    } else if (nextTextNodeId == 7 && state.cowboyHat == true && state.hamilton == true) {
-        nextTextNodeId = 7.3;
-    }
+    //     console.log('Ghost Town');
+    //     nextTextNodeId = 22.31;
+    // } else if (nextTextNodeId == 7.1 && state.cowboyHat == true && state.annie == true) {
+    //     nextTextNodeId = 7.2;
+    // } else if (nextTextNodeId == 7 && state.cowboyHat == true && state.hamilton == true) {
+    //     nextTextNodeId = 7.3;
+    // }
     showVid(nextTextNodeId);
 }
 startGame();

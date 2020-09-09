@@ -6,7 +6,45 @@ video::-webkit-media-controls-fullscreen-button {
 video::-webkit-media-controls- {
     display: none;
 }
-video
+video::-webkit-media-controls-timeline {
+    /* display: none; */
+}
+video::-webkit-media-controls-time-remaining-display {
+    display: none;
+}
+
+@media(max-width:2560px)
 {
-    width: 1000px;
+    video
+{
+    width: 100%;
+}
+}
+@media(max-width:1920px)
+{
+    video
+    {
+        width: 100%;
+    } 
+}
+@media(max-width: 760px)
+{
+    video
+    {
+        width: 100%;
+    }
+}
+@media(max-width: 560px)
+{
+    video
+    {
+        width: 100%;
+    }
+}
+@media(max-width: 375px)
+{
+    video
+{
+    width: 100%;
+}
 }
