@@ -12,6 +12,7 @@ body
 .parentAndEducators ul li a
 {
     color: black;
+    font-family: 'Roboto', sans-serif;
 }
 .grid-2
 {
@@ -20,6 +21,8 @@ body
     grid-template-columns: repeat(2, 1fr);
     
 }
+h1
+{font-size:2em}
 ul{
     list-style-type: none;
     color: #f3e113;
@@ -779,7 +782,9 @@ nav ul li a:hover
 }
 }
 @media(max-width: 560px)
-{   
+{ 
+    h1
+    {font-size:30px} 
 .center
 {
     align-content: center;
@@ -910,9 +915,22 @@ section#help
         padding: 1.2rem 1rem;
         position: relative;
     }
+    .parentAndEducators ul li a
+    {
+        color: black;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5em;
+    }
+    .kids ul li a
+    {
+        color: black;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5em;
+    }
 }
 @media(max-width: 375px)
 {
+
     section
     {
         width: 100%;
