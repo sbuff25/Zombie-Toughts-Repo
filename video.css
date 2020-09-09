@@ -7,7 +7,7 @@ video::-webkit-media-controls- {
     display: none;
 }
 video::-webkit-media-controls-timeline {
-    display: none;
+    /* display: none; */
 }
 video::-webkit-media-controls-time-remaining-display {
     display: none;
