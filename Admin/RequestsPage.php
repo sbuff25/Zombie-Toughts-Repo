@@ -177,7 +177,7 @@ include_once('FormCheck.php');
 
                                                 // $InstArray[$row['id']] = $IArray;
                                             ?>
-                                            <form>
+                                            
                                                 <input name="cFirstName" value=<?php echo $row['contact_first_name']; ?> hidden>
                                                 <input name="cLastName" value=<?php echo $row['contact_last_name']; ?> hidden>
                                                 <input name="cPhone" value=<?php echo $row['contact_phone']; ?> hidden>
@@ -190,8 +190,8 @@ include_once('FormCheck.php');
                                                 <input name='iZip' value=<?php echo $row['institution_zipcode']; ?> hidden>
                                                 <input name='iCounty' value=<?php echo $row['institution_county']; ?> hidden>
                                                 <?php $id_name = "id-". $row['id']; ?>
-                                                <button id="<?php echo $id_name ?>" type="submit" class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php echo $row['id']; ?>"><span class="material-icons">description</span>FORM</button>
-                                            </form>
+                                                <button id="<?php echo $id_name ?>" type="button" class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php echo $row['id']; ?>"><span class="material-icons">description</span>FORM</button>
+                                            
                                             <script>
                                                 $("<?php echo '#' . $id_name; ?>").click(function() {
                                                     $.ajax({
