@@ -191,8 +191,12 @@ include_once('FormCheck.php');
 
                                                 <?php $id_name = "id-". $row['id']; ?>
 
-                                                <script>
-                                                $(<?php echo '#' . $id_name; ?>).click(function() {
+                                                
+
+                                            <button id="<?php echo $id_name ?>" type="button" class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php echo $row['id']; ?>"><span class="material-icons">description</span>FORM</button>
+                                            
+                                            <script>
+                                                $("<?php echo '#' . $id_name; ?>").click(function() {
                                                     $.ajax({
                                                         url: 'RequestsPage.php',
                                                         type: 'POST',
@@ -217,10 +221,6 @@ include_once('FormCheck.php');
                                                     });
                                                 });
                                             </script>
-
-                                            <button id="<?php echo $id_name ?>" type="button" class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php echo $row['id']; ?>"><span class="material-icons">description</span>FORM</button>
-                                            
-                                            
 
 
                                             <!--____________________________________________________________________________________________________________________-->
