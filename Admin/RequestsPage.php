@@ -189,7 +189,7 @@ include_once('FormCheck.php');
                                                 <input name='iZip' value=<?php //echo $row['institution_zipcode']; ?> hidden>
                                                 <input name='iCounty' value=<?php //echo $row['institution_county']; ?> hidden> -->
 
-                                                <button name='InstID' class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php echo $row['id']; ?>"><span class="material-icons">description</span>FORM</button>
+                                                <button name='InstID' type="button" class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php echo $row['id']; ?>"><span class="material-icons">description</span>FORM</button>
                                             <!-- </form> -->
                                             <form action='RequestsPage' method='POST'>
                                                 <button class="dropdown-item bg-danger" type='submit' value="<?php echo $row['id']; ?>" name='deleteInstitution'><span class="material-icons">delete</span>DELETE</button>
