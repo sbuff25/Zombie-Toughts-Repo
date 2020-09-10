@@ -133,7 +133,7 @@ include_once('FormCheck.php');
                                                 <option value='in-progress'>In Progress</option>
                                                 <option value='completed'>Complete</option>
                                             </select>
-                                            <button type='submit' name='submitContacted' value='<?php echo $row['id']; ?>'>Submit</button>
+                                            <button type='submit' name='submitContacted' value="<?php echo $row['id']; ?>">Submit</button>
                                             <script>
                                                 document.getElementById('contact_select').selectedIndex=<?php echo $row['contacted']; ?>;
                                             </script>
@@ -154,7 +154,7 @@ include_once('FormCheck.php');
                                         <form action='RequestsPage' method='POST'>
                                             <label for='note'>Create New Note</label>
                                             <textarea class='form-control' size='5' name='note' placeholder='Enter New Note...'></textarea>
-                                            <button type='submit' name='newNote' value='<?php echo $row['id'];?>'>Submit Note</button>
+                                            <button type='submit' name='newNote' value="<?php echo $row['id'];?>">Submit Note</button>
                                         </form>
                                     </td>
                                     <td> <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
@@ -313,7 +313,8 @@ include_once('FormCheck.php');
                                                 <option value='in-progress'>In Progress</option>
                                                 <option value='completed'>Complete</option>
                                             </select>
-                                            <button type='submit' name='submitContacted' value='<?php echo $row['id']; ?>'>Submit</button>
+                                            <?php $id = $row['id']; ?>
+                                            <button type='submit' name='submitContacted' value="<?php echo $id; ?>">Submit</button>
                                             <script>
                                                 document.getElementById('contact_select').selectedIndex=<?php echo $row['contacted']; ?>;
                                             </script>
@@ -334,7 +335,8 @@ include_once('FormCheck.php');
                                         <form action='RequestsPage' method='POST'>
                                             <label for='note'>Create New Note</label>
                                             <textarea class='form-control' size='5' name='note' placeholder='Enter New Note...'></textarea>
-                                            <button type='submit' name='newNote' value='<?php echo $row['id'];?>'>Submit Note</button>
+                                            <?php $id = $row['id']; ?>
+                                            <button type='submit' name='newNote' value='<?php echo $id?>'>Submit Note</button>
                                         </form>
                                     </td>
                                     <td> <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
@@ -428,7 +430,7 @@ include_once('FormCheck.php');
                                                 <option value='in-progress'>In Progress</option>
                                                 <option value='completed'>Complete</option>
                                             </select>
-                                            <button type='submit' name='submitContactedIndividual' value='<?php echo $row['id']; ?>'>Submit</button>
+                                            <button type='submit' name='submitContactedIndividual' value="<?php echo $row['id']; ?>">Submit</button>
                                             <script>
                                                 document.getElementById('contact_select').selectedIndex=<?php echo $row['contacted']; ?>;
                                             </script>
@@ -449,7 +451,7 @@ include_once('FormCheck.php');
                                         <form action='RequestsPage' method='POST'>
                                             <label for='note'>Create New Note</label>
                                             <textarea class='form-control' size='5' name='note' placeholder='Enter New Note...'></textarea>
-                                            <button type='submit' name='newIndividualNote' value='<?php echo $row['id'];?>'>Submit Note</button>
+                                            <button type='submit' name='newIndividualNote' value="<?php echo $row['id'];?>">Submit Note</button>
                                         </form>
                                     </td>
                                     <td> <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
