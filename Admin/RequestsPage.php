@@ -161,34 +161,34 @@ include_once('FormCheck.php');
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <!--_______________________MT Institution Button Info______________-->
                                             <?php
-                                                // $IArray = array(
-                                                //     "cFirstName" => $row['contact_first_name'],
-                                                //     "cLastName" => $row['contact_last_name'],
-                                                //     "cPhone" => $row['contact_phone'],
-                                                //     "cExt" => $row['contact_ext'],
-                                                //     "cEmail" => $row['contact_email'],
-                                                //     "iName" => $row['institution_name'],
-                                                //     "iAddress" => $row['institution_mailing_address'],
-                                                //     "iCity" => $row['institution_city'],
-                                                //     "iState" => "Montana",
-                                                //     "iZip" => $row['institution_zipcode'],
-                                                //     "iCounty" => $row['institution_county']
-                                                // );
+                                                    // "cFirstName" = $row['contact_first_name'];
+                                                    // "cLastName" = $row['contact_last_name'];
+                                                    // "cPhone" = $row['contact_phone'];
+                                                    // "cExt" = $row['contact_ext'];
+                                                    // "cEmail" = $row['contact_email'];
+                                                    // "iName" = $row['institution_name'];
+                                                    // "iAddress" = $row['institution_mailing_address'];
+                                                    // "iCity" = $row['institution_city'];
+                                                    // "iState" = "Montana";
+                                                    // "iZip" = $row['institution_zipcode'];
+                                                    // "iCounty" = $row['institution_county'];
+  
 
                                                 // $InstArray[$row['id']] = $IArray;
                                             ?>
                                             
-                                                <input name="cFirstName" value=<?php echo $row['contact_first_name']; ?> hidden>
-                                                <input name="cLastName" value=<?php echo $row['contact_last_name']; ?> hidden>
-                                                <input name="cPhone" value=<?php echo $row['contact_phone']; ?> hidden>
-                                                <input name="cExt" value=<?php echo $row['contact_ext']; ?> hidden>
-                                                <input name='cEmail' value=<?php echo $row['contact_email']; ?> hidden>
-                                                <input name='iName' value=<?php echo $row['institution_name']; ?> hidden>
-                                                <input name='iAddress' value=<?php echo $row['institution_mailing_address']; ?> hidden>
-                                                <input name='iCity' value=<?php echo $row['institution_city']; ?> hidden>
+                                                <!-- <input name="cFirstName" value=<?php //echo $row['contact_first_name']; ?> hidden>
+                                                <input name="cLastName" value=<?php //echo $row['contact_last_name']; ?> hidden>
+                                                <input name="cPhone" value=<?php //echo $row['contact_phone']; ?> hidden>
+                                                <input name="cExt" value=<?php //echo $row['contact_ext']; ?> hidden>
+                                                <input name='cEmail' value=<?php //echo $row['contact_email']; ?> hidden>
+                                                <input name='iName' value=<?php //echo $row['institution_name']; ?> hidden>
+                                                <input name='iAddress' value=<?php //echo $row['institution_mailing_address']; ?> hidden>
+                                                <input name='iCity' value=<?php //echo $row['institution_city']; ?> hidden>
                                                 <input name='iState' value='Montana' hidden>
-                                                <input name='iZip' value=<?php echo $row['institution_zipcode']; ?> hidden>
-                                                <input name='iCounty' value=<?php echo $row['institution_county']; ?> hidden>
+                                                <input name='iZip' value=<?php //echo $row['institution_zipcode']; ?> hidden>
+                                                <input name='iCounty' value=<?php //echo $row['institution_county']; ?> hidden> -->
+
                                                 <?php $id_name = "id-". $row['id']; ?>
                                                 <button id="<?php echo $id_name ?>" type="button" class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php echo $row['id']; ?>"><span class="material-icons">description</span>FORM</button>
                                             
@@ -198,8 +198,19 @@ include_once('FormCheck.php');
                                                         url: 'RequestsPage.php',
                                                         type: 'POST',
                                                         data: {
-                                                            email: 'email@example.com',
-                                                            message: 'hello world!'
+                                                            cFirstName: <?php echo $row['contact_first_name']; ?>,
+                                                            cLastName: <?php echo $row['contact_last_name']; ?>,
+                                                            cPhone: <?php echo $row['contact_phone']; ?>,
+                                                            cExt: <?php echo $row['contact_ext']; ?>,
+                                                            cEmail: <?php echo $row['contact_email']; ?>,
+                                                            iName: <?php echo $row['institution_name']; ?>,
+                                                            iAddress: <?php echo $row['institution_mailing_address']; ?>,
+                                                            iCity: <?php echo $row['institution_city']; ?>,
+                                                            iState: "Montana",
+                                                            iZip: <?php echo $row['institution_zipcode']; ?>,
+                                                            iCounty: <?php echo $row['institution_county']; ?>,
+                                                            iID: <?php echo $row['id']; ?>,
+
                                                         },
                                                         success: function(msg) {
                                                             alert('Email Sent');
