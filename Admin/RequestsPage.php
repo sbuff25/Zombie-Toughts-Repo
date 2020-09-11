@@ -180,7 +180,7 @@ include_once('FormCheck.php');
 
                                                 // $InstArray[$row['id']] = $IArray;
                                             ?>
-                                    <td> <button onclick = "myFunction('<?php echo $cFirstName; ?>',
+                                    <td> <button onclick = "populateForm('<?php echo $cFirstName; ?>',
                                                                 '<?php echo $cLastName; ?>',
                                                                 '<?php echo $cPhone; ?>',
                                                                 '<?php echo $cExt; ?>',
@@ -547,7 +547,7 @@ include_once('FormCheck.php');
 
         <script>
 
-            function myFunction(cFirst, cLast, cPhone, cExt, cEmail, iName, iAddress, iCity, iState, iZip, iCounty, iID) {
+            function populateForm(cFirst, cLast, cPhone, cExt, cEmail, iName, iAddress, iCity, iState, iZip, iCounty, iID) {
                 // e.preventDefault();
                 return new Promise(function(resolve, reject){
                     $.ajax({
