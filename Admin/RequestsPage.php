@@ -180,7 +180,7 @@ include_once('FormCheck.php');
 
                                                 // $InstArray[$row['id']] = $IArray;
                                             ?>
-                                    <td> <button onclick = "populateForm('<?php echo $cFirstName; ?>',
+                                    <td> <button onclick = "return populateForm('<?php echo $cFirstName; ?>',
                                                                 '<?php echo $cLastName; ?>',
                                                                 '<?php echo $cPhone; ?>',
                                                                 '<?php echo $cExt; ?>',
