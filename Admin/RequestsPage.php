@@ -162,6 +162,24 @@ include_once('FormCheck.php');
                                             <button type='submit' name='newNote' value="<?php echo $id;?>">Submit Note</button>
                                         </form>
                                     </td>
+                                    <!--_______________________MT Institution Button Info______________-->
+                                    <?php
+                                                    $cFirstName = $row['contact_first_name'];
+                                                    $cLastName = $row['contact_last_name'];
+                                                    $cPhone = $row['contact_phone'];
+                                                    $cExt = $row['contact_ext'];
+                                                    $cEmail = $row['contact_email'];
+                                                    $iName = $row['institution_name'];
+                                                    $iAddress = $row['institution_mailing_address'];
+                                                    $iCity = $row['institution_city'];
+                                                    $iState = "Montana";
+                                                    $iZip = $row['institution_zipcode'];
+                                                    $iCounty = $row['institution_county'];
+                                                    $iID = $row['id'];
+  
+
+                                                // $InstArray[$row['id']] = $IArray;
+                                            ?>
                                     <td> <button onclick = "myFunction('<?php echo $cFirstName; ?>',
                                                                 '<?php echo $cLastName; ?>',
                                                                 '<?php echo $cPhone; ?>',
@@ -182,24 +200,7 @@ include_once('FormCheck.php');
                                                                 console.log(err)
                                                                 })" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <!--_______________________MT Institution Button Info______________-->
-                                            <?php
-                                                    $cFirstName = $row['contact_first_name'];
-                                                    $cLastName = $row['contact_last_name'];
-                                                    $cPhone = $row['contact_phone'];
-                                                    $cExt = $row['contact_ext'];
-                                                    $cEmail = $row['contact_email'];
-                                                    $iName = $row['institution_name'];
-                                                    $iAddress = $row['institution_mailing_address'];
-                                                    $iCity = $row['institution_city'];
-                                                    $iState = "Montana";
-                                                    $iZip = $row['institution_zipcode'];
-                                                    $iCounty = $row['institution_county'];
-                                                    $iID = $row['id'];
-  
-
-                                                // $InstArray[$row['id']] = $IArray;
-                                            ?>
+                                            
                                             
                                                 <!-- <input name="cFirstName" value=<?php //echo $row['contact_first_name']; ?> hidden>
                                                 <input name="cLastName" value=<?php //echo $row['contact_last_name']; ?> hidden>
