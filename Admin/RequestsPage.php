@@ -519,7 +519,7 @@ include_once('FormCheck.php');
         <script>
 
             function populateForm(cFirst, cLast, cPhone, cExt, cEmail, iName, iAddress, iCity, iState, iZip, iCounty, iID) {
-                e.preventDefault();
+                // e.preventDefault();
                 $.ajax({
                     url: 'RequestsPage.php',
                     type: 'POST',
