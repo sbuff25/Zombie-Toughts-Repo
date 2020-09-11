@@ -180,7 +180,7 @@ include_once('FormCheck.php');
 
                                                 // $InstArray[$row['id']] = $IArray;
                                             ?>
-                                    <td> <button onclick = "return populateForm('<?php echo $cFirstName; ?>',
+                                    <td> <button onclick = "populateForm('<?php echo $cFirstName; ?>',
                                                                 '<?php echo $cLastName; ?>',
                                                                 '<?php echo $cPhone; ?>',
                                                                 '<?php echo $cExt; ?>',
@@ -192,14 +192,7 @@ include_once('FormCheck.php');
                                                                 '<?php echo $iZip; ?>',
                                                                 '<?php echo $iCounty; ?>',
                                                                 '<?php echo $iID; ?>'
-                                                                ).then(function(data) {
-                                                                // Run this when your request was successful
-                                                                alert('populate form successful');
-                                                                console.log(data)
-                                                                }).catch(function(err) {
-                                                                // Run this when promise was rejected via reject()
-                                                                console.log(err)
-                                                                })" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
+                                                                );" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             
                                             
