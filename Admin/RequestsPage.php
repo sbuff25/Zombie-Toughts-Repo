@@ -222,7 +222,7 @@ include_once('FormCheck.php');
                                                     //     alert("Got Here");
                                                     // });
                                                     $.ajax({
-                                                        url: 'RequestsPage.php',
+                                                        url: 'RequestsPage',
                                                         type: 'POST',
                                                         data: {
                                                             cFirstName: "<?php echo $row['contact_first_name']; ?>",
