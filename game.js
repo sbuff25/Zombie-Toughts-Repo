@@ -864,16 +864,16 @@ const textNodes = [{
             text: '',
 
             options: [{
-                    text: 'How can Sam overcome his anxiety? Annie',
+                    text: 'A',
         
                     nextText: 13.2
                 },
                 {
-                    text: 'Why is a raven like a writing desk? Annie',
+                    text: 'B',
                     nextText: 18.1
                 },
                 {
-                    text: 'Skip dialogue and proceed to fight the bats Annie',
+                    text: 'C',
                     nextText: 15.1
                 },
             ]
@@ -1281,7 +1281,7 @@ let state = {}
 /////////////////////////////////////////////////////////////////////////////////////////////////
 function startGame() {
     state = {}
-    showVid(1);
+    showVid(11.1);
 }
 
 
