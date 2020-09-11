@@ -204,7 +204,7 @@ include_once('FormCheck.php');
                                             <script>
                                                 $("<?php echo '#' . $id_name; ?>").click(function(e) {
                                                     e.preventDefault();
-                                                    $.post("RequestPage",
+                                                    $.post("RequestsPage",
                                                             {
                                                             cFirstName: "<?php echo $row['contact_first_name']; ?>",
                                                             cLastName: "<?php echo $row['contact_last_name']; ?>",
