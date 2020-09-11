@@ -239,7 +239,7 @@ include_once('FormCheck.php');
                                                             iID: "<?php echo $row['id']; ?>"
 
                                                         },
-                                                        done: function(msg) {
+                                                        success: function(msg) {
                                                             alert('Email Sent');
                                                         }               
                                                     });
