@@ -543,7 +543,6 @@ include_once('FormCheck.php');
 
             function populateForm(cFirst, cLast, cPhone, cExt, cEmail, iName, iAddress, iCity, iState, iZip, iCounty, iID, e) {
                 // e.preventDefault();
-                return new Promise(function(resolve, reject){
                     $.ajax({
                     url: 'RequestsPage.php',
                     type: 'POST',
@@ -570,8 +569,8 @@ include_once('FormCheck.php');
                         $( id_element ).append( button );
                         alert('Stuff Posted');
                     }               
-                    });
                 });
+                );
                 
                 
             }
