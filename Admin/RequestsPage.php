@@ -194,6 +194,7 @@ include_once('FormCheck.php');
                                                                 '<?php echo $iID; ?>'
                                                                 ).then(function(data) {
                                                                 // Run this when your request was successful
+                                                                alert('populate form successful');
                                                                 console.log(data)
                                                                 }).catch(function(err) {
                                                                 // Run this when promise was rejected via reject()
