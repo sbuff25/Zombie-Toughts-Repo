@@ -319,10 +319,13 @@ include_once('FormCheck.php');
                                                 <option value='in-progress'>In Progress</option>
                                                 <option value='completed'>Complete</option>
                                             </select>
-                                            <?php $id = $row['id']; ?>
+                                            <?php $id = $row['id']; 
+                                                $contacted = $row['contacted'];
+                                            
+                                            ?>
                                             <button type='submit' name='submitContacted' value="<?php echo $id; ?>">Submit</button>
                                             <script>
-                                                document.getElementById('contact_select').selectedIndex=<?php echo $row['contacted']; ?>;
+                                                document.getElementById('contact_select').selectedIndex="<?php echo $contacted; ?>";
                                             </script>
                                         </form>
                                     
