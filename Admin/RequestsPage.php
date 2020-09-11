@@ -138,7 +138,7 @@ include_once('FormCheck.php');
                                             ?>
                                             <button type='submit' name='submitContacted' value="<?php echo $id; ?>">Submit</button>
                                             <script>
-                                                document.getElementById('contact_select').selectedIndex=<?php echo $contacted; ?>;
+                                                document.getElementById('contact_select').selectedIndex="<?php echo $contacted; ?>";
                                             </script>
                                         </form>
                                     
@@ -440,9 +440,10 @@ include_once('FormCheck.php');
                                                 <option value='completed'>Complete</option>
                                             </select>
                                             <?php $id = $row['id'];?>
+                                            <?php $contacted = $row['contacted']; ?>
                                             <button type='submit' name='submitContactedIndividual' value="<?php echo $id; ?>">Submit</button>
                                             <script>
-                                                document.getElementById('contact_select').selectedIndex=<?php echo $row['contacted']; ?>;
+                                                document.getElementById('contact_select').selectedIndex=<?php echo $contacted; ?>;
                                             </script>
                                         </form>
                                     
