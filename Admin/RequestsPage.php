@@ -572,7 +572,7 @@ include_once('FormCheck.php');
                         id_name = "ID-" + iID;
                         id_element = "#" + id_name;
                         
-                        button = '<button id={id_name} type="button" class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value={iID}><span class="material-icons">description</span>FORM</button>';
+                        button = '<button id="' + id_name + '" type="button" class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="' + iID +'"><span class="material-icons">description</span>FORM</button>';
                         $( id_element ).append( button );
                         alert('Stuff Posted');
                     }               
