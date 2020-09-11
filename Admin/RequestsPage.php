@@ -165,17 +165,17 @@ include_once('FormCheck.php');
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <!--_______________________MT Institution Button Info______________-->
                                             <?php
-                                                    // "cFirstName" = $row['contact_first_name'];
-                                                    // "cLastName" = $row['contact_last_name'];
-                                                    // "cPhone" = $row['contact_phone'];
-                                                    // "cExt" = $row['contact_ext'];
-                                                    // "cEmail" = $row['contact_email'];
-                                                    // "iName" = $row['institution_name'];
-                                                    // "iAddress" = $row['institution_mailing_address'];
-                                                    // "iCity" = $row['institution_city'];
-                                                    // "iState" = "Montana";
-                                                    // "iZip" = $row['institution_zipcode'];
-                                                    // "iCounty" = $row['institution_county'];
+                                                    $cFirstName = $row['contact_first_name'];
+                                                    $cLastName = $row['contact_last_name'];
+                                                    $cPhone = $row['contact_phone'];
+                                                    $cExt = $row['contact_ext'];
+                                                    $cEmail = $row['contact_email'];
+                                                    $iName = $row['institution_name'];
+                                                    $iAddress = $row['institution_mailing_address'];
+                                                    $iCity = $row['institution_city'];
+                                                    $iState = "Montana";
+                                                    $iZip = $row['institution_zipcode'];
+                                                    $iCounty = $row['institution_county'];
   
 
                                                 // $InstArray[$row['id']] = $IArray;
@@ -198,27 +198,37 @@ include_once('FormCheck.php');
 
                                                 
 
-                                            <button id="<?php echo $id_name ?>" type="button" class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php echo $id; ?>"><span class="material-icons">description</span>FORM</button>
+                                            <button onclick="populateForm('<?php echo $cFirstName; ?>',
+                                            '<?php echo $cLastName; ?>',
+                                            '<?php echo $cPhone; ?>',
+                                            '<?php echo $cExt; ?>',
+                                            '<?php echo $cEmail; ?>',
+                                            '<?php echo $iName; ?>',
+                                            '<?php echo $iAddress; ?>',
+                                            '<?php echo $iCity; ?>',
+                                            '<?php echo $iState; ?>',
+                                            '<?php echo $iZip; ?>',
+                                            '<?php echo $iCounty; ?>',)" id="<?php echo $id_name ?>" type="button" class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php echo $id; ?>"><span class="material-icons">description</span>FORM</button>
                                             
-                                            <script>
-                                                $("<?php echo '#' . $id_name; ?>").click(function(e) {
+                                            <!-- <script>
+                                                $("<?php //echo '#' . $id_name; ?>").click(function(e) {
                                                     e.preventDefault();
                                                     $.ajax({
                                                         url: 'RequestsPage.php',
                                                         type: 'POST',
                                                         data: {
-                                                            cFirstName: "<?php echo $row['contact_first_name']; ?>",
-                                                            cLastName: "<?php echo $row['contact_last_name']; ?>",
-                                                            cPhone: "<?php echo $row['contact_phone']; ?>",
-                                                            cExt: "<?php echo $row['contact_ext']; ?>",
-                                                            cEmail: "<?php echo $row['contact_email']; ?>",
-                                                            iName: "<?php echo $row['institution_name']; ?>",
-                                                            iAddress: "<?php echo $row['institution_mailing_address']; ?>",
-                                                            iCity: "<?php echo $row['institution_city']; ?>",
+                                                            cFirstName: "<?php //echo $row['contact_first_name']; ?>",
+                                                            cLastName: "<?php //echo $row['contact_last_name']; ?>",
+                                                            cPhone: "<?php //echo $row['contact_phone']; ?>",
+                                                            cExt: "<?php //echo $row['contact_ext']; ?>",
+                                                            cEmail: "<?php //echo $row['contact_email']; ?>",
+                                                            iName: "<?php //echo $row['institution_name']; ?>",
+                                                            iAddress: "<?php //echo $row['institution_mailing_address']; ?>",
+                                                            iCity: "<?php //echo $row['institution_city']; ?>",
                                                             iState: "Montana",
-                                                            iZip: "<?php echo $row['institution_zipcode']; ?>",
-                                                            iCounty: "<?php echo $row['institution_county']; ?>",
-                                                            iID: "<?php echo $row['id']; ?>"
+                                                            iZip: "<?php //echo $row['institution_zipcode']; ?>",
+                                                            iCounty: "<?php //echo $row['institution_county']; ?>",
+                                                            iID: "<?php //echo $row['id']; ?>"
 
                                                         },
                                                         done: function(msg) {
@@ -226,7 +236,7 @@ include_once('FormCheck.php');
                                                         }               
                                                     });
                                                 });
-                                            </script>
+                                            </script> -->
 
 
                                             <!--____________________________________________________________________________________________________________________-->
@@ -504,5 +514,37 @@ include_once('FormCheck.php');
         <footer class="center bg-dark">
             <p>Missoula Repertory Theatre &copy; 2020</p>
         </footer>
+
+
+        <script>
+
+            function populateForm(cFirst, cLast, cPhone, cExt, cEmail, iName, iAddress, iCity, iState, iZip, iCounty, iID) {
+                e.preventDefault();
+                $.ajax({
+                    url: 'RequestsPage.php',
+                    type: 'POST',
+                    data: {
+                        cFirstName: cFirst,
+                        cLastName: cLast,
+                        cPhone: cPhone,
+                        cExt: cExt,
+                        cEmail: cEmail,
+                        iName: iName,
+                        iAddress: iAddress,
+                        iCity: iCity,
+                        iState: "Montana",
+                        iZip: iZip,
+                        iCounty: iCounty,
+                        iID: iID
+
+                    },
+                    done: function(msg) {
+                        alert('Stuff Posted');
+                    }               
+                });
+                
+            }
+            
+        </script>
     </body>
 </html>
