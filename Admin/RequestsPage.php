@@ -546,7 +546,7 @@ include_once('FormCheck.php');
         <script>
 
             function myFunction(cFirst, cLast, cPhone, cExt, cEmail, iName, iAddress, iCity, iState, iZip, iCounty, iID) {
-                e.preventDefault();
+                // e.preventDefault();
                 return new Promise(function(resolve, reject){
                     $.ajax({
                     url: 'RequestsPage.php',
