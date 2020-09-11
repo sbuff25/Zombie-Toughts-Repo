@@ -162,7 +162,25 @@ include_once('FormCheck.php');
                                             <button type='submit' name='newNote' value="<?php echo $id;?>">Submit Note</button>
                                         </form>
                                     </td>
-                                    <td> <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
+                                    <td> <button onclick = "myFunction('<?php echo $cFirstName; ?>',
+                                                                '<?php echo $cLastName; ?>',
+                                                                '<?php echo $cPhone; ?>',
+                                                                '<?php echo $cExt; ?>',
+                                                                '<?php echo $cEmail; ?>',
+                                                                '<?php echo $iName; ?>',
+                                                                '<?php echo $iAddress; ?>',
+                                                                '<?php echo $iCity; ?>',
+                                                                '<?php echo $iState; ?>',
+                                                                '<?php echo $iZip; ?>',
+                                                                '<?php echo $iCounty; ?>',
+                                                                '<?php echo $iID; ?>'
+                                                                ).then(function(data) {
+                                                                // Run this when your request was successful
+                                                                console.log(data)
+                                                                }).catch(function(err) {
+                                                                // Run this when promise was rejected via reject()
+                                                                console.log(err)
+                                                                })" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <!--_______________________MT Institution Button Info______________-->
                                             <?php
@@ -197,28 +215,11 @@ include_once('FormCheck.php');
 
                                                 <?php $id_name = "id-". $row['id']; ?>
                                                 <?php $id = $row['id'];?>
+                                                <div id='<?php echo $id_name; ?>'></div>
 
                                                 
 
-                                            <button onclick = "myFunction('<?php echo $cFirstName; ?>',
-                                                                '<?php echo $cLastName; ?>',
-                                                                '<?php echo $cPhone; ?>',
-                                                                '<?php echo $cExt; ?>',
-                                                                '<?php echo $cEmail; ?>',
-                                                                '<?php echo $iName; ?>',
-                                                                '<?php echo $iAddress; ?>',
-                                                                '<?php echo $iCity; ?>',
-                                                                '<?php echo $iState; ?>',
-                                                                '<?php echo $iZip; ?>',
-                                                                '<?php echo $iCounty; ?>',
-                                                                '<?php echo $iID; ?>'
-                                                                ).then(function(data) {
-                                                                // Run this when your request was successful
-                                                                console.log(data)
-                                                                }).catch(function(err) {
-                                                                // Run this when promise was rejected via reject()
-                                                                console.log(err)
-                                                                })" id="<?php echo $id_name ?>" type="button" class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php echo $id; ?>"><span class="material-icons">description</span>FORM</button>
+                                            <!-- <button id="<?php //echo $id_name ?>" type="button" class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php //echo $id; ?>"><span class="material-icons">description</span>FORM</button> -->
                                                                                                             
                                             <script>
                                                 //$("<?php //echo '#' . $id_name; ?>").click(function(e) {
@@ -567,6 +568,11 @@ include_once('FormCheck.php');
 
                     },
                     success: function(msg) {
+                        id_name = "ID-" + iID;
+                        id_element = "#" + id_name;
+                        
+                        button = <button id={id_name} type="button" class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value={iID}><span class="material-icons">description</span>FORM</button>;
+                        $( id_element ).append( button );
                         alert('Stuff Posted');
                     }               
                     });
