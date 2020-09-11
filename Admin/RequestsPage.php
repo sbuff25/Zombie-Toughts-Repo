@@ -564,8 +564,11 @@ include_once('FormCheck.php');
                     success: function(msg) {
                         id_name = "ID-" + iID;
                         id_element = "#" + id_name;
-                        console.log(id_name);
+                        
                         button = '<button id="' + id_name + '" type="button" class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="' + iID +'"><span class="material-icons">description</span>FORM</button>';
+                        console.log(id_name);
+                        console.log(id_element);
+                        console.log(button);
                         $( id_element ).append( button );
                         alert('Stuff Posted');
                     }               
