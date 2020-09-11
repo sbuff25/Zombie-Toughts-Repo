@@ -241,7 +241,8 @@ include_once('FormCheck.php');
                                                         },
                                                         success: function(msg) {
                                                             alert('Email Sent');
-                                                        }               
+                                                        },
+                                                        async:false               
                                                     });
                                                 });
                                             </script>
