@@ -566,7 +566,7 @@ include_once('FormCheck.php');
                         iID: iID
 
                     },
-                    done: function(msg) {
+                    success: function(msg) {
                         alert('Stuff Posted');
                     }               
                     });
