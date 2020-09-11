@@ -543,7 +543,7 @@ include_once('FormCheck.php');
 
             function populateForm(cFirst, cLast, cPhone, cExt, cEmail, iName, iAddress, iCity, iState, iZip, iCounty, iID, e) {
                 // e.preventDefault();
-                    $.ajax({
+                $.ajax({
                     url: 'RequestsPage.php',
                     type: 'POST',
                     data: {
@@ -570,9 +570,7 @@ include_once('FormCheck.php');
                         alert('Stuff Posted');
                     }               
                 });
-                );
-                
-                
+                               
             }
             
         </script>
