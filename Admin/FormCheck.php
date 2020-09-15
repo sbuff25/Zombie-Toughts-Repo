@@ -480,7 +480,7 @@ require_once("./Classes/Database.php");
       
         if(count($errors) === 0){
             // Insert Grades into InstGrades
-            $gradeQuery = "INSERT INTO InstGrades (grade, instCode) VALUES";
+            $gradeQuery = "";
             $paramBind = "";
             foreach ($grades as $grade){
                 $gradeQuery .= "(" . $grade . ", " . $code . ")";
@@ -488,8 +488,8 @@ require_once("./Classes/Database.php");
                 // $gradeQuery .= "( ? , ? )";
             }
 
-            $stmt = $database->prepare($gradeQuery);
-            //$stmt->bind_param($paramBind, ...$grades);
+            $stmt = $database->prepare("INSERT INTO InstGrades (grade, instCode) VALUES ?");
+            $stmt->bind_param("s", $gradeQuery);
             $stmt->execute();
 
             if(!$stmt){
