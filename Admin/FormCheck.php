@@ -423,6 +423,15 @@ require_once("./Classes/Database.php");
 
         $grades = $_POST['student_grade'];
 
+        $stmt = $database->prepare("INSERT INTO AccessCode (code) VALUES (?)")
+        if(!$stmt->bind_param("s", $code)){
+            array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
+        }
+        if(!$stmt->execute()){
+            array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
+        }
+        $stmt->close();
+
         
         $stmt = $database->prepare(
             "INSERT INTO InstitutionAccessCode (
