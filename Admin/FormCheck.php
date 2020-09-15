@@ -483,19 +483,27 @@ require_once("./Classes/Database.php");
             $gradeQuery = "";
             $paramBind = "";
             foreach ($grades as $grade){
-                $gradeQuery .= "(" . $grade . ", " . $code . ")";
+                // $gradeQuery .= "(" . $grade . ", " . $code . ")";
                 //$paramBind .= "ss";
                 // $gradeQuery .= "( ? , ? )";
+                $stmt = $database->prepare("INSERT INTO InstGrades (grade, instCode) VALUES (?, ?)");
+                $stmt->bind_param("ss", $grade, $code);
+                $stmt->execute();
+
+                if(!$stmt){
+                    array_push($errors, "(Error Code: 1) There was a problem processing your request. Please try your request again, and if it still does not work please contact the Montana Repertory Theatre directly for access.");
+                }
+                $stmt->close();
             }
 
-            $stmt = $database->prepare("INSERT INTO InstGrades (grade, instCode) VALUES ?");
-            $stmt->bind_param("s", $gradeQuery);
-            $stmt->execute();
+            // $stmt = $database->prepare("INSERT INTO InstGrades (grade, instCode) VALUES ?");
+            // $stmt->bind_param("s", $gradeQuery);
+            // $stmt->execute();
 
-            if(!$stmt){
-                array_push($errors, "(Error Code: 1) There was a problem processing your request. Please try your request again, and if it still does not work please contact the Montana Repertory Theatre directly for access.");
-            }
-            $stmt->close();
+            // if(!$stmt){
+            //     array_push($errors, "(Error Code: 1) There was a problem processing your request. Please try your request again, and if it still does not work please contact the Montana Repertory Theatre directly for access.");
+            // }
+            // $stmt->close();
         }
 
         
