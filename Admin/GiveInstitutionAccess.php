@@ -52,7 +52,7 @@ include_once('FormCheck.php');
 
         <div class='panel panel-default'>
             <div class="panel-heading">Institution Access</div>
-            <div class='panel-body'>
+            <div class='panel-body center bg-light'>
             <form action="AdminPage" method='POST' class="form-container">
                 <h5><b>Contact's Information:</b></h5><br>
 
