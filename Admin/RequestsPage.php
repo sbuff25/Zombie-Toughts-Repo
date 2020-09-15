@@ -195,72 +195,24 @@ include_once('FormCheck.php');
                                                                 );" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             
-                                            
-                                                <!-- <input name="cFirstName" value=<?php //echo $row['contact_first_name']; ?> hidden>
-                                                <input name="cLastName" value=<?php //echo $row['contact_last_name']; ?> hidden>
-                                                <input name="cPhone" value=<?php //echo $row['contact_phone']; ?> hidden>
-                                                <input name="cExt" value=<?php //echo $row['contact_ext']; ?> hidden>
-                                                <input name='cEmail' value=<?php //echo $row['contact_email']; ?> hidden>
-                                                <input name='iName' value=<?php //echo $row['institution_name']; ?> hidden>
-                                                <input name='iAddress' value=<?php //echo $row['institution_mailing_address']; ?> hidden>
-                                                <input name='iCity' value=<?php //echo $row['institution_city']; ?> hidden>
+                                            <form action='GiveInstitutionAccess' method='POST'>
+                                                <input name="cFirstName" value=<?php echo $row['contact_first_name']; ?> hidden>
+                                                <input name="cLastName" value=<?php echo $row['contact_last_name']; ?> hidden>
+                                                <input name="cPhone" value=<?php echo $row['contact_phone']; ?> hidden>
+                                                <input name="cExt" value=<?php echo $row['contact_ext']; ?> hidden>
+                                                <input name='cEmail' value=<?php echo $row['contact_email']; ?> hidden>
+                                                <input name='iName' value=<?php echo $row['institution_name']; ?> hidden>
+                                                <input name='iAddress' value=<?php echo $row['institution_mailing_address']; ?> hidden>
+                                                <input name='iCity' value=<?php echo $row['institution_city']; ?> hidden>
                                                 <input name='iState' value='Montana' hidden>
-                                                <input name='iZip' value=<?php //echo $row['institution_zipcode']; ?> hidden>
-                                                <input name='iCounty' value=<?php //echo $row['institution_county']; ?> hidden> -->
+                                                <input name='iZip' value=<?php echo $row['institution_zipcode']; ?> hidden>
+                                                <input name='iCounty' value=<?php echo $row['institution_county']; ?> hidden>
 
-                                                <?php $id_name = "id-". $row['id']; ?>
-                                                <?php $id = $row['id'];?>
-                                                <div id='<?php echo $id_name; ?>'></div>
+                                                <?php $id = $row['id'];?>   
 
-                                                
-
-                                            <!-- <button id="<?php //echo $id_name ?>" type="button" class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php //echo $id; ?>"><span class="material-icons">description</span>FORM</button> -->
-                                                                                                            
-                                            <script>
-                                                //$("<?php //echo '#' . $id_name; ?>").click(function(e) {
-                                                    //e.preventDefault();
-                                                    // $.post("RequestsPage",
-                                                    //         {
-                                                    //         cFirstName: "<?php //echo $row['contact_first_name']; ?>",
-                                                    //         cLastName: "<?php //echo $row['contact_last_name']; ?>",
-                                                    //         cPhone: "<?php //echo $row['contact_phone']; ?>",
-                                                    //         cExt: "<?php //echo $row['contact_ext']; ?>",
-                                                    //         cEmail: "<?php //echo $row['contact_email']; ?>",
-                                                    //         iName: "<?php //echo $row['institution_name']; ?>",
-                                                    //         iAddress: "<?php //echo $row['institution_mailing_address']; ?>",
-                                                    //         iCity: "<?php //echo $row['institution_city']; ?>",
-                                                    //         iState: "Montana",
-                                                    //         iZip: "<?php //echo $row['institution_zipcode']; ?>",
-                                                    //         iCounty: "<?php //echo $row['institution_county']; ?>",
-                                                    //         iID: "<?php //echo $row['id']; ?>" 
-                                                    //     },function(){
-                                                    //     alert("Got Here");
-                                                    // });
-                                                    // $.ajax({
-                                                    //     url: 'RequestsPage',
-                                                    //     type: 'POST',
-                                                    //     data: {
-                                                    //         cFirstName: "<?php //echo $row['contact_first_name']; ?>",
-                                                    //         cLastName: "<?php //echo $row['contact_last_name']; ?>",
-                                                    //         cPhone: "<?php //echo $row['contact_phone']; ?>",
-                                                    //         cExt: "<?php //echo $row['contact_ext']; ?>",
-                                                    //         cEmail: "<?php //echo $row['contact_email']; ?>",
-                                                    //         iName: "<?php //echo $row['institution_name']; ?>",
-                                                    //         iAddress: "<?php //echo $row['institution_mailing_address']; ?>",
-                                                    //         iCity: "<?php //echo $row['institution_city']; ?>",
-                                                    //         iState: "Montana",
-                                                    //         iZip: "<?php //echo $row['institution_zipcode']; ?>",
-                                                    //         iCounty: "<?php //echo $row['institution_county']; ?>",
-                                                    //         iID: "<?php //echo $row['id']; ?>"
-
-                                                    //     },
-                                                    //     success: function(msg) {
-                                                    //         alert('Email Sent');
-                                                    //     },              
-                                                    // });
-                                                //});
-                                            </script>
-
+                                            <button type="submit" class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php echo $id; ?>"><span class="material-icons">description</span>FORM</button>
+                                                                                                        
+                                            </form>
 
                                             <!--____________________________________________________________________________________________________________________-->
                                             <form action='RequestsPage' method='POST'>
@@ -538,44 +490,5 @@ include_once('FormCheck.php');
             <p>Missoula Repertory Theatre &copy; 2020</p>
         </footer>
 
-
-        <script>
-
-            function populateForm(cFirst, cLast, cPhone, cExt, cEmail, iName, iAddress, iCity, iState, iZip, iCounty, iID, e) {
-                // e.preventDefault();
-                $.ajax({
-                    url: 'RequestsPage.php',
-                    type: 'POST',
-                    data: {
-                        cFirstName: cFirst,
-                        cLastName: cLast,
-                        cPhone: cPhone,
-                        cExt: cExt,
-                        cEmail: cEmail,
-                        iName: iName,
-                        iAddress: iAddress,
-                        iCity: iCity,
-                        iState: "Montana",
-                        iZip: iZip,
-                        iCounty: iCounty,
-                        iID: iID
-
-                    },
-                    success: function(msg) {
-                        id_name = "ID-" + iID;
-                        id_element = "#" + id_name;
-                        
-                        button = '<button id="' + id_name + '" type="button" class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="' + iID +'"><span class="material-icons">description</span>FORM</button>';
-                        console.log(id_name);
-                        console.log(id_element);
-                        console.log(button);
-                        $( id_element ).append( button );
-                        alert('Stuff Posted');
-                    }               
-                });
-                               
-            }
-            
-        </script>
     </body>
 </html>
