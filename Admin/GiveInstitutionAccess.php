@@ -56,6 +56,8 @@ include_once('FormCheck.php');
             <form action="AdminPage" method='POST' class="form-container">
                 <h5><b>Contact's Information:</b></h5><br>
 
+                <input name='id' value="<?php echo $_POST['id'];?>" hidden>
+
                 <label for='contact_first_name'>Contact's First Name:&nbsp;</label>
                 <input name='contact_first_name' placeholder='Enter First Name...' size='20' value="<?php echo $_POST['cFirstName']; ?>"><br>
 

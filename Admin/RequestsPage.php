@@ -199,7 +199,7 @@ include_once('FormCheck.php');
 
                                                 <?php $id = $row['id'];?>   
 
-                                                <button type="submit" value="<?php echo $id; ?>"><span class="material-icons">description</span>FORM</button>
+                                                <button name='id' type="submit" value="<?php echo $id; ?>"><span class="material-icons">description</span>FORM</button>
                                                                                                         
                                             </form>
 

@@ -420,6 +420,7 @@ require_once("./Classes/Database.php");
         $couOffice = mysqli_real_escape_string($database, $_POST['counselor_office']);
         $couBldg = mysqli_real_escape_string($database, $_POST['counselor_bldg']);
         $num_access = mysqli_real_escape_string($database, $_POST['accesses']);
+        $id = mysqli_real_escape_string($database, $_POST['id']);
 
         $grades = $_POST['student_grade'];
 
@@ -521,7 +522,7 @@ require_once("./Classes/Database.php");
             
             
 
-            if(!$updateSQL->bind_param("si", $contacted , $id))
+            if(!$updateSQL->bind_param("si", $id))
             {
                 array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
             
