@@ -529,6 +529,7 @@ require_once("./Classes/Database.php");
             if(!$updateSQL->execute()){
                 array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
             }
+            $updateSQL->close();
         }
 
         if(count($errors) === 0){
