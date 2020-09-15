@@ -445,7 +445,8 @@ require_once("./Classes/Database.php");
                 counselor_email,
                 counselor_phone, 
                 counselor_ext, 
-                total_number_of_accesses) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                total_number_of_accesses) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+        );
 
         $stmt->bind_param("sssssissssssssssssii", 
             $code, 
