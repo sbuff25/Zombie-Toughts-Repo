@@ -51,10 +51,12 @@ include_once('FormCheck.php');
         <?php endif ?>
 
         <div class='panel panel-default'>
-            <div class="panel-heading">Institution Access</div>
+            <div class="panel-heading"><h1>Institution Access</h1></div>
             <div class='panel-body center bg-light'>
             <form action="AdminPage" method='POST' class="form-container">
                 <h5><b>Contact's Information:</b></h5><br>
+
+                <input id='accessCode' name='access_code' hidden><br><br>
 
                 <label for='contact_first_name'>Contact's First Name:&nbsp;</label>
                 <input name='contact_first_name' placeholder='Enter First Name...' size='20' value="<?php echo $_POST['cFirstName']; ?>"><br>
@@ -84,12 +86,7 @@ include_once('FormCheck.php');
 
                 <label for='institution_state'>Institution's State:&nbsp;</label>
                 <select name='institution_state' name='StateSelect'><option value='Alabama'>Alabama</option><option value='Alaska'>Alaska</option><option value='Arizona'>Arizona</option><option value='Arkansas'>Arkansas</option><option value='California'>California</option><option value='Colorado'>Colorado</option><option value='Connecticut'>Connecticut</option><option value='Delaware'>Delaware</option><option value='Florida'>Florida</option><option value='Georgia'>Georgia</option><option value='Hawaii'>Hawaii</option><option value='Idaho'>Idaho</option><option value='Illinois'>Illinois</option><option value='Indiana'>Indiana</option><option value='Iowa'>Iowa</option><option value='Kansas'>Kansas</option><option value='Kentucky'>Kentucky</option><option value='Louisiana'>Louisiana</option><option value='Maine'>Maine</option><option value='Maryland'>Maryland</option><option value='Massachusetts'>Massachusetts</option><option value='Michigan'>Michigan</option><option value='Minnesota'>Minnesota</option><option value='Mississippi'>Mississippi</option><option value='Missouri'>Missouri</option><option value='Montana' selected>Montana</option><option value='Nebraska'>Nebraska</option><option value='Nevada'>Nevada</option><option value='New Hampshire'>New Hampshire</option><option value='New Jersey'>New Jersey</option><option value='New Mexico'>New Mexico</option><option value='New York'>New York</option><option value='North Carolina'>North Carolina</option><option value='North Dakota'>North Dakota</option><option value='Ohio'>Ohio</option><option value='Oklahoma'>Oklahoma</option><option value='Oregon'>Oregon</option><option value='Pennsylvania'>Pennsylvania</option><option value='Rhode Island'>Rhode Island</option><option value='South Carolina'>South Carolina</option><option value='South Dakota'>South Dakota</option><option value='Tennessee'>Tennessee</option><option value='Texas'>Texas</option><option value='Utah'>Utah</option><option value='Vermont'>Vermont</option><option value='Virginia'>Virginia</option><option value='Washington'>Washington</option><option value='West Virginia'>West Virginia</option><option value='Wisconsin'>Wisconsin</option><option value='Wyoming'>Wyoming</option></select><br>
-                <!-- <script>
-                    $(function() {
-                        
-                        $("#MySelect").val(<?php //echo $_POST['iState']; ?>)
-                    });
-                </script> -->
+
                 <label for='institution_zipcode'>Institution's Zipcode:&nbsp;</label>
                 <input name='institution_zipcode' placeholder='Enter Zipcode...' size='20' value="<?php echo $_POST['iZip']; ?>"><br>
 
@@ -138,6 +135,10 @@ include_once('FormCheck.php');
                 <label for='accesses'>Number of students/access codes needed:&nbsp;</label>
                 <input name='accesses' placeholder='Enter total...' type='number' min='1' size='20'><br>
 
+                <button type='button' id='generateCode'>Generate Access Code</button>
+
+                <div id='codeDiv'></div>
+
             </form>
         </div>
         </div>
@@ -151,6 +152,17 @@ include_once('FormCheck.php');
 
 
         <script>
+            $('#generateCode').on('click', function() {
+                $('#generateCode').remove();
+                // $('#LinkFormElement').empty();
+                
+                // Generate code and add to form 
+                code = generateAccessCode(this.value);
+                $( "<input name='generate_code' value='" + code + "'>" ).appendTo( "#codeDiv" );
+                $( "<h2>Code Generated</h2>" ).appendTo( "#codeDiv" );
+                $( "<button type='submit' name='submitInstAccess'>Submit</button>" ).appendTo( "#codeDiv" );
+                //$( "<input name='generate_code' value='" + code + "' hidden>" ).appendTo( "#" );
+            });
 
             function generateAccessCode(access_code_type){
                 characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -169,6 +181,7 @@ include_once('FormCheck.php');
                 else if(access_code_type === "ztp"){
                     access_code = 'ztp' + randomString;
                 }
+
                 return access_code;
             }
         </script>

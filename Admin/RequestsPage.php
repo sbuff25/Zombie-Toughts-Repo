@@ -196,6 +196,7 @@ include_once('FormCheck.php');
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             
                                             <form action='GiveInstitutionAccess' method='POST'>
+                                                <input id='accessCode' name='accessCode' hidden>
                                                 <input name="cFirstName" value=<?php echo $row['contact_first_name']; ?> hidden>
                                                 <input name="cLastName" value=<?php echo $row['contact_last_name']; ?> hidden>
                                                 <input name="cPhone" value=<?php echo $row['contact_phone']; ?> hidden>
@@ -210,7 +211,7 @@ include_once('FormCheck.php');
 
                                                 <?php $id = $row['id'];?>   
 
-                                            <button type="submit" class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php echo $id; ?>"><span class="material-icons">description</span>FORM</button>
+                                                <button type="submit" class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php echo $id; ?>"><span class="material-icons">description</span>FORM</button>
                                                                                                         
                                             </form>
 
