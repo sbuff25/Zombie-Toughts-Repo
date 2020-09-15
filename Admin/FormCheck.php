@@ -398,5 +398,121 @@ require_once("./Classes/Database.php");
             $_SESSION['success'] = "Successfully deleted contact";
         }
     }
+
+    if (isset($_POST['submitInstAccess'])) {
+        $code = mysqli_real_escape_string($database, $_POST['access_code']);
+        $first_name = mysqli_real_escape_string($database, $_POST['contact_first_name']);
+        $last_name = mysqli_real_escape_string($database, $_POST['contact_last_name']);
+        $email = mysqli_real_escape_string($database, $_POST['contact_email']);
+        $phone = mysqli_real_escape_string($database, $_POST['contact_phone']);
+        $ext = mysqli_real_escape_string($database, $_POST['contact_ext']);
+        $institution_name = mysqli_real_escape_string($database, $_POST['institution_name']);
+        $address = mysqli_real_escape_string($database, $_POST['mailing_address']);
+        $city = mysqli_real_escape_string($database, $_POST['institution_city']);
+        $state = mysqli_real_escape_string($database, $_POST['institution_state']);
+        $zipcode = mysqli_real_escape_string($database, $_POST['institution_zipcode']);
+        $county = mysqli_real_escape_string($database, $_POST['institution_county']);
+        $couFirst = mysqli_real_escape_string($database, $_POST['counselor_first_name']);
+        $couLast = mysqli_real_escape_string($database, $_POST['counselor_last_name']);
+        $couPhone = mysqli_real_escape_string($database, $_POST['counselor_phone']);
+        $couExt = mysqli_real_escape_string($database, $_POST['counselor_ext']);
+        $couEmail = mysqli_real_escape_string($database, $_POST['counselor_email']);
+        $couOffice = mysqli_real_escape_string($database, $_POST['counselor_office']);
+        $couBldg = mysqli_real_escape_string($database, $_POST['counselor_bldg']);
+        $num_access = mysqli_real_escape_string($database, $_POST['accesses']);
+
+        $grades = $_POST['student_grade'];
+
+        
+        $stmt = $database->prepare(
+            "INSERT INTO InstitutionAccessCode (
+                code, 
+                contact_first_name, 
+                contact_last_name, 
+                contact_email, 
+                contact_phone, 
+                contact_ext, 
+                institution_name, 
+                institution_mailing_address, 
+                institution_city, 
+                institution_state, 
+                institution_zipcode, 
+                institution_county, 
+                counselor_first_name, 
+                counselor_last_name, 
+                counselor_office_Number, 
+                counselor_bldg,
+                counselor_email,
+                counselor_phone, 
+                counselor_ext, 
+                total_number_of_accesses) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+
+        $stmt->bind_param("sssssissssssssssssii", 
+            $code, 
+            $first_name, 
+            $last_name,
+            $email, 
+            $phone, 
+            $ext, 
+            $institution_name, 
+            $address, 
+            $city, 
+            $state, 
+            $zipcode, 
+            $county,
+            $couFirst,
+            $couLast,
+            $couOffice,
+            $couBldg,
+            $couEmail,
+            $couPhone,
+            $couExt,
+            $num_access
+        );
+        
+        $stmt->execute();
+
+        if(!$stmt){
+            array_push($errors, "(Error Code: 0) There was a problem processing your request. Please try your request again, and if it still does not work please contact the Montana Repertory Theatre directly for access.");
+        }
+        $stmt->close();
+      
+        if(count($errors) === 0){
+            // Insert Grades into InstGrades
+            $gradeQuery = "INSERT INTO InstGrades (grade, instCode) VALUES";
+            $paramBind = "";
+            foreach ($grades as $grade){
+                //$gradeQuery .= "(" . $grade . ", " . $code . ")";
+                $paramBind .= "ss";
+                $gradeQuery .= "( ? , ? )";
+            }
+
+            $stmt = $database->prepare($gradeQuery);
+            $stmt->bind_param($paramBind, ...$grades);
+            $stmt->execute();
+
+            if(!$stmt){
+                array_push($errors, "(Error Code: 1) There was a problem processing your request. Please try your request again, and if it still does not work please contact the Montana Repertory Theatre directly for access.");
+            }
+            $stmt->close();
+        }
+
+        
+        if(count($errors) === 0){
+            $updateSQL = $database->prepare("UPDATE InstitutionInformation SET contacted='completed' WHERE id=?");
+            $updateSQL->bind_param("si", $contacted , $id);
+            $updateSQL->execute();
+
+            if(!$updateSQL){
+                array_push($errors, "Could not update contacted.");
+            }
+        }
+
+        if(count($errors) === 0){
+            // Send request processing email
+            $_SESSION['success'] = "Successfully Added Institution Access";
+        }
+
+    }
     
 ?>

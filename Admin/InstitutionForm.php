@@ -74,7 +74,7 @@
                 <h5><b>Other Information:</b></h5><br>
 
                 <label for='student_grade'>Students' Grade Level:&nbsp;</label>
-                <select name='student_grade' multiple>
+                <select name='student_grade[]' multiple>
                     <option value='K'>Kindergarten</option>
                     <option value='1'>1st</option>
                     <option value='2'>2nd</option>

@@ -107,6 +107,9 @@ include_once('FormCheck.php');
                 <label for='counselor_phone'>Counselor Phone Number (Format: XXX-XXX-XXXX ):&nbsp;</label>
                 <input name='counselor_phone' placeholder='Enter Phone Number...' type='tel' size='20' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'><br>
 
+                <label for='counselor_ext'>Counselor Extension Number:&nbsp;</label>
+                <input name='counselor_ext' placeholder='Enter Extension Number...'><br>
+
                 <label for='counselor_office'>Counselor Office Number:&nbsp;</label>
                 <input name='counselor_office' placeholder='Enter Office Number...' size='20'><br>
 
@@ -116,7 +119,7 @@ include_once('FormCheck.php');
                 <h5><b>Other Information:</b></h5><br>
 
                 <label for='student_grade'>Students' Grade Level:&nbsp;</label>
-                <select name='student_grade' multiple>
+                <select name='student_grade[]' multiple>
                     <option value='K'>Kindergarten</option>
                     <option value='1'>1st</option>
                     <option value='2'>2nd</option>
@@ -154,14 +157,11 @@ include_once('FormCheck.php');
         <script>
             $('#generateCode').on('click', function() {
                 $('#generateCode').remove();
-                // $('#LinkFormElement').empty();
-                
-                // Generate code and add to form 
+
                 code = generateAccessCode(this.value);
-                $( "<input name='generate_code' value='" + code + "'>" ).appendTo( "#codeDiv" );
+                $( "<input name='generate_code' value='" + code + "' hidden>" ).appendTo( "#codeDiv" );
                 $( "<h2>Code Generated</h2>" ).appendTo( "#codeDiv" );
-                $( "<button type='submit' name='submitInstAccess'>Submit</button>" ).appendTo( "#codeDiv" );
-                //$( "<input name='generate_code' value='" + code + "' hidden>" ).appendTo( "#" );
+                $( "<button class='btn btn-primary' type='submit' name='submitInstAccess'>Submit</button>" ).appendTo( "#codeDiv" );
             });
 
             function generateAccessCode(access_code_type){
