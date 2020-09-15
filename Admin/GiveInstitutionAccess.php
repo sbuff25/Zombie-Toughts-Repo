@@ -135,7 +135,7 @@ include_once('FormCheck.php');
                 <label for='accesses'>Number of students/access codes needed:&nbsp;</label>
                 <input name='accesses' placeholder='Enter total...' type='number' min='1' size='20'><br>
 
-                <button type='button' id='generateCode'>Generate Access Code</button>
+                <button type='button' id='generateCode' value='ztI'>Generate Access Code</button>
 
                 <div id='codeDiv'></div>
 
