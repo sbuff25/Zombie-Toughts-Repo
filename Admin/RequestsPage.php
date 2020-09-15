@@ -180,19 +180,7 @@ include_once('FormCheck.php');
 
                                                 // $InstArray[$row['id']] = $IArray;
                                             ?>
-                                    <td> <button onclick = "populateForm('<?php echo $cFirstName; ?>',
-                                                                '<?php echo $cLastName; ?>',
-                                                                '<?php echo $cPhone; ?>',
-                                                                '<?php echo $cExt; ?>',
-                                                                '<?php echo $cEmail; ?>',
-                                                                '<?php echo $iName; ?>',
-                                                                '<?php echo $iAddress; ?>',
-                                                                '<?php echo $iCity; ?>',
-                                                                '<?php echo $iState; ?>',
-                                                                '<?php echo $iZip; ?>',
-                                                                '<?php echo $iCounty; ?>',
-                                                                '<?php echo $iID; ?>'
-                                                                );" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
+                                    <td> <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             
                                             <form action='GiveInstitutionAccess' method='POST'>
@@ -211,7 +199,7 @@ include_once('FormCheck.php');
 
                                                 <?php $id = $row['id'];?>   
 
-                                                <button type="submit" class="dropdown-item" data-toggle="modal" data-target="#InstitutionForm" value="<?php echo $id; ?>"><span class="material-icons">description</span>FORM</button>
+                                                <button type="submit" value="<?php echo $id; ?>"><span class="material-icons">description</span>FORM</button>
                                                                                                         
                                             </form>
 
