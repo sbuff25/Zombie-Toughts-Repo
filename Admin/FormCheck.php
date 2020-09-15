@@ -400,7 +400,7 @@ require_once("./Classes/Database.php");
     }
 
     if (isset($_POST['submitInstAccess'])) {
-        $code = mysqli_real_escape_string($database, $_POST['access_code']);
+        $code = mysqli_real_escape_string($database, $_POST['generate_code']);
         $first_name = mysqli_real_escape_string($database, $_POST['contact_first_name']);
         $last_name = mysqli_real_escape_string($database, $_POST['contact_last_name']);
         $email = mysqli_real_escape_string($database, $_POST['contact_email']);
