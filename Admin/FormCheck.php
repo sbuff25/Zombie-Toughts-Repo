@@ -522,7 +522,7 @@ require_once("./Classes/Database.php");
             
             
 
-            if(!$updateSQL->bind_param("si", $id))
+            if(!$updateSQL->bind_param("i", $id))
             {
                 array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
             
