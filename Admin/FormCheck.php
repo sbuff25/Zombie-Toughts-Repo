@@ -518,11 +518,16 @@ require_once("./Classes/Database.php");
         
         if(count($errors) === 0){
             $updateSQL = $database->prepare("UPDATE InstitutionInformation SET contacted='completed' WHERE id=?");
-            $updateSQL->bind_param("si", $contacted , $id);
-            $updateSQL->execute();
+            
+            
 
-            if(!$updateSQL){
-                array_push($errors, "Could not update contacted.");
+            if(!$updateSQL->bind_param("si", $contacted , $id))
+            {
+                array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
+            
+            }
+            if(!$updateSQL->execute()){
+                array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
             }
         }
 
