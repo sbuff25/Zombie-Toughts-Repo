@@ -469,7 +469,7 @@ require_once("./Classes/Database.php");
             $couExt,
             $num_access
         );
-        
+
         $stmt->execute();
 
         if(!$stmt){
@@ -488,7 +488,7 @@ require_once("./Classes/Database.php");
             }
 
             $stmt = $database->prepare($gradeQuery);
-            $stmt->bind_param($paramBind, ...$grades);
+            $stmt->bind_param($paramBind, ...$grades[]);
             $stmt->execute();
 
             if(!$stmt){
