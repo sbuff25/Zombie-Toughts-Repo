@@ -482,13 +482,13 @@ require_once("./Classes/Database.php");
             $gradeQuery = "INSERT INTO InstGrades (grade, instCode) VALUES";
             $paramBind = "";
             foreach ($grades as $grade){
-                //$gradeQuery .= "(" . $grade . ", " . $code . ")";
-                $paramBind .= "ss";
-                $gradeQuery .= "( ? , ? )";
+                $gradeQuery .= "(" . $grade . ", " . $code . ")";
+                //$paramBind .= "ss";
+                // $gradeQuery .= "( ? , ? )";
             }
 
             $stmt = $database->prepare($gradeQuery);
-            $stmt->bind_param($paramBind, $grades);
+            //$stmt->bind_param($paramBind, ...$grades);
             $stmt->execute();
 
             if(!$stmt){
