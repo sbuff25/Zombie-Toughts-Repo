@@ -5,7 +5,7 @@ require_once("./php/Classes/Database.php");
 
     $errors = array();
     if (isset($_POST['submitCode'])) {
-        $code = mysqli_real_escape_string($database, $_POST['accessCode']);
+        $code = trim(mysqli_real_escape_string($database, $_POST['accessCode']));
         if(strlen($code) < 17 || strlen($code) > 17){
             array_push($errors, "Please check your access code to ensure that it was entered correctly. It is case-sensitive.");
         }
