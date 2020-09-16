@@ -13,6 +13,14 @@ require_once("./php/Classes/Database.php");
             $stmt = $database->prepare("SELECT * FROM IndividualAccessCode WHERE code=?");
             $stmt->bind_param("s", $code);
             $stmt->execute();
+            $result = $stmt->get_result();
+            if($result->num_rows === 1){
+                $row = $result->fetch_assoc();
+                if(strtotime($row['end_date']) > date()){
+                    array_push($errors, "Access period has ended.");
+                }
+            }
+            $stmt->close();
 
         }
         elseif(substr($code, 0, 3) === "ztI" && strlen($code) === 17){
@@ -32,12 +40,16 @@ require_once("./php/Classes/Database.php");
                 array_push($errors, "Please check your access code to ensure that it was entered correctly. It is case-sensitive.");
 
             }
+            $stmt->close();
 
         }
         elseif(substr($code, 0, 3) === "ztp" && strlen($code) === 17){
             $stmt = $database->prepare("SELECT * FROM PreviewAccessCode WHERE code=?");
             $stmt->bind_param("s", $code);
             $stmt->execute();
+
+
+            $stmt->close();
 
         }
         else{
@@ -202,7 +214,7 @@ require_once("./php/Classes/Database.php");
 
         if(count($errors) === 0){
             // Send request processing email
-            $_SESSION['success'] = "A email has been sent to you with instructions for accessing Zombie Thoughts.";
+            $_SESSION['success'] = "An email has been sent to you with instructions for accessing Zombie Thoughts.";
         }
 
     }

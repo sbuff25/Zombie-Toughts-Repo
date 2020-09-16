@@ -260,10 +260,11 @@ include_once("accessCheck.php");
             <br>
 
             <form action='index' method='POST'>
-            <label for='accessCode'>Have a code? Enter it here:&nbsp;</label>
-            <input name='accessCode' placeholder='Enter Access Code Here...'>
-            <button type='submit' name='submitCode'>Submit Code</button>
+                <label for='accessCode'>Have a code? Enter it here:&nbsp;</label>
+                <input name='accessCode' placeholder='Enter Access Code Here...'>
+                <button type='submit' name='submitCode'>Submit Code</button>
             </form>
+            <h4>Temp Access Code For Testing: ztibozycWkRzYMsAt </h4>
             <br>
 
             <?php
