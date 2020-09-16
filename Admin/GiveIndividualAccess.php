@@ -82,10 +82,10 @@ include_once('FormCheck.php');
                 <br>
 
                 <label for='zipcode'>Individual's Zipcode: </label>
-                <input name='zipcode' placeholder='Enter Zipcode...' size='20'><br>
+                <input name='zipcode' placeholder='Enter Zipcode...' size='20' value="<?php echo $_POST['zipcode']; ?>"><br>
 
                 <label for='end_date'>Code Expiration Date: </label>
-                <input name='end_date' type='date'><br>
+                <input name='end_date' type='date' required><br>
 
 
                 <button type='button' id='generateCode' value='zti'>Generate Access Code</button>
