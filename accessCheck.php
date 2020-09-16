@@ -16,7 +16,7 @@ require_once("./php/Classes/Database.php");
             $result = $stmt->get_result();
             if($result->num_rows === 1){
                 $row = $result->fetch_assoc();
-                if(strtotime($row['end_date']) > date()){
+                if(strtotime($row['end_date']) <= date()){
                     array_push($errors, "Access period has ended.");
                 }
             }
