@@ -88,6 +88,7 @@ include_once('FormCheck.php');
                 <input name='end_date' type='date'><br>
 
                 <label for='end_date'>Code Expiration Time: </label>
+                <?php echo time(); ?>
                 <input name='end_date' type='time' value="<?php echo time(); ?>" ><br>
 
 
