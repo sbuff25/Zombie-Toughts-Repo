@@ -34,8 +34,8 @@ include_once("accessCheck.php");
 
 </head>
 <body>
-    <?php //include_once("InstitutionAccessForm.php"); ?>
-    <?php //include_once("MTResidentForm.php"); ?>
+    <?php include_once("InstitutionAccessForm.php"); ?>
+    <?php include_once("MTResidentForm.php"); ?>
     <div id="progressbar"></div>
     <div id="scrollPath"></div>
 
@@ -228,8 +228,8 @@ include_once("accessCheck.php");
             <h3 class="center game_play" id="lighten">Zombie Thoughts</h3>
             <div class="collapsed center">
 
-            <?php include_once("InstitutionAccessForm.php"); ?>
-            <?php include_once("MTResidentForm.php"); ?>
+            <?php //include_once("InstitutionAccessForm.php"); ?>
+            <?php //include_once("MTResidentForm.php"); ?>
 
             <?php if(!isset($_SESSION['code'])){?>
 
