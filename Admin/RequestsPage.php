@@ -461,19 +461,17 @@ include_once('FormCheck.php');
                                     </td>
                                     <td> <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <form action='GiveInstitutionAccess' method='POST'>
-                                                <input id='accessCode' name='accessCode' hidden>
-                                                <input name="cFirstName" value=<?php echo $row['contact_first_name']; ?> hidden>
-                                                <input name="cLastName" value=<?php echo $row['contact_last_name']; ?> hidden>
-                                                <input name="cPhone" value=<?php echo $row['contact_phone']; ?> hidden>
-                                                <input name="cExt" value=<?php echo $row['contact_ext']; ?> hidden>
-                                                <input name='cEmail' value=<?php echo $row['contact_email']; ?> hidden>
-                                                <input name='iName' value=<?php echo $row['institution_name']; ?> hidden>
-                                                <input name='iAddress' value=<?php echo $row['institution_mailing_address']; ?> hidden>
-                                                <input name='iCity' value=<?php echo $row['institution_city']; ?> hidden>
-                                                <input name='iState' value=<?php echo $row['institution_state']; ?> hidden>
-                                                <input name='iZip' value=<?php echo $row['institution_zipcode']; ?> hidden>
-                                                <input name='iCounty' value=<?php echo $row['institution_county']; ?> hidden>
+                                            <form action='GiveIndividualAccess' method='POST'>
+                                                
+                                                <input name="first_name" value=<?php echo $row['first_name']; ?> hidden>
+                                                <input name="last_name" value=<?php echo $row['last_name']; ?> hidden>
+                                                <input name="phone" value=<?php echo $row['phone']; ?> hidden>
+                                                <input name='email' value=<?php echo $row['email']; ?> hidden>
+                                                <input name='address' value=<?php echo $row['address']; ?> hidden>
+                                                <input name='apt_num' value=<?php echo $row['apt_num']; ?> hidden>
+                                                <input name='city' value=<?php echo $row['city']; ?> hidden>
+                                                <input name='state' value=<?php echo $row['state']; ?> hidden>
+                                                <input name='zipcode' value=<?php echo $row['zipcode']; ?> hidden>
 
                                                 <?php $id = $row['id'];?>   
 
