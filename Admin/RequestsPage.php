@@ -463,15 +463,15 @@ include_once('FormCheck.php');
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <form action='GiveIndividualAccess' method='POST'>
                                                 
-                                                <input name="first_name" value=<?php echo $row['first_name']; ?> hidden>
-                                                <input name="last_name" value=<?php echo $row['last_name']; ?> hidden>
-                                                <input name="phone" value=<?php echo $row['phone']; ?> hidden>
-                                                <input name='email' value=<?php echo $row['email']; ?> hidden>
-                                                <input name='address' value=<?php echo $row['address']; ?> hidden>
-                                                <input name='apt_num' value=<?php echo $row['apt_num']; ?> hidden>
-                                                <input name='city' value=<?php echo $row['city']; ?> hidden>
-                                                <input name='state' value=<?php echo $row['state']; ?> hidden>
-                                                <input name='zipcode' value=<?php echo $row['zipcode']; ?> hidden>
+                                                <input name="first_name" value="<?php echo $row['first_name']; ?>" hidden>
+                                                <input name="last_name" value="<?php echo $row['last_name']; ?>" hidden>
+                                                <input name="phone" value="<?php echo $row['phone']; ?>" hidden>
+                                                <input name='email' value="<?php echo $row['email']; ?>" hidden>
+                                                <input name='address' value="<?php echo $row['address']; ?>" hidden>
+                                                <input name='apt_num' value="<?php echo $row['apt_num']; ?>" hidden>
+                                                <input name='city' value="<?php echo $row['city']; ?>" hidden>
+                                                <input name='state' value="<?php echo $row['state']; ?>" hidden>
+                                                <input name='zipcode' value="<?php echo $row['zipcode']; ?>" hidden>
 
                                                 <?php $id = $row['id'];?>   
 
