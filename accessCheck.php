@@ -144,7 +144,7 @@ require_once("./php/Classes/Database.php");
         $state = mysqli_real_escape_string($database, $_POST['state']);
         $zipcode = mysqli_real_escape_string($database, $_POST['zipcode']);
 
-        $end_date = mysqli_real_escape_string($database, $_POST['end_date']);
+        $end_date = date('Y-m-d', strtotime("+2 days"));
         $id = mysqli_real_escape_string($database, $_POST['id']);
 
 
@@ -199,25 +199,10 @@ require_once("./php/Classes/Database.php");
         $stmt->close();
 
         
-        if(count($errors) === 0){
-            $updateSQL = $database->prepare("UPDATE OutOfStateIndividual SET contacted='completed' WHERE id=?");
-            
-            
-
-            if(!$updateSQL->bind_param("i", $id))
-            {
-                array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
-            
-            }
-            if(!$updateSQL->execute()){
-                array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
-            }
-            $updateSQL->close();
-        }
 
         if(count($errors) === 0){
             // Send request processing email
-            $_SESSION['success'] = "Successfully Added Out-of-State Individual Access";
+            $_SESSION['success'] = "A email has been sent to you with instructions for accessing Zombie Thoughts.";
         }
 
     }
