@@ -14,7 +14,7 @@ include_once("accessCheck.php");
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script defer src="./game.js"></script>
-    <!-- <script src='bootstrap.min.js'></script> -->
+    
     <!-- <script defer src="./game_YT_API.js"></script> -->
     <link rel="stylesheet" href="./css.css">
     <link rel="stylesheet" href="./menu.css">
@@ -282,5 +282,6 @@ include_once("accessCheck.php");
     </script>
     <script src="./scroll.js"></script>
     <script src="./parallax.js"></script>
+    <script src='bootstrap.min.js'></script>
   
 </body>
