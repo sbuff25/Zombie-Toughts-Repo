@@ -12,7 +12,6 @@ video::-webkit-media-controls-timeline {
 video::-webkit-media-controls-time-remaining-display {
     display: none;
 }
-
 @media(max-width:2560px)
 {
     video
