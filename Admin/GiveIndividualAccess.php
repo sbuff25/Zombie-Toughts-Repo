@@ -85,7 +85,10 @@ include_once('FormCheck.php');
                 <input name='zipcode' placeholder='Enter Zipcode...' size='20'><br>
 
                 <label for='end_date'>Code Expiration Date: </label>
-                <input name='end_date' type='datetime-local'><br>
+                <input name='end_date' type='date'><br>
+
+                <label for='end_date'>Code Expiration Time: </label>
+                <input name='end_date' type='time' value="<?php echo time(); ?>" ><br>
 
 
                 <button type='button' id='generateCode' value='zti'>Generate Access Code</button>
