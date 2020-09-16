@@ -140,6 +140,9 @@ $("#ind_or_inst_select").on('change', function() {
             $("<label for='phone'>Phone Number (Format: XXX-XXX-XXXX ):&nbsp;</label>").appendTo( "#add_here" );
             $("<input name='phone' type='tel' placeholder='Enter Phone Number...' size='20' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}' required><br>").appendTo( "#add_here" );
 
+            $("<label for='address'>City:&nbsp;</label>").appendTo( "#add_here" );
+            $("<input name='address' placeholder='Enter Address...' size='20' required><br>").appendTo( "#add_here" );
+
             $("<label for='city'>City:&nbsp;</label>").appendTo( "#add_here" );
             $("<input name='city' placeholder='Enter City...' size='20' required><br>").appendTo( "#add_here" );
 

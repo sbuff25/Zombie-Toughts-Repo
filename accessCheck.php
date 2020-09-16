@@ -83,13 +83,14 @@ require_once("./php/Classes/Database.php");
         $last_name = mysqli_real_escape_string($database, $_POST['last_name']);
         $email = mysqli_real_escape_string($database, $_POST['email']);
         $phone = mysqli_real_escape_string($database, $_POST['phone']);
+        $address = mysqli_real_escape_string($database, $_POST['address']);
         $city = mysqli_real_escape_string($database, $_POST['city']);
         $state = mysqli_real_escape_string($database, $_POST['state']);
         $zipcode = mysqli_real_escape_string($database, $_POST['zipcode']);
         $county = mysqli_real_escape_string($database, $_POST['county']);
 
-        $stmt = $database->prepare("INSERT INTO OutOfStateIndividual (first_name, last_name, email, phone, city, state, zipcode, county, contacted) VALUES(?, ?, ?, ?, ?, ?, ?, ?, 'not contacted')");
-        $stmt->bind_param("ssssssss", $first_name, $last_name, $email, $phone, $city, $state, $zipcode, $county);
+        $stmt = $database->prepare("INSERT INTO OutOfStateIndividual (first_name, last_name, email, phone, address, city, state, zipcode, county, contacted) VALUES(?, ?, ?, ?, ?, ?, ?, ?, 'not contacted')");
+        $stmt->bind_param("sssssssss", $first_name, $last_name, $email, $phone, $address, $city, $state, $zipcode, $county);
         $stmt->execute();
 
         if(!$stmt){

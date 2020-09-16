@@ -88,7 +88,7 @@ include_once('FormCheck.php');
                 <input name='end_date' type='datetime-local'><br>
 
 
-                <button type='button' id='generateCode' value='ztI'>Generate Access Code</button>
+                <button type='button' id='generateCode' value='zti'>Generate Access Code</button>
 
                 <div id='codeDiv'></div>
 
