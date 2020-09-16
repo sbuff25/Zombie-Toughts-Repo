@@ -1,7 +1,6 @@
 <?php session_start(); 
 include_once("accessCheck.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
@@ -99,6 +98,9 @@ include_once("accessCheck.php");
             </a>
             <a href="">
                 <img src="./Sponsor_Logos_PNG/MontanaPBS.png" alt="" id="PBS">
+            </a>
+            <a href="https://www.dpwfoundation.org/">
+                <img src="./Sponsor_Logos_PNG/DPWF.png" alt="" id="DPWF">
             </a>
             
         </section>
@@ -208,7 +210,7 @@ include_once("accessCheck.php");
                                 Spencer Buffum (Programer/ Front End Developer)
                             </div>
                             <div class="bios">
-                                 Currently a senior at the University of Montana pursuing a BFA in graphic design and web development. His role in the project was the creation of the Zombie Thoughts Website and game.    
+                                 Currently a senior at the University of Montana pursuing a BFA in graphic design and web development. His role in the project was the creation of the Zombie Thoughts Website as well as the programing for the game itself.     
                             </div>
                         </div>
                     </div> 
@@ -223,6 +225,7 @@ include_once("accessCheck.php");
         <div class="game expand container center">
             <h3 class="center game_play" id="lighten">Zombie Thoughts</h3>
             <div class="collapsed center">
+
                 <?php //if(!isset($_SESSION['code'])){?>
 
                     <?php //include_once('./Admin/errors.php'); ?>
@@ -263,23 +266,23 @@ include_once("accessCheck.php");
                 ?>
                 
                 <div id="vid_box">
-                    <video id="video" controls controlsList="nodownload">
+                    <video id="video" controls controlsList="nodownload" playsinline>
                         <source src="" type="video/mp4">
                     </video>
                     <div id="player" class="moveUpVid"></div>
                 </div>
                 <div id="text" class="moveUpText"></div>
                 <div id="option-buttons" class="moveUpBtn"></div>
-                <audio id="audio">
-                    <source src="./audio/select_granted.wav"></source>
-                </audio>
-                <audio id="audio_menu">
-                    <source src="./audio/menu_slide.wav">
-                </audio>
-                <audio id="audio_select">
-                    <source src="./audio/selector_tone.wav">
-                </audio>
-                <?php //} ?>
+                    <audio id="audio">
+                        <source src="./audio/select_granted.wav"></source>
+                    </audio>
+                    <audio id="audio_menu">
+                        <source src="./audio/menu_slide.wav">
+                    </audio>
+                    <audio id="audio_select">
+                        <source src="./audio/selector_tone.wav">
+                    </audio>
+                    <?php //} ?>
             </div>
         </div>
     </section>
@@ -289,22 +292,21 @@ include_once("accessCheck.php");
             
             <div>
                 
-                <div class="parentAndEducators"> 
-                    <ul>
-                        <h1>Parents and educators :</h1>
-                        <li id="lighten"><a href="./resources/MT-ZombieThoughtsRepPack.pdf">Zombie Thoughts Classroom Guide (PDF attached)</a></li>
-                        <li id="lighten"><a href="https://www.amightygirl.com/blog?p=22612&fbclid=IwAR0H5s7x_RjLdLK2x_-KPjE7EnIh4SF-Z2cG-j7a3C0Uo8o-AOaYkiQC_7s">25 Books to Help Kids Overcome Anxiety, Worry & Fear</a></li>
-                        <li id="lighten"><a href="https://akidsbookabout.com/products/a-kids-book-about-anxiety?gclid=EAIaIQobChMI5bCW1NnU6wIV9j6tBh1r7wArEAAYASAAEgLNW_D_BwE">A Kids Book About Anxiety</a></li>
-                        <li id="lighten"><a href="https://www.nhsinform.scot/illnesses-and-conditions/mental-health/mental-health-self-help-guides/anxiety-self-help-guide">Scotland’s National Health Services Anxiety Self-Help Guide</a></li>
-                        <li id="lighten"><a href="https://theweek.com/articles/888213/anxiety-different-kids?fbclid=IwAR09XPor_umxRlFAneJ23RJtfdjaw5QJ3_Gc9NqQxvCRqjgRtm_5RNxRsUU">“Anxiety is Different for Kids”</a></li>
-                    </ul>
-                </div>
-                <div class="kids"> 
-                        
+                    <div class="parentAndEducators"> 
                         <ul>
-                            <h1>For Kids :</h1>
-                            <li id="lighten"><a href="https://www.self.com/story/grounding-techniques-for-anxiety?fbclid=IwAR0XXDdJctF7cDHSbIZe-HPGPCdKXTV47ZsLlPBTV_376a_I5i-hsLloG18">8 Grounding Techniques for When You’re Spiraling</a></li>
+                            <h1>Parents and educators:</h1>
+                            <li id="lighten"><a href="./resources/MT-ZombieThoughtsRepPack.pdf">Zombie Thoughts Classroom Guide (PDF attached)</a></li>
+                            <li id="lighten"><a href="https://www.amightygirl.com/blog?p=22612&fbclid=IwAR0H5s7x_RjLdLK2x_-KPjE7EnIh4SF-Z2cG-j7a3C0Uo8o-AOaYkiQC_7s">25 Books to Help Kids Overcome Anxiety, Worry & Fear</a></li>
+                            <li id="lighten"><a href="https://akidsbookabout.com/products/a-kids-book-about-anxiety?gclid=EAIaIQobChMI5bCW1NnU6wIV9j6tBh1r7wArEAAYASAAEgLNW_D_BwE">A Kids Book About Anxiety</a></li>
+                            <li id="lighten"><a href="https://www.nhsinform.scot/illnesses-and-conditions/mental-health/mental-health-self-help-guides/anxiety-self-help-guide">Scotland’s National Health Services Anxiety Self-Help Guide</a></li>
+                            <li id="lighten"><a href="https://theweek.com/articles/888213/anxiety-different-kids?fbclid=IwAR09XPor_umxRlFAneJ23RJtfdjaw5QJ3_Gc9NqQxvCRqjgRtm_5RNxRsUU">“Anxiety is Different for Kids”</a></li>
                         </ul>
+                    <div class="kids"> 
+                            
+                            <ul>
+                                <h1>For Kids:</h1>
+                                <li id="lighten"><a href="https://www.self.com/story/grounding-techniques-for-anxiety?fbclid=IwAR0XXDdJctF7cDHSbIZe-HPGPCdKXTV47ZsLlPBTV_376a_I5i-hsLloG18">8 Grounding Techniques for When You’re Spiraling</a></li>
+                            </ul>
                 </div>
             </div>
         </div>
@@ -320,10 +322,7 @@ include_once("accessCheck.php");
     
 </div>
 
-    <!--Footer-->
-    <footer class="center bg-dark">
-        <p>Missoula Repertory Theatre &copy; 2020</p>
-    </footer>
+
 
 
 
