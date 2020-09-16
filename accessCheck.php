@@ -129,4 +129,96 @@ require_once("./php/Classes/Database.php");
             // Send request processing email
         }
     }
+
+    if (isset($_POST['submitIndAccess'])) {
+        $code = mysqli_real_escape_string($database, $_POST['generate_code']);
+        $first_name = mysqli_real_escape_string($database, $_POST['first_name']);
+        $last_name = mysqli_real_escape_string($database, $_POST['last_name']);
+        $email = mysqli_real_escape_string($database, $_POST['email']);
+        $phone = mysqli_real_escape_string($database, $_POST['phone']);
+
+
+        $address = mysqli_real_escape_string($database, $_POST['address']);
+        $apt_num = mysqli_real_escape_string($database, $_POST['apt_num']);
+        $city = mysqli_real_escape_string($database, $_POST['city']);
+        $state = mysqli_real_escape_string($database, $_POST['state']);
+        $zipcode = mysqli_real_escape_string($database, $_POST['zipcode']);
+
+        $end_date = mysqli_real_escape_string($database, $_POST['end_date']);
+        $id = mysqli_real_escape_string($database, $_POST['id']);
+
+
+        $stmt = $database->prepare("INSERT INTO AccessCode (code) VALUES (?)");
+        if(!$stmt->bind_param("s", $code)){
+            array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
+        }
+        if(!$stmt->execute()){
+            array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
+        }
+        $stmt->close();
+
+        
+        $stmt = $database->prepare(
+            "INSERT INTO IndividualAccessCode (
+                code, 
+                first_name, 
+                last_name, 
+                email, 
+                phone, 
+                address, 
+                apt_num, 
+                city, 
+                state, 
+                zipcode,
+                end_date
+                ) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+        );
+
+        if(!$stmt->bind_param("sssssssssss", 
+            $code, 
+            $first_name, 
+            $last_name,
+            $email, 
+            $phone,
+            $address, 
+            $apt_num,
+            $city, 
+            $state, 
+            $zipcode, 
+            $end_date
+        )){
+            array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
+     
+        }
+
+        // $stmt->execute();
+
+        if(!$stmt->execute()){
+            array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
+        }
+        $stmt->close();
+
+        
+        if(count($errors) === 0){
+            $updateSQL = $database->prepare("UPDATE OutOfStateIndividual SET contacted='completed' WHERE id=?");
+            
+            
+
+            if(!$updateSQL->bind_param("i", $id))
+            {
+                array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
+            
+            }
+            if(!$updateSQL->execute()){
+                array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
+            }
+            $updateSQL->close();
+        }
+
+        if(count($errors) === 0){
+            // Send request processing email
+            $_SESSION['success'] = "Successfully Added Out-of-State Individual Access";
+        }
+
+    }
 ?>
