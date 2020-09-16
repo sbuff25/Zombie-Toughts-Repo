@@ -87,10 +87,6 @@ include_once('FormCheck.php');
                 <label for='end_date'>Code Expiration Date: </label>
                 <input name='end_date' type='date'><br>
 
-                <label for='end_date'>Code Expiration Time: </label>
-                <?php echo time(); ?>
-                <input name='end_date' type='time' value="<?php echo time(); ?>" ><br>
-
 
                 <button type='button' id='generateCode' value='zti'>Generate Access Code</button>
 

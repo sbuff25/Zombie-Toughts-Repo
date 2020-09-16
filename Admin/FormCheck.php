@@ -264,7 +264,7 @@ require_once("./Classes/Database.php");
         $id = mysqli_real_escape_string($database, $_POST['newNote']);
         $note = mysqli_real_escape_string($database, $_POST['note']);
 
-        $checkMax = $database->prepare("SELECT MAX(note_id) as max_note_id FROM InstitutionNotes WHERE institution_id=?");
+        $checkMax = $database->prepare("SELECT MAX(note_id) as max_note_id FROM InstitutionNotes WHERE id=?");
         $checkMax->bind_param("i", $id);
         $checkMax->execute();
         $result = $checkMax->get_result();
@@ -273,7 +273,7 @@ require_once("./Classes/Database.php");
         if($checkMax){
             if($result->num_rows > 0){
                 $note_id = intval($row['max_note_id']) + 1;
-                $insertSQL = $database->prepare("INSERT INTO InstitutionNotes (note_id, institution_id, note) VALUES (?, ?, ?)");
+                $insertSQL = $database->prepare("INSERT INTO InstitutionNotes (note_id, id, note) VALUES (?, ?, ?)");
                 $insertSQL->bind_param("iis", $note_id , $id, $note);
                 $insertSQL->execute();
                 if(!$insertSQL){
@@ -282,7 +282,7 @@ require_once("./Classes/Database.php");
                 $insertSQL->close();
             }
             else{
-                $insertSQL = $database->prepare("INSERT INTO InstitutionNotes (note_id, institution_id, note) VALUES (0, ?, ?)");
+                $insertSQL = $database->prepare("INSERT INTO InstitutionNotes (note_id, id, note) VALUES (0, ?, ?)");
                 $insertSQL->bind_param("is", $id, $note);
                 $insertSQL->execute();
                 if(!$insertSQL){
@@ -401,17 +401,17 @@ require_once("./Classes/Database.php");
 
     if (isset($_POST['submitInstAccess'])) {
         $code = mysqli_real_escape_string($database, $_POST['generate_code']);
-        $first_name = mysqli_real_escape_string($database, $_POST['contact_first_name']);
-        $last_name = mysqli_real_escape_string($database, $_POST['contact_last_name']);
-        $email = mysqli_real_escape_string($database, $_POST['contact_email']);
-        $phone = mysqli_real_escape_string($database, $_POST['contact_phone']);
-        $ext = mysqli_real_escape_string($database, $_POST['contact_ext']);
-        $institution_name = mysqli_real_escape_string($database, $_POST['institution_name']);
+        $first_name = mysqli_real_escape_string($database, $_POST['first_name']);
+        $last_name = mysqli_real_escape_string($database, $_POST['last_name']);
+        $email = mysqli_real_escape_string($database, $_POST['email']);
+        $phone = mysqli_real_escape_string($database, $_POST['phone']);
+        $ext = mysqli_real_escape_string($database, $_POST['ext']);
+        $name = mysqli_real_escape_string($database, $_POST['name']);
         $address = mysqli_real_escape_string($database, $_POST['mailing_address']);
-        $city = mysqli_real_escape_string($database, $_POST['institution_city']);
-        $state = mysqli_real_escape_string($database, $_POST['institution_state']);
-        $zipcode = mysqli_real_escape_string($database, $_POST['institution_zipcode']);
-        $county = mysqli_real_escape_string($database, $_POST['institution_county']);
+        $city = mysqli_real_escape_string($database, $_POST['city']);
+        $state = mysqli_real_escape_string($database, $_POST['state']);
+        $zipcode = mysqli_real_escape_string($database, $_POST['zipcode']);
+        $county = mysqli_real_escape_string($database, $_POST['county']);
         $couFirst = mysqli_real_escape_string($database, $_POST['counselor_first_name']);
         $couLast = mysqli_real_escape_string($database, $_POST['counselor_last_name']);
         $couPhone = mysqli_real_escape_string($database, $_POST['counselor_phone']);
@@ -437,17 +437,17 @@ require_once("./Classes/Database.php");
         $stmt = $database->prepare(
             "INSERT INTO InstitutionAccessCode (
                 code, 
-                contact_first_name, 
-                contact_last_name, 
-                contact_email, 
-                contact_phone, 
-                contact_ext, 
-                institution_name, 
-                institution_mailing_address, 
-                institution_city, 
-                institution_state, 
-                institution_zipcode, 
-                institution_county, 
+                first_name, 
+                last_name, 
+                email, 
+                phone, 
+                ext, 
+                name, 
+                mailing_address, 
+                city, 
+                state, 
+                zipcode, 
+                county, 
                 counselor_first_name, 
                 counselor_last_name, 
                 counselor_office_Number, 
@@ -465,7 +465,7 @@ require_once("./Classes/Database.php");
             $email, 
             $phone, 
             $ext, 
-            $institution_name, 
+            $name, 
             $address, 
             $city, 
             $state, 
@@ -539,5 +539,100 @@ require_once("./Classes/Database.php");
         }
 
     }
+
+
+
+    if (isset($_POST['submitIndAccess'])) {
+        $code = mysqli_real_escape_string($database, $_POST['generate_code']);
+        $first_name = mysqli_real_escape_string($database, $_POST['first_name']);
+        $last_name = mysqli_real_escape_string($database, $_POST['last_name']);
+        $email = mysqli_real_escape_string($database, $_POST['email']);
+        $phone = mysqli_real_escape_string($database, $_POST['phone']);
+
+
+        $address = mysqli_real_escape_string($database, $_POST['address']);
+        $apt_num = mysqli_real_escape_string($database, $_POST['apt_num']);
+        $city = mysqli_real_escape_string($database, $_POST['city']);
+        $state = mysqli_real_escape_string($database, $_POST['state']);
+        $zipcode = mysqli_real_escape_string($database, $_POST['zipcode']);
+
+        $end_date = mysqli_real_escape_string($database, $_POST['end_date']);
+        $id = mysqli_real_escape_string($database, $_POST['id']);
+
+
+        $stmt = $database->prepare("INSERT INTO AccessCode (code) VALUES (?)");
+        if(!$stmt->bind_param("s", $code)){
+            array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
+        }
+        if(!$stmt->execute()){
+            array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
+        }
+        $stmt->close();
+
+        
+        $stmt = $database->prepare(
+            "INSERT INTO IndividualAccessCode (
+                code, 
+                first_name, 
+                last_name, 
+                email, 
+                phone, 
+                address, 
+                apt_num, 
+                city, 
+                state, 
+                zipcode,
+                end_date
+                ) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+        );
+
+        if(!$stmt->bind_param("sssssssssss", 
+            $code, 
+            $first_name, 
+            $last_name,
+            $email, 
+            $phone,
+            $address, 
+            $apt_num,
+            $city, 
+            $state, 
+            $zipcode, 
+            $end_date
+        )){
+            array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
+     
+        }
+
+        // $stmt->execute();
+
+        if(!$stmt->execute()){
+            array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
+        }
+        $stmt->close();
+
+        
+        if(count($errors) === 0){
+            $updateSQL = $database->prepare("UPDATE OutOfStateIndividual SET contacted='completed' WHERE id=?");
+            
+            
+
+            if(!$updateSQL->bind_param("i", $id))
+            {
+                array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
+            
+            }
+            if(!$updateSQL->execute()){
+                array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
+            }
+            $updateSQL->close();
+        }
+
+        if(count($errors) === 0){
+            // Send request processing email
+            $_SESSION['success'] = "Successfully Added Out-of-State Individual Access";
+        }
+
+    }
+    
     
 ?>
