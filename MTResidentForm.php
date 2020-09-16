@@ -40,9 +40,9 @@
                 <label for='zipcode'>Zipcode:&nbsp;</label>
                 <input name='zipcode' placeholder='Enter Zipcode...' size='20'><br>
 
-                <!-- <label for='county'>County:&nbsp;</label>
-                <input name='county' placeholder='Enter County...' size='20'><br> -->
-                <button type='submit' name='IndividualMTAccessForm' class='btn btn-primary'>Submit Request</button> 
+                <button type='button' id='generateCode' value='zti'>Generate Access Code</button>
+
+                <div id='codeDiv'></div>
             </form>
         </div>
         <div class="modal-footer">
@@ -54,32 +54,34 @@
 
 
 <script>
+    $('#generateCode').on('click', function() {
+        $('#generateCode').remove();
 
-            function generateAccessCode(access_code_type){
-                characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-                randomString = '';
-                for (i = 0; i < 14; i++) { 
-                    index = Math.floor(Math.random() * characters.length);
-                    randomString += characters[index]; 
-                } 
-                access_code = '';
-                if (access_code_type === "zti"){
-                    access_code = 'zti' + randomString;
-                }
-                else if (access_code_type === "ztI"){
-                    access_code = 'ztI' + randomString;
-                }
-                else if(access_code_type === "ztp"){
-                    access_code = 'ztp' + randomString;
-                }
-                return access_code;
-            }
+        code = generateAccessCode(this.value);
+        $("<input name='generate_code' value='" + code + "' hidden>" ).appendTo( "#codeDiv" );
+        $("<h2>Code Generated</h2>" ).appendTo( "#codeDiv" );
+        $("<button class='btn btn-primary' type='submit' name='submitIndAccess'>Submit</button>" ).appendTo( "#codeDiv" );
+    });
+    
 
-            $('#select_type').on('change', function() {
-                $('#accesscodearea').empty();
-                
-                // Generate code and add to form 
-                code = generateAccessCode(this.value);
-                $( "<input name='generate_code' value='" + code + "'>" ).appendTo( "#accesscodearea" );
-            });
+    function generateAccessCode(access_code_type){
+        characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        randomString = '';
+        for (i = 0; i < 14; i++) { 
+            index = Math.floor(Math.random() * characters.length);
+            randomString += characters[index]; 
+        } 
+        access_code = '';
+        if (access_code_type === "zti"){
+            access_code = 'zti' + randomString;
+        }
+        else if (access_code_type === "ztI"){
+            access_code = 'ztI' + randomString;
+        }
+        else if(access_code_type === "ztp"){
+            access_code = 'ztp' + randomString;
+        }
+
+        return access_code;
+    }
 </script>
