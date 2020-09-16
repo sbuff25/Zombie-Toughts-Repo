@@ -16,13 +16,14 @@ include_once("accessCheck.php");
     <script defer src="./game.js"></script>
     
     <!-- <script defer src="./game_YT_API.js"></script> -->
+    <link rel="stylesheet" href="./bootstrap.min.css">
     <link rel="stylesheet" href="./css.css">
     <link rel="stylesheet" href="./menu.css">
     <link rel="stylesheet" href="./scroll_in.css">
     <link rel="stylesheet" href="./scroll_bar.css">
     <link rel="stylesheet" href="./text_animiations.css">
     <link rel="stylesheet" href="./video.css">
-    <link rel="stylesheet" href="./bootstrap.min.css">
+    
 
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
