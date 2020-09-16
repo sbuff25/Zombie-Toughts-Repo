@@ -341,6 +341,5 @@ include_once("accessCheck.php");
     </script>
     <script src="./scroll.js"></script>
     <script src="./parallax.js"></script>
-    <script src='bootstrap.min.js'></script>
   
 </body>
