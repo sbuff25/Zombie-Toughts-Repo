@@ -14,7 +14,7 @@ include_once("accessCheck.php");
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script defer src="./game.js"></script>
-    <script src='bootstrap.min.js'></script>
+    <!-- <script src='bootstrap.min.js'></script> -->
     <!-- <script defer src="./game_YT_API.js"></script> -->
     <link rel="stylesheet" href="./css.css">
     <link rel="stylesheet" href="./menu.css">
@@ -22,7 +22,7 @@ include_once("accessCheck.php");
     <link rel="stylesheet" href="./scroll_bar.css">
     <link rel="stylesheet" href="./text_animiations.css">
     <link rel="stylesheet" href="./video.css">
-    <link rel="stylesheet" href="./bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./bootstrap.min.css"> -->
 
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
