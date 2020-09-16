@@ -396,6 +396,7 @@ include_once('FormCheck.php');
                                     <th>Last Name</th>
                                     <th>Phone Number</th>
                                     <th>Email</th>
+                                    <th>Address</th>
                                     <th>City</th>
                                     <th>State</th>
                                     <th>County</th>
@@ -420,6 +421,7 @@ include_once('FormCheck.php');
                                     <td><?php echo $row['last_name']; ?></td>
                                     <td><?php echo $row['phone']; ?></td>
                                     <td><?php echo $row['email']; ?></td>
+                                    <td><?php echo $row['address']; ?></td>
                                     <td><?php echo $row['city']; ?></td>
                                     <td><?php echo $row['state']; ?></td>
                                     <td><?php echo $row['county']; ?></td>
