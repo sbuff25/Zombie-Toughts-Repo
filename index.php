@@ -225,10 +225,11 @@ include_once("accessCheck.php");
     <!--Actual Game-->
    
     <section  class="info" id="game">
-        <?php if(!isset($_SESSION['code'])){?>
         <div class="game expand container center">
-            <h3 class="center game_play" id="lighten">Zombie Thoughts</h3>
-            <div class="collapsed center">
+        <h3 class="center game_play" id="lighten">Zombie Thoughts</h3>
+        <?php if(!isset($_SESSION['code'])){?>
+        
+            <!-- <div class="collapsed center"> -->
 
             <?php //include_once("InstitutionAccessForm.php"); ?>
             <?php //include_once("MTResidentForm.php"); ?>
