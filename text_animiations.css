@@ -435,7 +435,151 @@
       animation: transitionText 1s;
     }
 }
+@media only screen and (max-width:820px) and (orientation: landscape)
+{
+    #author_animi
+    {
+        width: 20%;
+        position: absolute;
+        top: 90%;
+        left: 10%;
+    }
+    #title_animi
+    {
+        position: absolute;
+        width: 30%;
+        top: 55%;
+        padding: 5px;
 
+    }
+    /* Partnership */
+        /* 
+           MT Rep
+           PBS
+           Project Tomorrow
+           Curry Health Center
+        */
+    #PBS
+    {
+
+        position: absolute;
+        width:15%;  
+        top: 60%;
+        left: 75%;
+        animation: transitionText 1s; 
+    }
+    #united
+    {
+
+        position: absolute;
+        width:10%;  
+        top: 53%;
+        left: 55%;
+        animation: transitionText 1s;
+        /* opacity: 75%; */
+    
+    }
+
+    #CHC
+    {
+        
+        position: absolute;
+        width:10%;  
+        bottom: 25%;
+        left: 55%;
+        animation: transitionText 1s;
+        /* opacity: 75%; */
+
+    }
+    #ProjectTomorrowMT
+    {
+        position: absolute;
+        width:10%;  
+        bottom: 2%;
+        left: 55%;
+        animation: transitionText 1.5s;
+    
+    }
+    #mt_rep_logo
+    {
+        position: absolute;
+        width: 20%;
+        left: 35%;
+        top: 45%;
+        animation: transitionText 1s;
+    }
+    /* Foundations */
+    #MCT
+{
+    position: absolute;
+    width: 20%;
+    top: 33%;
+    left: 73%;
+    animation: transitionTextFromRight .8s;
+    /* opacity: 75%; */
+
+}
+#DPWF
+{
+    position: absolute;
+    bottom: 5%;
+    width: 15%;
+    left: 75%;
+    animation: transitionTextFromRight 1.7s;
+}
+#WF
+{
+    position: absolute;
+    width: 20%;
+    left: 72%;
+    top: 65%;
+    animation: transitionTextFromRight 1s;
+    /* opacity: 75%; */
+
+}
+
+#shubert
+{
+    position: absolute;
+    width: 15%;
+    top: 30%;
+    left: 73%;
+    animation: transitionTextFromRight .7s;
+    /* opacity: 75%; */
+
+}
+    /* Corporate Sponsors */
+        /* 
+           blackfoot
+           atg
+           PSHP 
+        */
+    #atg
+    {
+        position: absolute;
+        width: 15%;
+        top: 15%;
+        left: 57%;
+        animation: transitionText 1.5s;
+    }
+
+    #PSHP
+    {
+        position: absolute;
+        widows: 25%;  
+        top: 20%;
+        left: 30%;
+        animation: transitionText 2s;
+    }
+    #blackfoot
+    {
+      position: absolute;
+      width:20%;  
+      top: 10%;
+      left: 10%;
+      animation: transitionText 1s;
+    }
+}
 @keyframes transitionTextFromTop
 {
     from

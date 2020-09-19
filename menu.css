@@ -91,10 +91,18 @@ nav{
         transition: transform 0.5s ease-in;
 
     }
+    a
+{
+    text-decoration: none;
+    color: #f4f4f4;
+    justify-content: center;
+    margin-right: 40px;
+    
+}
     .nav_links li
     {
      opacity: 0;
-    margin: 0px;
+    margin: 5px;
         
     }
     .burger
