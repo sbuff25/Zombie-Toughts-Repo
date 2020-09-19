@@ -14,7 +14,6 @@ include_once("accessCheck.php");
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script defer src="./game.js"></script>
-    
     <!-- <script defer src="./game_YT_API.js"></script> -->
     <link rel="stylesheet" href="./bootstrap.min.css">
     <link rel="stylesheet" href="./css.css">
@@ -23,16 +22,6 @@ include_once("accessCheck.php");
     <link rel="stylesheet" href="./scroll_bar.css">
     <link rel="stylesheet" href="./text_animiations.css">
     <link rel="stylesheet" href="./video.css">
-    
-
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
-
-   
-   
-
 </head>
 <body>
     <?php include_once("InstitutionAccessForm.php"); ?>
@@ -49,7 +38,7 @@ include_once("accessCheck.php");
             <a href="#about">about</a>
         </li>
         <li>
-            <a href="#cast">Meet the team</a>
+            <a href="#cast">Cast/Crew</a>
         </li>
         <li>
             <a href="#game">game</a>
@@ -226,75 +215,70 @@ include_once("accessCheck.php");
    
     <section  class="info" id="game">
         <div class="game expand container center">
-        <h3 class="center game_play" id="lighten">Zombie Thoughts</h3>
-        <?php if(!isset($_SESSION['code'])){?>
-        
-            <!-- <div class="collapsed center"> -->
-
-            <?php //include_once("InstitutionAccessForm.php"); ?>
-            <?php //include_once("MTResidentForm.php"); ?>
-
+            <h3 class="center game_play" id="lighten">Zombie Thoughts</h3>
             
+            <?php if(!isset($_SESSION['code'])){?>
 
-            <?php include_once('./Admin/errors.php'); ?>
+                <?php include_once('./Admin/errors.php'); ?>
 
-            <?php if (isset($_SESSION['success'])) : ?>
-                <div class="error success">
-                <p>
-                <?php 
-                echo $_SESSION['success'];
-                unset($_SESSION['success']);
-                ?>
-                </p>
-                </div>
-            <?php endif ?>
+                <?php if (isset($_SESSION['success'])) : ?>
+                    <div class="error success">
+                    <p>
+                    <?php 
+                    echo $_SESSION['success'];
+                    unset($_SESSION['success']);
+                    ?>
+                    </p>
+                    </div>
+                <?php endif ?>
 
-            <label for='institution_button'>If you’re representing a school, group, or educational institution in the state of Montana,&nbsp;</label>
-            <button name='institution_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#MontanaInstitutionForm">Click here</button>
-            <br>
+                <label for='institution_button'>If you’re representing a school, group, or educational institution in the state of Montana,&nbsp;</label>
+                <button name='institution_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#MontanaInstitutionForm">Click here</button>
+                <br>
 
-            <label for='montana_individual_button'>If you’re an individual living in the state of Montana,&nbsp;</label>
-            <button name='montana_individual_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#MTIndividualForm">Click here</button>
-            <br>
+                <label for='montana_individual_button'>If you’re an individual living in the state of Montana,&nbsp;</label>
+                <button name='montana_individual_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#MTIndividualForm">Click here</button>
+                <br>
 
-            <label for='os_inst_ind_button'>If you’re a school or an individual outside of Montana,&nbsp;</label>
-            <button name='os_inst_ind_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#OOSForm">Click here</button>
-            <br>
+                <label for='os_inst_ind_button'>If you’re a school or an individual outside of Montana,&nbsp;</label>
+                <button name='os_inst_ind_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#OOSForm">Click here</button>
+                <br>
 
-            <form action='index' method='POST'>
-                <label for='accessCode'>Have a code? Enter it here:&nbsp;</label>
-                <input name='accessCode' placeholder='Enter Access Code Here...' style="color: black;">
-                <button type='submit' name='submitCode'>Submit Code</button>
-            </form>
-            <h2 style="color: black;">Temp Access Code For Testing: ztibozycWkRzYMsAt </h2>
-            <br>
+                <form action='index' method='POST'>
+                    <label for='accessCode'>Have a code? Enter it here:&nbsp;</label>
+                    <input name='accessCode' placeholder='Enter Access Code Here...' style="color: black;">
+                    <button type='submit' name='submitCode'>Submit Code</button>
+                </form>
+                <h2 style="color: black;">Temp Access Code For Testing: ztibozycWkRzYMsAt </h2>
+                <br>
 
             <?php
             }
             else{
             ?>
-
-            <div id="vid_box">
-            <video id="video" controls controlsList="nodownload" playsinline>
-                <source src="" type="video/mp4">
-            </video>
-            <div id="player" class="moveUpVid"></div>
-            </div>
-            <div id="text" class="moveUpText"></div>
-            <div id="option-buttons" class="moveUpBtn"></div>
-            <audio id="audio">
-                <source src="./audio/select_granted.wav"></source>
-            </audio>
-            <audio id="audio_menu">
-                <source src="./audio/menu_slide.wav">
-            </audio>
-            <audio id="audio_select">
-                <source src="./audio/selector_tone.wav">
-            </audio>
             
-            </div>
+                <div class="collapsed center">
+                    
+                    <div id="vid_box">
+                        <video id="video" controls controlsList="nodownload" playsinline>
+                            <source src="" type="video/mp4">
+                        </video>
+                        <div id="player" class="moveUpVid"></div>
+                    </div>
+                    <div id="text" class="moveUpText"></div>
+                    <div id="option-buttons" class="moveUpBtn"></div>
+                        <audio id="audio">
+                            <source src="./audio/select_granted.wav"></source>
+                        </audio>
+                        <audio id="audio_menu">
+                            <source src="./audio/menu_slide.wav">
+                        </audio>
+                        <audio id="audio_select">
+                            <source src="./audio/selector_tone.wav">
+                        </audio>
+                </div>
+            <?php } ?>
         </div>
-        <?php } ?>
     </section>
     <section class="info bg-light" id="help">
         <h3 class="center">Resources</h3>
@@ -310,13 +294,10 @@ include_once("accessCheck.php");
                             <li id="lighten"><a href="https://akidsbookabout.com/products/a-kids-book-about-anxiety?gclid=EAIaIQobChMI5bCW1NnU6wIV9j6tBh1r7wArEAAYASAAEgLNW_D_BwE">A Kids Book About Anxiety</a></li>
                             <li id="lighten"><a href="https://www.nhsinform.scot/illnesses-and-conditions/mental-health/mental-health-self-help-guides/anxiety-self-help-guide">Scotland’s National Health Services Anxiety Self-Help Guide</a></li>
                             <li id="lighten"><a href="https://theweek.com/articles/888213/anxiety-different-kids?fbclid=IwAR09XPor_umxRlFAneJ23RJtfdjaw5QJ3_Gc9NqQxvCRqjgRtm_5RNxRsUU">“Anxiety is Different for Kids”</a></li>
+                            <li id="lighten"><a href="https://apps.apple.com/app/sam/id666767947">Self-Help for Anxiety Management App</a></li>
+                            <li id="lighten"><a href="https://apps.apple.com/us/app/id778848692">Stop Breathe & Think App</a></li>
+                            <li id="lighten"><a href="https://apps.apple.com/us/app/calm-meditation/id571800810">Calm App</a></li>
                         </ul>
-                    <div class="kids"> 
-                            
-                            <ul>
-                                <h1>For Kids:</h1>
-                                <li id="lighten"><a href="https://www.self.com/story/grounding-techniques-for-anxiety?fbclid=IwAR0XXDdJctF7cDHSbIZe-HPGPCdKXTV47ZsLlPBTV_376a_I5i-hsLloG18">8 Grounding Techniques for When You’re Spiraling</a></li>
-                            </ul>
                 </div>
             </div>
         </div>
