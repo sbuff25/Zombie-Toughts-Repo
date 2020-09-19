@@ -103,7 +103,7 @@ require_once("./Admin/Classes/Database.php");
         $zipcode = mysqli_real_escape_string($database, $_POST['zipcode']);
         $county = mysqli_real_escape_string($database, $_POST['county']);
 
-        $stmt = $database->prepare("INSERT INTO OutOfStateIndividual (first_name, last_name, email, phone, address, apt_num, city, state, zipcode, county, contacted) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, 'not contacted')");
+        $stmt = $database->prepare("INSERT INTO OutOfStateIndividual (first_name, last_name, email, phone, address, apt_num, city, state, zipcode, county, contacted) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'not contacted')");
         $stmt->bind_param("ssssssssss", $first_name, $last_name, $email, $phone, $address, $apt_num, $city, $state, $zipcode, $county);
 
         if(!$stmt->execute()){
