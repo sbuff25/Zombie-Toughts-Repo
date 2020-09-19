@@ -64,7 +64,7 @@ include_once('FormCheck.php');
 
         
 
-        <button type="button" class='btn btn-primary' data-toggle="modal" data-target="#LinkForm">Generate Access Link</button>
+        <!-- <button type="button" class='btn btn-primary' data-toggle="modal" data-target="#LinkForm">Generate Access Link</button> -->
         <button type="button" class='btn btn-primary disabled'>View Reports</button>
         <a role="button" href='RequestsPage' class='btn btn-primary'>View Zombie Thought Requests</a>
 
