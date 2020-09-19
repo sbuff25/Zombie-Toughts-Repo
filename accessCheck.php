@@ -85,6 +85,7 @@ require_once("./Admin/Classes/Database.php");
 
         if(count($errors) === 0){
             // Send request processing email
+            $_SESSION['success'] = "Your request has been processed. A Zombie Thoughts representative will contact you soon.";
         }
 
     }
@@ -111,6 +112,7 @@ require_once("./Admin/Classes/Database.php");
 
         if(count($errors) === 0){
             // Send request processing email
+            $_SESSION['success'] = "Your request has been processed. A Zombie Thoughts representative will contact you soon.";
         }
     }
 
@@ -139,6 +141,7 @@ require_once("./Admin/Classes/Database.php");
 
         if(count($errors) === 0){
             // Send request processing email
+            $_SESSION['success'] = "Your request has been processed. Please check your email for instructions on how to access Zombie Thoughts.";
         }
     }
 
