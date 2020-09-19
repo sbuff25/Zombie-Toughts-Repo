@@ -8,7 +8,7 @@
             </button>
         </div>
         <div class="modal-body bg-muted text-dark">
-            <form action="index.php" method='POST' class="form-container">
+            <form action="index#game" method='POST' class="form-container">
 
                 <div id="accesscodearea">
                 </div>
