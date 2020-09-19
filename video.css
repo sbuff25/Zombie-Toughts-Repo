@@ -45,7 +45,7 @@ video::-webkit-media-controls-time-remaining-display {
 {
     #vid_box
     {
-        width: auto;
+        width: 100%;
     }
     
 }
