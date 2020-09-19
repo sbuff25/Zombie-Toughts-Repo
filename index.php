@@ -216,6 +216,7 @@ include_once("accessCheck.php");
     <section  class="info" id="game">
         <div class="game expand container center">
             <h3 class="center game_play" id="lighten">Zombie Thoughts</h3>
+            <br>
             
             <?php if(!isset($_SESSION['code'])){?>
 
@@ -244,7 +245,7 @@ include_once("accessCheck.php");
                 <button name='os_inst_ind_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#OOSForm">Click here</button>
                 <br>
 
-                <form action='index' method='POST'>
+                <form action='index#game' method='POST'>
                     <label for='accessCode'>Have a code? Enter it here:&nbsp;</label>
                     <input name='accessCode' placeholder='Enter Access Code Here...' style="color: black;">
                     <button type='submit' name='submitCode'>Submit Code</button>
