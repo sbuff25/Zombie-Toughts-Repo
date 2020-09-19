@@ -104,11 +104,14 @@ require_once("./Admin/Classes/Database.php");
         $county = mysqli_real_escape_string($database, $_POST['county']);
 
         $stmt = $database->prepare("INSERT INTO OutOfStateIndividual (first_name, last_name, email, phone, address, apt_num, city, state, zipcode, county, contacted) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'not contacted')");
-        $stmt->bind_param("ssssssssss", $first_name, $last_name, $email, $phone, $address, $apt_num, $city, $state, $zipcode, $county);
+        if(!$stmt->bind_param("ssssssssss", $first_name, $last_name, $email, $phone, $address, $apt_num, $city, $state, $zipcode, $county)){
+            array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
+        }
 
         if(!$stmt->execute()){
             array_push($errors, "There was a problem processing your request. Please try your request again, and if it still does not work please contact the Montana Repertory Theatre directly for access.");
         }
+        $stmt->close();
 
         if(count($errors) === 0){
             // Send request processing email
