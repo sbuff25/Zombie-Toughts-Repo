@@ -97,16 +97,16 @@ require_once("./Admin/Classes/Database.php");
         $email = mysqli_real_escape_string($database, $_POST['email']);
         $phone = mysqli_real_escape_string($database, $_POST['phone']);
         $address = mysqli_real_escape_string($database, $_POST['address']);
+        $apt_num = mysqli_real_escape_string($database, $_POST['apt_num']);
         $city = mysqli_real_escape_string($database, $_POST['city']);
         $state = mysqli_real_escape_string($database, $_POST['state']);
         $zipcode = mysqli_real_escape_string($database, $_POST['zipcode']);
         $county = mysqli_real_escape_string($database, $_POST['county']);
 
-        $stmt = $database->prepare("INSERT INTO OutOfStateIndividual (first_name, last_name, email, phone, address, city, state, zipcode, county, contacted) VALUES(?, ?, ?, ?, ?, ?, ?, ?, 'not contacted')");
-        $stmt->bind_param("sssssssss", $first_name, $last_name, $email, $phone, $address, $city, $state, $zipcode, $county);
-        $stmt->execute();
+        $stmt = $database->prepare("INSERT INTO OutOfStateIndividual (first_name, last_name, email, phone, address, apt_num, city, state, zipcode, county, contacted) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, 'not contacted')");
+        $stmt->bind_param("ssssssssss", $first_name, $last_name, $email, $phone, $address, $apt_num, $city, $state, $zipcode, $county);
 
-        if(!$stmt){
+        if(!$stmt->execute()){
             array_push($errors, "There was a problem processing your request. Please try your request again, and if it still does not work please contact the Montana Repertory Theatre directly for access.");
         }
 
