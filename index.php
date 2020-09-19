@@ -225,6 +225,7 @@ include_once("accessCheck.php");
     <!--Actual Game-->
    
     <section  class="info" id="game">
+        <?php if(!isset($_SESSION['code'])){?>
         <div class="game expand container center">
             <h3 class="center game_play" id="lighten">Zombie Thoughts</h3>
             <div class="collapsed center">
@@ -232,7 +233,7 @@ include_once("accessCheck.php");
             <?php //include_once("InstitutionAccessForm.php"); ?>
             <?php //include_once("MTResidentForm.php"); ?>
 
-            <?php if(!isset($_SESSION['code'])){?>
+            
 
             <?php include_once('./Admin/errors.php'); ?>
 
@@ -289,9 +290,10 @@ include_once("accessCheck.php");
             <audio id="audio_select">
                 <source src="./audio/selector_tone.wav">
             </audio>
-            <?php } ?>
+            
             </div>
         </div>
+        <?php } ?>
     </section>
     <section class="info bg-light" id="help">
         <h3 class="center">Resources</h3>
