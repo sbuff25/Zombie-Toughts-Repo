@@ -40,7 +40,7 @@
                 <label for='zipcode'>Zipcode:&nbsp;</label>
                 <input name='zipcode' placeholder='Enter Zipcode...' size='20'><br>
 
-                <button type='button' id='generateCode' value='zti'>Generate Access Code</button>
+                <button type='button' id='generateCode' value='zti' class='btn'>Generate Access Code</button>
 
                 <div id='codeDiv'></div>
             </form>
