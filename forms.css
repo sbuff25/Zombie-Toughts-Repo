@@ -33,5 +33,6 @@ label p {
 }
 
 #accesscodebox {
-    background-color: lightgray;
+    background-color:lightpink;
+    padding: 5px;
 }
