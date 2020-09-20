@@ -8,6 +8,11 @@ input h5 b{
     color: black;
 }
 
+.modal-title {
+    font-size: large;
+    color: white;
+}
+
 option {
     color: black;
 }
