@@ -72,7 +72,7 @@
                     <br>
                     <button type='submit' name='submitLogin' class='btn'>Login</button>
                 </form>
-                <a href="javascript:history.back()" class='button'>Back</a>
+                <a href="javascript:history.back()" class='btn' role='button'>Back</a>
             </div>
         </div>
         
