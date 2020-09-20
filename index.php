@@ -224,7 +224,7 @@ include_once("accessCheck.php");
                 <?php include_once('./Admin/errors.php'); ?>
 
                 <?php if (isset($_SESSION['success'])) : ?>
-                    <div class="error success">
+                    <div class="error success center">
                     <p>
                     <?php 
                     echo $_SESSION['success'];
