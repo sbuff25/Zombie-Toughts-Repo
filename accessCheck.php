@@ -12,7 +12,7 @@ require_once("./Admin/Classes/Database.php");
         if(substr($code, 0, 3) === "zti" && strlen($code) === 17){
             $stmt = $database->prepare("SELECT * FROM IndividualAccessCode WHERE code=?");
     
-            if($stmt->bind_param("s", $code)){
+            if(!$stmt->bind_param("s", $code)){
                 array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
          
             }
@@ -31,7 +31,7 @@ require_once("./Admin/Classes/Database.php");
 
                 }
                 else{
-                    if(is_null($row['clicked_date'])){
+                    if(count($errors) === 0 && is_null($row['clicked_date'])){
                         $clicked_date = date('Y-m-d H:i:s');
                         $stmt2 = $database->prepare("UPDATE IndividualAccessCode SET clicked_date=? WHERE code=?");
     
