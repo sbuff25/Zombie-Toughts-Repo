@@ -48,6 +48,9 @@ require_once("./Admin/Classes/Database.php");
                 }
                 
             }
+            else {
+                array_push($errors, "Please check your access code to ensure that it was entered correctly. It is case-sensitive.");
+            }
             $stmt->close();
 
         }
