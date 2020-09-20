@@ -11,3 +11,7 @@ input h5 {
 option {
     color: black;
 }
+
+select {
+    color: black;
+}
