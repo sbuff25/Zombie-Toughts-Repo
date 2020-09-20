@@ -1,4 +1,12 @@
 input {
     width: 100%;
     color: black;
-  }
+}
+
+input h5 {
+    color: black;
+}
+
+option {
+    color: black;
+}
