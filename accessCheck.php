@@ -11,14 +11,42 @@ require_once("./Admin/Classes/Database.php");
         }
         if(substr($code, 0, 3) === "zti" && strlen($code) === 17){
             $stmt = $database->prepare("SELECT * FROM IndividualAccessCode WHERE code=?");
-            $stmt->bind_param("s", $code);
-            $stmt->execute();
+    
+            if($stmt->bind_param("s", $code)){
+                array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
+         
+            }
+
+            if(!$stmt->execute()){
+                array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
+            }
+
             $result = $stmt->get_result();
+            
+
             if($result->num_rows === 1){
                 $row = $result->fetch_assoc();
-                if(strtotime($row['end_date']) <= date()){
+                if(strtotime(date('Y-m-d H:i:s', strtotime($row['end_date'])) <= date('Y-m-d H:i:s')){
                     array_push($errors, "Access period has ended.");
+
                 }
+                else{
+                    if(is_null($row['clicked_date'])){
+                        $clicked_date = date('Y-m-d H:i:s');
+                        $stmt2 = $database->prepare("UPDATE IndividualAccessCode SET clicked_date=? WHERE code=?");
+    
+                        if($stmt2->bind_param("ss", $clicked_date, $code)){
+                            array_push($errors, "Binding parameters failed: (" . $stmt2->errno . ") " . $stmt2->error);
+                    
+                        }
+
+                        if(!$stmt2->execute()){
+                            array_push($errors, "Execute failed: (" . $stmt2->errno . ") " . $stmt2->error);
+                        }
+                        $stmt2->close()
+                    }
+                }
+                
             }
             $stmt->close();
 
