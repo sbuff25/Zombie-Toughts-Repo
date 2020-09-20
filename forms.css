@@ -58,6 +58,7 @@ label p {
     border-style: solid;
     border-width: 3px;
     margin-bottom: 10px;
+    margin: auto;
 }
 
 .success {
@@ -69,4 +70,5 @@ label p {
     border-style: solid;
     border-width: 3px;
     margin-bottom: 10px;
+    margin: auto;
 }
