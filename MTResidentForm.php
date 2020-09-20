@@ -34,7 +34,7 @@
                 <label for='city'>City:&nbsp;</label>
                 <input name='city' placeholder='Enter City...' size='20' required><br>
 
-                <label for='state'>State: Montana</label>
+                <label for='state'>State: <br>Montana</label>
                 <input name='state' value='Montana' hidden><br>
                 
                 <label for='zipcode'>Zipcode:&nbsp;</label>
