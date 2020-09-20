@@ -3,9 +3,9 @@ input {
     color: black;
 }
 
-form h5 b{
-    background-color: black;
+form h5 b {
     color: black;
+    font-size: medium;
 }
 
 .modal-title {
