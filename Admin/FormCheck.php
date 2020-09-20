@@ -88,20 +88,16 @@ require_once("./Classes/Database.php");
         $email = mysqli_real_escape_string($database, $email);
 
 
-        //$check_user = "SELECT username, email FROM AdminUser WHERE email = '$email'";
+        // $stmt = $database->prepare("SELECT username, email FROM AdminUser WHERE email = ?");
+        // $stmt->bind_param("s", $email);
+        // $stmt->execute();
+        // $result = $stmt->get_result();
 
-        $stmt = $database->prepare("SELECT username, email FROM AdminUser WHERE email = ?");
-        $stmt->bind_param("s", $email);
-        $stmt->execute();
-        $result = $stmt->get_result();
-
-        //$result = mysqli_query($database, $check_user);
-        //if(mysqli_num_rows($result) >= 1){
-        if($result->num_rows >= 1){
-            array_push($errors, "That email is already in use.");
-            $stmt->close();
-        }
-        else{
+        // if($result->num_rows >= 1){
+        //     array_push($errors, "That email is already in use.");
+        //     $stmt->close();
+        // }
+        // else{
 
             $key = hash_pbkdf2('haval256,5', $email, 555, 5, 50);
             // $user_created = create_temp_admin_user($errors, $privilege, $email, $first_name, $last_name, $key);
@@ -110,26 +106,26 @@ require_once("./Classes/Database.php");
             // $result = mysqli_query($database, $insertSQL);
 
 
-            require_once("./Functions/NewUserEmail.php");
+            require_once("./Functions/Emails.php");
             require_once("./Classes/SendEmail.php");
             $body = new_user_email_body($email, $first_name, $last_name, $key);
             $subject = new_user_email_subject();
-            $email = new SendEmail($email, $subject, $body, $errors);
-            $stmt->close();
+            $email = new SendEmail($email, $subject, $body, $errors, "An email was sent to the user, with a link to set their password.", "Could not email user with link to access admin.");
+            // $stmt->close();
 
-            if(count($errors) === 0){
-                $stmt = $database->prepare("INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_date, tempkey) VALUES(?, ?, ?, ?, DATE_ADD(NOW(), INTERVAL 4 DAY), ?)");
-                $stmt->bind_param("sssss", $email, $first_name, $last_name, $privilege, $key);
-                $stmt->execute();
-                //$result = $stmt->get_result();
-                if(!$stmt){
-                    array_push($errors, "ERROR: Not able to execute. " . mysqli_error($database));
-                }
+            // if(count($errors) === 0){
+            //     $stmt = $database->prepare("INSERT INTO TempUser(email, first_name, last_name, privilege_level, exp_date, tempkey) VALUES(?, ?, ?, ?, DATE_ADD(NOW(), INTERVAL 4 DAY), ?)");
+            //     $stmt->bind_param("sssss", $email, $first_name, $last_name, $privilege, $key);
+            //     $stmt->execute();
+            //     //$result = $stmt->get_result();
+            //     if(!$stmt){
+            //         array_push($errors, "ERROR: Not able to execute. " . mysqli_error($database));
+            //     }
 
-            }
+            // }
 
             
-        }
+        // }
 
 
 

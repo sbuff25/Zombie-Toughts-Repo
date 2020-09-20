@@ -4,7 +4,7 @@ require_once "Mail.php";
 
     class SendEmail{
 
-        function __construct($recipient_email, $subject, $body, $errors){
+        function __construct($recipient_email, $subject, $body, $errors, $success_msg, $error_msg){
             $ini_file = parse_ini_file('/home3/yqepxzmy/email.ini');
             $sender = $ini_file['e'];
             $host = $ini_file['h'];
@@ -22,8 +22,10 @@ require_once "Mail.php";
             $mail = $smtp->send($recipient_email, $headers, $body);
             if (PEAR::isError($mail)) {
                 array_push($errors, $mail->getMessage());
+                array_push($errors, $error_msg);
                 // echo("<p>" . $mail->getMessage() . "</p>");
             } else {
+                $_SESSION['success'] = $success_msg;
                 // echo("<p>Message successfully sent!</p>");
             }
         }
