@@ -111,6 +111,7 @@ require_once("./Classes/Database.php");
             $body = new_user_email_body($email, $first_name, $last_name, $key);
             $subject = new_user_email_subject();
             $objSendEmail = new SendEmail($email, $subject, $body, $errors, "An email was sent to the user, with a link to set their password.", "Could not email user with link to access admin.");
+            
             // $stmt->close();
 
             // if(count($errors) === 0){
