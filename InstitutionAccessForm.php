@@ -88,7 +88,7 @@
 $("#ind_or_inst_select").on('change', function() {
     $("#add_here").empty();
         if(this.value === "inst"){
-            $("<h3><b>Contact Information:</b></h3><br>").appendTo( "#add_here" );
+            $("<h2><b>Contact Information:</b></h2><br>").appendTo( "#add_here" );
 
             $("<label for='contact_first_name'>Contact's First Name:&nbsp;</label>").appendTo( "#add_here" );
             $("<input name='contact_first_name' placeholder='Enter First Name...' size='20'><br>").appendTo( "#add_here" );
@@ -105,7 +105,7 @@ $("#ind_or_inst_select").on('change', function() {
             $("<label for='ext'>Extension Number:&nbsp;</label>").appendTo( "#add_here" );
             $("<input name='ext' placeholder='Enter Extension...' size='20'><br><br>").appendTo( "#add_here" );
 
-            $(" <h3><b>Institution Information:</b></h3><br>").appendTo( "#add_here" );
+            $(" <h2><b>Institution Information:</b></h2><br>").appendTo( "#add_here" );
 
             $(" <label for='institution_name'>Institution's Name:&nbsp;</label>").appendTo( "#add_here" );
             $(" <input name='institution_name' placeholder='Enter Name...' size='20'><br>").appendTo( "#add_here" );
