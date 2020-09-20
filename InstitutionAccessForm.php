@@ -9,7 +9,7 @@
         </div>
         <div class="modal-body bg-muted text-dark">
             <form action="index#game" method='POST' class="form-container">
-                <h4><b>Contact Information:</b></h4><br>
+                <h3><b>Contact Information:</b></h3><br>
 
                 <label for='contact_first_name'>Contact's First Name:&nbsp;</label>
                 <input name='contact_first_name' placeholder='Enter First Name...' size='20'><br>
@@ -26,7 +26,7 @@
                 <label for='ext'>Contact's Extension (if available):&nbsp;</label>
                 <input name='ext' placeholder='Enter Extension...' size='20'><br><br>
 
-                <h4><b>Institution Information:</b></h4><br>
+                <h3><b>Institution Information:</b></h3><br>
 
                 <label for='institution_name'>Institution's Name:&nbsp;</label>
                 <input name='institution_name' placeholder='Enter Name...' size='20'><br>
@@ -88,7 +88,7 @@
 $("#ind_or_inst_select").on('change', function() {
     $("#add_here").empty();
         if(this.value === "inst"){
-            $("<h4><b>Contact Information:</b></h4><br>").appendTo( "#add_here" );
+            $("<h3><b>Contact Information:</b></h3><br>").appendTo( "#add_here" );
 
             $("<label for='contact_first_name'>Contact's First Name:&nbsp;</label>").appendTo( "#add_here" );
             $("<input name='contact_first_name' placeholder='Enter First Name...' size='20'><br>").appendTo( "#add_here" );
@@ -105,7 +105,7 @@ $("#ind_or_inst_select").on('change', function() {
             $("<label for='ext'>Extension Number:&nbsp;</label>").appendTo( "#add_here" );
             $("<input name='ext' placeholder='Enter Extension...' size='20'><br><br>").appendTo( "#add_here" );
 
-            $(" <h4><b>Institution Information:</b></h4><br>").appendTo( "#add_here" );
+            $(" <h3><b>Institution Information:</b></h3><br>").appendTo( "#add_here" );
 
             $(" <label for='institution_name'>Institution's Name:&nbsp;</label>").appendTo( "#add_here" );
             $(" <input name='institution_name' placeholder='Enter Name...' size='20'><br>").appendTo( "#add_here" );
