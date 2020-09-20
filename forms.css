@@ -33,6 +33,17 @@ label p {
 }
 
 #accesscodebox {
-    background-color: rgb(252, 223, 228);
-    padding: 20px;
+    background-color: rgb(253, 234, 237);
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 25px;
+}
+
+#formrequestdiv {
+    background-color: rgb(255, 166, 181);
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
 }

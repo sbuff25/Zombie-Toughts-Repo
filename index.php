@@ -233,18 +233,19 @@ include_once("accessCheck.php");
                     </p>
                     </div>
                 <?php endif ?>
+                <div id='formrequestdiv'>
+                    <label for='institution_button'>If you’re representing a school, group, or educational institution in the state of Montana,&nbsp;</label>
+                    <button name='institution_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#MontanaInstitutionForm">Click here</button>
+                    <br>
 
-                <label for='institution_button'>If you’re representing a school, group, or educational institution in the state of Montana,&nbsp;</label>
-                <button name='institution_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#MontanaInstitutionForm">Click here</button>
-                <br>
+                    <label for='montana_individual_button'>If you’re an individual living in the state of Montana,&nbsp;</label>
+                    <button name='montana_individual_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#MTIndividualForm">Click here</button>
+                    <br>
 
-                <label for='montana_individual_button'>If you’re an individual living in the state of Montana,&nbsp;</label>
-                <button name='montana_individual_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#MTIndividualForm">Click here</button>
-                <br>
-
-                <label for='os_inst_ind_button'>If you’re a school or an individual outside of Montana,&nbsp;</label>
-                <button name='os_inst_ind_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#OOSForm">Click here</button>
-                <br>
+                    <label for='os_inst_ind_button'>If you’re a school or an individual outside of Montana,&nbsp;</label>
+                    <button name='os_inst_ind_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#OOSForm">Click here</button>
+                    <br>
+                </div>
 
                 <form action='index#game' method='POST' id='accesscodebox'>
                     <label for='accessCode'>Have a code? Enter it here:&nbsp;</label>
