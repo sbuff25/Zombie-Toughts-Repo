@@ -15,3 +15,8 @@ option {
 select {
     color: black;
 }
+
+label p {
+    color: darkgray;
+    font-size: small;
+}
