@@ -22,6 +22,7 @@ include_once("accessCheck.php");
     <link rel="stylesheet" href="./scroll_bar.css">
     <link rel="stylesheet" href="./text_animiations.css">
     <link rel="stylesheet" href="./video.css">
+    <link rel="stylesheet" href="./forms.css">
 </head>
 <body>
     <?php include_once("InstitutionAccessForm.php"); ?>
