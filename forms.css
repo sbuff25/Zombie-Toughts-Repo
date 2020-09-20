@@ -51,8 +51,12 @@ label p {
 
 .error {
     color: red;
+    background-color: rgb(255, 179, 179);
+    border-color: red;
 }
 
 .success {
     color: green;
+    background-color: rgb(192, 255, 192);
+    border-color: green;
 }
