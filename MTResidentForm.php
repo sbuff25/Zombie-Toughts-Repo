@@ -2,7 +2,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
         <div class="modal-header bg-dark">
-            <h5 class="modal-title text-light">Request Access for Zombie Thoughts</h5>
+            <h4 class="modal-title text-light">Request Access for Zombie Thoughts</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
             </button>
