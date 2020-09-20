@@ -43,7 +43,7 @@ require_once("./Admin/Classes/Database.php");
                         if(!$stmt2->execute()){
                             array_push($errors, "Execute failed: (" . $stmt2->errno . ") " . $stmt2->error);
                         }
-                        $stmt2->close()
+                        $stmt2->close();
                     }
                 }
                 
