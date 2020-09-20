@@ -246,10 +246,10 @@ include_once("accessCheck.php");
                 <button name='os_inst_ind_button' type="button" class='btn btn-primary' data-toggle="modal" data-target="#OOSForm">Click here</button>
                 <br>
 
-                <form action='index#game' method='POST'>
+                <form action='index#game' method='POST' id='accesscodebox'>
                     <label for='accessCode'>Have a code? Enter it here:&nbsp;</label>
                     <input name='accessCode' placeholder='Enter Access Code Here...' style="color: black;">
-                    <button type='submit' name='submitCode'>Submit Code</button>
+                    <button type='submit' name='submitCode' class='btn'>Submit Code</button>
                 </form>
                 <h2 style="color: black;">Temp Access Code For Testing: ztibozycWkRzYMsAt </h2>
                 <br>

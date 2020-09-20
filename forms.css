@@ -31,3 +31,7 @@ label p {
     color: darkgray;
     font-size: small;
 }
+
+#accesscodebox {
+    background-color: lightgray;
+}
