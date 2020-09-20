@@ -9,7 +9,7 @@
         </div>
         <div class="modal-body bg-muted text-dark">
             <form action="index#game" method='POST' class="form-container">
-                <h3><b>Contact Information:</b></h3><br>
+                <h2><b>Contact Information:</b></h2><br>
 
                 <label for='contact_first_name'>Contact's First Name:&nbsp;</label>
                 <input name='contact_first_name' placeholder='Enter First Name...' size='20'><br>
@@ -26,7 +26,7 @@
                 <label for='ext'>Contact's Extension (if available):&nbsp;</label>
                 <input name='ext' placeholder='Enter Extension...' size='20'><br><br>
 
-                <h3><b>Institution Information:</b></h3><br>
+                <h2><b>Institution Information:</b></h2><br>
 
                 <label for='institution_name'>Institution's Name:&nbsp;</label>
                 <input name='institution_name' placeholder='Enter Name...' size='20'><br>
