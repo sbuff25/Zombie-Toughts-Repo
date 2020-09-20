@@ -36,37 +36,39 @@
 
     </head>
     <body>
-        <div>
-            <br><br><br><br>  <!--Delete this line when Spencer begins to style -->
-            <h1>Admin Login</h1>
+        <div class="col-sm-6 col-sm-offset-3" >
+            <div class="panel panel-default">
+                <br><br><br><br>  <!--Delete this line when Spencer begins to style -->
+                <h1>Admin Login</h1>
 
-            <form action='LoginPage' method='POST'>
-                <div>
-                    <label for='email'>Email or Username:</label>
-                    <input name='emailorusername' placeholder='Enter Email or Username...'>
-                </div>
-                <br>
-                <div>
-                    <label for='password'>Password:</label>
-                    <input name='password' type='password' placeholder='Enter Password...'>
-                </div>
-                <br>
-                <?php 
-                    include_once('errors.php');
-                    if (isset($_SESSION['success'])) : ?>
-                    <div class="error success">
-                    <h3>
-                    <?php 
-                        echo $_SESSION['success'];
-                        unset($_SESSION['success']);
-                    ?>
-                    </h3>
+                <form action='LoginPage' method='POST'>
+                    <div>
+                        <label for='email'>Email or Username:</label>
+                        <input name='emailorusername' placeholder='Enter Email or Username...'>
                     </div>
-                <?php endif ?>
-                <br>
-                <button type='submit' name='submitLogin'>Login</button>
-            </form>
-            <a href="javascript:history.back()" class='button'>Back</a>
+                    <br>
+                    <div>
+                        <label for='password'>Password:</label>
+                        <input name='password' type='password' placeholder='Enter Password...'>
+                    </div>
+                    <br>
+                    <?php 
+                        include_once('errors.php');
+                        if (isset($_SESSION['success'])) : ?>
+                        <div class="error success">
+                        <h3>
+                        <?php 
+                            echo $_SESSION['success'];
+                            unset($_SESSION['success']);
+                        ?>
+                        </h3>
+                        </div>
+                    <?php endif ?>
+                    <br>
+                    <button type='submit' name='submitLogin'>Login</button>
+                </form>
+                <a href="javascript:history.back()" class='button'>Back</a>
+            </div>
         </div>
         
 
