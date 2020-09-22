@@ -64,7 +64,7 @@ require_once "Mail/mime.php";
                                     <img src="umt:'. $umt .'" alt="University of Montana">
                                     <img src="shubert:'. $shubert .'" alt="The Shubert Foundation">
                                     <img src="uwmc:'. $uwmc .'" alt="United Way of Missoula County">';
-            $html_email += $htmlBody;
+            $html_email .= $htmlBody;
             $plain_text = $ptBody;
 
             
