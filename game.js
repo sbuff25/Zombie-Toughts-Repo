@@ -1,6 +1,6 @@
 const textNodes = [{
             id: 1,
-            vid: './video/AH1.mp4', // kick-out
+            vid: './video2/AH1.mp4', // kick-out
             text: '',
             options: [{
                     text: 'A',
@@ -16,7 +16,7 @@ const textNodes = [{
         },
         {
             id: 1.1,
-            vid: './video/A2.mp4',
+            vid: './video2/A2.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -27,7 +27,7 @@ const textNodes = [{
         },
         {
             id: 1.01,
-            vid: './video/H2.mp4', // kick-out
+            vid: './video2/H2.mp4', // kick-out
             text: '',
             options: [{
                     text: 'Continue',
@@ -38,7 +38,7 @@ const textNodes = [{
         },
         {
             id: 2,
-            vid: './video/H3.mp4', // god-less
+            vid: './video2/H3.mp4', // god-less
             text: '',
             options: [{
 
@@ -55,7 +55,7 @@ const textNodes = [{
         },
         {
             id: 2.1,
-            vid: './video/A3.mp4', // 2 much 2
+            vid: './video2/A3.mp4', // 2 much 2
             text: '',
             options: [{
                     text: 'Cowboy Hat?',
@@ -72,7 +72,7 @@ const textNodes = [{
         {
             id: 4.01,//B-hat
             text: '',
-            vid: './video/H4B.mp4',
+            vid: './video2/H4B.mp4',
             options: [{
                     text: 'A Fedora?',
                     setState: { fedora: true },
@@ -87,7 +87,7 @@ const textNodes = [{
         },
         {
             id: 4.001,
-            vid: './video/H4A.mp4',//C-hat
+            vid: './video2/H4A.mp4',//C-hat
             text: '',
             options: [{
                     text: 'A Fedora?',
@@ -104,7 +104,7 @@ const textNodes = [{
         // Boy
         {
             id: 4.02,
-            vid: './video/H5D.mp4',
+            vid: './video2/H5D.mp4',
             text: '',
             options: [{
                     text: 'Ghost Town',
@@ -120,7 +120,7 @@ const textNodes = [{
         },
         {
             id: 4.03,
-            vid: './video/H5C.mp4',
+            vid: './video2/H5C.mp4',
             text: '',
             options: [{
                     text: 'Ghost Town',
@@ -136,7 +136,7 @@ const textNodes = [{
         },
         {
             id: 4.002,
-            vid: './video/H5B.mp4',
+            vid: './video2/H5B.mp4',
             text: '',
             options: [{
                     text: 'Ghost Town',
@@ -152,7 +152,7 @@ const textNodes = [{
         },
         {
             id: 4.003,
-            vid: './video/H5A.mp4',
+            vid: './video2/H5A.mp4',
             text: '',
             options: [{
                     text: 'Ghost Town',
@@ -169,7 +169,7 @@ const textNodes = [{
         // Boy baseball hat
         {
             id: 4.021,
-            vid: './video/H6D.mp4',
+            vid: './video2/H6D.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -178,7 +178,7 @@ const textNodes = [{
         },
         {
             id: 4.031,
-            vid: './video/H6C.mp4',
+            vid: './video2/H6C.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -187,7 +187,7 @@ const textNodes = [{
         },
         {
             id: 4.022,
-            vid: './video/H7D.mp4',
+            vid: './video2/H7D.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -196,7 +196,7 @@ const textNodes = [{
         },
         {
             id: 4.032,
-            vid: './video/H7C.mp4',
+            vid: './video2/H7C.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -206,7 +206,7 @@ const textNodes = [{
         // Boy Cowboy hat
         {
             id: 4.0021,
-            vid: './video/H6B.mp4',
+            vid: './video2/H6B.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -215,7 +215,7 @@ const textNodes = [{
         },
         {
             id: 4.0022,
-            vid: './video/H7B.mp4',
+            vid: './video2/H7B.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -224,7 +224,7 @@ const textNodes = [{
         },
         {
             id: 4.0031,
-            vid: './video/H6A.mp4',
+            vid: './video2/H6A.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -233,7 +233,7 @@ const textNodes = [{
         },
         {
             id: 4.0032,
-            vid: './video/H7A.mp4',
+            vid: './video2/H7A.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -243,7 +243,7 @@ const textNodes = [{
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         {
             id: 4.019,
-            vid: './video/A4B.mp4',
+            vid: './video2/A4B.mp4',
             text: '',
             options: [{
                     text: 'A Headband',
@@ -259,7 +259,7 @@ const textNodes = [{
         },
         {
             id: 4.0019,
-            vid: './video/A4A.mp4',
+            vid: './video2/A4A.mp4',
             text: '',
             options: [{
                     text: 'Headband?',
@@ -281,7 +281,7 @@ const textNodes = [{
         // Boy
         {
             id: 4.029,
-            vid: './video/A5D.mp4',
+            vid: './video2/A5D.mp4',
             text: '',
             options: [
                 {
@@ -299,7 +299,7 @@ const textNodes = [{
         //Baseball hat head band
         {
             id: 4.039,
-            vid: './video/A5C.mp4',
+            vid: './video2/A5C.mp4',
             text: '',
             options: [
                 {
@@ -318,7 +318,7 @@ const textNodes = [{
             // Still need Correct video for A5B
             // Annie with Cowboy hat and Pig with the fedora
             id: 4.0029,
-            vid: './video/A5Bupdated.mp4',
+            vid: './video2/A5Bupdated.mp4',
             text: '',
             options: [{
                     text: 'Ghost Town',
@@ -341,7 +341,7 @@ const textNodes = [{
             // Still need Correct video for A5B
             // Annie with Cowboy hat and Pig with the fedora
             id: 4.0002299,
-            vid: './video/A6B.mp4',
+            vid: './video2/A6B.mp4',
             text: '',
             options: [
                 {
@@ -354,7 +354,7 @@ const textNodes = [{
         //Annie Cowboyhat Headband
         {
             id: 4.0039,
-            vid: './video/A5A.mp4',
+            vid: './video2/A5A.mp4',
             text: '',
             options: [{
                     text: 'Ghost Town',
@@ -370,7 +370,7 @@ const textNodes = [{
         },
         {
             id: 4.100329,
-            vid: './video/A7A.mp4',
+            vid: './video2/A7A.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -380,7 +380,7 @@ const textNodes = [{
         },
         {
             id: 4.0219,
-            vid: './video/A6D.mp4',
+            vid: './video2/A6D.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -389,7 +389,7 @@ const textNodes = [{
         },
         {
             id: 4.0319,
-            vid: './video/A6C.mp4',
+            vid: './video2/A6C.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -398,7 +398,7 @@ const textNodes = [{
         },
         {
             id: 4.0229,
-            vid: './video/A7D.mp4',
+            vid: './video2/A7D.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -407,7 +407,7 @@ const textNodes = [{
         },
         {
             id: 4.0329,
-            vid: './video/A7C.mp4',
+            vid: './video2/A7C.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -418,7 +418,7 @@ const textNodes = [{
         // Fedora Cowboy hat Mount Doom
         {
             id: 4.00219,
-            vid: './video/A6B.mp4',
+            vid: './video2/A6B.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -431,7 +431,7 @@ const textNodes = [{
         /////////////////////////////////////////////////////////////////////////////
         {
             id: 4.002299,
-            vid: './video/A10B.mp4',
+            vid: './video2/A10B.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -440,7 +440,7 @@ const textNodes = [{
         },
         {
             id: 4.00229,
-            vid: './video/A8D.mp4',
+            vid: './video2/A8D.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -449,7 +449,7 @@ const textNodes = [{
         },
         {
             id: 4.00319,
-            vid: './video/A6A.mp4',
+            vid: './video2/A6A.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -458,7 +458,7 @@ const textNodes = [{
         },
         {
             id: 4.00329,
-            vid: './video/A10A.mp4',
+            vid: './video2/A10A.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -469,7 +469,7 @@ const textNodes = [{
 
         {
             id: 'H_GHOST_TOWN_C_F',
-            vid: './video/H10B.mp4',
+            vid: './video2/H10B.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -482,7 +482,7 @@ const textNodes = [{
         /////////////////////////////////
         {
             id: 'H_GHOST_TOWN_C_H',
-            vid: './video/H10Abesttry.mp4',
+            vid: './video2/H10Abesttry.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -496,7 +496,7 @@ const textNodes = [{
         // Add Mount Doom Here Hamilton
         {
             id: 'H_MT_DOOM_C_H',
-            vid: './video/H8A.mp4',
+            vid: './video2/H8A.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -506,7 +506,7 @@ const textNodes = [{
         },
         {
             id: 'H_MT_DOOM_C_F',
-            vid: './video/H8B.mp4',
+            vid: './video2/H8B.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -516,7 +516,7 @@ const textNodes = [{
         },
         {
             id: 'H_MT_DOOM_B_F',
-            vid: './video/H8D.mp4',
+            vid: './video2/H8D.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -526,7 +526,7 @@ const textNodes = [{
         },
         {
             id: 'H_MT_DOOM_B_H',
-            vid: './video/H8C.mp4',
+            vid: './video2/H8C.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -537,7 +537,7 @@ const textNodes = [{
         // Add Mount Doom Annie
         {
             id: 'MT_DOOM_C_H',
-            vid: './video/A8A.mp4',
+            vid: './video2/A8A.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -547,7 +547,7 @@ const textNodes = [{
         },
         {
             id: 'MT_DOOM_C_F',
-            vid: './video/A8B.mp4',
+            vid: './video2/A8B.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -557,7 +557,7 @@ const textNodes = [{
         },
         {
             id: 'MT_DOOM_C_F_PT_2',
-            vid: './video/A9.mp4',
+            vid: './video2/A9.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -568,7 +568,7 @@ const textNodes = [{
         // MT DOOM Baseball Hat
         {
             id: 'MT_DOOM_B_H',
-            vid: './video/A8C.mp4',
+            vid: './video2/A8C.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -580,7 +580,7 @@ const textNodes = [{
         // Still Needs Vid Upload
         {
             id: 8,
-            vid: './video/',
+            vid: './video2/',
             text: '',
             options: [{
                     text: 'Continue',
@@ -591,7 +591,7 @@ const textNodes = [{
         },
         {
             id: 8.02,
-            vid: './video/H10D.mp4',
+            vid: './video2/H10D.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -602,7 +602,7 @@ const textNodes = [{
         },
         {
             id: 8.002,
-            vid: './video/H10C.mp4',
+            vid: './video2/H10C.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -614,7 +614,7 @@ const textNodes = [{
         // Girl
         {
             id: 8.1,
-            vid: './video/A10D.mp4',
+            vid: './video2/A10D.mp4',
             text: '',
             options: [{
                     text: 'continue',
@@ -625,7 +625,7 @@ const textNodes = [{
         },
         {
             id: 8.01,
-            vid: './video/A10C.mp4',
+            vid: './video2/A10C.mp4',
             text: '',
             options: [{
                     text: 'continue',
@@ -638,7 +638,7 @@ const textNodes = [{
         // After Hats are lost
         {
             id: 'G_Town_Annie',
-            vid: './video/A11.mp4',
+            vid: './video2/A11.mp4',
             text: '',
             options: [{
                     text: 'continue',
@@ -651,7 +651,7 @@ const textNodes = [{
         ///// When hamilton loses hat 
         {
             id: 9,
-            vid: './video/H11.mp4',
+            vid: './video2/H11.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -660,7 +660,7 @@ const textNodes = [{
         },
         {
             id: 9.02,
-            vid: './video/H9.mp4',
+            vid: './video2/H9.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -670,7 +670,7 @@ const textNodes = [{
         // Girl
         {
             id: 9.1,
-            vid: './video/A12.mp4',
+            vid: './video2/A12.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -679,7 +679,7 @@ const textNodes = [{
         },
         {
             id: 11,
-            vid: './video/H12.mp4',
+            vid: './video2/H12.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -689,7 +689,7 @@ const textNodes = [{
         },
         {
             id: 11.11,
-            vid: './video/H13.mp4',
+            vid: './video2/H13.mp4',
             text: '',
             options: [{
                     text: 'A',
@@ -708,7 +708,7 @@ const textNodes = [{
         // Girl
         {
             id: 11.1,
-            vid: './video/A13.mp4',
+            vid: './video2/A13.mp4',
             text: '',
             options: [{
                     text: 'A',
@@ -726,7 +726,7 @@ const textNodes = [{
         },
         {
             id: 'retry',
-            vid: './video/A18B.mp4',
+            vid: './video2/A18B.mp4',
             text: '',
             options: [{
                     text: 'A',
@@ -744,7 +744,7 @@ const textNodes = [{
         },
         {
             id: 'retry_02',
-            vid: './video/A19B.mp4',
+            vid: './video2/A19B.mp4',
             text: '',
             options: [
                 {
@@ -755,7 +755,7 @@ const textNodes = [{
         },
         {
             id: 'final_move',
-            vid: './video/A17.mp4',
+            vid: './video2/A17.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -765,7 +765,7 @@ const textNodes = [{
         // Boy
         {
             id: 12,
-            vid: './video/H14.mp4',
+            vid: './video2/H14.mp4',
             text: '',
 
             options: [{
@@ -785,7 +785,7 @@ const textNodes = [{
         },
         {
             id: '12_2',
-            vid: './video/H18B.mp4',
+            vid: './video2/H18B.mp4',
             text: '',
 
             options: [{
@@ -805,7 +805,7 @@ const textNodes = [{
         },
         {
             id: '12_3',
-            vid: './video/H19B.mp4',
+            vid: './video2/H19B.mp4',
             text: '',
 
             options: [{
@@ -817,7 +817,7 @@ const textNodes = [{
         },
         {
             id: '13_2',
-            vid: './video/H14.mp4',
+            vid: './video2/H14.mp4',
             text: '',
 
             options: [{
@@ -839,7 +839,7 @@ const textNodes = [{
         // Boy
         {
             id: 12.1,
-            vid: './video/A14.mp4',
+            vid: './video2/A14.mp4',
             text: '',
 
             options: [{
@@ -860,7 +860,7 @@ const textNodes = [{
         // Girl
         {
             id: 12.2,
-            vid: './video/A14.mp4',
+            vid: './video2/A14.mp4',
             text: '',
 
             options: [{
@@ -881,7 +881,7 @@ const textNodes = [{
         // Boy
         {
             id: 13,
-            vid: './video/H17.mp4',
+            vid: './video2/H17.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -890,7 +890,7 @@ const textNodes = [{
         },
         {
             id: '13_02',
-            vid: './video/H15.mp4',
+            vid: './video2/H15.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -900,7 +900,7 @@ const textNodes = [{
         // Boy
         {
             id: 13.1,
-            vid: './video/H16.mp4',
+            vid: './video2/H16.mp4',
             text: '',
             options: [{
                 text: 'A',
@@ -915,7 +915,7 @@ const textNodes = [{
         // Girl
         {
             id: 13.02,
-            vid: './video/A16.mp4',
+            vid: './video2/A16.mp4',
             text: '',
             options: [{
                 text: 'A',
@@ -929,7 +929,7 @@ const textNodes = [{
         },
         {
             id: 13.2,
-            vid: './video/A17.mp4',
+            vid: './video2/A17.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -939,7 +939,7 @@ const textNodes = [{
         // Boy
         {
             id: 14,
-            vid: './video/H18A.mp4',
+            vid: './video2/H18A.mp4',
             text: '',
             options: [{
                     text: 'Try Again',
@@ -950,7 +950,7 @@ const textNodes = [{
         },
         {
             id: '14_2',
-            vid: './video/H18A.mp4',
+            vid: './video2/H18A.mp4',
             text: '',
             options: [{
                     text: 'Try Again',
@@ -961,7 +961,7 @@ const textNodes = [{
         },
         {
             id: 18.1,
-            vid: './video/A18A.mp4',
+            vid: './video2/A18A.mp4',
             text: '',
             options: [{
                     text: 'Try Again',
@@ -972,7 +972,7 @@ const textNodes = [{
         },
         {
             id: '18.1retry',
-            vid: './video/A18A.mp4',
+            vid: './video2/A18A.mp4',
             text: '',
             options: [{
                     text: 'Try Again',
@@ -984,7 +984,7 @@ const textNodes = [{
         // Boy
         {
             id: 15,
-            vid: './video/H19A.mp4',
+            vid: './video2/H19A.mp4',
             text: '',
             options: [{
                     text: 'Try Again',
@@ -996,7 +996,7 @@ const textNodes = [{
         // Girl
         {
             id: 15.1,
-            vid: './video/A19A.mp4',
+            vid: './video2/A19A.mp4',
             text: '',
             options: [{
                     text: 'Try Again',
@@ -1008,7 +1008,7 @@ const textNodes = [{
         // Boy
         {
             id: 16,
-            vid: './video/H20.mp4',
+            vid: './video2/H20.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -1020,7 +1020,7 @@ const textNodes = [{
         // Girl
         {
             id: 16.01,
-            vid: './video/A15.mp4',
+            vid: './video2/A15.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -1031,7 +1031,7 @@ const textNodes = [{
         },
         {
             id: 16.1,
-            vid: './video/A20.mp4',
+            vid: './video2/A20.mp4',
             text: '',
             options: [{
                     text: 'Continue',
@@ -1043,7 +1043,7 @@ const textNodes = [{
         // Boy
         {
             id: 17,
-            vid: './video/H21.mp4',
+            vid: './video2/H21.mp4',
             text: '',
             options: [
                 {
@@ -1061,7 +1061,7 @@ const textNodes = [{
         // Boy
         {
             id: '19A',
-            vid: './video/H22B.mp4',
+            vid: './video2/H22B.mp4',
             text: '',
             options: [
                 {
@@ -1072,7 +1072,7 @@ const textNodes = [{
         },
         {
             id: '19B',
-            vid: './video/H22A.mp4',
+            vid: './video2/H22A.mp4',
             text: '',
             options: [
                 {
@@ -1084,7 +1084,7 @@ const textNodes = [{
         // Girl
         {
             id: 19.1,
-            vid: './video/A21.mp4',
+            vid: './video2/A21.mp4',
             text: '',
             options: [
                 {
@@ -1099,7 +1099,7 @@ const textNodes = [{
         },
         {
             id: '20.1A',
-            vid: './video/A22A.mp4',
+            vid: './video2/A22A.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -1108,7 +1108,7 @@ const textNodes = [{
         },
         {
             id: '20.1B',
-            vid: './video/A22B.mp4',
+            vid: './video2/A22B.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -1117,7 +1117,7 @@ const textNodes = [{
         },
         {
             id: 'A23A',
-            vid: './video/A23A.mp4',
+            vid: './video2/A23A.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -1126,7 +1126,7 @@ const textNodes = [{
         },
         {
             id: 'A23B',
-            vid: './video/A23B.mp4',
+            vid: './video2/A23B.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -1136,7 +1136,7 @@ const textNodes = [{
         // Boys Final Out Comes
         {
             id: '20A',
-            vid: './video/H23A.mp4',
+            vid: './video2/H23A.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -1145,7 +1145,7 @@ const textNodes = [{
         },
         {
             id: '20B',
-            vid: './video/H23B.mp4',
+            vid: './video2/H23B.mp4',
             text: '',
             options: [{
                 text: 'Continue',
@@ -1154,7 +1154,7 @@ const textNodes = [{
         },
         {
             id: 'FINAL_VID',
-            vid: './video/Ayers.mp4',
+            vid: './video2/Ayers.mp4',
             text: '',
             options: [{
                 text: 'RESTART GAME',
