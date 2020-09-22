@@ -51,19 +51,19 @@ require_once "Mail/mime.php";
 
             $html_email =   '<html>
                                 <body>
-                                    <img src="mtrep:'. $mtrep .'" alt="Montana Repertory Theatre">
-                                    <img src="atg:'. $atg .'" alt="ATG">
-                                    <img src="blackfoot:'. $blackfoot .'" alt="Blackfoot - Giving Back">
-                                    <img src="chc:'. $chc .'" alt="Curry Health Center">
-                                    <img src="dpwf:'. $dpwf .'" alt="Dennis & Phyllis Washington Foundation">
-                                    <img src="mac:'. $mac .'" alt="Montana Arts Council">
-                                    <img src="mt_cultural_trust:'. $mt_cultural_trust .'" alt="Montana Cultural Trust">
-                                    <img src="mt_pbs:'. $mt_pbs .'" alt="Montana PBS">
-                                    <img src="projectTomorrow:'. $projectTomorrow .'" alt="Project Tomorrow Montana">
-                                    <img src="pshp:'. $pshp .'" alt="Pacific Source Health Plans">
-                                    <img src="umt:'. $umt .'" alt="University of Montana">
-                                    <img src="shubert:'. $shubert .'" alt="The Shubert Foundation">
-                                    <img src="uwmc:'. $uwmc .'" alt="United Way of Missoula County">';
+                                    <img src="cid:'. $mtrep .'" alt="Montana Repertory Theatre">
+                                    <img src="cid:'. $atg .'" alt="ATG">
+                                    <img src="cid:'. $blackfoot .'" alt="Blackfoot - Giving Back">
+                                    <img src="cid:'. $chc .'" alt="Curry Health Center">
+                                    <img src="cid:'. $dpwf .'" alt="Dennis & Phyllis Washington Foundation">
+                                    <img src="cid:'. $mac .'" alt="Montana Arts Council">
+                                    <img src="cid:'. $mt_cultural_trust .'" alt="Montana Cultural Trust">
+                                    <img src="cid:'. $mt_pbs .'" alt="Montana PBS">
+                                    <img src="cid:'. $projectTomorrow .'" alt="Project Tomorrow Montana">
+                                    <img src="cid:'. $pshp .'" alt="Pacific Source Health Plans">
+                                    <img src="cid:'. $umt .'" alt="University of Montana">
+                                    <img src="cid:'. $shubert .'" alt="The Shubert Foundation">
+                                    <img src="cid:'. $uwmc .'" alt="United Way of Missoula County">';
             $html_email .= $htmlBody;
             $plain_text = $ptBody;
 
