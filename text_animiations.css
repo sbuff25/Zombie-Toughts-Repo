@@ -771,14 +771,14 @@
     {
         width: 40%;
         position: absolute;
-        top: 90%;
+        top: 87%;
         left: 10%;
     }
     #title_animi
     {
         position: absolute;
         width: 50%;
-        top: 55%;
+        top: 30%;
         padding: 5px;
 
     }
@@ -803,7 +803,7 @@
 
         position: absolute;
         width:10%;  
-        top: 70%;
+        top: 45%;
         left: 59%;
         animation: transitionText 1s;
         /* opacity: 75%; */
@@ -815,7 +815,7 @@
         
         position: absolute;
         width:10%;  
-        bottom: 17%;
+        bottom: 30%;
         left: 60%;
         animation: transitionText 1s;
         /* opacity: 75%; */
@@ -833,9 +833,9 @@
     #mt_rep_logo
     {
         position: absolute;
-        width: 15%;
-        left: 42%;
-        top: 50%;
+        width: 10%;
+        left: 45%;
+        top: 30%;
         animation: transitionText 1s;
     }
     /* Foundations */
@@ -896,24 +896,24 @@
     {
         position: absolute;
         width: 15%;
-        top: 38%;
-        left: 57%;
+        top: 13%;
+        left: 50%;
         animation: transitionTextFromLeft 1.5s;
     }
 
     #PSHP
     {
         position: absolute;
-        widows: 25%;  
-        top: 40%;
-        left: 30%;
+        width: 25%;  
+        top: 15%;
+        left: 24%;
         animation: transitionTextFromLeft 1.7s;
     }
     #blackfoot
     {
       position: absolute;
-      width:20%;  
-      top: 30%;
+      width:10%;  
+      top: 10%;
       left: 10%;
       animation: transitionTextFromLeft 1.5s;
     }
