@@ -248,9 +248,17 @@ require_once("./Admin/Classes/Database.php");
         $stmt->close();
 
         
+        require_once("./Admin/Functions/Emails.php");
+        require_once("./Admin/Classes/SendImageEmail.php");
+        $plainBody = MT_resident_email_plain_body($code);
+        $htmlBody = MT_resident_email_html_body($code);
+        $subject = MT_Resident_email_subject($code);
 
+        $objSendEmail = new SendImageEmail($email, $subject, $plainBody, $htmlBody, $errors, "An email has been sent to you with instructions for accessing Zombie Thoughts.", "There has been an issue creating an access code.");
+        
         if(count($errors) === 0){
             // Send request processing email
+            
             $_SESSION['success'] = "An email has been sent to you with instructions for accessing Zombie Thoughts.";
         }
 
