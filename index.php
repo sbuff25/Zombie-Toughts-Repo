@@ -95,6 +95,9 @@ include_once("accessCheck.php");
             <a href="https://www.dpwfoundation.org/">
                 <img src="./Sponsor_Logos_PNG/DPWF.png" alt="" id="DPWF">
             </a>
+            <a href="https://art.mt.gov/">
+                <img src="./Sponsor_Logos_PNG/MAC.png" alt="" id="MAC">
+            </a>
             
         </section>
      
@@ -218,7 +221,6 @@ include_once("accessCheck.php");
         <div class="game expand container center">
             <h3 class="center game_play" id="lighten">Zombie Thoughts</h3>
             <br>
-            
             <?php if(!isset($_SESSION['code'])){?>
 
                 <?php include_once('./Admin/errors.php'); ?>
@@ -259,27 +261,26 @@ include_once("accessCheck.php");
             }
             else{
             ?>
-            
-                <div class="collapsed center">
-                    
-                    <div id="vid_box">
-                        <video id="video" controls controlsList="nodownload" playsinline>
-                            <source src="" type="video/mp4">
-                        </video>
-                        <div id="player" class="moveUpVid"></div>
-                    </div>
-                    <div id="text" class="moveUpText"></div>
-                    <div id="option-buttons" class="moveUpBtn"></div>
-                        <audio id="audio">
-                            <source src="./audio/select_granted.wav"></source>
-                        </audio>
-                        <audio id="audio_menu">
-                            <source src="./audio/menu_slide.wav">
-                        </audio>
-                        <audio id="audio_select">
-                            <source src="./audio/selector_tone.wav">
-                        </audio>
+            <div class="collapsed center">
+                
+                <div id="vid_box">
+                    <video id="video" controls controlsList="nodownload" playsinline>
+                        <source src="" type="video/mp4">
+                    </video>
+                    <div id="player" class="moveUpVid"></div>
                 </div>
+                <div id="text" class="moveUpText"></div>
+                <div id="option-buttons" class="moveUpBtn"></div>
+                    <audio id="audio">
+                        <source src="./audio/select_granted.wav"></source>
+                    </audio>
+                    <audio id="audio_menu">
+                        <source src="./audio/menu_slide.wav">
+                    </audio>
+                    <audio id="audio_select">
+                        <source src="./audio/selector_tone.wav">
+                    </audio>
+            </div>
             <?php } ?>
         </div>
     </section>
