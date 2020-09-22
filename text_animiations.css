@@ -63,12 +63,20 @@
         /* opacity: 75%; */
     
     }
+#MAC
+{
+    position: absolute;
+    width: 20%;
+    left: 78%;
+    bottom: 20%;
+    animation: transitionTextFromRight 1.7s;
+}
     #WF
     {
         position: absolute;
-        width: 25%;
-        left: 75%;
-        top: 65%;
+        width: 15%;
+        right: 2%;
+        top: 75%;
         animation: transitionTextFromRight 1s;
         /* opacity: 75%; */
     
@@ -212,9 +220,9 @@
 #WF
 {
     position: absolute;
-    width: 25%;
-    left: 75%;
-    top: 65%;
+    width: 15%;
+    left: 83.4%;
+    top: 75%;
     animation: transitionTextFromRight 1.6s;
     /* opacity: 75%; */
 
@@ -226,6 +234,14 @@
     width: 10%;
     left: 87%;
     animation: transitionTextFromRight 1.8s;
+}
+#MAC
+{
+    position: absolute;
+    width: 20%;
+    left: 78%;
+    bottom: 20%;
+    animation: transitionTextFromRight 1.7s;
 }
 #shubert
 {
@@ -392,7 +408,14 @@
     /* opacity: 75%; */
 
 }
-
+#MAC
+{
+    position: absolute;
+    width: 30%;
+    left: 65%;
+    bottom: 65%;
+    animation: transitionTextFromRight 1.7s;
+}
 #shubert
 {
     position: absolute;
@@ -525,6 +548,14 @@
     bottom: 5%;
     width: 15%;
     left: 75%;
+    animation: transitionTextFromRight 1.7s;
+}
+#MAC
+{
+    position: absolute;
+    width: 15%;
+    left: 73%;
+    bottom: 70%;
     animation: transitionTextFromRight 1.7s;
 }
 #WF
