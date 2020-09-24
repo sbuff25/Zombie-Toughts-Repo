@@ -261,7 +261,7 @@ include_once("accessCheck.php");
             }
             else{
             ?>
-            <div class="collapsed center">
+            <!-- <div class="collapsed center"> -->
                 
                 <div id="vid_box">
                     <video id="video" controls controlsList="nodownload" playsinline>
@@ -280,7 +280,7 @@ include_once("accessCheck.php");
                     <audio id="audio_select">
                         <source src="./audio/selector_tone.wav">
                     </audio>
-            </div>
+            <!-- </div> -->
             <?php } ?>
         </div>
     </section>
