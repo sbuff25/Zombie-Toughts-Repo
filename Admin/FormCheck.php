@@ -263,12 +263,12 @@ require_once("./Classes/Database.php");
 
         $checkMax = $database->prepare("SELECT MAX(note_id) as max_note_id FROM InstitutionNotes WHERE id=?");
         array_push($errors, $id);  
-        if(!$checkMax->bind_param("s", $id)){    
-            array_push($errors, "Binding parameters failed: (" . $checkMax->errno . ") " . $checkMax->error);  
+        if(!$checkMax->bind_param("i", $id)){    
+            // array_push($errors, "Binding parameters failed: (" . $checkMax->errno . ") " . $checkMax->error);  
         }
         if(!$checkMax->execute()){            
-            array_push($errors, "Execute failed: (" . $checkMax->errno . ") " . $checkMax->error);
-            array_push($errors, "Could not find notes");  
+            // array_push($errors, "Execute failed: (" . $checkMax->errno . ") " . $checkMax->error);
+            // array_push($errors, "Could not find notes");  
         }
         
         
