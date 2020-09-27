@@ -65,7 +65,7 @@
 
         code = generateAccessCode(this.value);
         $("<input name='generate_code' value='" + code + "' hidden>" ).appendTo( "#codeDiv" );
-        $("<h2>Code Generated</h2>" ).appendTo( "#codeDiv" );
+        $("<h2 class='codeGenText'>Code Generated</h2>" ).appendTo( "#codeDiv" );
         $("<button class='btn btn-primary' type='submit' name='submitIndAccess'>Submit</button>" ).appendTo( "#codeDiv" );
     });
     
