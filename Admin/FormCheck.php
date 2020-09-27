@@ -261,8 +261,7 @@ require_once("./Classes/Database.php");
         $id = mysqli_real_escape_string($database, $_POST['newNote']);
         $note = mysqli_real_escape_string($database, $_POST['note']);
 
-        $checkMax = $database->prepare("SELECT MAX(note_id) as max_note_id FROM InstitutionNotes WHERE institution_id=?");
-        array_push($errors, $id);  
+        $checkMax = $database->prepare("SELECT MAX(note_id) as max_note_id FROM InstitutionNotes WHERE institution_id=?"); 
         if(!$checkMax->bind_param("i", $id)){    
             array_push($errors, "Binding parameters failed: (" . $checkMax->errno . ") " . $checkMax->error);  
         }
