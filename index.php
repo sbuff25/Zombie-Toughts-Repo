@@ -332,5 +332,10 @@ include_once("accessCheck.php");
     <script src="./scroll.js"></script>
     <script src="./parallax.js"></script>
     <script src="./bootstrap.min.js"></script>
+    <script>
+        if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+        }
+    </script>
   
 </body>
