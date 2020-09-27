@@ -107,12 +107,24 @@ require_once("./Admin/Classes/Database.php");
         $county = mysqli_real_escape_string($database, $_POST['institution_county']);
 
         $stmt = $database->prepare("INSERT INTO InstitutionInformation (contact_first_name, contact_last_name, contact_email, contact_phone, contact_ext, institution_name, institution_mailing_address, institution_city, institution_state, institution_zipcode, institution_county, contacted) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'not contacted')");
-        $stmt->bind_param("sssssssssis", $first_name, $last_name, $email, $phone, $ext, $institution_name, $address, $city, $state, $zipcode, $county);
-        $stmt->execute();
 
-        if(!$stmt){
+        if(!$stmt->bind_param("sssssssssis", $first_name, $last_name, $email, $phone, $ext, $institution_name, $address, $city, $state, $zipcode, $county)){
+            array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
+        }
+
+        if(!$stmt->execute()){
             array_push($errors, "There was a problem processing your request. Please try your request again, and if it still does not work please contact the Montana Repertory Theatre directly for access.");
         }
+        $stmt->close();
+
+        require_once("./Admin/Functions/Emails.php");
+        require_once("./Admin/Classes/SendEmail.php");
+        $plainBody = MT_institution_email_plain_body($code);
+        // $htmlBody = MT_resident_email_html_body($code);
+        $subject = MT_institution_email_subject($code);
+
+        $objSendEmail = new SendEmail($email, $subject, $plainBody, $errors, "An email has been sent to you with instructions for accessing Zombie Thoughts.", "There has been an issue creating an access code.");
+        
 
         if(count($errors) === 0){
             // Send request processing email

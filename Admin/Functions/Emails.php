@@ -28,9 +28,9 @@
     function MT_institution_email_plain_body(){
         $body = '';
         $body .= "Hello!\n";
-        $body .= "Thanks for your interest in Montana Repertory Theatre’s Production of Zombie Thoughts. Your\n";
+        $body .= "Thanks for your interest in Montana Repertory Theatre's Production of Zombie Thoughts. Your\n";
         $body .= "information has been passed on to our Educational Outreach Coordinator and someone from\n";
-        $body .= "our office will contact you soon.  If you don’t hear from us within 2 business days, feel free to\n";
+        $body .= "our office will contact you soon. If you don't hear from us within 2 business days, feel free to\n";
         $body .= "e-mail us at ZombieThoughts@MontanaRep.com.\n\n";
         $body .= "Michael Legg\n";
         $body .= "Artistic Director\n";
@@ -42,9 +42,9 @@
     function MT_institution_email_html_body(){
         $body = '';
         $body .= "Hello!<br>";
-        $body .= "Thanks for your interest in Montana Repertory Theatre’s Production of Zombie Thoughts. Your<br>";
+        $body .= "Thanks for your interest in Montana Repertory Theatre's Production of Zombie Thoughts. Your<br>";
         $body .= "information has been passed on to our Educational Outreach Coordinator and someone from<br>";
-        $body .= "our office will contact you soon.  If you don’t hear from us within 2 business days, feel free to<br>";
+        $body .= "our office will contact you soon. If you don't hear from us within 2 business days, feel free to<br>";
         $body .= "e-mail us at ZombieThoughts@MontanaRep.com.<br><br>";
         $body .= "Michael Legg<br>";
         $body .= "Artistic Director<br>";
