@@ -250,7 +250,7 @@ require_once("./Admin/Classes/Database.php");
      
         // }
 
-        if(!$stmt->bind_param("sssss", 
+        if(!$stmt->bind_param("ssss", 
         $code,
         $state,
         $county, 

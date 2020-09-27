@@ -63,7 +63,7 @@
     */
     function MT_resident_email_plain_body($code){
         $body = '';
-        $body .= "Thanks for your interest in Montana Repertory Theatre’s Production of Zombie Thoughts.\n";
+        $body .= "Thanks for your interest in Montana Repertory Theatre's Production of Zombie Thoughts.\n";
         $body .= "Here's your one-time use code to watch the show: ". $code .". You can enter it on the Game screen at\n";
         $body .= "MontanaRepZombieThoughts.com. If you need additional help, or a replacement code, you can\n";
         $body .= "e-mail us at ZombieThoughts@MontanaRep.com.\n\n";
@@ -77,7 +77,7 @@
     }
     function MT_resident_email_html_body($code){
         $body = '';
-        $body .= "Thanks for your interest in Montana Repertory Theatre’s Production of Zombie Thoughts.<br>";
+        $body .= "Thanks for your interest in Montana Repertory Theatre's Production of Zombie Thoughts.<br>";
         $body .= "Here's your one-time use code to watch the show: " . $code . ". You can enter it on the Game screen at<br>";
         $body .= "MontanaRepZombieThoughts.com.  If you need additional help, or a replacement code, you can<br>";
         $body .= "e-mail us at ZombieThoughts@MontanaRep.com.<br><br>";
