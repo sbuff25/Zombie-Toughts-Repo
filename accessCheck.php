@@ -13,7 +13,8 @@ require_once("./Admin/Classes/Database.php");
             $stmt = $database->prepare("SELECT * FROM IndividualAccessCode WHERE code=?");
     
             if(!$stmt->bind_param("s", $code)){
-                array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
+                //array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
+                array_push($errors, "There has been problem accepting your code. Please wait a couple minutes, and then try again.");
          
             }
 
