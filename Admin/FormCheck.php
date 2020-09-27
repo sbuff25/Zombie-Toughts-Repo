@@ -278,18 +278,18 @@ require_once("./Classes/Database.php");
         if(count($errors) === 0){
             if($result->num_rows > 0){
                 $note_id = intval($row['max_note_id']) + 1;
-                $insertSQL = $database->prepare("INSERT INTO InstitutionNotes (note_id, id, note) VALUES (?, ?, ?)");
+                $insertSQL = $database->prepare("INSERT INTO InstitutionNotes (note_id, institution_id, note) VALUES (?, ?, ?)");
                 if(!$insertSQL->bind_param("iis", $note_id , $id, $note)){    
                     array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);  
                 }
                 if(!$insertSQL->execute()){            
                     array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
-                    array_push($errors, "unable to insert note");  
+                    array_push($errors, "unable to insert note 0");  
                 }
                 $insertSQL->close();
             }
             else{
-                $insertSQL = $database->prepare("INSERT INTO InstitutionNotes (note_id, id, note) VALUES (0, ?, ?)");
+                $insertSQL = $database->prepare("INSERT INTO InstitutionNotes (note_id, institution_id, note) VALUES (0, ?, ?)");
 
                 if(!$insertSQL->bind_param("is", $id, $note)){    
                     array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);  
