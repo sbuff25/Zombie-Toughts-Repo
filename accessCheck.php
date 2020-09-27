@@ -181,17 +181,18 @@ require_once("./Admin/Classes/Database.php");
 
     if (isset($_POST['submitIndAccess'])) {
         $code = mysqli_real_escape_string($database, $_POST['generate_code']);
-        $first_name = mysqli_real_escape_string($database, $_POST['first_name']);
-        $last_name = mysqli_real_escape_string($database, $_POST['last_name']);
+        // $first_name = mysqli_real_escape_string($database, $_POST['first_name']);
+        // $last_name = mysqli_real_escape_string($database, $_POST['last_name']);
         $email = mysqli_real_escape_string($database, $_POST['email']);
-        $phone = mysqli_real_escape_string($database, $_POST['phone']);
+        // $phone = mysqli_real_escape_string($database, $_POST['phone']);
+        $county = mysqli_real_escape_string($database, $_POST['county']);
 
 
-        $address = mysqli_real_escape_string($database, $_POST['address']);
-        $apt_num = mysqli_real_escape_string($database, $_POST['apt_num']);
-        $city = mysqli_real_escape_string($database, $_POST['city']);
-        $state = mysqli_real_escape_string($database, $_POST['state']);
-        $zipcode = mysqli_real_escape_string($database, $_POST['zipcode']);
+        // $address = mysqli_real_escape_string($database, $_POST['address']);
+        // $apt_num = mysqli_real_escape_string($database, $_POST['apt_num']);
+        // $city = mysqli_real_escape_string($database, $_POST['city']);
+        // $state = mysqli_real_escape_string($database, $_POST['state']);
+        // $zipcode = mysqli_real_escape_string($database, $_POST['zipcode']);
 
         $end_date = date('Y-m-d', strtotime("+2 days"));
         $id = mysqli_real_escape_string($database, $_POST['id']);
@@ -207,38 +208,57 @@ require_once("./Admin/Classes/Database.php");
         $stmt->close();
 
         
+        // $stmt = $database->prepare(
+        //     "INSERT INTO IndividualAccessCode (
+        //         code, 
+        //         first_name, 
+        //         last_name, 
+        //         email, 
+        //         phone, 
+        //         address, 
+        //         apt_num, 
+        //         city, 
+        //         state, 
+        //         zipcode,
+        //         end_date
+        //         ) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+        // );
+
         $stmt = $database->prepare(
             "INSERT INTO IndividualAccessCode (
                 code, 
-                first_name, 
-                last_name, 
-                email, 
-                phone, 
-                address, 
-                apt_num, 
-                city, 
-                state, 
-                zipcode,
+                state,
+                county,
                 end_date
-                ) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                ) VALUES(?, ?, ?, ?)"
         );
 
-        if(!$stmt->bind_param("sssssssssss", 
-            $code, 
-            $first_name, 
-            $last_name,
-            $email, 
-            $phone,
-            $address, 
-            $apt_num,
-            $city, 
-            $state, 
-            $zipcode, 
-            $end_date
-        )){
-            array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
+        // if(!$stmt->bind_param("sssssssssss", 
+        //     $code, 
+        //     $first_name, 
+        //     $last_name,
+        //     $email, 
+        //     $phone,
+        //     $address, 
+        //     $apt_num,
+        //     $city, 
+        //     $state, 
+        //     $zipcode, 
+        //     $end_date
+        // )){
+        //     array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
      
-        }
+        // }
+
+        if(!$stmt->bind_param("sssss", 
+        $code,
+        $state,
+        $county, 
+        $end_date
+    )){
+        array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
+ 
+    }
 
         // $stmt->execute();
 
@@ -249,12 +269,12 @@ require_once("./Admin/Classes/Database.php");
 
         
         require_once("./Admin/Functions/Emails.php");
-        require_once("./Admin/Classes/SendImageEmail.php");
+        require_once("./Admin/Classes/SendEmail.php");
         $plainBody = MT_resident_email_plain_body($code);
-        $htmlBody = MT_resident_email_html_body($code);
+        // $htmlBody = MT_resident_email_html_body($code);
         $subject = MT_Resident_email_subject($code);
 
-        $objSendEmail = new SendImageEmail($email, $subject, $plainBody, $htmlBody, $errors, "An email has been sent to you with instructions for accessing Zombie Thoughts.", "There has been an issue creating an access code.");
+        $objSendEmail = new SendEmail($email, $subject, $plainBody, $errors, "An email has been sent to you with instructions for accessing Zombie Thoughts.", "There has been an issue creating an access code.");
         
         if(count($errors) === 0){
             // Send request processing email

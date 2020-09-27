@@ -144,7 +144,7 @@ $("#ind_or_inst_select").on('change', function() {
             $("<input name='address' placeholder='Enter Address...' size='20' required><br>").appendTo( "#add_here" );
 
             $("<label for='apt_num'>Apartment Number (if applicable):&nbsp;</label>").appendTo( "#add_here" );
-            $("<input name='apt_num' placeholder='Enter Apartment Number...' size='20' required><br>").appendTo( "#add_here" );
+            $("<input name='apt_num' placeholder='Enter Apartment Number...' size='20'><br>").appendTo( "#add_here" );
 
             $("<label for='city'>City:&nbsp;</label>").appendTo( "#add_here" );
             $("<input name='city' placeholder='Enter City...' size='20' required><br>").appendTo( "#add_here" );
