@@ -93,4 +93,29 @@
     function MT_Resident_email_subject(){
         return "Montana Repertory Theatre Zombie Thoughts - Access Code";
     }
+
+    /*
+    _______________________Zombie Thoughts OOS Request Email_______________________________
+    */
+
+    function OOS_request_email_plain_body(){
+        $body = '';
+        $body .= "Hello!\n";
+        $body .= "Thanks for your interest in Montana Repertory Theatre's Production of Zombie Thoughts.\n";
+        $body .= "At present, Zombie Thoughts is only available to individuals and schools located within the state of Montana.\n";
+        $body .= "Your information has been passed on to our Educational Outreach Coordinator and someone from our office will be\n";
+        $body .= "in touch with you soon to talk about future availability in your area.\n";
+        $body .= "If you don’t hear from us within 2 business days, feel free to e-mail us at ZombieThoughts@MontanaRep.com.\n\n";
+        $body .= "Michael Legg\n";
+        $body .= "Artistic Director\n";
+        $body .= "Montana Repertory Theatre";
+
+        return $body;
+    }
+
+    function OOS_request_email_subject(){
+        return "Montana Repertory Theatre Zombie Thoughts Request";
+    }
+    
+
 ?>

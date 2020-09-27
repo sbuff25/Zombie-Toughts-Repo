@@ -121,11 +121,19 @@ require_once("./Admin/Classes/Database.php");
 
         require_once("./Admin/Functions/Emails.php");
         require_once("./Admin/Classes/SendEmail.php");
-        $plainBody = MT_institution_email_plain_body($code);
-        // $htmlBody = MT_resident_email_html_body($code);
-        $subject = MT_institution_email_subject($code);
+        $plainBody = "";
+        $subject = "";
+        if($state === "Montana"){
+            $plainBody = MT_institution_email_plain_body($code);
+            $subject = MT_institution_email_subject($code);
+        }
+        else{
+            $plainBody = OOS_request_email_plain_body();
+            $subject = OOS_request_email_subject();
+        }
+        
 
-        $objSendEmail = new SendEmail($email, $subject, $plainBody, $errors, "An email has been sent to you with instructions for accessing Zombie Thoughts.", "There has been an issue creating an access code.");
+        $objSendEmail = new SendEmail($email, $subject, $plainBody, $errors, "An email has been sent to you.", "There has been an issue processing your request.");
         
 
         if(count($errors) === 0){
@@ -157,6 +165,15 @@ require_once("./Admin/Classes/Database.php");
             array_push($errors, "There was a problem processing your request. Please try your request again, and if it still does not work please contact the Montana Repertory Theatre directly for access.");
         }
         $stmt->close();
+
+        require_once("./Admin/Functions/Emails.php");
+        require_once("./Admin/Classes/SendEmail.php");
+        $plainBody = OOS_request_email_plain_body();
+        $subject = OOS_request_email_subject();
+        
+
+        $objSendEmail = new SendEmail($email, $subject, $plainBody, $errors, "An email has been sent to you.", "There has been an issue processing your request.");
+        
 
         if(count($errors) === 0){
             // Send request processing email
