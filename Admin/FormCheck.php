@@ -261,10 +261,10 @@ require_once("./Classes/Database.php");
         $id = mysqli_real_escape_string($database, $_POST['newNote']);
         $note = mysqli_real_escape_string($database, $_POST['note']);
 
-        // $checkMax = $database->prepare("SELECT MAX(note_id) as max_note_id FROM InstitutionNotes WHERE id=?");
-        // if(!$checkMax->bind_param("i", $id)){    
-        //     array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);  
-        // }
+        $checkMax = $database->prepare("SELECT MAX(note_id) as max_note_id FROM InstitutionNotes WHERE id=?");
+        if(!$checkMax->bind_param("i", $id)){    
+            array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);  
+        }
         // if(!$checkMax->execute()){            
         //     array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
         //     array_push($errors, "Could not find notes");  
