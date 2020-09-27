@@ -264,47 +264,47 @@ require_once("./Classes/Database.php");
         $checkMax = $database->prepare("SELECT MAX(note_id) as max_note_id FROM InstitutionNotes WHERE institution_id=?");
         array_push($errors, $id);  
         if(!$checkMax->bind_param("i", $id)){    
-            // array_push($errors, "Binding parameters failed: (" . $checkMax->errno . ") " . $checkMax->error);  
+            array_push($errors, "Binding parameters failed: (" . $checkMax->errno . ") " . $checkMax->error);  
         }
         if(!$checkMax->execute()){            
-            // array_push($errors, "Execute failed: (" . $checkMax->errno . ") " . $checkMax->error);
-            // array_push($errors, "Could not find notes");  
+            array_push($errors, "Execute failed: (" . $checkMax->errno . ") " . $checkMax->error);
+            array_push($errors, "Could not find notes");  
         }
         
         
-        // $result = $checkMax->get_result();
-        // $row = $result->fetch_assoc();
+        $result = $checkMax->get_result();
+        $row = $result->fetch_assoc();
 
-        // if(count($errors) === 0){
-        //     if($result->num_rows > 0){
-        //         $note_id = intval($row['max_note_id']) + 1;
-        //         $insertSQL = $database->prepare("INSERT INTO InstitutionNotes (note_id, id, note) VALUES (?, ?, ?)");
-        //         if(!$insertSQL->bind_param("iis", $note_id , $id, $note)){    
-        //             array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);  
-        //         }
-        //         if(!$insertSQL->execute()){            
-        //             array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
-        //             array_push($errors, "unable to insert note");  
-        //         }
-        //         $insertSQL->close();
-        //     }
-        //     else{
-        //         $insertSQL = $database->prepare("INSERT INTO InstitutionNotes (note_id, id, note) VALUES (0, ?, ?)");
+        if(count($errors) === 0){
+            if($result->num_rows > 0){
+                $note_id = intval($row['max_note_id']) + 1;
+                $insertSQL = $database->prepare("INSERT INTO InstitutionNotes (note_id, id, note) VALUES (?, ?, ?)");
+                if(!$insertSQL->bind_param("iis", $note_id , $id, $note)){    
+                    array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);  
+                }
+                if(!$insertSQL->execute()){            
+                    array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
+                    array_push($errors, "unable to insert note");  
+                }
+                $insertSQL->close();
+            }
+            else{
+                $insertSQL = $database->prepare("INSERT INTO InstitutionNotes (note_id, id, note) VALUES (0, ?, ?)");
 
-        //         if(!$insertSQL->bind_param("is", $id, $note)){    
-        //             array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);  
-        //         }
-        //         if(!$insertSQL->execute()){            
-        //             array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
-        //             array_push($errors, "unable to insert note");  
-        //         }
-        //         $insertSQL->close();
-        //     }
-        // }
-        // else{
-        //     array_push($errors, "Unable to insert note.");
-        // }
-        // $checkMax->close();
+                if(!$insertSQL->bind_param("is", $id, $note)){    
+                    array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);  
+                }
+                if(!$insertSQL->execute()){            
+                    array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
+                    array_push($errors, "unable to insert note");  
+                }
+                $insertSQL->close();
+            }
+        }
+        else{
+            array_push($errors, "Unable to insert note.");
+        }
+        $checkMax->close();
 
         
 
