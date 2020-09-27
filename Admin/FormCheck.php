@@ -262,28 +262,40 @@ require_once("./Classes/Database.php");
         $note = mysqli_real_escape_string($database, $_POST['note']);
 
         $checkMax = $database->prepare("SELECT MAX(note_id) as max_note_id FROM InstitutionNotes WHERE id=?");
-        $checkMax->bind_param("i", $id);
-        $checkMax->execute();
+        if(!$checkMax->bind_param("i", $id)){    
+            array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);  
+        }
+        if(!$checkMax->execute()){            
+            array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
+            array_push($errors, "Could not find notes");  
+        }
+        
+        
         $result = $checkMax->get_result();
         $row = $result->fetch_assoc();
 
-        if($checkMax){
+        if(count($errors) === 0){
             if($result->num_rows > 0){
                 $note_id = intval($row['max_note_id']) + 1;
                 $insertSQL = $database->prepare("INSERT INTO InstitutionNotes (note_id, id, note) VALUES (?, ?, ?)");
-                $insertSQL->bind_param("iis", $note_id , $id, $note);
-                $insertSQL->execute();
-                if(!$insertSQL){
-                    array_push($errors, "Unable to insert note.");
+                if(!$insertSQL->bind_param("iis", $note_id , $id, $note)){    
+                    array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);  
+                }
+                if(!$insertSQL->execute()){            
+                    array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
+                    array_push($errors, "unable to insert note");  
                 }
                 $insertSQL->close();
             }
             else{
                 $insertSQL = $database->prepare("INSERT INTO InstitutionNotes (note_id, id, note) VALUES (0, ?, ?)");
-                $insertSQL->bind_param("is", $id, $note);
-                $insertSQL->execute();
-                if(!$insertSQL){
-                    array_push($errors, "Unable to insert note.");
+
+                if(!$insertSQL->bind_param("is", $id, $note)){    
+                    array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);  
+                }
+                if(!$insertSQL->execute()){            
+                    array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
+                    array_push($errors, "unable to insert note");  
                 }
                 $insertSQL->close();
             }
@@ -487,6 +499,14 @@ require_once("./Classes/Database.php");
             array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
         }
         $stmt->close();
+
+        require_once("./Admin/Functions/Emails.php");
+        require_once("./Admin/Classes/SendEmail.php");
+        $plainBody = insitution_code_email_plain_body($code, $num_accesses);
+        $subject = institution_code_email_subject();
+        $objSendEmail = new SendEmail($email, $subject, $plainBody, $errors, "An email has been sent to with a code", "There has been an issue processing email.");
+        
+
       
         if(count($errors) === 0){
             // Insert Grades into InstGrades
@@ -623,6 +643,13 @@ require_once("./Classes/Database.php");
             }
             $updateSQL->close();
         }
+
+        require_once("./Admin/Functions/Emails.php");
+        require_once("./Admin/Classes/SendEmail.php");
+        $plainBody = insitution_code_email_plain_body($code);
+        $subject = institution_code_email_subject();
+        $objSendEmail = new SendEmail($email, $subject, $plainBody, $errors, "An email has been sent to with a code", "There has been an issue processing email.");
+        
 
         if(count($errors) === 0){
             // Send request processing email

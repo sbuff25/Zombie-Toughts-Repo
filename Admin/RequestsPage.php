@@ -185,17 +185,17 @@ include_once('FormCheck.php');
                                             
                                             <form action='GiveInstitutionAccess' method='POST'>
                                                 <input id='accessCode' name='accessCode' hidden>
-                                                <input name="cFirstName" value=<?php echo $row['contact_first_name']; ?> hidden>
-                                                <input name="cLastName" value=<?php echo $row['contact_last_name']; ?> hidden>
-                                                <input name="cPhone" value=<?php echo $row['contact_phone']; ?> hidden>
-                                                <input name="cExt" value=<?php echo $row['contact_ext']; ?> hidden>
-                                                <input name='cEmail' value=<?php echo $row['contact_email']; ?> hidden>
-                                                <input name='iName' value=<?php echo $row['institution_name']; ?> hidden>
-                                                <input name='iAddress' value=<?php echo $row['institution_mailing_address']; ?> hidden>
-                                                <input name='iCity' value=<?php echo $row['institution_city']; ?> hidden>
+                                                <input name="cFirstName" value="<?php echo $row['contact_first_name']; ?>" hidden>
+                                                <input name="cLastName" value="<?php echo $row['contact_last_name']; ?>" hidden>
+                                                <input name="cPhone" value="<?php echo $row['contact_phone']; ?>" hidden>
+                                                <input name="cExt" value="<?php echo $row['contact_ext']; ?>" hidden>
+                                                <input name='cEmail' value="<?php echo $row['contact_email']; ?>" hidden>
+                                                <input name='iName' value="<?php echo $row['institution_name']; ?>" hidden>
+                                                <input name='iAddress' value="<?php echo $row['institution_mailing_address']; ?>" hidden>
+                                                <input name='iCity' value="<?php echo $row['institution_city']; ?>" hidden>
                                                 <input name='iState' value='Montana' hidden>
-                                                <input name='iZip' value=<?php echo $row['institution_zipcode']; ?> hidden>
-                                                <input name='iCounty' value=<?php echo $row['institution_county']; ?> hidden>
+                                                <input name='iZip' value="<?php echo $row['institution_zipcode']; ?>" hidden>
+                                                <input name='iCounty' value="<?php echo $row['institution_county']; ?>" hidden>
 
                                                 <?php $id = $row['id'];?>   
 
@@ -329,17 +329,17 @@ include_once('FormCheck.php');
                                             
                                             <form action='GiveInstitutionAccess' method='POST'>
                                                 <input id='accessCode' name='accessCode' hidden>
-                                                <input name="cFirstName" value=<?php echo $row['contact_first_name']; ?> hidden>
-                                                <input name="cLastName" value=<?php echo $row['contact_last_name']; ?> hidden>
-                                                <input name="cPhone" value=<?php echo $row['contact_phone']; ?> hidden>
-                                                <input name="cExt" value=<?php echo $row['contact_ext']; ?> hidden>
-                                                <input name='cEmail' value=<?php echo $row['contact_email']; ?> hidden>
-                                                <input name='iName' value=<?php echo $row['institution_name']; ?> hidden>
-                                                <input name='iAddress' value=<?php echo $row['institution_mailing_address']; ?> hidden>
-                                                <input name='iCity' value=<?php echo $row['institution_city']; ?> hidden>
-                                                <input name='iState' value=<?php echo $row['institution_state']; ?> hidden>
-                                                <input name='iZip' value=<?php echo $row['institution_zipcode']; ?> hidden>
-                                                <input name='iCounty' value=<?php echo $row['institution_county']; ?> hidden>
+                                                <input name="cFirstName" value="<?php echo $row['contact_first_name']; ?>" hidden>
+                                                <input name="cLastName" value="<?php echo $row['contact_last_name']; ?>" hidden>
+                                                <input name="cPhone" value="<?php echo $row['contact_phone']; ?>" hidden>
+                                                <input name="cExt" value="<?php echo $row['contact_ext']; ?>" hidden>
+                                                <input name='cEmail' value="<?php echo $row['contact_email']; ?>" hidden>
+                                                <input name='iName' value="<?php echo $row['institution_name']; ?>" hidden>
+                                                <input name='iAddress' value="<?php echo $row['institution_mailing_address']; ?>" hidden>
+                                                <input name='iCity' value="<?php echo $row['institution_city']; ?>" hidden>
+                                                <input name='iState' value="<?php echo $row['institution_state']; ?>" hidden>
+                                                <input name='iZip' value="<?php echo $row['institution_zipcode']; ?>" hidden>
+                                                <input name='iCounty' value="<?php echo $row['institution_county']; ?>" hidden>
 
                                                 <?php $id = $row['id'];?>   
 
