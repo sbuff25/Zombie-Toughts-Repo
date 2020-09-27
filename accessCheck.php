@@ -33,9 +33,10 @@ require_once("./Admin/Classes/Database.php");
                 else{
                     if(count($errors) === 0 && is_null($row['clicked_date'])){
                         $clicked_date = date('Y-m-d H:i:s');
-                        $stmt2 = $database->prepare("UPDATE IndividualAccessCode SET clicked_date=? WHERE code=?");
+                        $new_end_date = date('Y-m-d', strtotime("+2 days"));
+                        $stmt2 = $database->prepare("UPDATE IndividualAccessCode SET clicked_date=?, end_date=? WHERE code=?");
     
-                        if($stmt2->bind_param("ss", $clicked_date, $code)){
+                        if($stmt2->bind_param("sss", $clicked_date, $new_end_date, $code)){
                             array_push($errors, "Binding parameters failed: (" . $stmt2->errno . ") " . $stmt2->error);
                     
                         }
@@ -206,7 +207,7 @@ require_once("./Admin/Classes/Database.php");
         // $state = mysqli_real_escape_string($database, $_POST['state']);
         // $zipcode = mysqli_real_escape_string($database, $_POST['zipcode']);
 
-        $end_date = date('Y-m-d', strtotime("+2 days"));
+        $end_date = date('Y-m-d', strtotime("+7 days"));
         $id = mysqli_real_escape_string($database, $_POST['id']);
 
 
@@ -291,7 +292,7 @@ require_once("./Admin/Classes/Database.php");
         if(count($errors) === 0){
             // Send request processing email
             
-            $_SESSION['success'] = "An email has been sent to you with instructions for accessing Zombie Thoughts.";
+            $_SESSION['success'] = "An email has been sent to you with instructions for accessing Zombie Thoughts. You have seven days to enter your Zombie Thoughts code. Once you enter your code, you have 48 hours to finish playing Zombie Thoughts.";
         }
 
     }
