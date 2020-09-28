@@ -123,7 +123,7 @@
     /*
     _______________________Zombie Thoughts Code Email_______________________________
     */
-    function insitution_code_email_plain_body($code){
+    function institution_code_email_plain_body($code){
         $body = '';
         $body .= "Thanks for your interest in Montana Repertory Theatre's Production of Zombie Thoughts.\n";
         $body .= "Here's your multi-use code to watch the show: ". $code .". You can enter it on the Game screen at\n";
@@ -138,7 +138,7 @@
         return $body;
     }  
     
-    function insitution_code_email_subject(){
+    function institution_code_email_subject(){
         return "Montana Repertory Theatre - Zombie Thoughts Access Code";
     }
 

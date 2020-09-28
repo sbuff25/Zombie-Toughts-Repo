@@ -502,7 +502,7 @@ require_once("./Classes/Database.php");
 
         require_once("./Functions/Emails.php");
         require_once("./Classes/SendEmail.php");
-        $plainBody = insitution_code_email_plain_body($code, $num_accesses);
+        $plainBody = institution_code_email_plain_body($code, $num_accesses);
         $subject = institution_code_email_subject();
         $objSendEmail = new SendEmail($email, $subject, $plainBody, $errors, "An email has been sent to with a code", "There has been an issue processing email.");
         
