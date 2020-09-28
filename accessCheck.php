@@ -57,15 +57,23 @@ require_once("./Admin/Classes/Database.php");
 
         }
         elseif(substr($code, 0, 3) === "ztI" && strlen($code) === 17){
-            $stmt = $database->prepare("SELECT counselor_first_name, counselor_last_name, counselor_email, counselor_phone, counselor_office_number, counselor_bldg, total_number_of_accesses FROM InstitutionAccessCode WHERE code=?");
+            $stmt = $database->prepare("SELECT counselor_first_name, counselor_last_name, counselor_email, counselor_phone, counselor_office_number, counselor_bldg, total_number_of_accesses, times_accessed FROM InstitutionAccessCode WHERE code=?");
             $stmt->bind_param("s", $code);
             $stmt->execute();
+
+            
             $result = $stmt->get_result();
             if($result->num_rows === 1){
                 $row = $result->fetch_assoc();
                 if(int($row['total_number_of_accesses']) <= 0){
                     array_push($errors, "The code you have entered has passed its access limit. If you are a student, please contact your teacher.");
                 }
+                $times_accessed = $row['rows_accessed'];
+
+                $stmt2 = $database->prepare("ALTER TABLE InstitutionAccessCode UPDATE COLUMN times_accessed = ? WHERE code=?");
+                $stmt2->bind_param("ss", $times_accessed, $code);
+                $stmt2->execute();
+                $stmt2->close();
 
             }
             else{
