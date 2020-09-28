@@ -500,8 +500,8 @@ require_once("./Classes/Database.php");
         }
         $stmt->close();
 
-        require_once("./Admin/Functions/Emails.php");
-        require_once("./Admin/Classes/SendEmail.php");
+        require_once("./Functions/Emails.php");
+        require_once("./Classes/SendEmail.php");
         $plainBody = insitution_code_email_plain_body($code, $num_accesses);
         $subject = institution_code_email_subject();
         $objSendEmail = new SendEmail($email, $subject, $plainBody, $errors, "An email has been sent to with a code", "There has been an issue processing email.");
@@ -644,8 +644,8 @@ require_once("./Classes/Database.php");
             $updateSQL->close();
         }
 
-        require_once("./Admin/Functions/Emails.php");
-        require_once("./Admin/Classes/SendEmail.php");
+        require_once("./Functions/Emails.php");
+        require_once("./Classes/SendEmail.php");
         $plainBody = insitution_code_email_plain_body($code);
         $subject = institution_code_email_subject();
         $objSendEmail = new SendEmail($email, $subject, $plainBody, $errors, "An email has been sent to with a code", "There has been an issue processing email.");
