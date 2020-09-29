@@ -541,7 +541,7 @@ const textNodes = [{
             text: '',
             options: [{
                     text: 'Continue',
-                    nextText: 9.1
+                    nextText: 'MT_DOOM_C_F_PT_2'
                 }
             ]
         },
