@@ -410,17 +410,17 @@ require_once("./Classes/Database.php");
 
     if (isset($_POST['submitInstAccess'])) {
         $code = mysqli_real_escape_string($database, $_POST['generate_code']);
-        $first_name = mysqli_real_escape_string($database, $_POST['first_name']);
-        $last_name = mysqli_real_escape_string($database, $_POST['last_name']);
-        $email = mysqli_real_escape_string($database, $_POST['email']);
-        $phone = mysqli_real_escape_string($database, $_POST['phone']);
-        $ext = mysqli_real_escape_string($database, $_POST['ext']);
-        $name = mysqli_real_escape_string($database, $_POST['name']);
-        $address = mysqli_real_escape_string($database, $_POST['mailing_address']);
-        $city = mysqli_real_escape_string($database, $_POST['city']);
-        $state = mysqli_real_escape_string($database, $_POST['state']);
-        $zipcode = mysqli_real_escape_string($database, $_POST['zipcode']);
-        $county = mysqli_real_escape_string($database, $_POST['county']);
+        $first_name = mysqli_real_escape_string($database, $_POST['contact_first_name']);
+        $last_name = mysqli_real_escape_string($database, $_POST['contact_last_name']);
+        $email = mysqli_real_escape_string($database, $_POST['contact_email']);
+        $phone = mysqli_real_escape_string($database, $_POST['contact_phone']);
+        $ext = mysqli_real_escape_string($database, $_POST['contact_ext']);
+        $name = mysqli_real_escape_string($database, $_POST['institution_name']);
+        $address = mysqli_real_escape_string($database, $_POST['institution_mailing_address']);
+        $city = mysqli_real_escape_string($database, $_POST['institution_city']);
+        $state = mysqli_real_escape_string($database, $_POST['institution_state']);
+        $zipcode = mysqli_real_escape_string($database, $_POST['institution_zipcode']);
+        $county = mysqli_real_escape_string($database, $_POST['institution_county']);
         $couFirst = mysqli_real_escape_string($database, $_POST['counselor_first_name']);
         $couLast = mysqli_real_escape_string($database, $_POST['counselor_last_name']);
         $couPhone = mysqli_real_escape_string($database, $_POST['counselor_phone']);
