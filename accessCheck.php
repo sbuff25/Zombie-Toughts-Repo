@@ -78,23 +78,25 @@ require_once("./Admin/Classes/Database.php");
                 }
                 if(intval($row['total_number_of_accesses']) <= $times_accessed){
                     array_push($errors, "The code you have entered has passed its access limit. If you are a student, please contact your teacher.");
-                }
-                $times_accessed = $times_accessed + 1;
-                $stmt2 = "";
-                if (!$stmt2 = $database->prepare("UPDATE InstitutionAccessCode SET times_accessed=? WHERE code=?")) {
-                    array_push($errors, "Prepare failed: (" . $stmt2->errno . ") " . $stmt2->error);
-                }
-                else{
-                    if(!$stmt2->bind_param("is", $times_accessed, $code)){
-                        array_push($errors, "Binding parameters failed: (" . $stmt2->errno . ") " . $stmt2->error);
+                }else{
+                    $times_accessed = $times_accessed + 1;
+                    $stmt2 = "";
+                    if (!$stmt2 = $database->prepare("UPDATE InstitutionAccessCode SET times_accessed=? WHERE code=?")) {
+                        array_push($errors, "Prepare failed: (" . $stmt2->errno . ") " . $stmt2->error);
                     }
                     else{
-                        if(!$stmt2->execute()){
-                            array_push($errors, "Execute failed: (" . $stmt2->errno . ") " . $stmt2->error);
+                        if(!$stmt2->bind_param("is", $times_accessed, $code)){
+                            array_push($errors, "Binding parameters failed: (" . $stmt2->errno . ") " . $stmt2->error);
                         }
-                        $stmt2->close();
+                        else{
+                            if(!$stmt2->execute()){
+                                array_push($errors, "Execute failed: (" . $stmt2->errno . ") " . $stmt2->error);
+                            }
+                            $stmt2->close();
+                        }
                     }
                 }
+                
 
                 
                 // array_push($errors, $code . " " . $times_accessed);
