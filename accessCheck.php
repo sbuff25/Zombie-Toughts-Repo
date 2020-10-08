@@ -72,7 +72,9 @@ require_once("./Admin/Classes/Database.php");
             if($result->num_rows === 1){
                 $row = $result->fetch_assoc();
                 $times_accessed = 0;
-                if(strcasecmp ( $row['times_accessed'] , "NULL" )){}
+                if(strcasecmp ( $row['times_accessed'] , "NULL" )){
+                    array_push($errors, '' . $row['times_accessed']);
+                }
                 else{
                     $times_accessed = intval($row['times_accessed']);
                     array_push($errors, '' . $times_accessed);
