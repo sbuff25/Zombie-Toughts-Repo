@@ -75,10 +75,12 @@ require_once("./Admin/Classes/Database.php");
                 if(strcasecmp ( $row['times_accessed'] , "NULL" )){}
                 else{
                     $times_accessed = intval($row['times_accessed']);
+                    array_push($errors, '' . $times_accessed);
                 }
                 if(intval($row['total_number_of_accesses']) <= $times_accessed){
                     array_push($errors, "The code you have entered has passed its access limit. If you are a student, please contact your teacher.");
-                }else{
+                }
+                else{
                     $times_accessed = $times_accessed + 1;
                     $stmt2 = "";
                     if (!$stmt2 = $database->prepare("UPDATE InstitutionAccessCode SET times_accessed=? WHERE code=?")) {
