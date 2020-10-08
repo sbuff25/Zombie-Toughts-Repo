@@ -165,8 +165,8 @@ include_once('FormCheck.php');
                 $('#generateCode').remove();
 
                 code = generateAccessCode(this.value);
-                $( "<input name='generate_code' id='codecss' value='" + code + "' readonly>" ).appendTo( "#codeDiv" );
                 $( "<h2>Code Generated</h2>" ).appendTo( "#codeDiv" );
+                $( "<input name='generate_code' id='codecss' value='" + code + "' readonly>" ).appendTo( "#codeDiv" );
                 $( "<button class='btn btn-primary' type='submit' name='submitInstAccess'>Submit</button>" ).appendTo( "#codeDiv" );
             });
             
