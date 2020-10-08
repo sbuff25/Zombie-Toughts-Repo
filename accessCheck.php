@@ -81,7 +81,7 @@ require_once("./Admin/Classes/Database.php");
                 }
                 $times_accessed = $times_accessed + 1;
                 $stmt2 = "";
-                if (!$stmt2 = $database->prepare("ALTER TABLE InstitutionAccessCode UPDATE COLUMN times_accessed=? WHERE code=?")) {
+                if (!$stmt2 = $database->prepare("UPDATE InstitutionAccessCode SET times_accessed=? WHERE code=?")) {
                     array_push($errors, "Prepare failed: (" . $stmt2->errno . ") " . $stmt2->error);
                 }
                 else{
@@ -97,7 +97,7 @@ require_once("./Admin/Classes/Database.php");
                 }
 
                 
-                array_push($errors, $code . " " . $times_accessed);
+                // array_push($errors, $code . " " . $times_accessed);
                 
 
             }
