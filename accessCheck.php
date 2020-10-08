@@ -84,17 +84,20 @@ require_once("./Admin/Classes/Database.php");
                 if (!$stmt2 = $database->prepare("ALTER TABLE InstitutionAccessCode UPDATE COLUMN times_accessed=? WHERE code=?")) {
                     array_push($errors, "Prepare failed: (" . $stmt2->errno . ") " . $stmt2->error);
                 }
-                if(!$stmt2->bind_param("is", $times_accessed, $code)){
-                    array_push($errors, "Binding parameters failed: (" . $stmt2->errno . ") " . $stmt2->error);
-                    
-            
+                else{
+                    if(!$stmt2->bind_param("is", $times_accessed, $code)){
+                        array_push($errors, "Binding parameters failed: (" . $stmt2->errno . ") " . $stmt2->error);
+                    }
+                    else{
+                        if(!$stmt2->execute()){
+                            array_push($errors, "Execute failed: (" . $stmt2->errno . ") " . $stmt2->error);
+                        }
+                    }
                 }
-    
-                if(!$stmt2->execute()){
-                    array_push($errors, "Execute failed: (" . $stmt2->errno . ") " . $stmt2->error);
-                }
+
+                
                 array_push($errors, $code . " " . $times_accessed);
-                // $stmt2->close();
+                $stmt2->close();
 
             }
             else{
