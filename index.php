@@ -254,6 +254,7 @@ include_once("accessCheck.php");
                     <input name='accessCode' placeholder='Enter Access Code Here...' id='temptestcode'>
                     <button type='submit' name='submitCode' class='btn'>Submit Code</button>
                 </form>
+                <!-- <h2 id='temptestcode'>Temp Access Code For Testing: ztiBtFjnhGEbavysA </h2> -->
                 <br>
 
             <?php

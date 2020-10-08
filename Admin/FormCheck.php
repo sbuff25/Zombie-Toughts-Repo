@@ -429,6 +429,7 @@ require_once("./Classes/Database.php");
         $couOffice = mysqli_real_escape_string($database, $_POST['counselor_office']);
         $couBldg = mysqli_real_escape_string($database, $_POST['counselor_bldg']);
         $num_access = mysqli_real_escape_string($database, $_POST['accesses']);
+        $num_students = mysqli_real_escape_string($database, $_POST['num_students']);
         $id = mysqli_real_escape_string($database, $_POST['id']);
 
         $grades = $_POST['student_grade'];
@@ -464,10 +465,11 @@ require_once("./Classes/Database.php");
                 counselor_email,
                 counselor_phone, 
                 counselor_ext, 
-                total_number_of_accesses) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                total_number_of_accesses, 
+                number_students) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
         );
 
-        if(!$stmt->bind_param("sssssissssssssssssii", 
+        if(!$stmt->bind_param("sssssissssssssssssiii", 
             $code, 
             $first_name, 
             $last_name,
@@ -487,7 +489,8 @@ require_once("./Classes/Database.php");
             $couEmail,
             $couPhone,
             $couExt,
-            $num_access
+            $num_access,
+            $num_students
         )){
             array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
      
@@ -502,7 +505,7 @@ require_once("./Classes/Database.php");
 
         require_once("./Functions/Emails.php");
         require_once("./Classes/SendEmail.php");
-        $plainBody = institution_code_email_plain_body($code, $num_accesses);
+        $plainBody = institution_code_email_plain_body($code, $num_access);
         $subject = institution_code_email_subject();
         $objSendEmail = new SendEmail($email, $subject, $plainBody, $errors, "An email has been sent to with a code", "There has been an issue processing email.");
         

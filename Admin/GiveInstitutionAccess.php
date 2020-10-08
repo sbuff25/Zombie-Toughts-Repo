@@ -137,8 +137,11 @@ include_once('FormCheck.php');
                     <option value='12'>12th</option>
                 </select><br>
 
-                <label for='accesses'>Number of students/access codes needed:&nbsp;</label>
+                <label for='accesses'>Number of Viewings:&nbsp;</label>
                 <input name='accesses' placeholder='Enter total...' type='number' min='1' size='20'><br>
+
+                <label for='num_students'>Number of Students:&nbsp;</label>
+                <input name='num_students' placeholder='Enter total...' type='number' min='1' size='20'><br>
 
                 <button type='button' id='generateCode' value='ztI'>Generate Access Code</button>
 
@@ -161,7 +164,7 @@ include_once('FormCheck.php');
                 $('#generateCode').remove();
 
                 code = generateAccessCode(this.value);
-                $( "<input name='generate_code' value='" + code + "' hidden>" ).appendTo( "#codeDiv" );
+                $( "<input name='generate_code' value='" + code + "' readonly>" ).appendTo( "#codeDiv" );
                 $( "<h2>Code Generated</h2>" ).appendTo( "#codeDiv" );
                 $( "<button class='btn btn-primary' type='submit' name='submitInstAccess'>Submit</button>" ).appendTo( "#codeDiv" );
             });
