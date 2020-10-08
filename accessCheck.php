@@ -82,7 +82,7 @@ require_once("./Admin/Classes/Database.php");
                 $times_accessed = $times_accessed + 1;
                 $stmt2 = "";
                 if (!$stmt2 = $database->prepare("ALTER TABLE InstitutionAccessCode UPDATE COLUMN times_accessed=? WHERE code=?")) {
-                    echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
+                    array_push($errors, "Prepare failed: (" . $stmt2->errno . ") " . $stmt2->error);
                 }
                 if(!$stmt2->bind_param("is", $times_accessed, $code)){
                     array_push($errors, "Binding parameters failed: (" . $stmt2->errno . ") " . $stmt2->error);
