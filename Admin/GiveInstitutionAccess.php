@@ -24,6 +24,7 @@ include_once('FormCheck.php');
 
         <link rel="stylesheet" href="../css.css">
         <link rel="stylesheet" href="../menu.css">
+        <link rel="stylesheet" href="./phpforms.css">
         
         <link rel="stylesheet" href="../scroll_bar.css">
         <link rel="stylesheet" href="../text_animiations.css">
@@ -164,7 +165,7 @@ include_once('FormCheck.php');
                 $('#generateCode').remove();
 
                 code = generateAccessCode(this.value);
-                $( "<input name='generate_code' value='" + code + "' readonly>" ).appendTo( "#codeDiv" );
+                $( "<input name='generate_code' id='codecss' value='" + code + "' readonly>" ).appendTo( "#codeDiv" );
                 $( "<h2>Code Generated</h2>" ).appendTo( "#codeDiv" );
                 $( "<button class='btn btn-primary' type='submit' name='submitInstAccess'>Submit</button>" ).appendTo( "#codeDiv" );
             });

@@ -65,7 +65,7 @@ require_once("./Admin/Classes/Database.php");
             $result = $stmt->get_result();
             if($result->num_rows === 1){
                 $row = $result->fetch_assoc();
-                if(int($row['total_number_of_accesses']) <= 0){
+                if(intval($row['total_number_of_accesses']) <= 0){
                     array_push($errors, "The code you have entered has passed its access limit. If you are a student, please contact your teacher.");
                 }
                 $times_accessed = $row['rows_accessed'];
