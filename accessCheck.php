@@ -37,7 +37,7 @@ require_once("./Admin/Classes/Database.php");
                         $new_end_date = date('Y-m-d', strtotime("+2 days"));
                         $stmt2 = $database->prepare("UPDATE IndividualAccessCode SET clicked_date=?, end_date=? WHERE code=?");
     
-                        if($stmt2->bind_param("sss", $clicked_date, $new_end_date, $code)){
+                        if(!$stmt2->bind_param("sss", $clicked_date, $new_end_date, $code)){
                             array_push($errors, "Binding parameters failed: (" . $stmt2->errno . ") " . $stmt2->error);
                     
                         }
@@ -58,8 +58,14 @@ require_once("./Admin/Classes/Database.php");
         }
         elseif(substr($code, 0, 3) === "ztI" && strlen($code) === 17){
             $stmt = $database->prepare("SELECT counselor_first_name, counselor_last_name, counselor_email, counselor_phone, counselor_office_number, counselor_bldg, total_number_of_accesses, times_accessed FROM InstitutionAccessCode WHERE code=?");
-            $stmt->bind_param("s", $code);
-            $stmt->execute();
+            if(!$stmt->bind_param("s", $code)){
+                array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
+        
+            }
+
+            if(!$stmt->execute()){
+                array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
+            }
 
             
             $result = $stmt->get_result();
@@ -71,8 +77,15 @@ require_once("./Admin/Classes/Database.php");
                 $times_accessed = $row['times_accessed'];
 
                 $stmt2 = $database->prepare("ALTER TABLE InstitutionAccessCode UPDATE COLUMN times_accessed = ? WHERE code=?");
-                $stmt2->bind_param("is", $times_accessed, $code);
-                $stmt2->execute();
+                if(!$stmt2->bind_param("is", $times_accessed, $code)){
+                    array_push($errors, "Binding parameters failed: (" . $stmt2->errno . ") " . $stmt2->error);
+                    
+            
+                }
+    
+                if(!$stmt2->execute()){
+                    array_push($errors, "Execute failed: (" . $stmt2->errno . ") " . $stmt2->error);
+                }
                 $stmt2->close();
 
             }
