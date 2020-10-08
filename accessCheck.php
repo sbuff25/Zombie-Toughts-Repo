@@ -77,6 +77,7 @@ require_once("./Admin/Classes/Database.php");
                     $times_accessed = intval($row['times_accessed']);
                     array_push($errors, '' . $times_accessed);
                 }
+                array_push($errors, '' . $times_accessed);
                 if(intval($row['total_number_of_accesses']) <= $times_accessed){
                     array_push($errors, "The code you have entered has passed its access limit. If you are a student, please contact your teacher.");
                 }
