@@ -466,7 +466,8 @@ require_once("./Classes/Database.php");
                 counselor_phone, 
                 counselor_ext, 
                 total_number_of_accesses, 
-                number_students) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                number_students, 
+                times_accessed) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)"
         );
 
         if(!$stmt->bind_param("sssssissssssssssssiii", 

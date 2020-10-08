@@ -71,12 +71,17 @@ require_once("./Admin/Classes/Database.php");
             $result = $stmt->get_result();
             if($result->num_rows === 1){
                 $row = $result->fetch_assoc();
-                if(intval($row['total_number_of_accesses']) <= 0){
+                $times_accessed = 0;
+                if(strcasecmp ( $row['times_accessed'] , "NULL" )){}
+                else{
+                    $times_accessed = intval($row['times_accessed']);
+                }
+                if(intval($row['total_number_of_accesses']) <= $times_accessed){
                     array_push($errors, "The code you have entered has passed its access limit. If you are a student, please contact your teacher.");
                 }
-                $times_accessed = $row['times_accessed'];
+                $times_accessed = $times_accessed + 1;
 
-                $stmt2 = $database->prepare("ALTER TABLE InstitutionAccessCode UPDATE COLUMN times_accessed = ? WHERE code=?");
+                $stmt2 = $database->prepare("ALTER TABLE InstitutionAccessCode UPDATE COLUMN times_accessed=? WHERE code=?");
                 if(!$stmt2->bind_param("is", $times_accessed, $code)){
                     array_push($errors, "Binding parameters failed: (" . $stmt2->errno . ") " . $stmt2->error);
                     
