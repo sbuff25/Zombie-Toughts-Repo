@@ -68,10 +68,10 @@ require_once("./Admin/Classes/Database.php");
                 if(intval($row['total_number_of_accesses']) <= 0){
                     array_push($errors, "The code you have entered has passed its access limit. If you are a student, please contact your teacher.");
                 }
-                $times_accessed = $row['rows_accessed'];
+                $times_accessed = $row['times_accessed'];
 
                 $stmt2 = $database->prepare("ALTER TABLE InstitutionAccessCode UPDATE COLUMN times_accessed = ? WHERE code=?");
-                $stmt2->bind_param("ss", $times_accessed, $code);
+                $stmt2->bind_param("is", $times_accessed, $code);
                 $stmt2->execute();
                 $stmt2->close();
 
