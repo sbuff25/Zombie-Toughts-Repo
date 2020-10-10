@@ -123,10 +123,11 @@
     /*
     _______________________Zombie Thoughts Code Email_______________________________
     */
-    function institution_code_email_plain_body($code){
+    function institution_code_email_plain_body($code, $access_num){
         $body = '';
         $body .= "Thanks for your interest in Montana Repertory Theatre's Production of Zombie Thoughts.\n";
-        $body .= "Here's your multi-use code to watch the show: ". $code .". You can enter it on the Game screen at\n";
+        $body .= "Here's your multi-use code to watch the show: ". $code .". This code is good for " . $access_num . " viewings.\n"; 
+        $body .= "Please contact us for additional viewings. You can enter the code on the Game screen at\n";
         $body .= "MontanaRepZombieThoughts.com. Please note that the code is case-sensitive, so be sure to enter lower-case\n"; 
         $body .= "and upper-case letters as indicated.\n\n";
         $body .= "If you have any questions or need additional help, feel free to e-mail us at ZombieThoughts@MontanaRep.com.\n";
