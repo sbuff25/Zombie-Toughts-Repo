@@ -5,6 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zombie Thoughts Project</title>
+    <!-- <link rel="stylesheet" href="./materialize.min.css"> -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -50,46 +51,46 @@
     <header class="showcase" id="home">
         <section id="home">
             
-            <img src="./images/Title_Animation/Title_Animation.png" alt="" id="title_animi">
-            <img src="./images/Title_Animation/Author_Animation.png" alt="" id="author_animi">
+            <img src="./images/Title_Animation/Title_Animation.png" alt="Zombie Thoughts Title" id="title_animi">
+            <img src="./images/Title_Animation/Author_Animation.png" alt="Jennider a. Kokai and Oliver Kokai-Means" id="author_animi">
             <a href="https://montanarep.com/">
-                <img src="./images/Title_Animation/MT_Rep_Logo.png" alt="" id="mt_rep_logo">
+                <img src="./images/Title_Animation/MT_Rep_Logo.png" alt="Montana Repertory Theatre" id="mt_rep_logo">
             </a>
             <a href="https://www.blackfoot.com/">
-                <img src="./Sponsor_Logos_PNG/blackfoot-givingback.png" alt="" id="blackfoot">
+                <img src="./Sponsor_Logos_PNG/blackfoot-givingback.png" alt="Blackfoot Communications" id="blackfoot">
             </a>
             <a href="https://atginfo.com/">
-                <img src="./Sponsor_Logos_PNG/ATG_white.png" alt="" id="atg">
+                <img src="./Sponsor_Logos_PNG/ATG_white.png" alt="Advanced Technology Group" id="atg">
             </a>
             <a href="https://www.pacificsourcemembersfirst.com/">
-                <img src="./Sponsor_Logos_PNG/PSHP_white.png" alt="" id="PSHP">
+                <img src="./Sponsor_Logos_PNG/PSHP_white.png" alt="Pacific Source Health Plan" id="PSHP">
             </a>
             <a href="">
-                <img src="./Sponsor_Logos_PNG/montana-cultural-trust.png" alt="" id="MCT">
+                <img src="./Sponsor_Logos_PNG/montana-cultural-trust.png" alt="Montana Cultural Trust" id="MCT">
             </a>
            <a href="https://www.shubertfoundation.org/">
-                <img src="./Sponsor_Logos_PNG/shubert-foundation_2.png" alt="" id="shubert">
+                <img src="./Sponsor_Logos_PNG/shubert-foundation_2.png" alt="Shubert Foundation" id="shubert">
            </a>
             <a href="https://projecttomorrowmt.org/">
-                <img src="./Sponsor_Logos_PNG/ProjectTomorrowMT.png" alt="" id="ProjectTomorrowMT">
+                <img src="./Sponsor_Logos_PNG/ProjectTomorrowMT.png" alt="Project Tomorrow Montana Suicide Prevention and Education" id="ProjectTomorrowMT">
             </a>
             <a href="http://www.umt.edu/curry-health-center/">
-                <img src="./Sponsor_Logos_PNG/CHC.png" alt="" id="CHC">
+                <img src="./Sponsor_Logos_PNG/CHC.png" alt="Curry Health Center" id="CHC">
             </a>
             <a href="https://www.missoulaunitedway.org/">
-                <img src="./Sponsor_Logos_PNG/UWMC_sm.png" alt="" id="united">
+                <img src="./Sponsor_Logos_PNG/UWMC_sm.png" alt="Live United United Way" id="united">
             </a>
             <a href="">
-                <img src="./Sponsor_Logos_PNG/RedLogoCondensed.png" alt="" id="WF">
+                <img src="./Sponsor_Logos_PNG/RedLogoCondensed.png" alt="Washington Foundation" id="WF">
             </a>
             <a href="">
-                <img src="./Sponsor_Logos_PNG/MontanaPBS.png" alt="" id="PBS">
+                <img src="./Sponsor_Logos_PNG/MontanaPBS.png" alt="Montana Public Broadcasting" id="PBS">
             </a>
             <a href="https://www.dpwfoundation.org/">
-                <img src="./Sponsor_Logos_PNG/DPWF.png" alt="" id="DPWF">
+                <img src="./Sponsor_Logos_PNG/DPWF.png" alt="Dennis and Phyllis Washington Foundation" id="DPWF">
             </a>
             <a href="https://art.mt.gov/">
-                <img src="./Sponsor_Logos_PNG/MAC.png" alt="" id="MAC">
+                <img src="./Sponsor_Logos_PNG/MAC.png" alt="Montana Arts Council" id="MAC">
             </a>
             
         </section>
@@ -214,45 +215,51 @@
         <div class="game expand container center">
             <h3 class="center game_play" id="lighten">Zombie Thoughts</h3>
             <div class="collapsed center">
+            
+                    <div id="vid_box">
+                        <video id="video" controls controlsList="nodownload" playsinline>
+                            <source src="" type="video/mp4">
+                        </video>
+                        <div id="player" class="moveUpVid"></div>
+                    </div>
+                    <div id="text" class="moveUpText"></div>
+                    <div id="option-buttons" class="moveUpBtn"></div>
+                        <audio id="audio">
+                            <source src="./audio/select_granted.wav"></source>
+                        </audio>
+                        <audio id="audio_menu">
+                            <source src="./audio/menu_slide.wav">
+                        </audio>
+                        <audio id="audio_select">
+                            <source src="./audio/selector_tone.wav">
+                        </audio>
+         
                 
-                <div id="vid_box">
-                    <video id="video" controls controlsList="nodownload" playsinline>
-                        <source src="" type="video/mp4">
-                    </video>
-                    <div id="player" class="moveUpVid"></div>
-                </div>
-                <div id="text" class="moveUpText"></div>
-                <div id="option-buttons" class="moveUpBtn"></div>
-                    <audio id="audio">
-                        <source src="./audio/select_granted.wav"></source>
-                    </audio>
-                    <audio id="audio_menu">
-                        <source src="./audio/menu_slide.wav">
-                    </audio>
-                    <audio id="audio_select">
-                        <source src="./audio/selector_tone.wav">
-                    </audio>
             </div>
         </div>
     </section>
     <section class="info bg-light" id="help">
         <h3 class="center">Resources</h3>
         <div class="container center about_text">
-            
             <div>
-                
-                    <div class="parentAndEducators"> 
-                        <ul>
-                            <h1>Parents and educators:</h1>
-                            <li id="lighten"><a href="./resources/MT-ZombieThoughtsRepPack.pdf">Zombie Thoughts Classroom Guide (PDF attached)</a></li>
-                            <li id="lighten"><a href="https://www.amightygirl.com/blog?p=22612&fbclid=IwAR0H5s7x_RjLdLK2x_-KPjE7EnIh4SF-Z2cG-j7a3C0Uo8o-AOaYkiQC_7s">25 Books to Help Kids Overcome Anxiety, Worry & Fear</a></li>
-                            <li id="lighten"><a href="https://akidsbookabout.com/products/a-kids-book-about-anxiety?gclid=EAIaIQobChMI5bCW1NnU6wIV9j6tBh1r7wArEAAYASAAEgLNW_D_BwE">A Kids Book About Anxiety</a></li>
-                            <li id="lighten"><a href="https://www.nhsinform.scot/illnesses-and-conditions/mental-health/mental-health-self-help-guides/anxiety-self-help-guide">Scotland’s National Health Services Anxiety Self-Help Guide</a></li>
-                            <li id="lighten"><a href="https://theweek.com/articles/888213/anxiety-different-kids?fbclid=IwAR09XPor_umxRlFAneJ23RJtfdjaw5QJ3_Gc9NqQxvCRqjgRtm_5RNxRsUU">“Anxiety is Different for Kids”</a></li>
-                            <li id="lighten"><a href="https://apps.apple.com/app/sam/id666767947">Self-Help for Anxiety Management App</a></li>
-                            <li id="lighten"><a href="https://apps.apple.com/us/app/id778848692">Stop Breathe & Think App</a></li>
-                            <li id="lighten"><a href="https://apps.apple.com/us/app/calm-meditation/id571800810">Calm App</a></li>
-                        </ul>
+                    <div class="container parentAndEducators">
+                        <div class="row">
+                            <div class="col s12">
+                                <ul class="center">
+                                    <h1>Parents and educators:</h1>
+                                    <li class="center" id="lighten"><a href="./resources/MT-ZombieThoughtsRepPack.pdf">Zombie Thoughts Classroom Guide (PDF attached)</a></li>
+                                    <li class="center" id="lighten"><a href="https://www.amightygirl.com/blog?p=22612&fbclid=IwAR0H5s7x_RjLdLK2x_-KPjE7EnIh4SF-Z2cG-j7a3C0Uo8o-AOaYkiQC_7s">25 Books to Help Kids Overcome Anxiety, Worry & Fear</a></li>
+                                    <li class="center" id="lighten"><a href="https://akidsbookabout.com/products/a-kids-book-about-anxiety?gclid=EAIaIQobChMI5bCW1NnU6wIV9j6tBh1r7wArEAAYASAAEgLNW_D_BwE">A Kids Book About Anxiety</a></li>
+                                    <li class="center" id="lighten"><a href="https://www.nhsinform.scot/illnesses-and-conditions/mental-health/mental-health-self-help-guides/anxiety-self-help-guide">Scotland’s National Health Services Anxiety Self-Help Guide</a></li>
+                                    <li class="center" id="lighten"><a href="https://theweek.com/articles/888213/anxiety-different-kids?fbclid=IwAR09XPor_umxRlFAneJ23RJtfdjaw5QJ3_Gc9NqQxvCRqjgRtm_5RNxRsUU">“Anxiety is Different for Kids”</a></li>
+                                    <li class="center" id="lighten"><a href="https://apps.apple.com/app/sam/id666767947">Self-Help for Anxiety Management App</a></li>
+                                    <li class="center" id="lighten"><a href="https://apps.apple.com/us/app/id778848692">Stop Breathe & Think App</a></li>
+                                    <li class="center" id="lighten"><a href="https://apps.apple.com/us/app/calm-meditation/id571800810">Calm App</a></li>
+                                </ul>
+
+                            </div>
+                        </div> 
+                        
                 </div>
             </div>
         </div>
