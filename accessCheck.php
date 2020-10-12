@@ -260,7 +260,7 @@ require_once("./Admin/Classes/Database.php");
         // $address = mysqli_real_escape_string($database, $_POST['address']);
         // $apt_num = mysqli_real_escape_string($database, $_POST['apt_num']);
         // $city = mysqli_real_escape_string($database, $_POST['city']);
-        // $state = mysqli_real_escape_string($database, $_POST['state']);
+        $state = mysqli_real_escape_string($database, $_POST['state']);
         // $zipcode = mysqli_real_escape_string($database, $_POST['zipcode']);
 
         $end_date = date('Y-m-d', strtotime("+7 days"));
