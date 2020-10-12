@@ -130,6 +130,40 @@ require_once("./Classes/Database.php");
                                 }
 
                             ?>
+                            <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">County</th>
+                                            <th scope="col">Total Students By County</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                        <?php
+                                            $result = $sql->get_result();
+                                            if($result->num_rows > 0){
+                                                while($row = $result->fetch_assoc()){
+                                                ?>
+                                                    <tr>
+                                                        <td><?php echo $row['institution_county']; ?></td>
+                                                        <td><?php echo $row['Total_Students_Per_County']; ?></td>
+                                                    </tr>
+                                        <?php
+                                                }
+                                        ?>      
+                                        <?php
+                                            }
+                                            else{
+                                        ?>
+                                                <tr>
+                                                    <td colspan="2">No Results Found</td>
+                                                </tr>
+                                        <?php
+                                            }
+                                        ?>
+                                        
+                                    </tbody>
+                                </table>
                             <?php
                                 $sql->close();
                             ?>
@@ -154,6 +188,43 @@ require_once("./Classes/Database.php");
                                     array_push($errors, "Execute failed: (" . $sql->errno . ") " . $sql->error);
                                     array_push($errors, "Could not generate report");  
                                 }
+                            ?>
+                                   <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">State</th>
+                                            <th scope="col">Total Out-of-State Individuals By State</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                        <?php
+                                            $result = $sql->get_result();
+                                            if($result->num_rows > 0){
+                                                while($row = $result->fetch_assoc()){
+                                                ?>
+                                                    <tr>
+                                                        <td><?php echo $row['state']; ?></td>
+                                                        <td><?php echo $row['total_per_state']; ?></td>
+                                                    </tr>
+                                        <?php
+                                                }
+                                        ?>      
+                                        <?php
+                                            }
+                                            else{
+                                        ?>
+                                                <tr>
+                                                    <td colspan="2">No Results Found</td>
+                                                </tr>
+                                        <?php
+                                            }
+                                        ?>
+                                        
+                                    </tbody>
+                                </table>
+                            <?php
+                            
                                 $sql->close();
                             ?>
                         </div>
@@ -164,7 +235,7 @@ require_once("./Classes/Database.php");
                         <div class='report-div'>
                             <h2 class='report-title'>Total Number of Out-Of-State Students By State</h2>
                             <?php 
-                                $sql = $database->prepare("	SELECT institution_state, SUM(number_students) AS Total_Students_Per_County
+                                $sql = $database->prepare("	SELECT institution_state, SUM(number_students) AS Total_Students_Per_State
                                                             FROM InstitutionAccessCode
                                                             WHERE institution_state<>'Montana' AND institution_state<>''
                                                             GROUP BY institution_state
@@ -177,6 +248,42 @@ require_once("./Classes/Database.php");
                                     array_push($errors, "Execute failed: (" . $sql->errno . ") " . $sql->error);
                                     array_push($errors, "Could not generate report");  
                                 }
+                            ?>
+                                   <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">State</th>
+                                            <th scope="col">Total Students By State</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                        <?php
+                                            $result = $sql->get_result();
+                                            if($result->num_rows > 0){
+                                                while($row = $result->fetch_assoc()){
+                                                ?>
+                                                    <tr>
+                                                        <td><?php echo $row['institution_state']; ?></td>
+                                                        <td><?php echo $row['Total_Students_Per_State']; ?></td>
+                                                    </tr>
+                                        <?php
+                                                }
+                                        ?>      
+                                        <?php
+                                            }
+                                            else{
+                                        ?>
+                                                <tr>
+                                                    <td colspan="2">No Results Found</td>
+                                                </tr>
+                                        <?php
+                                            }
+                                        ?>
+                                        
+                                    </tbody>
+                                </table>
+                            <?php
                                 $sql->close();
                             ?>
                         </div>
