@@ -44,12 +44,12 @@ require_once("./Classes/Database.php");
             <div class="panel panel-default">
                 <br><br><br><br>
                 <img src='../images/Logos/Logos/1. Primary Logo - Green/1_MontanaRep_PrimaryLogo_GreenLandscape.png' alt='Montana Repertory Theatre Logo' width='50%' height='50%'>
-                <h1>Montana Repertory Theatre Report</h1>
+                <h1 class='report-head text-center'>Montana Repertory Theatre Report</h1>
                 <?php 
                     if($_POST['reportSelect']==="county"){
                         ?>
                         <div class='report-div'>
-                            <h2 class='report-title'>Total Number of Requests for Montana Residents By County</h2>
+                            <h2 class='report-title text-center'>Total Number of Requests for Montana Residents By County</h2>
                             <?php 
                                 $sql = $database->prepare("SELECT county, Count(county) AS number_requests
                                                             FROM IndividualAccessCode
@@ -113,7 +113,7 @@ require_once("./Classes/Database.php");
 
                         ?>
                         <div class='report-div'>
-                            <h2 class='report-title'>Total Number of Students in Montana By County</h2>
+                            <h2 class='report-title text-center'>Total Number of Students in Montana By County</h2>
                             <?php 
                                 $sql = $database->prepare("SELECT institution_county, SUM(number_students) AS Total_Students_Per_County
                                                             FROM InstitutionAccessCode
@@ -174,7 +174,7 @@ require_once("./Classes/Database.php");
                     elseif($_POST['reportSelect']==="state"){
                         ?>
                         <div class='report-div'>
-                            <h2 class='report-title'>Total Number of Out-Of-State Individuals By State</h2>
+                            <h2 class='report-title text-center'>Total Number of Out-Of-State Individuals By State</h2>
                             <?php 
                                 $sql = $database->prepare("	SELECT state, Count(state) as total_per_state
                                                             FROM IndividualAccessCode
