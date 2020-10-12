@@ -38,11 +38,6 @@ require_once("./Classes/Database.php");
                 $result3 = $check_pass2->get_result();
                 $row3 = $result3->fetch_array();
                 // array_push($errors, $row3[0]);
-                $_SESSION['username'] = $row['username'];
-                    $_SESSION['email'] = $row['email'];
-                    $_SESSION['first_name'] = $row['first_name'];
-                    $_SESSION['last_name'] = $row['last_name'];
-                    $_SESSION['privilege'] = $row['privilege_level'];
 
                 if($row2[0] || $row3[0]){  // May need to fix and check what the result was
 
@@ -54,7 +49,7 @@ require_once("./Classes/Database.php");
 
                 }
                 else {
-                    //array_push($errors, "Username, email, and/or password are incorrect.");
+                    array_push($errors, "Username, email, and/or password are incorrect.");
                 }
                 $check_pass1->close();
                 $check_pass2->close();
