@@ -24,7 +24,7 @@ require_once("./Classes/Database.php");
 
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Zombie Thoughts Project: Admin Login</title>
+        <title>Zombie Thoughts Project: Query</title>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
@@ -43,6 +43,7 @@ require_once("./Classes/Database.php");
         <div class="col-sm-6 col-sm-offset-3" >
             <div class="panel panel-default">
                 <br><br><br><br>
+                <img src='../images/Logos/Logos/1. Primary Logo - Green/1_MontanaRep_PrimaryLogo_GreenLandscape.png' alt='Montana Repertory Theatre Logo'>
                 <h1>Montana Repertory Theatre Report</h1>
                 <?php 
                     if($_POST['reportSelect']==="county"){
