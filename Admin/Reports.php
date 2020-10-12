@@ -8,7 +8,7 @@
         session_destroy();
     } 
 ?>
-<?php if(isset($_SESSION['username']) && isset($_SESSION['email'])){
+<?php if(!isset($_SESSION['username']) && !isset($_SESSION['email'])){
         header('location: ./AdminPage');
         exit;
 
