@@ -69,8 +69,8 @@ require_once("./Classes/Database.php");
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th scope="col">County</th>
-                                            <th scope="col">Number of Requests By County</th>
+                                            <th scope="col col-centered">County</th>
+                                            <th scope="col col-centered">Number of Requests By County</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -134,8 +134,8 @@ require_once("./Classes/Database.php");
                             <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th scope="col">County</th>
-                                            <th scope="col">Total Students By County</th>
+                                            <th scope="col col-centered">County</th>
+                                            <th scope="col col-centered">Total Students By County</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -193,8 +193,8 @@ require_once("./Classes/Database.php");
                                    <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th scope="col">State</th>
-                                            <th scope="col">Total Out-of-State Individuals By State</th>
+                                            <th scope="col col-centered">State</th>
+                                            <th scope="col col-centered">Total Out-of-State Individuals By State</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -253,8 +253,8 @@ require_once("./Classes/Database.php");
                                    <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th scope="col">State</th>
-                                            <th scope="col">Total Students By State</th>
+                                            <th scope="col col-centered">State</th>
+                                            <th scope="col col-centered">Total Students By State</th>
                                         </tr>
                                     </thead>
                                     <tbody>
