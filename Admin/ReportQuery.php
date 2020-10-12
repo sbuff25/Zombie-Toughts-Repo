@@ -1,7 +1,11 @@
 <?php session_start(); 
 require_once("./Classes/Database.php");
 ?>
+<?php if(!isset($_SESSION['username']) && !isset($_SESSION['email']) && !isset($_POST['reportSelect'])){
+        header('location: ./AdminPage');
+        exit;
 
+}?>
 <?php
     if (isset($_GET['logout'])) {
         unset($_SESSION['email']);
@@ -11,11 +15,7 @@ require_once("./Classes/Database.php");
         session_destroy();
     } 
 ?>
-<?php if(isset($_SESSION['username']) && isset($_SESSION['email']) && isset($_POST['reportSelect'])){
-        header('location: ./AdminPage');
-        exit;
 
-}?>
 <?php include_once('FormCheck.php'); ?>
 <!DOCTYPE html>
 <html lang="en-us">
