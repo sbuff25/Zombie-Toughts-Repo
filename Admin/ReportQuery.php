@@ -41,7 +41,7 @@ require_once("./Classes/Database.php");
     </head>
     <body>
         <div class="col-sm-6 col-sm-offset-3" >
-            <div class="panel panel-default">
+            <div class="panel panel-default align-items-center">
                 <br><br><br><br>
                 <img src='../images/Logos/Logos/1. Primary Logo - Green/1_MontanaRep_PrimaryLogo_GreenLandscape.png' alt='Montana Repertory Theatre Logo' width='25%' height='25%'>
                 <h1 class='report-head text-center'>Montana Repertory Theatre Report</h1>
@@ -234,7 +234,7 @@ require_once("./Classes/Database.php");
                     elseif($_POST['reportSelect']==="state_students"){
                         ?>
                         <div class='report-div'>
-                            <h2 class='report-title'>Total Number of Out-Of-State Students By State</h2>
+                            <h2 class='report-title text-center'>Total Number of Out-Of-State Students By State</h2>
                             <?php 
                                 $sql = $database->prepare("	SELECT institution_state, SUM(number_students) AS Total_Students_Per_State
                                                             FROM InstitutionAccessCode
