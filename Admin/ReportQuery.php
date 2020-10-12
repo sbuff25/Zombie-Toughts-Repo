@@ -41,7 +41,7 @@ require_once("./Classes/Database.php");
     </head>
     <body>
         <div class="col-sm-6 col-sm-offset-3" >
-            <div class="panel panel-default align-items-center">
+            <div class="panel panel-default align-items-center cont">
                 <br><br><br><br>
                 <img src='../images/Logos/Logos/1. Primary Logo - Green/1_MontanaRep_PrimaryLogo_GreenLandscape.png' alt='Montana Repertory Theatre Logo' width='25%' height='25%'>
                 <h1 class='report-head text-center'>Montana Repertory Theatre Report</h1>
