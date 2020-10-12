@@ -35,7 +35,8 @@ require_once("./Classes/Database.php");
                 $check_pass2->bind_param("ss", $hashed_password, $email_or_username);
                 $check_pass2->execute();
                 $result3 = $check_pass1->get_result();
-                array_push($errors, $result2);
+                $row3 = $result3->fetch_assoc();
+                array_push($errors, $row3);
 
                 if($result2 || $result3){  // May need to fix and check what the result was
 
