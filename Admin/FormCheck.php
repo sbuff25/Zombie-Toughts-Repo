@@ -34,9 +34,9 @@ require_once("./Classes/Database.php");
                 $check_pass2 = $database->prepare("SELECT EXISTS(SELECT * FROM AdminUser WHERE (password = ? AND email = ?))");
                 $check_pass2->bind_param("ss", $hashed_password, $email_or_username);
                 $check_pass2->execute();
-                $result3 = $check_pass1->get_result();
-                $row3 = $result3->fetch_assoc();
-                array_push($errors, $row3);
+                $result3 = $check_pass2->get_result();
+                $row3 = $result3->fetch_array();
+                array_push($errors, $row3[0]);
 
                 if($result2 || $result3){  // May need to fix and check what the result was
 
