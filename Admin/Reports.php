@@ -31,11 +31,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-        <link rel="stylesheet" href="../css.css">
         <link rel="stylesheet" href="../menu.css">
-        
-        <link rel="stylesheet" href="../scroll_bar.css">
-        <link rel="stylesheet" href="../text_animiations.css">
+        <link rel="stylesheet" href="./reports.css">
         
     
 
@@ -44,12 +41,13 @@
         <div class="col-sm-6 col-sm-offset-3" >
             <div class="panel panel-default">
                 <br><br><br><br>
-                <h1>Reports</h1>
+                <h1>Montana Repertory Theatre</h1>
                 <form action='ReportQuery.php' method='POST'>
                     <select name='reportSelect'>
-                        <option value='county'>Montana Residents by County</option>
-                        <option value='grades'>Montana Institution Student Grades Watch Count</option>
-                        <option value='views'>Montana Institution Watch Count</option>
+                        <option value='county'>Montana: Number of Requests By County</option>
+                        <option value='students'>Montana: Number of Students By County</option>
+                        <option value='state'>Out-of-State: Number of Requests By State</option>
+                        <option value='state_students'>Out-of-State: Number of Students By State</option>
                     </select>
                     <button type='submit' class='btn'>Generate Report</button>
                 </form>

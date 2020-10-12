@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php session_start(); 
+require_once("./Classes/Database.php");
+?>
+
 <?php
     if (isset($_GET['logout'])) {
         unset($_SESSION['email']);
@@ -8,7 +11,7 @@
         session_destroy();
     } 
 ?>
-<?php if(isset($_SESSION['username']) && isset($_SESSION['email'])){
+<?php if(isset($_SESSION['username']) && isset($_SESSION['email']) && isset($_POST['reportSelect'])){
         header('location: ./AdminPage');
         exit;
 
@@ -44,7 +47,151 @@
         <div class="col-sm-6 col-sm-offset-3" >
             <div class="panel panel-default">
                 <br><br><br><br>
-                <h1>Report</h1>
+                <h1>Montana Repertory Theatre Report</h1>
+                <?php 
+                    if($_POST['reportSelect']==="county"){
+                        ?>
+                        <div class='report-div'>
+                            <h2 class='report-title'>Total Number of Requests for Montana Residents By County</h2>
+                            <?php 
+                                $sql = $database->prepare("SELECT county, Count(county) AS number_requests
+                                                            FROM IndividualAccessCode
+                                                                WHERE county IN ('Beaverhead', 'Big Horn','Blaine','Broadwater','Carbon','Carter','Cascade','Chouteau','Custer','Daniels','Dawson','Deer Lodge','Fallon','Fergus','Flathead','Gallatin','Garfield'
+                                                        ,'Glacier','Golden Valley','Granite','Hill','Jefferson','Judith Basin','Lake','Lewis And Clark','Liberty','Lincoln','Madison','McCone','Meagher','Mineral','Missoula','Musselshell','Park','Petroleum','Phillips','Pondera'
+                                                        ,'Powder River','Powell','Prairie','Ravalli','Richland','Roosevelt','Rosebud','Sanders','Sheridan','Silver Bow','Stillwater','Sweet Grass','Teton','Toole','Treasure','Valley','Wheatland','Wibaux','Yellowstone','Yellowstone National Park')
+                                                            GROUP BY county
+                                                            ORDER BY county"); 
+                                if(!$sql->bind_param("")){    
+                                    array_push($errors, "Binding parameters failed: (" . $sql->errno . ") " . $sql->error);  
+                                }
+                                if(!$sql->execute()){            
+                                    array_push($errors, "Execute failed: (" . $sql->errno . ") " . $sql->error);
+                                    array_push($errors, "Could not generate report");  
+                                }
+                            ?>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">County</th>
+                                            <th scope="col">Number of Requests By County</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                        <?php
+                                            $result = $sql->get_result();
+                                            if($result->num_rows > 0){
+                                                while($row = $result->fetch_assoc()){
+                                                ?>
+                                                    <tr>
+                                                        <td><?php echo $row['county']; ?></td>
+                                                        <td><?php echo $row['number_requests']; ?></td>
+                                                    </tr>
+                                        <?php
+                                                }
+                                        ?>      
+                                        <?php
+                                            }
+                                            else{
+                                        ?>
+                                                <tr>
+                                                    <td colspan="2">No Results Found</td>
+                                                </tr>
+                                        <?php
+                                            }
+                                        ?>
+                                        
+                                    </tbody>
+                                </table>
+                            <?php
+                                $sql->close();
+                            ?>
+                        </div>
+
+
+                        
+                        <?php
+                    }
+                    elseif($_POST['reportSelect']==="students"){
+
+                        ?>
+                        <div class='report-div'>
+                            <h2 class='report-title'>Total Number of Students in Montana By County</h2>
+                            <?php 
+                                $sql = $database->prepare("SELECT institution_county, SUM(number_students) AS Total_Students_Per_County
+                                                            FROM InstitutionAccessCode
+                                                            WHERE institution_county IN ('Beaverhead','Big Horn','Blaine','Broadwater','Carbon','Carter','Cascade','Chouteau','Custer','Daniels','Dawson','Deer Lodge','Fallon','Fergus','Flathead','Gallatin','Garfield'
+                                                            ,'Glacier','Golden Valley','Granite','Hill','Jefferson','Judith Basin','Lake','Lewis And Clark','Liberty','Lincoln','Madison','McCone','Meagher','Mineral','Missoula','Musselshell','Park','Petroleum','Phillips','Pondera'
+                                                            ,'Powder River','Powell','Prairie','Ravalli','Richland','Roosevelt','Rosebud','Sanders','Sheridan','Silver Bow','Stillwater','Sweet Grass','Teton','Toole','Treasure','Valley','Wheatland','Wibaux','Yellowstone','Yellowstone National Park')
+                                                            GROUP BY institution_county
+                                                            ORDER BY institution_county"); 
+                                if(!$sql->bind_param("")){    
+                                    array_push($errors, "Binding parameters failed: (" . $sql->errno . ") " . $sql->error);  
+                                }
+                                if(!$sql->execute()){            
+                                    array_push($errors, "Execute failed: (" . $sql->errno . ") " . $sql->error);
+                                    array_push($errors, "Could not generate report");  
+                                }
+
+                            ?>
+                            <?php
+                                $sql->close();
+                            ?>
+                        </div>
+                        <?php
+                    }
+                    elseif($_POST['reportSelect']==="state"){
+                        ?>
+                        <div class='report-div'>
+                            <h2 class='report-title'>Total Number of Out-Of-State Individuals By State</h2>
+                            <?php 
+                                $sql = $database->prepare("	SELECT state, Count(state) as total_per_state
+                                                            FROM IndividualAccessCode
+                                                            WHERE state<>'Montana'
+                                                            GROUP BY state
+                                                            ORDER BY state
+                                                        "); 
+                                if(!$sql->bind_param("")){    
+                                    array_push($errors, "Binding parameters failed: (" . $sql->errno . ") " . $sql->error);  
+                                }
+                                if(!$sql->execute()){            
+                                    array_push($errors, "Execute failed: (" . $sql->errno . ") " . $sql->error);
+                                    array_push($errors, "Could not generate report");  
+                                }
+                                $sql->close();
+                            ?>
+                        </div>
+                        <?php
+                    }
+                    elseif($_POST['reportSelect']==="state_students"){
+                        ?>
+                        <div class='report-div'>
+                            <h2 class='report-title'>Total Number of Out-Of-State Students By State</h2>
+                            <?php 
+                                $sql = $database->prepare("	SELECT institution_state, SUM(number_students) AS Total_Students_Per_County
+                                                            FROM InstitutionAccessCode
+                                                            WHERE institution_state<>'Montana' AND institution_state<>''
+                                                            GROUP BY institution_state
+                                                            ORDER BY institution_state
+                                                        "); 
+                                if(!$sql->bind_param("")){    
+                                    array_push($errors, "Binding parameters failed: (" . $sql->errno . ") " . $sql->error);  
+                                }
+                                if(!$sql->execute()){            
+                                    array_push($errors, "Execute failed: (" . $sql->errno . ") " . $sql->error);
+                                    array_push($errors, "Could not generate report");  
+                                }
+                                $sql->close();
+                            ?>
+                        </div>
+                        <?php
+                    }
+                    else{
+                        ?>
+                        <h2>There has been an error processing your request</h2>
+                        <?php
+                    }
+                ?>
 
                 
                 <a href="javascript:history.back()" class='btn btn-danger btn-sm' role='button'>Back</a>
