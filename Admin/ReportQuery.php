@@ -43,7 +43,7 @@ require_once("./Classes/Database.php");
         <div class="col-sm-6 col-sm-offset-3" >
             <div class="panel panel-default">
                 <br><br><br><br>
-                <img src='../images/Logos/Logos/1. Primary Logo - Green/1_MontanaRep_PrimaryLogo_GreenLandscape.png' alt='Montana Repertory Theatre Logo'>
+                <img src='../images/Logos/Logos/1. Primary Logo - Green/1_MontanaRep_PrimaryLogo_GreenLandscape.png' alt='Montana Repertory Theatre Logo' width='50%' height='50%'>
                 <h1>Montana Repertory Theatre Report</h1>
                 <?php 
                     if($_POST['reportSelect']==="county"){
