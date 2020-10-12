@@ -1,4 +1,9 @@
 <?php session_start(); ?>
+<?php if(!isset($_SESSION['username']) && !isset($_SESSION['email'])){
+        header('location: ./AdminPage');
+        exit;
+
+}?>
 <?php
     if (isset($_GET['logout'])) {
         unset($_SESSION['email']);
@@ -8,11 +13,7 @@
         session_destroy();
     } 
 ?>
-<?php if(!isset($_SESSION['username']) && !isset($_SESSION['email'])){
-        header('location: ./AdminPage');
-        exit;
 
-}?>
 <?php include_once('FormCheck.php'); ?>
 <!DOCTYPE html>
 <html lang="en-us">
