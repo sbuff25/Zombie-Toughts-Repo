@@ -49,7 +49,7 @@ require_once("./Classes/Database.php");
 
                 }
                 else {
-                    array_push($errors, "Username, email, and/or password are incorrect.");
+                    //array_push($errors, "Username, email, and/or password are incorrect.");
                 }
                 $check_pass1->close();
                 $check_pass2->close();
