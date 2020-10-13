@@ -41,7 +41,7 @@
 
     </head>
     <body>
-        <div class="col-sm-6 col-sm-offset-3" >
+        <div class="col-md-8 mx-auto" >
             <div class="panel panel-default">
                 <br><br><br><br>
                 <h1>Admin Login</h1>
