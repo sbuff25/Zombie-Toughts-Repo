@@ -10,3 +10,8 @@
     width: 100%;
     text-align: right;  
 }
+
+table{
+    table-layout: fixed;
+    word-wrap: break-word;
+}
