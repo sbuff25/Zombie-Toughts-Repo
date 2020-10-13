@@ -22,7 +22,7 @@ include_once('FormCheck.php');
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+        <link rel="stylesheet" href="./phpforms.css">
 
         <!-- <link rel="stylesheet" href="../css.css">
         <link rel="stylesheet" href="../menu.css"> -->
@@ -78,7 +78,7 @@ include_once('FormCheck.php');
         
 
         <!--Footer-->
-        <footer class="center bg-dark">
+        <footer class="center bg-dark text-white sticky-footer">
             <p>Missoula Repertory Theatre &copy; 2020</p>
         </footer>
 
