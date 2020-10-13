@@ -87,7 +87,7 @@ include_once('FormCheck.php');
                             $result = $stmt->get_result();
                         ?>
                             <form action='RequestsPage' method='POST'>
-                                <table class='table table-bordered text-dark table-hover table-striped table-light'>
+                                <table class='table table-bordered text-dark table-hover table-striped table-light m-5'>
                                     <thead>
                                         <tr class='text-center bg-secondary'>
                                             <th colspan='12'><b>Montana Residents Zombie Thought Requests</b></th>
@@ -245,7 +245,7 @@ include_once('FormCheck.php');
                             $result = $stmt->get_result();
                         ?>
                             <form action='RequestsPage' method='POST'>
-                                <table class='table table-bordered text-dark table-hover table-striped table-light'>
+                                <table class='table table-bordered text-dark table-hover table-striped table-light m-5'>
                                     <thead>
                                         <tr class='text-center bg-secondary'>
                                             <th colspan='13'><b>Out of State Zombie Thought Requests</b></th>
@@ -387,7 +387,7 @@ include_once('FormCheck.php');
                             $result = $stmt->get_result();
                         ?>
                             <form action='RequestsPage' method='POST'>
-                                <table class='table table-bordered text-dark table-hover table-striped table-light'>
+                                <table class='table table-bordered text-dark table-hover table-striped table-light m-5'>
                                     <thead>
                                         <tr class='text-center bg-secondary'>
                                             <th colspan='12'><b>Out of State Zombie Thought Requests</b></th>
