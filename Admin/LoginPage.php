@@ -42,7 +42,7 @@
 
     </head>
     <body>
-        <div class="col-md-8 mx-auto bg-light text-dark text-center" >
+        <div class="col-md-8 mx-auto bg-light text-dark text-center align-middle" >
             <div class="panel panel-default justify-content-center">
                 <br><br><br><br>
                 <h1>Admin Login</h1>
