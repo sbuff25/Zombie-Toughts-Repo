@@ -71,9 +71,9 @@
                         </div>
                     <?php endif ?>
                     <br>
-                    <button type='submit' name='submitLogin' class='btn btn-primary'>Login</button>
+                    <button type='submit' name='submitLogin' class='btn btn-primary btn-lg m-2'>Login</button>
                 </form>
-                <a href="javascript:history.back()" class='btn btn-danger btn-sm' role='button'>Back</a>
+                <a href="javascript:history.back()" class='btn btn-danger btn-lg m-2' role='button'>Back</a>
             </div>
         </div>
         
