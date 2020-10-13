@@ -78,7 +78,7 @@
         
 
         <!--Footer-->
-        <footer class="center bg-dark">
+        <footer class="page-footer center bg-dark">
             <p>Missoula Repertory Theatre &copy; 2020</p>
         </footer>
 
