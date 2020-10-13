@@ -48,7 +48,7 @@
                 <br><br><br><br>
                 <h1>Montana Repertory Theatre: Select Report</h1>
                 <form action='ReportQuery.php' method='POST'>
-                    <select name='reportSelect' class='text-lg' id='report-select'>
+                    <select name='reportSelect' class='m-3' id='report-select'>
                         <option value='county'>Montana: Number of Requests By County</option>
                         <option value='students'>Montana: Number of Students By County</option>
                         <option value='state'>Out-of-State: Number of Requests By State</option>
