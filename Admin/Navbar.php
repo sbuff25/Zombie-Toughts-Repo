@@ -15,10 +15,10 @@
             <li class="nav-item active">
                 <a class="nav-link" href="LoginPage?logout='1'">Logout</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item text-white">
                 <p>You are logged in as: <?php echo $_SESSION['email']; ?></p>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item text-white">
                 <p>Privilege: <?php echo $_SESSION['privilege']; ?></p>
             </li>
         <?php } 
