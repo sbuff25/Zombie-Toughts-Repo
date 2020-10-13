@@ -7,19 +7,19 @@
         <?php if(isset($_SESSION['email'])){
         ?>
             <li class="nav-item active">
-                <a class='nav-link' href="./AdminPage">Admin Home</a>
+                <a class='nav-link text-white' href="./AdminPage">Admin Home</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="./RequestsPage">Requests</a>
+                <a class="nav-link text-white" href="./RequestsPage">Requests</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="LoginPage?logout='1'">Logout</a>
+                <a class="nav-link text-white" href="LoginPage?logout='1'">Logout</a>
             </li>
-            <li class="nav-item text-white">
-                <p>You are logged in as: <?php echo $_SESSION['email']; ?></p>
+            <li class="nav-item text-light">
+                <p class='navbar-text'>You are logged in as: <?php echo $_SESSION['email']; ?></p>
             </li>
-            <li class="nav-item text-white">
-                <p>Privilege: <?php echo $_SESSION['privilege']; ?></p>
+            <li class="nav-item text-light">
+                <p class='navbar-text'>Privilege: <?php echo $_SESSION['privilege']; ?></p>
             </li>
         <?php } 
         else {?>
