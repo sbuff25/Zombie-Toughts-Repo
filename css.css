@@ -9,6 +9,11 @@ body
    
     
 }
+.page-footer{
+
+    flex:1 1 auto;
+
+}
 .parentAndEducators ul li a
 {
     color: black;
