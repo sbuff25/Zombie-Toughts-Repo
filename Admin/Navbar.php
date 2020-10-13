@@ -3,7 +3,7 @@
 
 <nav class="navbar navbar-inverse navbar-dark navbar-expand-lg">
     <a class="navbar-brand" href="#"><img src='../images/Logos/Logos/1. Primary Logo - Green/1_MontanaRep_PrimaryLogo_GreenLandscape.png' width='10%' height='10%' alt='Montana Repertory Logo'></a>
-    <ul class="nav navbar-nav ml-auto">
+    <ul class="nav navbar-nav mr-auto">
         <?php if(isset($_SESSION['email'])){
         ?>
             <li class="nav-item active">

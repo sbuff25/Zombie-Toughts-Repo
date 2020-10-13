@@ -32,7 +32,7 @@ include_once('FormCheck.php');
 
 
     </head>
-    <body class='bg-dark'>
+    <body class='bg-muted'>
         <?php
             include_once('Navbar.php');
         ?>
