@@ -2,8 +2,8 @@
 <div id="scrollPath"></div> -->
 
 <nav class="navbar navbar-inverse">
-    <ul class="nav navbar-nav">
-
+    <a class="navbar-brand" href="#"><img src='../images/Logos/Logos/1. Primary Logo - Green/1_MontanaRep_PrimaryLogo_GreenLandscape.png' width='25%' height='25%' alt='Montana Repertory Logo'></a>
+    <ul class="nav navbar-nav mr-auto">
         <?php if(isset($_SESSION['email'])){
         ?>
             <li>
