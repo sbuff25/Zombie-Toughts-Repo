@@ -41,7 +41,7 @@ include_once('FormCheck.php');
         $InstArray = array();
         ?>
             <br><br><br><br><br>
-        <div class="col-md-8 mx-auto bg-light text-dark text-center align-middle" >
+        <div class="col-md-4 mx-auto bg-light text-dark text-center" >
             <div class="panel panel-default justify-content-center">
                 <h1>Zombie Thoughts Requests</h1>
                 <ul class="nav nav-pills">
