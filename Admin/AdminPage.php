@@ -56,9 +56,9 @@ include_once('FormCheck.php');
             <?php if (isset($_SESSION['privilege']) && strtolower($_SESSION['privilege']) === "high"){ ?>
 
 
-                <button type="button" class='btn btn-primary' data-toggle="modal" data-target="#NewUserForm">Create New User</button>
+                <button type="button" class='btn btn-dark btn-lg m-5' data-toggle="modal" data-target="#NewUserForm">Create New User</button>
                 <br>
-                <button type="button" class='btn btn-primary' data-toggle="modal" data-target="#DeleteUserForm">Delete User</button>
+                <button type="button" class='btn btn-dark btn-lg m-5' data-toggle="modal" data-target="#DeleteUserForm">Delete User</button>
                 <br>
 
                 <?php include("NewUserForm.php"); ?>
@@ -69,9 +69,9 @@ include_once('FormCheck.php');
                 
 
                 <!-- <button type="button" class='btn btn-primary' data-toggle="modal" data-target="#LinkForm">Generate Access Link</button> -->
-                <a href='Reports.php' role="button" class='btn btn-primary'>View Reports</a>
+                <a href='Reports.php' role="button" class='btn btn-dark btn-lg m-5'>View Reports</a>
                 <br>
-                <a role="button" href='RequestsPage' class='btn btn-primary'>View Zombie Thought Requests</a>
+                <a role="button" href='RequestsPage' class='btn btn-dark btn-lg m-5'>View Zombie Thought Requests</a>
             </div>
         </div>
 
