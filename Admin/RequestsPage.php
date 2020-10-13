@@ -93,18 +93,18 @@ include_once('FormCheck.php');
                                             <th colspan='12'><b>Montana Residents Zombie Thought Requests</b></th>
                                         </tr>
                                         <tr>
-                                            <th>Date Requested</th>
-                                            <th>Contact First Name</th>
-                                            <th>Contact Last Name</th>
-                                            <th>Contact Phone Number</th>
-                                            <th>Contact Extension (if available)</th>
-                                            <th>Contact Email</th>
-                                            <th>Institution Name</th>
-                                            <th>Institution City</th>
-                                            <th>Institution County</th>
-                                            <th>Contacted</th>
-                                            <th>Notes</th>
-                                            <th>Options</th>
+                                            <th scope='col'>Date Requested</th>
+                                            <th scope='col'>Contact First Name</th>
+                                            <th scope='col'>Contact Last Name</th>
+                                            <th scope='col'>Contact Phone Number</th>
+                                            <th scope='col'>Contact Extension (if available)</th>
+                                            <th scope='col'>Contact Email</th>
+                                            <th scope='col'>Institution Name</th>
+                                            <th scope='col'>Institution City</th>
+                                            <th scope='col'>Institution County</th>
+                                            <th scope='col'>Contacted</th>
+                                            <th scope='col'>Notes</th>
+                                            <th scope='col'>Options</th>
 
                                         </tr>
                                     </thead>
@@ -251,19 +251,19 @@ include_once('FormCheck.php');
                                             <th colspan='13'><b>Out of State Zombie Thought Requests</b></th>
                                         </tr>
                                         <tr>
-                                            <th>Date Requested</th>
-                                            <th>Contact First Name</th>
-                                            <th>Contact Last Name</th>
-                                            <th>Contact Phone Number</th>
-                                            <th>Contact Extension (if available)</th>
-                                            <th>Contact Email</th>
-                                            <th>Institution Name</th>
-                                            <th>Institution City</th>
-                                            <th>Institution State</th>
-                                            <th>Institution County</th>
-                                            <th>Contacted</th>
-                                            <th>Notes</th>
-                                            <th>Options</th>
+                                            <th scope='col'>Date Requested</th>
+                                            <th scope='col'>Contact First Name</th>
+                                            <th scope='col'>Contact Last Name</th>
+                                            <th scope='col'>Contact Phone Number</th>
+                                            <th scope='col'>Contact Extension (if available)</th>
+                                            <th scope='col'>Contact Email</th>
+                                            <th scope='col'>Institution Name</th>
+                                            <th scope='col'>Institution City</th>
+                                            <th scope='col'>Institution State</th>
+                                            <th scope='col'>Institution County</th>
+                                            <th scope='col'>Contacted</th>
+                                            <th scope='col'>Notes</th>
+                                            <th scope='col'>Options</th>
 
                                         </tr>
                                     </thead>
@@ -393,18 +393,18 @@ include_once('FormCheck.php');
                                             <th colspan='12'><b>Out of State Zombie Thought Requests</b></th>
                                         </tr>
                                         <tr>
-                                            <th>Date Requested</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Phone Number</th>
-                                            <th>Email</th>
-                                            <th>Address</th>
-                                            <th>City</th>
-                                            <th>State</th>
-                                            <th>County</th>
-                                            <th>Contacted</th>
-                                            <th>Notes</th>
-                                            <th>Options</th>
+                                            <th scope='col'>Date Requested</th>
+                                            <th scope='col'>First Name</th>
+                                            <th scope='col'>Last Name</th>
+                                            <th scope='col'>Phone Number</th>
+                                            <th scope='col'>Email</th>
+                                            <th scope='col'>Address</th>
+                                            <th scope='col'>City</th>
+                                            <th scope='col'>State</th>
+                                            <th scope='col'>County</th>
+                                            <th scope='col'>Contacted</th>
+                                            <th scope='col'>Notes</th>
+                                            <th scope='col'>Options</th>
 
                                         </tr>
                                     </thead>
