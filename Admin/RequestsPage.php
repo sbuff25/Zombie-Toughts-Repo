@@ -25,11 +25,11 @@ include_once('FormCheck.php');
         
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-        <link rel="stylesheet" href="../css.css">
+        <!-- <link rel="stylesheet" href="../css.css">
         <link rel="stylesheet" href="../menu.css">
         
         <link rel="stylesheet" href="../scroll_bar.css">
-        <link rel="stylesheet" href="../text_animiations.css">
+        <link rel="stylesheet" href="../text_animiations.css"> -->
         </head>
     <body>
 
