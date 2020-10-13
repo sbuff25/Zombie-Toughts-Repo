@@ -45,7 +45,7 @@
         <div class="col-sm-6 col-sm-offset-3" >
             <div class="panel panel-default">
                 <br><br><br><br>
-                <h1>Montana Repertory Theatre</h1>
+                <h1>Montana Repertory Theatre: Select Report</h1>
                 <form action='ReportQuery.php' method='POST'>
                     <select name='reportSelect'>
                         <option value='county'>Montana: Number of Requests By County</option>
