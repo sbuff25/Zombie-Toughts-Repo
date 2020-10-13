@@ -2,23 +2,23 @@
 <div id="scrollPath"></div> -->
 
 <nav class="navbar navbar-inverse">
-    <a class="navbar-brand" href="#"><img src='../images/Logos/Logos/1. Primary Logo - Green/1_MontanaRep_PrimaryLogo_GreenLandscape.png' width='25%' height='25%' alt='Montana Repertory Logo'></a>
+    <a class="navbar-brand" href="#"><img src='../images/Logos/Logos/1. Primary Logo - Green/1_MontanaRep_PrimaryLogo_GreenLandscape.png' width='10%' height='10%' alt='Montana Repertory Logo'></a>
     <ul class="nav navbar-nav mr-auto">
         <?php if(isset($_SESSION['email'])){
         ?>
-            <li>
-                <a href="./AdminPage">Admin Home</a>
+            <li class="nav-item active">
+                <a class='nav-link' href="./AdminPage">Admin Home</a>
             </li>
-            <li>
-                <a href="./RequestsPage">Requests</a>
+            <li class="nav-item active">
+                <a class="nav-link" href="./RequestsPage">Requests</a>
             </li>
-            <li>
-                <a href="LoginPage?logout='1'">Logout</a>
+            <li class="nav-item active">
+                <a class="nav-link" href="LoginPage?logout='1'">Logout</a>
             </li>
-            <li>
+            <li class="nav-item active">
                 <p>You are logged in as: <?php echo $_SESSION['email']; ?></p>
             </li>
-            <li>
+            <li class="nav-item active">
                 <p>Privilege: <?php echo $_SESSION['privilege']; ?></p>
             </li>
         <?php } 
