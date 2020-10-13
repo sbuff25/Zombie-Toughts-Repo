@@ -34,6 +34,7 @@
 
         <!-- <link rel="stylesheet" href="../menu.css"> -->
         <link rel="stylesheet" href="./reports.css">
+        <link rel="stylesheet" href="./phpforms.css">
         
     
 
