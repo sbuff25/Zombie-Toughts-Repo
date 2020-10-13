@@ -1,5 +1,3 @@
-<!-- <div id="progressbar"></div>
-<div id="scrollPath"></div> -->
 
 <nav class="navbar navbar-inverse bg-dark navbar-expand-lg">
     <a class="navbar-brand" href="./AdminPage"><img src='../images/Logos/Logos/1. Primary Logo - Green/1_MontanaRep_PrimaryLogo_GreenLandscape.png' width='10%' height='10%' alt='Montana Repertory Logo'></a>
@@ -28,9 +26,4 @@
             </li>
         <?php } ?>
     </ul>
-    <!-- <div class="burger">
-    <div class="line1"></div>
-    <div class="line2"></div>
-    <div class="line3"></div>
-    </div> -->
 </nav>
