@@ -56,7 +56,7 @@
                     <button type='submit' class='btn'>Generate Report</button>
                 </form>
 
-                <a href="javascript:history.back()" class='btn btn-danger btn-sm' role='button'>Back</a>
+                <a href="javascript:history.back()" class='btn btn-danger btn-lg' role='button'>Back</a>
             </div>
         </div>
         
