@@ -56,6 +56,8 @@ include_once('FormCheck.php');
                     </li>
                 </ul>
                 <br>
+            </div>
+        </div>
 
                 <?php include_once("errors.php"); ?>
 
@@ -512,8 +514,7 @@ include_once('FormCheck.php');
                             </form>
                     </div>
                 </div>
-            </div>
-        </div>
+
 
         <!--Footer-->
         <footer class="sticky-footer center bg-dark">
