@@ -43,7 +43,7 @@
         <?php
             include_once('Navbar.php');
         ?>
-        <div class="col-sm-6 col-sm-offset-3" >
+        <div class="col-md-8 mx-auto bg-light text-dark text-center align-middle" >
             <div class="panel panel-default">
                 <br><br><br><br>
                 <h1>Montana Repertory Theatre: Select Report</h1>
@@ -54,7 +54,8 @@
                         <option value='state'>Out-of-State: Number of Requests By State</option>
                         <option value='state_students'>Out-of-State: Number of Students By State</option>
                     </select>
-                    <button type='submit' class='btn'>Generate Report</button>
+                    <br>
+                    <button type='submit' class='btn btn-primary btn-lg'>Generate Report</button>
                 </form>
 
                 <a href="javascript:history.back()" class='btn btn-danger btn-lg' role='button'>Back</a>
