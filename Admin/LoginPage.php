@@ -41,7 +41,7 @@
 
     </head>
     <body>
-        <div class="mx-auto" >
+        <div class="col-md-8 mx-auto bg-dark text-white" >
             <div class="panel panel-default">
                 <br><br><br><br>
                 <h1>Admin Login</h1>
