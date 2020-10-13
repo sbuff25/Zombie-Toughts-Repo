@@ -16,3 +16,7 @@
 optgroup{
     font-size: 50px;
 }
+option{
+    font-size: 50px;
+    padding: 5px;
+}
