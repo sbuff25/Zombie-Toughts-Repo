@@ -31,42 +31,46 @@ include_once('FormCheck.php');
 
     </head>
     <body>
+        <div class="col-md-8 mx-auto bg-light text-dark text-center" >
+            <div class="panel panel-default justify-content-center">
+            <?php
+            include_once('Navbar.php');
+            ?>
+                <br><br><br><br><br>
 
-    <?php
-    include_once('Navbar.php');
-    ?>
-        <br><br><br><br><br>
+            <?php include_once('errors.php'); ?>
 
-    <?php include_once('errors.php'); ?>
+            <?php if (isset($_SESSION['success'])) : ?>
+                <div class="error success">
+                <p>
+                <?php 
+                    echo $_SESSION['success'];
+                    unset($_SESSION['success']);
+                ?>
+                </p>
+                </div>
+            <?php endif ?>
+            <?php if (isset($_SESSION['privilege']) && strtolower($_SESSION['privilege']) === "high"){ ?>
 
-    <?php if (isset($_SESSION['success'])) : ?>
-        <div class="error success">
-        <p>
-        <?php 
-            echo $_SESSION['success'];
-            unset($_SESSION['success']);
-        ?>
-        </p>
+
+                <button type="button" class='btn btn-primary' data-toggle="modal" data-target="#NewUserForm">Create New User</button>
+                <br>
+                <button type="button" class='btn btn-primary' data-toggle="modal" data-target="#DeleteUserForm">Delete User</button>
+                <br>
+
+                <?php include("NewUserForm.php"); ?>
+                <?php include("DeleteUserForm.php"); ?>
+            <?php } ?>
+                <?php include("LinkForm.php"); ?>
+
+                
+
+                <!-- <button type="button" class='btn btn-primary' data-toggle="modal" data-target="#LinkForm">Generate Access Link</button> -->
+                <a href='Reports.php' role="button" class='btn btn-primary'>View Reports</a>
+                <br>
+                <a role="button" href='RequestsPage' class='btn btn-primary'>View Zombie Thought Requests</a>
+            </div>
         </div>
-    <?php endif ?>
-    <?php if (isset($_SESSION['privilege']) && strtolower($_SESSION['privilege']) === "high"){ ?>
-
-
-        <button type="button" class='btn btn-primary' data-toggle="modal" data-target="#NewUserForm">Create New User</button>
-        <br>
-        <button type="button" class='btn btn-primary' data-toggle="modal" data-target="#DeleteUserForm">Delete User</button>
-        <br>
-
-        <?php include("NewUserForm.php"); ?>
-        <?php include("DeleteUserForm.php"); ?>
-    <?php } ?>
-        <?php include("LinkForm.php"); ?>
-
-        
-
-        <!-- <button type="button" class='btn btn-primary' data-toggle="modal" data-target="#LinkForm">Generate Access Link</button> -->
-        <a href='Reports.php' role="button" class='btn btn-primary'>View Reports</a>
-        <a role="button" href='RequestsPage' class='btn btn-primary'>View Zombie Thought Requests</a>
 
         
 
