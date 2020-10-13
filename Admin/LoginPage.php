@@ -31,11 +31,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-        <link rel="stylesheet" href="../css.css">
+        <link rel="stylesheet" href="./phpforms.css">
+        <!-- <link rel="stylesheet" href="../css.css">
         <link rel="stylesheet" href="../menu.css">
         
         <link rel="stylesheet" href="../scroll_bar.css">
-        <link rel="stylesheet" href="../text_animiations.css">
+        <link rel="stylesheet" href="../text_animiations.css"> -->
         
     
 
@@ -70,7 +71,7 @@
                         </div>
                     <?php endif ?>
                     <br>
-                    <button type='submit' name='submitLogin' class='btn'>Login</button>
+                    <button type='submit' name='submitLogin' class='btn btn-primary'>Login</button>
                 </form>
                 <a href="javascript:history.back()" class='btn btn-danger btn-sm' role='button'>Back</a>
             </div>
