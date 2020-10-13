@@ -1,5 +1,5 @@
-<div id="progressbar"></div>
-<div id="scrollPath"></div>
+<!-- <div id="progressbar"></div>
+<div id="scrollPath"></div> -->
 
 <nav class="navbar navbar-inverse">
     <ul class="nav navbar-nav">
