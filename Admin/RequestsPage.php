@@ -239,7 +239,7 @@ include_once('FormCheck.php');
             <!-- __________________________________Out of state Requests Table______________________________ -->
 
             
-            <div class='tab-pane container fade' id='OutInstitution'>
+            <div class='tab-pane fade' id='OutInstitution'>
                 <h2>Out of State Institution Requests</h2>
                 <?php
                     $stmt = $database->prepare("SELECT * FROM InstitutionInformation WHERE NOT institution_state='Montana'");
@@ -247,7 +247,7 @@ include_once('FormCheck.php');
                     $result = $stmt->get_result();
                 ?>
                     <form action='RequestsPage' method='POST'>
-                        <table class='table table-bordered text-dark table-hover table-striped table-light mx-auto mb-5'>
+                        <table class='table table-bordered text-dark table-hover table-striped table-light mt-2 ml-2 mr-2 mb-5'>
                             <thead>
                                 <tr class='text-center bg-secondary'>
                                     <th colspan='13' class='text-center'><b>Out of State Zombie Thought Requests</b></th>
@@ -381,7 +381,7 @@ include_once('FormCheck.php');
             <!-- __________________________________Out of state Individual Requests Table______________________________ -->
 
             
-            <div class='tab-pane container fade' id='OutIndividual'>
+            <div class='tab-pane fade' id='OutIndividual'>
                 <h2>Out of State Individual Requests</h2>
                 <?php
                     $stmt = $database->prepare("SELECT * FROM OutOfStateIndividual");
@@ -389,7 +389,7 @@ include_once('FormCheck.php');
                     $result = $stmt->get_result();
                 ?>
                     <form action='RequestsPage' method='POST'>
-                        <table class='table table-bordered text-dark table-hover table-striped table-light mx-auto mb-5'>
+                        <table class='table table-bordered text-dark table-hover table-striped table-light mt-2 ml-2 mr-2 mb-5'>
                             <thead>
                                 <tr class='text-center bg-secondary'>
                                     <th colspan='12' class='text-center'><b>Out of State Zombie Thought Requests</b></th>
