@@ -93,8 +93,6 @@ include_once('FormCheck.php');
                     else{
                         $order='ASC';
                     }
-                    
-                    echo $sortby;
                 ?>
                 <form action='RequestsPage' method='POST'>
                     <select id='sortby' name='sortbyselect'>
@@ -113,6 +111,7 @@ include_once('FormCheck.php');
 
                 <?php
                     $stmt = $database->prepare("SELECT * FROM InstitutionInformation WHERE institution_state='Montana' ORDER BY ?");
+                    echo "SELECT * FROM InstitutionInformation WHERE institution_state='Montana' ORDER BY ". $sortby;
                     if(!$stmt->bind_param("s", $sortby))
                     {
                         echo "Could Not sort table";
