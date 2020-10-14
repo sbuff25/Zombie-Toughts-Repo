@@ -11,12 +11,13 @@ require_once('FormCheck.php') ?>
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script defer src="../game.js"></script>
-        <link rel="stylesheet" href="../css.css">
+        <!-- <link rel="stylesheet" href="../css.css">
         <link rel="stylesheet" href="../menu.css">
         
         <link rel="stylesheet" href="../scroll_bar.css">
         <link rel="stylesheet" href="../text_animiations.css">
-        
+         -->
+        <link rel="stylesheet" href="./phpforms.css">
     
 
     </head>
@@ -104,7 +105,7 @@ require_once('FormCheck.php') ?>
         
 
         <!--Footer-->
-        <footer class="center bg-dark">
+        <footer class="sticky-footer center bg-dark">
             <p>Missoula Repertory Theatre &copy; 2020</p>
         </footer>
 

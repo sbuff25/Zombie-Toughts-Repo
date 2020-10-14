@@ -50,10 +50,10 @@
                 <form action='ReportQuery.php' method='POST'>
                     <select name='reportSelect' class='m-3' id='report-font'>
                         <optgroup>
-                            <option value='county' id='report-font'>Montana: Number of Requests By County</option>
-                            <option value='students' id='report-font'>Montana: Number of Students By County</option>
-                            <option value='state' id='report-font'>Out-of-State: Number of Requests By State</option>
-                            <option value='state_students' id='report-font'>Out-of-State: Number of Students By State</option>
+                            <option value='county' id='report-font'>Montana Resident's Individual Requests By County</option>
+                            <option value='students' id='report-font'>Montana Institutions' Number of Students By County</option>
+                            <option value='state' id='report-font'>Out-of-State Individual's Requests By State</option>
+                            <option value='state_students' id='report-font'>Out-of-State Institutions' Number of Students By State</option>
                         </optgroup>
                     </select>
                     <br>
