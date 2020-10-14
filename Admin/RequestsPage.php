@@ -75,7 +75,7 @@ include_once('FormCheck.php');
         <div class='tab-content'>
 
             <!-- __________________________________Montana Requests Table______________________________ -->
-            <div class='tab-pane container active' id='MontanaInstitution'>
+            <div class='tab-pane active' id='MontanaInstitution'>
             <h2>Montana Institution Requests</h2>
 
                 <?php
