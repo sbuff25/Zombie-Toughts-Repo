@@ -11,6 +11,9 @@
                 <a class="nav-link text-white" href="./RequestsPage">Requests</a>
             </li>
             <li class="nav-item active">
+                <a class="nav-link text-white" href="./Reports">Reports</a>
+            </li>
+            <li class="nav-item active">
                 <a class="nav-link text-white" href="LoginPage?logout='1'">Logout</a>
             </li>
             <li class="nav-item text-secondary">
