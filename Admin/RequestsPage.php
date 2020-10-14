@@ -113,7 +113,7 @@ include_once('FormCheck.php');
 
                 <?php
                     $stmt = $database->prepare("SELECT * FROM InstitutionInformation WHERE institution_state='Montana' ORDER BY ?");
-                    if(!$stmt->bind_param("s", $_SESSION['sortby']))
+                    if(!$stmt->bind_param("s", $sortby))
                     {
                         echo "Could Not sort table";
                     
