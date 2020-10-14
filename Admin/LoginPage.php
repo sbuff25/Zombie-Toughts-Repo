@@ -48,16 +48,14 @@
                 <h1>Admin Login</h1>
 
                 <form action='LoginPage' method='POST'>
-                    <div>
+                    <div class='my-2'>
                         <label for='email'>Email or Username:</label>
                         <input name='emailorusername' placeholder='Enter Email or Username...'>
                     </div>
-                    <br>
-                    <div>
+                    <div class='mb-2'>
                         <label for='password'>Password:</label>
                         <input name='password' type='password' placeholder='Enter Password...'>
                     </div>
-                    <br>
                     <?php 
                         include_once('errors.php');
                         if (isset($_SESSION['success'])) : ?>
