@@ -47,44 +47,44 @@ include_once('FormCheck.php');
                     /* Loop through all table rows (except the
                     first, which contains table headers): */
                     for (i = 1; i < (rows.length - 1); i++) {
-                    // Start by saying there should be no switching:
-                    shouldSwitch = false;
-                    /* Get the two elements you want to compare,
-                    one from current row and one from the next: */
-                    x = rows[i].getElementsByTagName("td")[n];
-                    y = rows[i + 1].getElementsByTagName("td")[n];
-                    /* Check if the two rows should switch place,
-                    based on the direction, asc or desc: */
-                    if (dir == "asc") {
-                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                        // If so, mark as a switch and break the loop:
-                        shouldSwitch = true;
-                        break;
+                        // Start by saying there should be no switching:
+                        shouldSwitch = false;
+                        /* Get the two elements you want to compare,
+                        one from current row and one from the next: */
+                        x = rows[i].getElementsByTagName("td")[n];
+                        y = rows[i + 1].getElementsByTagName("td")[n];
+                        /* Check if the two rows should switch place,
+                        based on the direction, asc or desc: */
+                        if (dir == "asc") {
+                            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                                // If so, mark as a switch and break the loop:
+                                shouldSwitch = true;
+                                break;
+                            }
+                        } else if (dir == "desc") {
+                            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                                // If so, mark as a switch and break the loop:
+                                shouldSwitch = true;
+                                break;
+                            }
                         }
-                    } else if (dir == "desc") {
-                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                        // If so, mark as a switch and break the loop:
-                        shouldSwitch = true;
-                        break;
-                        }
-                    }
                     }
                     if (shouldSwitch) {
-                    /* If a switch has been marked, make the switch
-                    and mark that a switch has been done: */
-                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                    switching = true;
-                    // Each time a switch is done, increase this count by 1:
-                    switchcount ++;
-                    } else {
-                    /* If no switching has been done AND the direction is "asc",
-                    set the direction to "desc" and run the while loop again. */
-                    if (switchcount == 0 && dir == "asc") {
-                        dir = "desc";
+                        /* If a switch has been marked, make the switch
+                        and mark that a switch has been done: */
+                        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
                         switching = true;
+                        // Each time a switch is done, increase this count by 1:
+                        switchcount ++;
+                        } else {
+                            /* If no switching has been done AND the direction is "asc",
+                            set the direction to "desc" and run the while loop again. */
+                            if (switchcount == 0 && dir == "asc") {
+                                dir = "desc";
+                                switching = true;
+                            }
+                        }
                     }
-                    }
-                }
                 }
             </script>
         </head>
@@ -150,29 +150,16 @@ include_once('FormCheck.php');
                         $order='ASC';
                     }
                 ?>
-                <form action='RequestsPage' method='POST'>
-                    <select id='sortby' name='sortbyselect'>
-                        <option value='date_requested' <?php echo $_SESSION['sortby'] === 'date_requested'?"selected='true'":''; ?>>Date Requested</option>
-                        <option value='contact_first_name' <?php echo $_SESSION['sortby'] === 'contact_first_name'?"selected='true'":''; ?>>Contact First Name</option>
-                        <option value='contact_last_name' <?php echo $_SESSION['sortby'] === 'contact_last_name'?"selected='true'":''; ?>>Contact Last Name</option>
-                        <option value='contact_email' <?php echo $_SESSION['sortby'] === 'contact_email'?"selected='true'":''; ?>>Contact Email</option>
-                        <option value='institution_name' <?php echo $_SESSION['sortby'] === 'institution_name'?"selected='true'":''; ?>>Institution Name</option>
-                        <option value='institution_city' <?php echo $_SESSION['sortby'] === 'institution_city'?"selected='true'":''; ?>>Institution City</option>
-                        <option value='institution_county' <?php echo $_SESSION['sortby'] === 'institution_county'?"selected='true'":''; ?>>Institution County</option>
-                        <option value='contacted' <?php echo $_SESSION['sortby'] === 'contacted'?"selected='true'":''; ?>>Contacted</option>
-                    </select>
-                    <button type='submit' name='set_sort_by'>SORT</button>
-                </form>
-                
+
 
                 <?php
-                    $stmt = $database->prepare("SELECT * FROM InstitutionInformation WHERE institution_state='Montana' ORDER BY ?");
-                    echo "SELECT * FROM InstitutionInformation WHERE institution_state='Montana' ORDER BY ". $sortby;
-                    if(!$stmt->bind_param("s", $sortby))
-                    {
-                        echo "Could Not sort table";
+                    $stmt = $database->prepare("SELECT * FROM InstitutionInformation WHERE institution_state='Montana'");
+                    // echo "SELECT * FROM InstitutionInformation WHERE institution_state='Montana' ORDER BY ". $sortby;
+                    // if(!$stmt->bind_param("s", $sortby))
+                    // {
+                    //     echo "Could Not sort table";
                     
-                    }
+                    // }
                     if(!$stmt->execute())
                     {
                         echo "Could Not sort table";
