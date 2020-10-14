@@ -115,10 +115,14 @@ include_once('FormCheck.php');
                     $stmt = $database->prepare("SELECT * FROM InstitutionInformation WHERE institution_state='Montana' ORDER BY ?");
                     if(!$stmt->bind_param("s", $sortby))
                     {
-                        array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
+                        echo "Could Not sort table";
                     
                     }
-                    $stmt->execute();
+                    if(!$stmt->execute())
+                    {
+                        echo "Could Not sort table";
+                    
+                    }
                     $result = $stmt->get_result();
                 ?>
                     <form action='RequestsPage' method='POST'>
