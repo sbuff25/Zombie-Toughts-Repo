@@ -125,7 +125,7 @@ include_once('FormCheck.php');
                     $result = $stmt->get_result();
                 ?>
                     <form action='RequestsPage' method='POST'>
-                        <table class='table table-bordered text-dark table-hover table-striped table-light mt-2 ml-2 mr-2 mb-5'>
+                        <table id='mt-sort' class='table table-bordered text-dark table-hover table-striped table-light mt-2 ml-2 mr-2 mb-5'>
                             <thead>
                                 <tr class='text-center bg-secondary'>
                                     <th colspan='12' class='text-center'><b>Montana Residents Zombie Thought Requests</b></th>
