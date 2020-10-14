@@ -131,18 +131,18 @@ include_once('FormCheck.php');
                                     <th colspan='12' class='text-center'><b>Montana Residents Zombie Thought Requests</b></th>
                                 </tr>
                                 <tr>
-                                    <th scope='col' onclick="sortTable(0)">Date Requested</th>
-                                    <th scope='col' onclick="sortTable(1)">Contact First Name</th>
-                                    <th scope='col' onclick="sortTable(2)">Contact Last Name</th>
-                                    <th scope='col' onclick="sortTable(3)">Contact Phone Number</th>
-                                    <th scope='col' onclick="sortTable(4)">Contact Extension (if available)</th>
-                                    <th scope='col' onclick="sortTable(5)">Contact Email</th>
-                                    <th scope='col' onclick="sortTable(6)">Institution Name</th>
-                                    <th scope='col' onclick="sortTable(7)">Institution City</th>
-                                    <th scope='col' onclick="sortTable(8)">Institution County</th>
-                                    <th scope='col' onclick="sortTable(9)">Contacted</th>
-                                    <th scope='col' onclick="sortTable(10)">Notes</th>
-                                    <th scope='col' onclick="sortTable(11)">Options</th>
+                                    <th scope='col' onclick="sortTable('mt-sort', 0)">Date Requested</th>
+                                    <th scope='col' onclick="sortTable('mt-sort', 1)">Contact First Name</th>
+                                    <th scope='col' onclick="sortTable('mt-sort', 2)">Contact Last Name</th>
+                                    <th scope='col' onclick="sortTable('mt-sort', 3)">Contact Phone Number</th>
+                                    <th scope='col' onclick="sortTable('mt-sort', 4)">Contact Extension (if available)</th>
+                                    <th scope='col' onclick="sortTable('mt-sort', 5)">Contact Email</th>
+                                    <th scope='col' onclick="sortTable('mt-sort', 6)">Institution Name</th>
+                                    <th scope='col' onclick="sortTable('mt-sort', 7)">Institution City</th>
+                                    <th scope='col' onclick="sortTable('mt-sort', 8)">Institution County</th>
+                                    <th scope='col' onclick="sortTable('mt-sort', 9)">Contacted</th>
+                                    <th scope='col' onclick="sortTable('mt-sort', 10)">Notes</th>
+                                    <th scope='col' onclick="sortTable('mt-sort', 11)">Options</th>
 
                                 </tr>
                             </thead>
@@ -563,9 +563,9 @@ include_once('FormCheck.php');
         }
     </script>     -->
     <script>
-function sortTable(n) {
+function sortTable(tableName,n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById("myTable2");
+  table = document.getElementById(tableName);
   switching = true;
   // Set the sorting direction to ascending:
   dir = "asc";
