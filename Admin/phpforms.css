@@ -11,6 +11,12 @@
     width: 100%;
     text-align: right;  
 }
+.contact-status{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+}
+
 
 table{
     /* table-layout: fixed; */
