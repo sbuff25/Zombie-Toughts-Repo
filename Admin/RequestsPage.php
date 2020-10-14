@@ -562,6 +562,18 @@ include_once('FormCheck.php');
         window.history.replaceState( null, null, window.location.href );
         }
     </script>     -->
+    <script>
+        $(document).ready(function () {
+        $('#mt-sort').DataTable({
+        "aaSorting": [],
+        columnDefs: [{
+        orderable: false,
+        targets: 3
+        }]
+        });
+        $('.dataTables_length').addClass('bs-select');
+        });
+    </script>
 
     </body>
 </html>
