@@ -98,14 +98,14 @@ include_once('FormCheck.php');
                 ?>
                 <form action='RequestsPage' method='POST'>
                     <select id='sortby' name='sortbyselect'>
-                        <option value='date_requested' <?php echo $_SESSION['sortby'] = 'date_requested'?"selected='true'":''; ?>>Date Requested</option>
-                        <option value='contact_first_name' <?php echo $_SESSION['sortby'] = 'contact_first_name'?"selected='true'":''; ?>>Contact First Name</option>
-                        <option value='contact_last_name' <?php echo $_SESSION['sortby'] = 'contact_last_name'?"selected='true'":''; ?>>Contact Last Name</option>
-                        <option value='contact_email' <?php echo $_SESSION['sortby'] = 'contact_email'?"selected='true'":''; ?>>Contact Email</option>
-                        <option value='institution_name' <?php echo $_SESSION['sortby'] = 'institution_name'?"selected='true'":''; ?>>Institution Name</option>
-                        <option value='institution_city' <?php echo $_SESSION['sortby'] = 'institution_city'?"selected='true'":''; ?>>Institution City</option>
-                        <option value='institution_county' <?php echo $_SESSION['sortby'] = 'institution_county'?"selected='true'":''; ?>>Institution County</option>
-                        <option value='contacted' <?php echo $_SESSION['sortby'] = 'contacted'?"selected='true'":''; ?>>Contacted</option>
+                        <option value='date_requested' <?php echo $_SESSION['sortby'] === 'date_requested'?"selected='true'":''; ?>>Date Requested</option>
+                        <option value='contact_first_name' <?php echo $_SESSION['sortby'] === 'contact_first_name'?"selected='true'":''; ?>>Contact First Name</option>
+                        <option value='contact_last_name' <?php echo $_SESSION['sortby'] === 'contact_last_name'?"selected='true'":''; ?>>Contact Last Name</option>
+                        <option value='contact_email' <?php echo $_SESSION['sortby'] === 'contact_email'?"selected='true'":''; ?>>Contact Email</option>
+                        <option value='institution_name' <?php echo $_SESSION['sortby'] === 'institution_name'?"selected='true'":''; ?>>Institution Name</option>
+                        <option value='institution_city' <?php echo $_SESSION['sortby'] === 'institution_city'?"selected='true'":''; ?>>Institution City</option>
+                        <option value='institution_county' <?php echo $_SESSION['sortby'] === 'institution_county'?"selected='true'":''; ?>>Institution County</option>
+                        <option value='contacted' <?php echo $_SESSION['sortby'] === 'contacted'?"selected='true'":''; ?>>Contacted</option>
                     </select>
                     <button type='submit' name='set_sort_by'>SORT</button>
                 </form>
