@@ -132,7 +132,7 @@ include_once('FormCheck.php');
                                     <td>
                                         <h4 class='contact-status'><?php echo $row['contacted']; ?></h4><br>
                                         <form action='RequestsPage' method='POST'>
-                                            <label for='contacted'>Contact Status</label>
+                                            <label for='contacted'>Update Contact Status</label>
                                             <select name='contacted' id='contact_select'>
                                                 <option value='not contacted'>Not Contacted</option>
                                                 <option value='in-progress'>In Progress</option>
@@ -292,7 +292,7 @@ include_once('FormCheck.php');
                                     <td>
                                         <h4 class='contact-status'><?php echo $row['contacted']; ?></h4><br>
                                         <form action='RequestsPage' method='POST'>
-                                            <label for='contacted'>Contact Status</label>
+                                            <label for='contacted'>Update Contact Status</label>
                                             <select name='contacted' id='contact_select'>
                                                 <option value='not contacted'>Not Contacted</option>
                                                 <option value='in-progress'>In Progress</option>
@@ -432,7 +432,7 @@ include_once('FormCheck.php');
                                     <td>
                                         <h4 class='contact-status'><?php echo $row['contacted']; ?></h4><br>
                                         <form action='RequestsPage' method='POST'>
-                                            <label for='contacted'>Contact Status</label>
+                                            <label for='contacted'>Update Contact Status</label>
                                             <select name='contacted' id='contact_select'>
                                                 <option value='not contacted'>Not Contacted</option>
                                                 <option value='in-progress'>In Progress</option>
