@@ -72,10 +72,10 @@ include_once('FormCheck.php');
                 </div>
                 <?php endif ?>
 
-                <div class='tab-content mx-auto'>
+                <div class='tab-content'>
 
                     <!-- __________________________________Montana Requests Table______________________________ -->
-                    <div class='tab-pane container mx-auto active' id='MontanaInstitution'>
+                    <div class='tab-pane container active' id='MontanaInstitution'>
                     <h2>Montana Institution Requests</h2>
 
                         <?php
