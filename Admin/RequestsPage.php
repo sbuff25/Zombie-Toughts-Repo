@@ -94,7 +94,7 @@ include_once('FormCheck.php');
                         $order='ASC';
                     }
                     
-                    echo $_SESSION['sortby'];
+                    echo $sortby;
                 ?>
                 <form action='RequestsPage' method='POST'>
                     <select id='sortby' name='sortbyselect'>
