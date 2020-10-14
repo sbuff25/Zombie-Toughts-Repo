@@ -130,7 +130,7 @@ include_once('FormCheck.php');
                                     <td><?php echo $row['institution_city']; ?></td>
                                     <td><?php echo $row['institution_county']; ?></td>
                                     <td>
-                                        <?php echo $row['contacted']; ?><br>
+                                        <h4 class='contact-status'><?php echo $row['contacted']; ?></h4><br>
                                         <form action='RequestsPage' method='POST'>
                                             <label for='contacted'>Contact Status</label>
                                             <select name='contacted' id='contact_select'>
@@ -290,7 +290,7 @@ include_once('FormCheck.php');
                                     <td><?php echo $row['institution_state']; ?></td>
                                     <td><?php echo $row['institution_county']; ?></td>
                                     <td>
-                                        <?php echo $row['contacted']; ?><br>
+                                        <h4 class='contact-status'><?php echo $row['contacted']; ?></h4><br>
                                         <form action='RequestsPage' method='POST'>
                                             <label for='contacted'>Contact Status</label>
                                             <select name='contacted' id='contact_select'>
@@ -430,7 +430,7 @@ include_once('FormCheck.php');
                                     <td><?php echo $row['state']; ?></td>
                                     <td><?php echo $row['county']; ?></td>
                                     <td>
-                                        <?php echo $row['contacted']; ?><br>
+                                        <h4 class='contact-status'><?php echo $row['contacted']; ?></h4><br>
                                         <form action='RequestsPage' method='POST'>
                                             <label for='contacted'>Contact Status</label>
                                             <select name='contacted' id='contact_select'>
