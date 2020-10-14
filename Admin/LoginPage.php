@@ -48,7 +48,7 @@
                 <h1>Admin Login</h1>
 
                 <form action='LoginPage' method='POST'>
-                    <div class='my-2'>
+                    <div class='my-4'>
                         <label for='email'>Email or Username:</label>
                         <input name='emailorusername' placeholder='Enter Email or Username...'>
                     </div>
@@ -68,7 +68,6 @@
                         </h3>
                         </div>
                     <?php endif ?>
-                    <br>
                     <button type='submit' name='submitLogin' class='btn btn-primary btn-lg m-2'>Login</button>
                 </form>
                 <a href="javascript:history.back()" class='btn btn-danger btn-lg m-2' role='button'>Back</a>
