@@ -75,7 +75,7 @@ include_once('FormCheck.php');
                 <div class='tab-content mx-auto'>
 
                     <!-- __________________________________Montana Requests Table______________________________ -->
-                    <div class='tab-pane container active' id='MontanaInstitution'>
+                    <div class='tab-pane container mx-auto active' id='MontanaInstitution'>
                     <h2>Montana Institution Requests</h2>
 
                         <?php
@@ -89,7 +89,7 @@ include_once('FormCheck.php');
                             $result = $stmt->get_result();
                         ?>
                             <form action='RequestsPage' method='POST'>
-                                <table class='table table-bordered text-dark table-hover table-striped table-light mx-auto mb-5'>
+                                <table class='table table-bordered text-dark table-hover table-striped table-light mb-5'>
                                     <thead>
                                         <tr class='text-center bg-secondary'>
                                             <th colspan='12' class='text-center'><b>Montana Residents Zombie Thought Requests</b></th>
