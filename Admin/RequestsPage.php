@@ -557,11 +557,11 @@ include_once('FormCheck.php');
             <p>Missoula Repertory Theatre &copy; 2020</p>
         </footer>
 
-    <script>
+    <!-- <script>
         if ( window.history.replaceState ) {
         window.history.replaceState( null, null, window.location.href );
         }
-    </script>    
+    </script>     -->
 
     </body>
 </html>
