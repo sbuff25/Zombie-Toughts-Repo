@@ -72,19 +72,51 @@ include_once('FormCheck.php');
         </div>
         <?php endif ?>
 
+
         <div class='tab-content'>
 
             <!-- __________________________________Montana Requests Table______________________________ -->
             <div class='tab-pane active' id='MontanaInstitution'>
             <h2>Montana Institution Requests</h2>
-
                 <?php
-                    $sortby = '';
-                    $filterby='';
+                    $sortby='';
+                    $order='';
+                    if(isset($_SESSION['sortby'])){
+                        $sortby=$_SESSION['sortby'];
+                    }
+                    else{
+                        $sortby='date_requested';
+                    }
+                    if(isset($_SESSION['order'])){
+                        $order=$_SESSION['order'];
+                    }
+                    else{
+                        $order='ASC';
+                    }
+                    
                 ?>
+                <form action='RequestsPage' method='POST'>
+                    <select id='sortby' name='sortbyselect'>
+                        <option value='date_requested' <?php echo $_SESSION['sortby'] = 'date_requested'?"selected='true'":'' ?>>date_requested</option>
+                        <option value='contact_first_name' <?php echo $_SESSION['sortby'] = 'contact_first_name'?"selected='true'":'' ?>>contact_first_name</option>
+                        <option value='contact_last_name' <?php echo $_SESSION['sortby'] = 'contact_last_name'?"selected='true'":'' ?>>contact_last_name</option>
+                        <option value='contact_email' <?php echo $_SESSION['sortby'] = 'contact_email'?"selected='true'":'' ?>>contact_email</option>
+                        <option value='institution_name' <?php echo $_SESSION['sortby'] = 'institution_name'?"selected='true'":'' ?>>institution_name</option>
+                        <option value='institution_city' <?php echo $_SESSION['sortby'] = 'institution_city'?"selected='true'":'' ?>>institution_city</option>
+                        <option value='institution_county' <?php echo $_SESSION['sortby'] = 'institution_county'?"selected='true'":'' ?>>institution_county</option>
+                        <option value='contacted' <?php echo $_SESSION['sortby'] = 'contacted'?"selected='true'":'' ?>>contacted</option>
+                    </select>
+                    <button type='submit' name='set_sort_by'>SORT</button>
+                </form>
+                
 
                 <?php
-                    $stmt = $database->prepare("SELECT * FROM InstitutionInformation WHERE institution_state='Montana'");
+                    $stmt = $database->prepare("SELECT * FROM InstitutionInformation WHERE institution_state='Montana' ORDER BY ?");
+                    if(!$stmt->bind_param("s", $sortby))
+                    {
+                        array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
+                    
+                    }
                     $stmt->execute();
                     $result = $stmt->get_result();
                 ?>

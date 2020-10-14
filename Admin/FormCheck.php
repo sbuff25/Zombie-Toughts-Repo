@@ -664,6 +664,14 @@ require_once("./Classes/Database.php");
         }
 
     }
+
+
+
+    if (isset($_POST['set_sort_by'])) {
+        $sortby = mysqli_real_escape_string($database, $_POST['sortbyselect']);
+        $_SESSION['sortby'] = $sortby;
+
+    }
     
     
 ?>
