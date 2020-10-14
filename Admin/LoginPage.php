@@ -48,11 +48,11 @@
                 <h1>Admin Login</h1>
 
                 <form action='LoginPage' method='POST'>
-                    <div class='my-4'>
+                    <div class='mt-5 mb-2'>
                         <label for='email'>Email or Username:</label>
                         <input name='emailorusername' placeholder='Enter Email or Username...'>
                     </div>
-                    <div class='mb-2'>
+                    <div class='mb-3'>
                         <label for='password'>Password:</label>
                         <input name='password' type='password' placeholder='Enter Password...'>
                     </div>
