@@ -55,10 +55,11 @@ include_once('FormCheck.php');
             <?php endif ?>
 
             <!-- <button type="button" class='btn btn-primary' data-toggle="modal" data-target="#LinkForm">Generate Access Link</button> -->
+            <a role="button" href='RequestsPage' class='btn btn-dark btn-lg m-4'>View Zombie Thought Requests</a>
+            <br>
             <a href='Reports.php' role="button" class='btn btn-dark btn-lg m-4'>View Reports</a>
             <br>
-            <a role="button" href='RequestsPage' class='btn btn-dark btn-lg mb-5 mt-4'>View Zombie Thought Requests</a>
-            <br>
+
 
             <?php if (isset($_SESSION['privilege']) && strtolower($_SESSION['privilege']) === "high"){ ?>
 
