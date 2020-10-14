@@ -72,7 +72,7 @@ include_once('FormCheck.php');
         </div>
         <?php endif ?>
 
-        <div class='tab-content col-lg-10 mx-auto'>
+        <div class='tab-content'>
 
             <!-- __________________________________Montana Requests Table______________________________ -->
             <div class='tab-pane container active' id='MontanaInstitution'>
