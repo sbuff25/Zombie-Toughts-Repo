@@ -69,7 +69,7 @@
         <meta charset="UTF-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><?php $institution_name;?> - Zombie Thoughts Project</title>
+        <title><?php $id . $institution_name;?> - Zombie Thoughts Project</title>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
