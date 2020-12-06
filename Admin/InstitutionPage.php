@@ -154,7 +154,7 @@
                     <input name='iZip' value="<?php echo $institution_zipcode; ?>" hidden>
                     <input name='iCounty' value="<?php echo $institution_county; ?>" hidden>  
 
-                    <button class='dropdown-item' name='id' type="submit" value="<?php echo $id; ?>"><span class="material-icons">description</span>FORM</button>
+                    <button class='btn btn-primary' name='id' type="submit" value="<?php echo $id; ?>"><span class="material-icons">description</span>FORM</button>
                                                                             
                 </form>
                 <br>
