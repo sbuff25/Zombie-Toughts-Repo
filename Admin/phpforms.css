@@ -55,9 +55,11 @@ table{
 .notes-list{
     padding: 5px;
     font-size: 20px;
+    list-style-position: inside;
 }
 
 .institution_notes_area{
     background-color: gray;
     width: 50%;
+    margin: auto;
 }
