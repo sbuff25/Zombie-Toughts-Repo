@@ -204,7 +204,7 @@ include_once('FormCheck.php');
                                     <td><?php echo $row['contact_last_name']; ?></td>
                                     <td><?php echo $row['contact_phone']; ?></td>
                                     <td><?php echo $row['contact_ext']; ?></td>
-                                    <td><?php echo $row['contact_email']; ?></td>
+                                    <td><a href="mailto:<?php echo $row['contact_email']; ?>"><?php echo $row['contact_email']; ?></a></td>
                                     <td><?php echo $row['institution_name']; ?></td>
                                     <td><?php echo $row['institution_city']; ?></td>
                                     <td><?php echo $row['institution_county']; ?></td>
@@ -363,7 +363,7 @@ include_once('FormCheck.php');
                                     <td><?php echo $row['contact_last_name']; ?></td>
                                     <td><?php echo $row['contact_phone']; ?></td>
                                     <td><?php echo $row['contact_ext']; ?></td>
-                                    <td><?php echo $row['contact_email']; ?></td>
+                                    <td><a href="mailto:<?php echo $row['contact_email']; ?>"><?php echo $row['contact_email']; ?></a></td>
                                     <td><?php echo $row['institution_name']; ?></td>
                                     <td><?php echo $row['institution_city']; ?></td>
                                     <td><?php echo $row['institution_state']; ?></td>
