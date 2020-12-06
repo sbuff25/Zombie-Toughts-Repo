@@ -21,7 +21,7 @@
 
 }
 
-table.dataTable thead .sorting:after,
+/* table.dataTable thead .sorting:after,
 table.dataTable thead .sorting:before,
 table.dataTable thead .sorting_asc:after,
 table.dataTable thead .sorting_asc:before,
@@ -35,4 +35,37 @@ table.dataTable thead .sorting_desc_disabled:before {
 table{
     /* table-layout: fixed; */
     /* word-wrap: break-word; */
+/*}
+} */
+
+.contact-info-h4{
+    float: left;
+    width: 50%;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.contact-info-h5{
+    float: left;
+    width: 50%;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.notes-title {
+    float: left;
+    width: 50%;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.notes-list{
+    float: left;
+    width: 50%;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.institution_notes_area{
+    background-color: gray;
 }
