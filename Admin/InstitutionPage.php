@@ -97,7 +97,8 @@
     <body>
 
         <?php
-            include_once('Navbar.php');            
+            include_once('Navbar.php');
+            include_once('InstitutionForm.php');            
         ?>
         <br><br><br><br><br>
 
@@ -138,6 +139,24 @@
                 <h5 class='contact-info-h6'>Email: <a href="mailto:<?php echo $contact_email;?>"><?php echo $contact_email;?></a></h5>
                 <h5 class='contact-info-h6'>Phone: <?php echo $contact_phone; ?></h5>
                 <h5 class='contact-info-h6'>Ext: <?php echo $contact_ext;?></h5>
+
+                <form action='GiveInstitutionAccess' method='POST'>
+                    <input id='accessCode' name='accessCode' hidden>
+                    <input name="cFirstName" value="<?php echo $contact_first_name; ?>" hidden>
+                    <input name="cLastName" value="<?php echo $contact_last_name; ?>" hidden>
+                    <input name="cPhone" value="<?php echo $contact_phone; ?>" hidden>
+                    <input name="cExt" value="<?php echo $contact_ext; ?>" hidden>
+                    <input name='cEmail' value="<?php echo $contact_email; ?>" hidden>
+                    <input name='iName' value="<?php echo $institution_name; ?>" hidden>
+                    <input name='iAddress' value="<?php echo $institution_mailing_address; ?>" hidden>
+                    <input name='iCity' value="<?php echo $institution_city; ?>" hidden>
+                    <input name='iState' value='Montana' hidden>
+                    <input name='iZip' value="<?php echo $institution_zipcode; ?>" hidden>
+                    <input name='iCounty' value="<?php echo $institution_county; ?>" hidden>  
+
+                    <button class='dropdown-item' name='id' type="submit" value="<?php echo $id; ?>"><span class="material-icons">description</span>FORM</button>
+                                                                            
+                </form>
                 <br>
 
                 <div class='institution_notes_area'>
