@@ -285,6 +285,13 @@ include_once('FormCheck.php');
                                                 <button class='dropdown-item' name='id' type="submit" value="<?php echo $id; ?>"><span class="material-icons">description</span>FORM</button>
                                                                                                         
                                             </form>
+                                            <form action='InstitutionPage' method='POST'>
+
+                                                <?php $id = $row['id'];?>   
+
+                                                <button class='dropdown-item' name='ViewInstitution' type="submit" value="<?php echo $id; ?>"><span class="material-icons">preview</span>VIEW</button>
+                                                                                                        
+                                            </form>
 
                                             <!--____________________________________________________________________________________________________________________-->
                                             <form action='RequestsPage' method='POST'>

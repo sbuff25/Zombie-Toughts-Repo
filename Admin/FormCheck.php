@@ -665,6 +665,20 @@ require_once("./Classes/Database.php");
 
     }
 
+    // if (isset($_POST['ViewInstitution'])) {
+
+    //     $stmt = $database->prepare("SELECT");
+    //     if(!$stmt->bind_param("s", $code)){
+    //         array_push($errors, "Binding parameters failed: (" . $stmt->errno . ") " . $stmt->error);
+    //     }
+    //     if(!$stmt->execute()){
+    //         array_push($errors, "Execute failed: (" . $stmt->errno . ") " . $stmt->error);
+    //     }
+    //     $stmt->close();
+    //     header('Location: ./AdminPage');
+        
+    // }
+
 
 
     if (isset($_POST['set_sort_by'])) {
