@@ -92,7 +92,6 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
         <link rel="stylesheet" href="./phpforms.css">
-        <link rel="stylesheet" href="./instcss.css">
 
     </head>
     <body>
