@@ -17,7 +17,7 @@
         array_push($errors, "Execute failed: (" . $stmt1->errno . ") " . $stmt1->error);
     }
     $result1 = $stmt1->get_result();
-    $row1 = $result1->fetch_assoc();
+    $row1 = $result1->fetch_array(MYSQLI_ASSOC);
 
     $contacted = $row1['contacted'];
     $contact_first_name = $row1['contact_first_name'];
@@ -32,8 +32,6 @@
     $institution_zipcode = $row1['institution_zipcode'];
     $institution_county = $row1['institution_county'];
 
-
-    $stmt1->close();
 
     // Get Institution Notes______________________________________________________________________
     $stmt2 = $database->prepare("SELECT note FROM InstitutionNotes WHERE institution_id=?");
@@ -138,7 +136,10 @@
 
             </div>
         </div>
-        <?php $stmt2->close(); ?>
+        <?php 
+        $stmt1->close();
+        $stmt2->close(); 
+        ?>
 
         <script>
             document.getElementById('contact_select').selectedIndex="<?php echo $contacted; ?>";
