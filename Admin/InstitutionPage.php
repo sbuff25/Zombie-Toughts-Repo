@@ -154,7 +154,6 @@
                     
                     </ul>
                     <form action='InstitutionPage' method='POST'>
-                        <label for='note'>Create New Note</label>
                         <textarea class='form-control' size='5' name='note' placeholder='Enter New Note...'></textarea>
                         <button type='submit' name='newNote' value="<?php echo $id;?>">Submit Note</button>
                     </form>

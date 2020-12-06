@@ -39,29 +39,25 @@ table{
 } */
 
 .contact-info-h4{
-    width: 50%;
     padding: 5px;
     font-size: 30px;
 }
 
 .contact-info-h5{
-    width: 50%;
     font-size: 20px;
 }
 
 .notes-title {
-    width: 50%;
     padding: 5px;
     font-size: 30px;
 }
 
 .notes-list{
-    float: left;
-    width: 50%;
     padding: 5px;
     font-size: 20px;
 }
 
 .institution_notes_area{
     background-color: gray;
+    width: 50%;
 }
