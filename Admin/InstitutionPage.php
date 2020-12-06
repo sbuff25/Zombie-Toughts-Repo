@@ -4,8 +4,17 @@
         exit;
 
     }
+    $id;
     include_once('FormCheck.php');
-    $id = $_POST['ViewInstitution'];
+    if(isset($_POST['ViewInstitution'])){
+        $id = $_POST['ViewInstitution'];
+        $_SESSION['inst_id'] = $id;
+    }
+    elseif($_SESSION['inst_id']){
+        $id = $_SESSION['inst_id'];
+    }
+    
+    
     // Get Institution Information_________________________________________________________________
     $stmt1 = $database->prepare("SELECT * FROM InstitutionInformation WHERE id=?");
     if(!$stmt1->bind_param('i', $id))
@@ -134,7 +143,7 @@
                     <h3 class='notes-title'>Notes</h3>
                     <div>
                     </div>
-                    <ul>
+                    <ul class='notes-list'>
                         <?php
                             while($row2 = $result2->fetch_assoc()){
                         ?>
@@ -147,7 +156,6 @@
                     <form action='InstitutionPage' method='POST'>
                         <label for='note'>Create New Note</label>
                         <textarea class='form-control' size='5' name='note' placeholder='Enter New Note...'></textarea>
-                        <?php $id = $row['id'];?>
                         <button type='submit' name='newNote' value="<?php echo $id;?>">Submit Note</button>
                     </form>
                 </div>
