@@ -17,20 +17,37 @@
         array_push($errors, "Execute failed: (" . $stmt1->errno . ") " . $stmt1->error);
     }
     $result1 = $stmt1->get_result();
-    $row1 = $result1->fetch_array(MYSQLI_ASSOC);
 
-    $contacted = $row1['contacted'];
-    $contact_first_name = $row1['contact_first_name'];
-    $contact_last_name = $row1['contact_last_name'];
-    $contact_phone = $row1['contact_phone'];
-    $contact_ext = $row1['contact_ext'];
-    $contact_email = $row1['contact_email'];
-    $institution_name = $row1['institution_name'];
-    $institution_mailing_address = $row1['institution_mailing_address'];
-    $institution_city = $row1['institution_city'];
-    $institution_state = $row1['institution_state'];
-    $institution_zipcode = $row1['institution_zipcode'];
-    $institution_county = $row1['institution_county'];
+    $contacted;
+    $contact_first_name;
+    $contact_last_name;
+    $contact_phone;
+    $contact_ext;
+    $contact_email;
+    $institution_name;
+    $institution_mailing_address;
+    $institution_city;
+    $institution_state;
+    $institution_zipcode;
+    $institution_county;
+
+    while($row1 = $result1->fetch_assoc()){
+        $contacted = $row1['contacted'];
+        $contact_first_name = $row1['contact_first_name'];
+        $contact_last_name = $row1['contact_last_name'];
+        $contact_phone = $row1['contact_phone'];
+        $contact_ext = $row1['contact_ext'];
+        $contact_email = $row1['contact_email'];
+        $institution_name = $row1['institution_name'];
+        $institution_mailing_address = $row1['institution_mailing_address'];
+        $institution_city = $row1['institution_city'];
+        $institution_state = $row1['institution_state'];
+        $institution_zipcode = $row1['institution_zipcode'];
+        $institution_county = $row1['institution_county'];
+    }
+
+
+
 
 
     // Get Institution Notes______________________________________________________________________
