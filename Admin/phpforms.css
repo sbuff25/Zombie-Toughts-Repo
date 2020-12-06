@@ -39,31 +39,27 @@ table{
 } */
 
 .contact-info-h4{
-    float: left;
     width: 50%;
     padding: 5px;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .contact-info-h5{
-    float: left;
     width: 50%;
-    padding: 5px;
-    font-size: 10px;
+    font-size: 20px;
 }
 
 .notes-title {
-    float: left;
     width: 50%;
     padding: 5px;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .notes-list{
     float: left;
     width: 50%;
     padding: 5px;
-    font-size: 10px;
+    font-size: 20px;
 }
 
 .institution_notes_area{
