@@ -69,7 +69,7 @@
         <meta charset="UTF-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><?php $id . $institution_name;?> - Zombie Thoughts Project</title>
+        <title><?php echo $institution_name;?> - Zombie Thoughts Project</title>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -94,7 +94,7 @@
 
         <div class="col-lg-10 mx-auto bg-light text-dark text-center" >
             <div class="panel panel-default justify-content-center">
-                <h1>Zombie Thoughts Request - <?php $institution_name;?></h1>
+                <h1>Zombie Thoughts Request - <?php echo $institution_name;?></h1>
                 <br>
                 <?php include_once("errors.php"); ?>
 
@@ -108,7 +108,7 @@
                 </p>
                 </div>
                 <?php endif ?>
-                <h4>Contact Status: <?php $contacted; ?></h4>
+                <h4>Contact Status: <?php echo $contacted; ?></h4>
                 <form action='InstitutionPage' method='POST'>
                     <label for='contacted'>Update Contact Status</label>
                     <select name='contacted' id='contact_select'>
@@ -119,14 +119,14 @@
                     <button type='submit' name='submitContacted' value="<?php echo $id; ?>">Submit</button>
                 </form>
                 <br>
-                <h4 class='contact-info-h4'>Contact: <?php $contact_first_name . " " . $contact_last_name;?></h4>
-                <h5 class='contact-info-h5'>Email: <a href="mailto:<?php $contact_email;?>"></a></h5>
-                <h5 class='contact-info-h5'>Phone: <?php $contact_phone; ?> Ext: <?php $contact_ext;?></h5>
+                <h4 class='contact-info-h4'>Contact: <?php echo $contact_first_name . " " . $contact_last_name;?></h4>
+                <h5 class='contact-info-h5'>Email: <a href="mailto:<?php echo $contact_email;?>"></a></h5>
+                <h5 class='contact-info-h5'>Phone: <?php echo $contact_phone; ?> Ext: <?php echo $contact_ext;?></h5>
                 <br>
-                <h4 class='contact-info-h4'>Institution Name: <?php $institution_name;?></h4>
+                <h4 class='contact-info-h4'>Institution Name: <?php echo $institution_name;?></h4>
                 <h5 class='contact-info-h5'>Mailing Address:</h5>
-                <h5 class='contact-info-h5'><?php $institution_mailing_address; ?></h5>
-                <h5 class='contact-info-h5'><?php $institution_city; ?>, <?php $institution_state; ?> <?php $institution_zipcode; ?> <?php $institution_county; ?></h5>
+                <h5 class='contact-info-h5'><?php echo $institution_mailing_address; ?></h5>
+                <h5 class='contact-info-h5'><?php echo $institution_city . ", " . $institution_state . " " . $institution_zipcode . " " . $institution_county; ?></h5>
                 <br>
 
                 <div class='institution_notes_area'>
