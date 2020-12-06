@@ -120,8 +120,9 @@
                 </form>
                 <br>
                 <h4 class='contact-info-h4'>Contact: <?php echo $contact_first_name . " " . $contact_last_name;?></h4>
-                <h5 class='contact-info-h5'>Email: <a href="mailto:<?php echo $contact_email;?>"></a></h5>
-                <h5 class='contact-info-h5'>Phone: <?php echo $contact_phone; ?> Ext: <?php echo $contact_ext;?></h5>
+                <h5 class='contact-info-h5'>Email: <a href="mailto:<?php echo $contact_email;?>"><?php echo $contact_email;?></a></h5>
+                <h5 class='contact-info-h5'>Phone: <?php echo $contact_phone; ?></h5>
+                <h5 class='contact-info-h5'>Ext: <?php echo $contact_ext;?></h5>
                 <br>
                 <h4 class='contact-info-h4'>Institution Name: <?php echo $institution_name;?></h4>
                 <h5 class='contact-info-h5'>Mailing Address:</h5>
